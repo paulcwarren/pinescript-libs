@@ -1,13 +1,15 @@
 // ──────────────
 // Automated Sector Mapping (Inlined)
 // ──────────────
-t = syminfo.ticker
+// Strips exchange prefixes (e.g., 'NASDAQ:NVDA' becomes 'NVDA')
+cleanT = str.replace_all(syminfo.ticker, ".*:", "")
+
 var string currentSector = "unknown"
 var string s01 = na, var string s02 = na, var string s03 = na, var string s04 = na, var string s05 = na
 var string s06 = na, var string s07 = na, var string s08 = na, var string s09 = na, var string s10 = na
 
 {{ range $sector, $stocks := .Sectors -}}
-{{ if eq $sector "BLOK" }}if{{ else }}else if{{ end }} t=="{{ $sector }}"{{ range $stocks }} or t=="{{ . }}"{{ end }}
+{{ if eq $sector "BLOK" }}if{{ else }}else if{{ end }} cleanT == "{{ $sector }}"{{ range $stocks }} or cleanT == "{{ . }}"{{ end }}
     currentSector := "{{ $sector }}"
     {{- range $i, $s := $stocks }}
     s{{ if lt $i 9 }}0{{ end }}{{ add $i 1 }} := "{{ $s }}"
