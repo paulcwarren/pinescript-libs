@@ -1,55 +1,17 @@
-//@version=5
-// @description Lightweight library for mapping ETFs to their Top 10 holdings.
-library("SectorLib", overlay=false)
+// ──────────────
+// Automated Sector Mapping (Inlined)
+// ──────────────
+t = syminfo.ticker
+var string currentSector = "unknown"
+var string s01 = na, var string s02 = na, var string s03 = na, var string s04 = na, var string s05 = na
+var string s06 = na, var string s07 = na, var string s08 = na, var string s09 = na, var string s10 = na
 
-// ──────────────
-// 1. Sector Membership Helpers (Internal)
-// ──────────────
-{{- range $sector, $stocks := .Sectors }}
-f_is{{ $sector }}(string stock) =>
-    bool found = false
-    switch stock
-        {{- range $s := $stocks }}
-        "{{ $s }}" => found := true
-        {{- end }}
-    found
+{{ range $sector, $stocks := .Sectors -}}
+{{ if eq $sector "BLOK" }}if{{ else }}else if{{ end }} t=="{{ $sector }}"{{ range $stocks }} or t=="{{ . }}"{{ end }}
+    currentSector := "{{ $sector }}"
+    {{- range $i, $s := $stocks }}
+    s{{ if lt $i 9 }}0{{ end }}{{ add $i 1 }} := "{{ $s }}"
+    {{- end }}
 {{ end }}
-
-// ──────────────
-// 2. Exported Functions
-// ──────────────
-
-// @function Returns the sector ticker for a given stock.
-export f_getSector(string stock) =>
-    string result = "unknown"
-    switch
-        {{- range $sector, $stocks := .Sectors }}
-        f_is{{ $sector }}(stock) => result := "{{ $sector }}"
-        {{- end }}
-    result
-
-// @function Returns the number of holdings for a specific sector.
-export f_getNumHoldings(string sector) =>
-    int count = 0
-    switch sector
-        {{- range $sector, $stocks := .Sectors }}
-        "{{ $sector }}" => count := {{ len $stocks }}
-        {{- end }}
-    count
-
-// @function Returns a specific holding by index for a sector.
-export f_getHolding(string sector, int idx) =>
-    string ticker = na
-    switch sector
-        {{- range $sector, $stocks := .Sectors }}
-        "{{ $sector }}" =>
-            switch idx
-                {{- range $i, $s := $stocks }}
-                {{ $i }} => ticker := "{{ $s }}"
-                {{- end }}
-        {{- end }}
-    ticker
-
-// @function Returns an array of all sector tickers.
-export f_getAllSectors() =>
-    array.from({{- $first := true }}{{- range $sector, $_ := .Sectors }}{{- if $first }}{{ $first = false }}"{{ $sector }}"{{ else }}, "{{ $sector }}"{{ end }}{{- end }})
+else
+    currentSector := "unknown"

@@ -29,7 +29,9 @@ func main() {
 	// 2. Setup Template
 	// Note: Use the filename that matches your .tmpl file exactly
 	tmpl, err := template.New("sectors.tmpl").Funcs(template.FuncMap{
-		"len": func(arr []string) int { return len(arr) },
+		"add": func(a, b int) int {
+			return a + b
+		},
 	}).ParseFiles("templates/sectors.tmpl")
 
 	if err != nil {
