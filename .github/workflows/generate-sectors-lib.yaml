@@ -1,0 +1,50 @@
+name: Generate SectorLib
+on:
+  workflow_dispatch: # Allows you to trigger this manually anytime
+  schedule:
+    - cron: '0 0 * * 0' # Weekly
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Run Scraper & Generator
+        run: |
+          # Install dependencies
+          pip install yfinance pandas
+
+          pushd sectors
+          
+          # 1. Run your python scraper
+          python get_sectors.py
+
+          # 2. Run the Go generator (outputs SectorLib.pine)
+          go run main.go
+
+          popd
+
+      - name: Display Library for Copy-Paste
+        run: |
+          echo "===================================================="
+          echo "  COPY THE CODE BELOW INTO TRADINGVIEW EDITOR      "
+          echo "===================================================="
+          cat sectors/SectorLib.pine
+          echo "===================================================="
+
+      - name: Archive Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SectorLib-Latest
+          path: sectors/SectorLib.pine
