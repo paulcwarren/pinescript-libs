@@ -1,5 +1,5 @@
 //@version=5
-// @description Lightweight library for mapping ETFs to their Top 10 holdings.
+// @description Lightweight library for mapping ETFs to their Top 10 holdings. (Generated)
 library("SectorLib", overlay=false)
 
 // ──────────────
@@ -7,9 +7,11 @@ library("SectorLib", overlay=false)
 // ──────────────
 {{- range $sector, $stocks := .Sectors }}
 f_is{{ $sector }}(string stock) =>
-    {{- range $i, $s := $stocks }}
-    {{- if eq $i 0 }}stock == "{{ $s }}"{{ else }} or stock == "{{ $s }}"{{ end }}
-    {{- end }}
+    switch stock
+        {{- range $s := $stocks }}
+        "{{ $s }}" => true
+        {{- end }}
+        => false
 {{ end }}
 
 // ──────────────
@@ -17,48 +19,34 @@ f_is{{ $sector }}(string stock) =>
 // ──────────────
 
 // @function Returns the sector ticker (e.g., "XLK") for a given stock ticker.
-// @param stock The ticker of the stock to check.
-// @returns The sector name or "unknown".
 export f_getSector(string stock) =>
-    {{- $first := true }}
-    {{- range $sector, $stocks := .Sectors }}
-    {{- if $first }}{{ $first = false }}f_is{{ $sector }}(stock) ? "{{ $sector }}"{{ else }} : f_is{{ $sector }}(stock) ? "{{ $sector }}"{{ end }}
-    {{- end }} : "unknown"
-
-// @function Checks if a stock is tracked within this library.
-// @param stock The ticker to check.
-export f_isStockInLibrary(string stock) =>
-    f_getSector(stock) != "unknown"
+    switch
+        {{- range $sector, $stocks := .Sectors }}
+        f_is{{ $sector }}(stock) => "{{ $sector }}"
+        {{- end }}
+        => "unknown"
 
 // @function Returns the total number of holdings tracked for a specific sector.
-// @param sector The sector ETF ticker (e.g., "MAGS").
 export f_getNumHoldings(string sector) =>
-    int count = 0
-    {{- range $sector, $stocks := .Sectors }}
-    if sector == "{{ $sector }}"
-        count := {{ len $stocks }}
-    {{- end }}
-    count
+    switch sector
+        {{- range $sector, $stocks := .Sectors }}
+        "{{ $sector }}" => {{ len $stocks }}
+        {{- end }}
+        => 0
 
 // @function Returns a specific holding by index for a sector.
-// @param sector The sector ETF ticker.
-// @param idx The index (0-9).
 export f_getHolding(string sector, int idx) =>
     string ticker = na
-    {{- range $sector, $stocks := .Sectors }}
-    if sector == "{{ $sector }}"
-        {{- range $i, $s := $stocks }}
-        if idx == {{ $i }}
-            ticker := "{{ $s }}"
+    switch sector
+        {{- range $sector, $stocks := .Sectors }}
+        "{{ $sector }}" =>
+            switch idx
+                {{- range $i, $s := $stocks }}
+                {{ $i }} => "{{ $s }}"
+                {{- end }}
         {{- end }}
-    {{- end }}
     ticker
 
 // @function Returns an array of all sector tickers included in this library.
 export f_getAllSectors() =>
-    array.from(
-        {{- $first := true }}
-        {{- range $sector, $_ := .Sectors }}
-        {{- if $first }}{{ $first = false }}"{{ $sector }}"{{ else }}, "{{ $sector }}"{{ end }}
-        {{- end }}
-    )   
+    array.from({{- $first := true }}{{- range $sector, $_ := .Sectors }}{{- if $first }}{{ $first = false }}"{{ $sector }}"{{ else }}, "{{ $sector }}"{{ end }}{{- end }})
