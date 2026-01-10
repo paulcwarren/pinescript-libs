@@ -6,7 +6,7 @@ library("SectorLib", overlay=false)
 // 1. Sector Membership Helpers (Internal)
 // ──────────────
 {{- range $sector, $stocks := .Sectors }}
-f_is{{ $sector }}(stock) =>
+f_is{{ $sector }}(string stock) =>
     bool found = false
     switch stock
         {{- range $s := $stocks }}
@@ -20,8 +20,7 @@ f_is{{ $sector }}(stock) =>
 // ──────────────
 
 // @function Returns the sector ticker for a given stock.
-// @param stock (string)
-export f_getSector(stock) =>
+export f_getSector(string stock) =>
     string result = "unknown"
     switch
         {{- range $sector, $stocks := .Sectors }}
@@ -30,8 +29,7 @@ export f_getSector(stock) =>
     result
 
 // @function Returns the number of holdings for a specific sector.
-// @param sector (string)
-export f_getNumHoldings(sector) =>
+export f_getNumHoldings(string sector) =>
     int count = 0
     switch sector
         {{- range $sector, $stocks := .Sectors }}
@@ -40,9 +38,7 @@ export f_getNumHoldings(sector) =>
     count
 
 // @function Returns a specific holding by index for a sector.
-// @param sector (string)
-// @param idx (int)
-export f_getHolding(sector, idx) =>
+export f_getHolding(string sector, int idx) =>
     string ticker = na
     switch sector
         {{- range $sector, $stocks := .Sectors }}
