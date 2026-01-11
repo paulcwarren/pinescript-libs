@@ -1,9 +1,10 @@
 name: Generate SectorLib
 on:
-  workflow_dispatch: # Allows you to trigger this manually anytime
-  schedule:
-    - cron: '0 0 * * 0' # Weekly
-
+push:
+    branches:
+      - main
+  workflow_dispatch:  # This allows you to also run it manually from the Actions tab
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
           pip install yfinance pandas
 
           pushd sectors
-          
+
           # 1. Run your python scraper
           python get_sectors.py
 
