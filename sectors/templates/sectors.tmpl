@@ -2,7 +2,7 @@
 // Automated Sector Mapping (Inlined)
 // ──────────────
 // Step 1: Strip Exchange Prefix
-cleanT_step1 = str.replace_all(syminfo.tickerid, ".*:", "")
+cleanT_step1 = str.replace_all(syminfo.ticker, ".*:", "")
 // Step 2: Strip Suffixes like .T or -B
 cleanT = str.replace_all(cleanT_step1, "[.\\-].*$", "")
 
