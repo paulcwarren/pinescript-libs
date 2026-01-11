@@ -1,8 +1,9 @@
 import json
 import os
+import re
 import yfinance as yf
 
-# 1. Define the dictionary first!
+# 1. Define the dictionary first
 mapping = {}
 
 sector_etfs = ["BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XHB", "XBI", "XLP"]
@@ -14,10 +15,17 @@ for etf in sector_etfs:
         t = yf.Ticker(etf)
         holdings = t.funds_data.top_holdings
         
+        # --- FIXED INDENTATION START ---
         if holdings is not None and not holdings.empty:
-            # Clean tickers: remove non-alphanumeric chars to keep Pine Script happy
             raw_tickers = holdings.index.tolist()[:10]
-            clean_tickers = [str(tk).split()[0].strip() for tk in raw_tickers] 
+            clean_tickers = []
+            for tk in raw_tickers:
+                # Remove spaces/swap info
+                s = str(tk).split()[0] 
+                # Clean ticker to match Pine cleanT (removes .T, -B, etc.)
+                s = re.sub(r'[.\-].*$', '', s) 
+                clean_tickers.append(s)
+            
             mapping[etf] = clean_tickers
             print(f"✅ {etf}: Found {len(clean_tickers)} tickers")
         else:
@@ -27,6 +35,7 @@ for etf in sector_etfs:
             else:
                 mapping[etf] = []
                 print(f"⚠️ {etf}: No holdings found")
+        # --- FIXED INDENTATION END ---
                 
     except Exception as e:
         print(f"❌ {etf}: Error - {e}")

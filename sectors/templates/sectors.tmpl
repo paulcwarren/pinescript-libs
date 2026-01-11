@@ -1,8 +1,10 @@
 // ──────────────
 // Automated Sector Mapping (Inlined)
 // ──────────────
-// Strips exchange prefixes (e.g., 'NASDAQ:NVDA' becomes 'NVDA')
-cleanT = str.replace_all(syminfo.ticker, ".*:", "")
+// Step 1: Strip Exchange Prefix
+cleanT_step1 = str.replace_all(syminfo.tickerid, ".*:", "")
+// Step 2: Strip Suffixes like .T or -B
+cleanT = str.replace_all(cleanT_step1, "[.\\-].*$", "")
 
 var string currentSector = "unknown"
 var string s01 = na, var string s02 = na, var string s03 = na, var string s04 = na, var string s05 = na
