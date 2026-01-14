@@ -1,17 +1,19 @@
-// ──────────────
-// Automated Sector Mapping (Inlined)
-// ──────────────
+// ==========================================
 // Step 1: Strip Exchange Prefix
 cleanT_step1 = str.replace_all(syminfo.ticker, ".*:", "")
 // Step 2: Strip Suffixes like .T or -B
 cleanT = str.replace_all(cleanT_step1, "[.\\-].*$", "")
 
-var string currentSector = "unknown"
-var string s01 = na, var string s02 = na, var string s03 = na, var string s04 = na, var string s05 = na
-var string s06 = na, var string s07 = na, var string s08 = na, var string s09 = na, var string s10 = na
+// Use empty strings instead of na for safety in request.security
+string currentSector = "unknown"
+string s01 = "", string s02 = "", string s03 = "", string s04 = "", string s05 = ""
+string s06 = "", string s07 = "", string s08 = "", string s09 = "", string s10 = ""
 
+// --- Index Sector Group ---
+if cleanT == "SPY" or cleanT == "QQQ" or cleanT == "IWM" or cleanT == "DIA"
+    currentSector := cleanT, s01 := "SPY", s02 := "QQQ", s03 := "IWM", s04 := "DIA"
 {{ range $sector, $stocks := .Sectors -}}
-{{ if eq $sector "BLOK" }}if{{ else }}else if{{ end }} cleanT == "{{ $sector }}"{{ range $stocks }} or cleanT == "{{ . }}"{{ end }}
+else if cleanT == "{{ $sector }}"{{ range $stocks }} or cleanT == "{{ . }}"{{ end }}
     currentSector := "{{ $sector }}"
     {{- range $i, $s := $stocks }}
     s{{ if lt $i 9 }}0{{ end }}{{ add $i 1 }} := "{{ $s }}"
