@@ -14,7 +14,7 @@ if cleanT == "SPY" or cleanT == "QQQ" or cleanT == "IWM" or cleanT == "DIA"
     currentSector := cleanT, s01 := "SPY", s02 := "QQQ", s03 := "IWM", s04 := "DIA"
 {{ range $sector, $stocks := .Sectors -}}
 else if cleanT == "{{ $sector }}"{{ range $stocks }} or cleanT == "{{ . }}"{{ end }}
-    currentSector := "{{ $sector }}", s01 := "{{ index $stocks 0 }}", s02 := "{{ index $stocks 1 }}", s03 := "{{ index $stocks 2 }}", s04 := "{{ index $stocks 3 }}", s05 := "{{ index $stocks 4 }}", s06 := "{{ index $stocks 5 }}", s07 := "{{ index $stocks 6 }}", s08 := "{{ index $stocks 7 }}", s09 := "{{ index $stocks 8 }}", s10 := "{{ index $stocks 9 }}"
+    currentSector := "{{ $sector }}", s01 := "{{ getHolding $stocks 0 }}", s02 := "{{ getHolding $stocks 1 }}", s03 := "{{ getHolding $stocks 2 }}", s04 := "{{ getHolding $stocks 3 }}", s05 := "{{ getHolding $stocks 4 }}", s06 := "{{ getHolding $stocks 5 }}", s07 := "{{ getHolding $stocks 6 }}", s08 := "{{ getHolding $stocks 7 }}", s09 := "{{ getHolding $stocks 8 }}", s10 := "{{ getHolding $stocks 9 }}"
 {{ end }}
 else
     currentSector := "unknown"

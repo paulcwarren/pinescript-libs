@@ -32,6 +32,12 @@ func main() {
 		"add": func(a, b int) int {
 			return a + b
 		},
+		"getHolding": func(slice []string, i int) string {
+			if i >= 0 && i < len(slice) {
+				return slice[i]
+			}
+			return "" // Return empty string if the index doesn't exist (e.g. MAGS slot 10)
+		},
 	}).ParseFiles("templates/sectors.tmpl")
 
 	if err != nil {
