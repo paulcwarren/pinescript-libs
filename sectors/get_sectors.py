@@ -6,7 +6,7 @@ import yfinance as yf
 # 1. Define the dictionary first
 mapping = {}
 
-sector_etfs = ["BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XHB", "XBI", "XLP", "SOXX"]
+sector_etfs = ["BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XHB", "XBI", "XLP", "SOXX", "XME"]
 
 print("--- Starting Scrape ---")
 for etf in sector_etfs:
