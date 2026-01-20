@@ -42,14 +42,14 @@ window.WALLS = {
   "HOOD": {
     "spot": 108.74,
     "callWall": 118,
-    "putWall": 110,
+    "putWall": 100,
     "gammaFlip": 65,
     "netGEX": 0.0094,
     "updated": "2026-01-20"
   },
   "GLXY": {
     "spot": 34.31,
-    "callWall": 30,
+    "callWall": 35,
     "putWall": 32,
     "gammaFlip": 32,
     "netGEX": -0.0004,
@@ -114,7 +114,7 @@ window.WALLS = {
   "IGV": {
     "spot": 98.31,
     "callWall": 120,
-    "putWall": 103,
+    "putWall": 94,
     "gammaFlip": 60,
     "netGEX": 0.0152,
     "updated": "2026-01-20"
@@ -138,7 +138,7 @@ window.WALLS = {
   "CRM": {
     "spot": 227.11,
     "callWall": 250,
-    "putWall": 230,
+    "putWall": 215,
     "gammaFlip": 310,
     "netGEX": 0.0168,
     "updated": "2026-01-20"
@@ -170,7 +170,7 @@ window.WALLS = {
   "ADBE": {
     "spot": 296.12,
     "callWall": 320,
-    "putWall": 300,
+    "putWall": 285,
     "gammaFlip": 260,
     "netGEX": 0.0109,
     "updated": "2026-01-20"
@@ -178,7 +178,7 @@ window.WALLS = {
   "NOW": {
     "spot": 127.31,
     "callWall": 150,
-    "putWall": 129,
+    "putWall": 125,
     "gammaFlip": 104,
     "netGEX": 0.0093,
     "updated": "2026-01-20"
@@ -202,7 +202,7 @@ window.WALLS = {
   "CLOU": {
     "spot": 21.34,
     "callWall": 25,
-    "putWall": 24,
+    "putWall": 17,
     "gammaFlip": 22,
     "netGEX": -0.0,
     "updated": "2026-01-20"
@@ -218,7 +218,7 @@ window.WALLS = {
   "TWLO": {
     "spot": 119.07,
     "callWall": 145,
-    "putWall": 120,
+    "putWall": 118,
     "gammaFlip": 105,
     "netGEX": 0.0001,
     "updated": "2026-01-20"
@@ -226,7 +226,7 @@ window.WALLS = {
   "ZM": {
     "spot": 80.96,
     "callWall": 90,
-    "putWall": 82,
+    "putWall": 80,
     "gammaFlip": 99,
     "netGEX": 0.0003,
     "updated": "2026-01-20"
@@ -250,7 +250,7 @@ window.WALLS = {
   "PAYC": {
     "spot": 148.41,
     "callWall": 150,
-    "putWall": 170,
+    "putWall": 125,
     "gammaFlip": 150,
     "netGEX": -0.0,
     "updated": "2026-01-20"
@@ -266,7 +266,7 @@ window.WALLS = {
   "WK": {
     "spot": 85.72,
     "callWall": 90,
-    "putWall": 90,
+    "putWall": 80,
     "gammaFlip": 85,
     "netGEX": -0.0003,
     "updated": "2026-01-20"
@@ -298,7 +298,7 @@ window.WALLS = {
   "AAPL": {
     "spot": 255.53,
     "callWall": 275,
-    "putWall": 260,
+    "putWall": 250,
     "gammaFlip": 280,
     "netGEX": -0.0101,
     "updated": "2026-01-20"
@@ -329,7 +329,7 @@ window.WALLS = {
   },
   "QTUM": {
     "spot": 118.43,
-    "callWall": 110,
+    "callWall": 120,
     "putWall": 95,
     "gammaFlip": 125,
     "netGEX": -0.0,
@@ -337,7 +337,7 @@ window.WALLS = {
   },
   "MU": {
     "spot": 362.75,
-    "callWall": 350,
+    "callWall": 375,
     "putWall": 345,
     "gammaFlip": 352,
     "netGEX": -0.0545,
@@ -346,7 +346,7 @@ window.WALLS = {
   "NTNX": {
     "spot": 45.74,
     "callWall": 50,
-    "putWall": 47,
+    "putWall": 45,
     "gammaFlip": 57,
     "netGEX": -0.0002,
     "updated": "2026-01-20"
@@ -377,7 +377,7 @@ window.WALLS = {
   },
   "URA": {
     "spot": 54.4,
-    "callWall": 46,
+    "callWall": 55,
     "putWall": 49,
     "gammaFlip": 35,
     "netGEX": 0.0001,
@@ -393,7 +393,7 @@ window.WALLS = {
   },
   "UEC": {
     "spot": 17.87,
-    "callWall": 15,
+    "callWall": 18,
     "putWall": 14,
     "gammaFlip": 16,
     "netGEX": -0.0003,
@@ -401,7 +401,7 @@ window.WALLS = {
   },
   "LEU": {
     "spot": 331.03,
-    "callWall": 300,
+    "callWall": 350,
     "putWall": 290,
     "gammaFlip": 340,
     "netGEX": -0.0013,
@@ -450,7 +450,7 @@ window.WALLS = {
   "TRMB": {
     "spot": 73.89,
     "callWall": 80,
-    "putWall": 75,
+    "putWall": 60,
     "gammaFlip": 75,
     "netGEX": -0.0002,
     "updated": "2026-01-20"
@@ -465,7 +465,7 @@ window.WALLS = {
   },
   "VSAT": {
     "spot": 45.94,
-    "callWall": 37,
+    "callWall": 55,
     "putWall": 35,
     "gammaFlip": 37,
     "netGEX": -0.0012,
@@ -473,7 +473,7 @@ window.WALLS = {
   },
   "ASTS": {
     "spot": 115.77,
-    "callWall": 100,
+    "callWall": 125,
     "putWall": 90,
     "gammaFlip": 97,
     "netGEX": -0.0045,
@@ -481,7 +481,7 @@ window.WALLS = {
   },
   "ROBO": {
     "spot": 74.1,
-    "callWall": 72,
+    "callWall": 75,
     "putWall": 70,
     "gammaFlip": 65,
     "netGEX": -0.0001,
@@ -498,14 +498,14 @@ window.WALLS = {
   "ISRG": {
     "spot": 535.0,
     "callWall": 630,
-    "putWall": 560,
+    "putWall": 510,
     "gammaFlip": 400,
     "netGEX": 0.0049,
     "updated": "2026-01-20"
   },
   "ROK": {
     "spot": 415.52,
-    "callWall": 410,
+    "callWall": 430,
     "putWall": 360,
     "gammaFlip": 410,
     "netGEX": -0.0036,
@@ -521,7 +521,7 @@ window.WALLS = {
   },
   "OIH": {
     "spot": 326.59,
-    "callWall": 315,
+    "callWall": 330,
     "putWall": 255,
     "gammaFlip": 315,
     "netGEX": -0.0015,
@@ -529,7 +529,7 @@ window.WALLS = {
   },
   "SLB": {
     "spot": 46.73,
-    "callWall": 40,
+    "callWall": 47,
     "putWall": 45,
     "gammaFlip": 45,
     "netGEX": -0.0007,
@@ -570,7 +570,7 @@ window.WALLS = {
   "WFRD": {
     "spot": 83.74,
     "callWall": 100,
-    "putWall": 95,
+    "putWall": 65,
     "gammaFlip": 80,
     "netGEX": -0.0001,
     "updated": "2026-01-20"
@@ -601,7 +601,7 @@ window.WALLS = {
   },
   "LBRT": {
     "spot": 20.19,
-    "callWall": 20,
+    "callWall": 25,
     "putWall": 20,
     "gammaFlip": 13,
     "netGEX": -0.0002,
@@ -650,7 +650,7 @@ window.WALLS = {
   "BRK-B": {
     "spot": 493.29,
     "callWall": 505,
-    "putWall": 495,
+    "putWall": 490,
     "gammaFlip": 505,
     "netGEX": -0.029,
     "updated": "2026-01-20"
@@ -769,7 +769,7 @@ window.WALLS = {
   },
   "LOW": {
     "spot": 277.55,
-    "callWall": 275,
+    "callWall": 280,
     "putWall": 267,
     "gammaFlip": 270,
     "netGEX": -0.0037,
@@ -857,7 +857,7 @@ window.WALLS = {
   },
   "HON": {
     "spot": 219.39,
-    "callWall": 210,
+    "callWall": 220,
     "putWall": 210,
     "gammaFlip": 202,
     "netGEX": -0.0023,
@@ -873,7 +873,7 @@ window.WALLS = {
   },
   "DE": {
     "spot": 514.4,
-    "callWall": 500,
+    "callWall": 517,
     "putWall": 510,
     "gammaFlip": 375,
     "netGEX": -0.0008,
@@ -954,7 +954,7 @@ window.WALLS = {
   "MPC": {
     "spot": 175.63,
     "callWall": 185,
-    "putWall": 180,
+    "putWall": 155,
     "gammaFlip": 190,
     "netGEX": -0.0016,
     "updated": "2026-01-20"
@@ -962,7 +962,7 @@ window.WALLS = {
   "XLC": {
     "spot": 115.17,
     "callWall": 120,
-    "putWall": 116,
+    "putWall": 113,
     "gammaFlip": 112,
     "netGEX": 0.0004,
     "updated": "2026-01-20"
@@ -1034,7 +1034,7 @@ window.WALLS = {
   "T": {
     "spot": 23.49,
     "callWall": 26,
-    "putWall": 24,
+    "putWall": 23,
     "gammaFlip": 21,
     "netGEX": -0.0007,
     "updated": "2026-01-20"
@@ -1057,7 +1057,7 @@ window.WALLS = {
   },
   "JNJ": {
     "spot": 218.66,
-    "callWall": 205,
+    "callWall": 230,
     "putWall": 212,
     "gammaFlip": 212,
     "netGEX": -0.0018,
@@ -1066,7 +1066,7 @@ window.WALLS = {
   "ABBV": {
     "spot": 214.35,
     "callWall": 230,
-    "putWall": 225,
+    "putWall": 210,
     "gammaFlip": 170,
     "netGEX": 0.0013,
     "updated": "2026-01-20"
@@ -1082,7 +1082,7 @@ window.WALLS = {
   "MRK": {
     "spot": 108.83,
     "callWall": 113,
-    "putWall": 110,
+    "putWall": 108,
     "gammaFlip": 108,
     "netGEX": -0.0226,
     "updated": "2026-01-20"
@@ -1090,7 +1090,7 @@ window.WALLS = {
   "ABT": {
     "spot": 121.76,
     "callWall": 130,
-    "putWall": 122,
+    "putWall": 120,
     "gammaFlip": 111,
     "netGEX": 0.0007,
     "updated": "2026-01-20"
@@ -1105,7 +1105,7 @@ window.WALLS = {
   },
   "AMGN": {
     "spot": 330.41,
-    "callWall": 305,
+    "callWall": 335,
     "putWall": 320,
     "gammaFlip": 325,
     "netGEX": -0.0101,
@@ -1138,7 +1138,7 @@ window.WALLS = {
   "CEG": {
     "spot": 307.71,
     "callWall": 350,
-    "putWall": 315,
+    "putWall": 300,
     "gammaFlip": 347,
     "netGEX": 0.0064,
     "updated": "2026-01-20"
@@ -1185,7 +1185,7 @@ window.WALLS = {
   },
   "D": {
     "spot": 61.13,
-    "callWall": 60,
+    "callWall": 62,
     "putWall": 57,
     "gammaFlip": 60,
     "netGEX": -0.0055,
@@ -1209,7 +1209,7 @@ window.WALLS = {
   },
   "XLRE": {
     "spot": 42.21,
-    "callWall": 42,
+    "callWall": 43,
     "putWall": 42,
     "gammaFlip": 30,
     "netGEX": 0.0002,
@@ -1257,7 +1257,7 @@ window.WALLS = {
   },
   "CBRE": {
     "spot": 171.59,
-    "callWall": 170,
+    "callWall": 180,
     "putWall": 160,
     "gammaFlip": 170,
     "netGEX": -0.0007,
@@ -1265,7 +1265,7 @@ window.WALLS = {
   },
   "O": {
     "spot": 61.42,
-    "callWall": 60,
+    "callWall": 62,
     "putWall": 55,
     "gammaFlip": 60,
     "netGEX": -0.0106,
@@ -1273,7 +1273,7 @@ window.WALLS = {
   },
   "DLR": {
     "spot": 163.6,
-    "callWall": 160,
+    "callWall": 170,
     "putWall": 155,
     "gammaFlip": 155,
     "netGEX": -0.0004,
@@ -1321,7 +1321,7 @@ window.WALLS = {
   },
   "MAS": {
     "spot": 70.47,
-    "callWall": 70,
+    "callWall": 75,
     "putWall": 55,
     "gammaFlip": 65,
     "netGEX": -0.0004,
@@ -1361,7 +1361,7 @@ window.WALLS = {
   },
   "TOL": {
     "spot": 146.68,
-    "callWall": 140,
+    "callWall": 150,
     "putWall": 130,
     "gammaFlip": 155,
     "netGEX": -0.0006,
@@ -1385,7 +1385,7 @@ window.WALLS = {
   },
   "PRAX": {
     "spot": 317.25,
-    "callWall": 260,
+    "callWall": 320,
     "putWall": 260,
     "gammaFlip": 260,
     "netGEX": -0.0001,
@@ -1393,7 +1393,7 @@ window.WALLS = {
   },
   "TVTX": {
     "spot": 27.87,
-    "callWall": 22,
+    "callWall": 30,
     "putWall": 25,
     "gammaFlip": 25,
     "netGEX": 0.0002,
@@ -1402,7 +1402,7 @@ window.WALLS = {
   "BMRN": {
     "spot": 54.59,
     "callWall": 60,
-    "putWall": 57,
+    "putWall": 50,
     "gammaFlip": 62,
     "netGEX": -0.0001,
     "updated": "2026-01-20"
@@ -1410,14 +1410,14 @@ window.WALLS = {
   "HALO": {
     "spot": 71.21,
     "callWall": 75,
-    "putWall": 75,
+    "putWall": 60,
     "gammaFlip": 70,
     "netGEX": -0.0003,
     "updated": "2026-01-20"
   },
   "ROIV": {
     "spot": 23.13,
-    "callWall": 23,
+    "callWall": 24,
     "putWall": 18,
     "gammaFlip": 10,
     "netGEX": -0.001,
@@ -1425,7 +1425,7 @@ window.WALLS = {
   },
   "EXEL": {
     "spot": 43.96,
-    "callWall": 40,
+    "callWall": 50,
     "putWall": 35,
     "gammaFlip": 43,
     "netGEX": -0.0002,
@@ -1434,14 +1434,14 @@ window.WALLS = {
   "REGN": {
     "spot": 733.04,
     "callWall": 820,
-    "putWall": 770,
+    "putWall": 730,
     "gammaFlip": 815,
     "netGEX": 0.0018,
     "updated": "2026-01-20"
   },
   "PCVX": {
     "spot": 46.59,
-    "callWall": 40,
+    "callWall": 55,
     "putWall": 40,
     "gammaFlip": 30,
     "netGEX": 0.0,
@@ -1449,7 +1449,7 @@ window.WALLS = {
   },
   "MDGL": {
     "spot": 501.68,
-    "callWall": 400,
+    "callWall": 580,
     "putWall": 400,
     "gammaFlip": 450,
     "netGEX": -0.0002,
@@ -1457,7 +1457,7 @@ window.WALLS = {
   },
   "XLP": {
     "spot": 82.11,
-    "callWall": 80,
+    "callWall": 82,
     "putWall": 78,
     "gammaFlip": 73,
     "netGEX": 0.0016,
@@ -1529,7 +1529,7 @@ window.WALLS = {
   },
   "CL": {
     "spot": 84.52,
-    "callWall": 82,
+    "callWall": 85,
     "putWall": 74,
     "gammaFlip": 82,
     "netGEX": -0.0017,
@@ -1545,7 +1545,7 @@ window.WALLS = {
   },
   "SOXX": {
     "spot": 342.47,
-    "callWall": 325,
+    "callWall": 347,
     "putWall": 275,
     "gammaFlip": 327,
     "netGEX": -0.0002,
@@ -1569,7 +1569,7 @@ window.WALLS = {
   },
   "LRCX": {
     "spot": 222.96,
-    "callWall": 220,
+    "callWall": 240,
     "putWall": 205,
     "gammaFlip": 222,
     "netGEX": -0.0085,
@@ -1577,7 +1577,7 @@ window.WALLS = {
   },
   "KLAC": {
     "spot": 1567.82,
-    "callWall": 1300,
+    "callWall": 1640,
     "putWall": 1200,
     "gammaFlip": 360,
     "netGEX": 0.0029,
@@ -1585,7 +1585,7 @@ window.WALLS = {
   },
   "TXN": {
     "spot": 191.58,
-    "callWall": 180,
+    "callWall": 192,
     "putWall": 185,
     "gammaFlip": 170,
     "netGEX": -0.0035,
@@ -1609,15 +1609,15 @@ window.WALLS = {
   },
   "AA": {
     "spot": 60.07,
-    "callWall": 50,
-    "putWall": 65,
+    "callWall": 70,
+    "putWall": 50,
     "gammaFlip": 54,
     "netGEX": 0.0002,
     "updated": "2026-01-20"
   },
   "CDE": {
     "spot": 22.58,
-    "callWall": 22,
+    "callWall": 25,
     "putWall": 18,
     "gammaFlip": 18,
     "netGEX": -0.0006,
@@ -1625,7 +1625,7 @@ window.WALLS = {
   },
   "HL": {
     "spot": 26.54,
-    "callWall": 25,
+    "callWall": 30,
     "putWall": 21,
     "gammaFlip": 22,
     "netGEX": -0.0008,
@@ -1633,7 +1633,7 @@ window.WALLS = {
   },
   "HCC": {
     "spot": 100.07,
-    "callWall": 80,
+    "callWall": 105,
     "putWall": 85,
     "gammaFlip": 80,
     "netGEX": -0.0006,
@@ -1649,7 +1649,7 @@ window.WALLS = {
   },
   "RGLD": {
     "spot": 265.12,
-    "callWall": 250,
+    "callWall": 300,
     "putWall": 230,
     "gammaFlip": 220,
     "netGEX": 0.0013,
@@ -1657,7 +1657,7 @@ window.WALLS = {
   },
   "NEM": {
     "spot": 114.12,
-    "callWall": 105,
+    "callWall": 120,
     "putWall": 110,
     "gammaFlip": 115,
     "netGEX": -0.0018,
@@ -1665,7 +1665,7 @@ window.WALLS = {
   },
   "CNR": {
     "spot": 97.11,
-    "callWall": 90,
+    "callWall": 100,
     "putWall": 80,
     "gammaFlip": 90,
     "netGEX": -0.0007,
@@ -1673,7 +1673,7 @@ window.WALLS = {
   },
   "CLF": {
     "spot": 14.0,
-    "callWall": 12,
+    "callWall": 15,
     "putWall": 12,
     "gammaFlip": 14,
     "netGEX": -0.0005,
@@ -1689,7 +1689,7 @@ window.WALLS = {
   },
   "XRT": {
     "spot": 90.42,
-    "callWall": 90,
+    "callWall": 91,
     "putWall": 87,
     "gammaFlip": 90,
     "netGEX": -0.0004,
@@ -1705,7 +1705,7 @@ window.WALLS = {
   },
   "BBW": {
     "spot": 70.62,
-    "callWall": 65,
+    "callWall": 75,
     "putWall": 62,
     "gammaFlip": 70,
     "netGEX": -0.0001,
@@ -1714,7 +1714,7 @@ window.WALLS = {
   "AEO": {
     "spot": 25.44,
     "callWall": 29,
-    "putWall": 25,
+    "putWall": 24,
     "gammaFlip": 18,
     "netGEX": 0.0002,
     "updated": "2026-01-20"
@@ -1729,7 +1729,7 @@ window.WALLS = {
   },
   "BURL": {
     "spot": 306.31,
-    "callWall": 305,
+    "callWall": 325,
     "putWall": 230,
     "gammaFlip": 260,
     "netGEX": 0.0025,
@@ -1745,8 +1745,8 @@ window.WALLS = {
   },
   "DG": {
     "spot": 148.74,
-    "callWall": 139,
-    "putWall": 150,
+    "callWall": 150,
+    "putWall": 144,
     "gammaFlip": 144,
     "netGEX": 0.0037,
     "updated": "2026-01-20"
