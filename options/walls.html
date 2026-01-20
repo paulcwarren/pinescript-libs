@@ -13,8 +13,12 @@
 </head>
 <body>
   <h1>Option Walls Lookup</h1>
-  <input type="text" id="tickerInput" placeholder="Enter ticker" />
-  <button onclick="lookupTicker()">Lookup</button>
+
+  <!-- Wrap in form -->
+  <form id="lookupForm">
+    <input type="text" id="tickerInput" placeholder="Enter ticker" />
+    <button type="submit">Lookup</button>
+  </form>
 
   <div class="result" id="result"></div>
 
@@ -22,34 +26,42 @@
   <script src="walls.js"></script>
   <script>
     function lookupTicker() {
-      const ticker = document.getElementById("tickerInput").value.toUpperCase();
+      const tickerInput = document.getElementById("tickerInput");
+      const ticker = tickerInput.value.toUpperCase();
       const resultDiv = document.getElementById("result");
-
+  
       if (!window.WALLS) {
         resultDiv.innerHTML = '<span class="warning">Error: walls.js not loaded.</span>';
         return;
       }
-
+  
       const data = window.WALLS[ticker];
       if (!data) {
         resultDiv.innerHTML = `<span class="warning">No data found for ${ticker}</span>`;
-        return;
+      } else {
+        resultDiv.innerHTML = `
+          <strong>${ticker}</strong><br>
+          Spot Price: ${data.spot}<br>
+          Put Wall: ${data.putWall}<br>
+          Call Wall: ${data.callWall}<br>
+          Gamma Flip: ${data.gammaFlip}<br>
+          Expiry: ${data.expiry}
+        `;
       }
-
-      resultDiv.innerHTML = `
-        <strong>${ticker}</strong><br>
-        Spot Price: ${data.spot}<br>
-        Put Wall: ${data.putWall}<br>
-        Call Wall: ${data.callWall}<br>
-        Gamma Flip: ${data.gammaFlip}<br>
-        Expiry: ${data.expiry}
-      `;
+  
+      // Clear input and return focus
+      tickerInput.value = "";
+      tickerInput.focus();
     }
-
-    // Optional: press Enter to trigger lookup
-    document.getElementById("tickerInput").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") lookupTicker();
+  
+    // Handle form submit
+    document.getElementById("lookupForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent page reload
+      lookupTicker();
     });
+  
+    // Optional: auto-focus input on page load
+    document.getElementById("tickerInput").focus();
   </script>
-</body>
+  </body>
 </html>
