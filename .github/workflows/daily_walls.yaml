@@ -34,6 +34,4 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add options/walls.js
         git diff --cached --quiet || git commit -m "Update walls.js [skip ci]"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git push https://x-access-token:${{ secrets.PAT }}@github.com/paulcwarren/pinescript-libs.git HEAD:main
