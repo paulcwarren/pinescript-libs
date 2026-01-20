@@ -46,82 +46,62 @@ def calc_gamma(S, K, sigma, T, r=0.015):
 # -----------------------------
 # CORE LOGIC: Process Option Chain
 # -----------------------------
+# -----------------------------
+# CORE LOGIC: Process Option Chain
+# -----------------------------
 def get_gex_and_walls(ticker):
-    # Normalize ticker symbol (e.g. BRK.B -> BRK-B)
     yf_ticker = TICKER_MAP.get(ticker, ticker)
     stock = yf.Ticker(yf_ticker)
     
     try:
         # 1. Get Spot Price
-        # We use history(period="1d") because it's generally more reliable than info['regularMarketPrice']
         hist = stock.history(period="1d")
-        if hist.empty:
-            logging.warning(f"No price data found for {ticker}")
-            return None
+        if hist.empty: return None
         spot = hist['Close'].iloc[-1]
         
         # 2. Get Expirations
         exps = stock.options
-        if not exps:
-            logging.warning(f"No option chain found for {ticker}")
-            return None
-            
-        # Limit to the next N expirations to simulate "Total Gamma" without over-fetching
+        if not exps: return None
         target_exps = exps[:EXPIRATION_LOOKAHEAD]
         
         all_calls = []
         all_puts = []
 
-        # 3. Iterate Expirations and Collect Chains
         for exp_date_str in target_exps:
             try:
                 chain = stock.option_chain(exp_date_str)
-                
-                # Calculate Time to Expiry (T) in years
                 exp_date = datetime.strptime(exp_date_str, "%Y-%m-%d").date()
                 today = date.today()
                 days_to_expiry = (exp_date - today).days
-                
-                # If 0DTE (or negative due to timezone diffs), clamp to 0.5 days
                 T = max(days_to_expiry, 0.5) / 365.0
                 
-                # Calls
                 calls = chain.calls.copy()
-                calls['type'] = 'call'
-                calls['T'] = T
+                calls['type'] = 'call'; calls['T'] = T
                 all_calls.append(calls)
                 
-                # Puts
                 puts = chain.puts.copy()
-                puts['type'] = 'put'
-                puts['T'] = T
+                puts['type'] = 'put'; puts['T'] = T
                 all_puts.append(puts)
-            except Exception as e:
-                # Sometimes specific expirations fail in YF, skip them but continue processing
+            except:
                 continue
 
-        if not all_calls or not all_puts:
-            return None
+        if not all_calls or not all_puts: return None
 
-        # Concatenate all chains into single DataFrames
         df_calls = pd.concat(all_calls)
         df_puts = pd.concat(all_puts)
         
-        # 4. Data Cleaning
-        # Fill missing Implied Volatility with a placeholder (0.2 = 20%) to allow GEX calc
+        # Fill NaN IV
         df_calls['impliedVolatility'] = df_calls['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         df_puts['impliedVolatility'] = df_puts['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         
-        # 5. Calculate Gamma (Vectorized)
-        # Call GEX = Negative (Dealer Short Gamma)
-        # Put GEX = Positive (Dealer Long Gamma)
+        # Calc Gamma & GEX
         df_calls['gamma'] = calc_gamma(spot, df_calls['strike'], df_calls['impliedVolatility'], df_calls['T'])
         df_calls['GEX'] = df_calls['gamma'] * df_calls['openInterest'] * (spot**2) * -1 
         
         df_puts['gamma'] = calc_gamma(spot, df_puts['strike'], df_puts['impliedVolatility'], df_puts['T'])
         df_puts['GEX'] = df_puts['gamma'] * df_puts['openInterest'] * (spot**2) 
         
-        # 6. Aggregate by Strike
+        # Aggregate
         call_stats = df_calls.groupby('strike')[['openInterest', 'GEX']].sum()
         put_stats = df_puts.groupby('strike')[['openInterest', 'GEX']].sum()
         
@@ -132,41 +112,56 @@ def get_gex_and_walls(ticker):
         total_df['put_GEX'] = put_stats['GEX'].fillna(0)
         total_df['total_GEX'] = total_df['call_GEX'] + total_df['put_GEX']
         
-        # 7. Identify Walls
-        # Call Wall: Strike with highest Net Call Open Interest
-        call_wall = total_df['call_OI'].idxmax()
+        # ---------------------------------------------------------
+        # THE FIX: Apply "Smart Bounds" for Wall Detection
+        # ---------------------------------------------------------
+        # We only look for walls within +/- 25% of spot price.
+        # This filters out the "Doomsday Puts" at strike $10.
+        lower_bound = spot * 0.75
+        upper_bound = spot * 1.25
         
-        # Put Wall: Strike with highest Net Put Open Interest
-        put_wall = total_df['put_OI'].idxmax()
+        relevant_range = total_df[
+            (total_df.index >= lower_bound) & 
+            (total_df.index <= upper_bound)
+        ]
+
+        if relevant_range.empty:
+            # Fallback to full range if data is weird
+            relevant_range = total_df
+
+        # Call Wall = Max Call OI in relevant range
+        call_wall = relevant_range['call_OI'].idxmax()
         
-        # 8. Identify Gamma Flip
-        # Find where cumulative GEX crosses zero
+        # Put Wall = Max Put OI in relevant range
+        put_wall = relevant_range['put_OI'].idxmax()
+        
+        # Gamma Flip (remains calculated on full range for accuracy, 
+        # but we search for the flip closest to spot)
         cumulative_gex = total_df['total_GEX'].cumsum()
         signs = np.sign(cumulative_gex).diff().fillna(0)
         flips = signs[signs != 0].index
         
         if len(flips) > 0:
-            # Find flip closest to current spot price
             gamma_flip = min(flips, key=lambda x: abs(x - spot))
         else:
-            # Fallback: Strike with lowest absolute GEX
             gamma_flip = total_df['total_GEX'].abs().idxmin()
 
-        logging.info(f"Done {ticker}: Spot={spot:.2f} | PutWall={put_wall} | CallWall={call_wall}")
+        # LOGGING for sanity check
+        logging.info(f"{ticker}: Spot {spot:.0f} | PutWall {put_wall} | CallWall {call_wall}")
 
         return {
             "spot": round(float(spot), 2),
             "callWall": int(call_wall),
             "putWall": int(put_wall),
             "gammaFlip": int(gamma_flip),
-            "netGEX": round(total_df['total_GEX'].sum() / 10**9, 4), # Billions
+            "netGEX": round(total_df['total_GEX'].sum() / 10**9, 4),
             "updated": date.today().isoformat()
         }
 
     except Exception as e:
         logging.error(f"Error calculating walls for {ticker}: {e}")
         return None
-
+        
 # -----------------------------
 # HELPER: Fetch ETF Holdings
 # -----------------------------
