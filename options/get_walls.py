@@ -121,8 +121,8 @@ def get_gex_and_walls(ticker):
         # ---------------------------------------------------------
         
         # Define search bounds (+/- 25% of spot) to avoid deep OTM weirdness
-        lower_bound = spot * 0.75
-        upper_bound = spot * 1.25
+        lower_bound = spot * 0.90
+        upper_bound = spot * 1.10
         
         # CALL WALL: Max Call OI >= Spot (Resistance)
         call_candidates = total_df[
