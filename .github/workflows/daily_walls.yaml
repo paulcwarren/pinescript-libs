@@ -32,12 +32,14 @@ jobs:
         python options/get_walls.py
 
     - name: Commit and push updated walls.js
+      env:
+        PAT: ${{ secrets.PINESCRIPT_LIBS_TOKEN }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add options/walls.js
         git diff --cached --quiet || git commit -m "Update walls.js [skip ci]"
-        git push https://x-access-token:${{ secrets.PINESCRIPT_LIBS_TOKEN }}@github.com/paulcwarren/pinescript-libs.git HEAD:main
+        git push https://x-access-token:${PAT}@github.com/paulcwarren/pinescript-libs.git HEAD:main
 
     # - name: Commit and push updated walls.js
     #   run: |
