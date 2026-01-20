@@ -29,7 +29,7 @@ window.WALLS = {
   },
   "BLOK": {
     "spot": 65.81,
-    "putWall": 59.0,
+    "putWall": 56.0,
     "callWall": 75.0,
     "gammaFlip": 30.0,
     "expiry": "2026-02-20"
@@ -514,7 +514,7 @@ window.WALLS = {
     "spot": 18.0,
     "putWall": 13.0,
     "callWall": 18.0,
-    "gammaFlip": null,
+    "gammaFlip": 3.0,
     "expiry": "2026-02-20"
   },
   "NE": {
@@ -696,7 +696,7 @@ window.WALLS = {
     "spot": 94.7,
     "putWall": 90.0,
     "callWall": 105.0,
-    "gammaFlip": 90.0,
+    "gammaFlip": 45.0,
     "expiry": "2026-02-20"
   },
   "XLI": {
@@ -1214,7 +1214,7 @@ window.WALLS = {
     "spot": 317.25,
     "putWall": 230.0,
     "callWall": 320.0,
-    "gammaFlip": 30.0,
+    "gammaFlip": 35.0,
     "expiry": "2026-02-20"
   },
   "TVTX": {
