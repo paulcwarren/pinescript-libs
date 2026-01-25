@@ -1,1379 +1,1379 @@
 window.WALLS = {
   "SPY": {
-    "spot": 688.98,
-    "callWall": 695,
-    "putWall": 670,
-    "gammaFlip": 691,
-    "netGEX": -1.0823,
-    "updated": "2026-01-23"
+    "spot": 689.23,
+    "callWall": 700,
+    "putWall": 680,
+    "gammaFlip": 693,
+    "netGEX": -0.4922,
+    "updated": "2026-01-25"
   },
   "QQQ": {
-    "spot": 620.76,
+    "spot": 622.72,
     "callWall": 623,
-    "putWall": 600,
-    "gammaFlip": 620,
-    "netGEX": -1.1443,
-    "updated": "2026-01-23"
+    "putWall": 580,
+    "gammaFlip": 623,
+    "netGEX": -0.8518,
+    "updated": "2026-01-25"
   },
   "IWM": {
-    "spot": 269.79,
-    "callWall": 271,
+    "spot": 264.81,
+    "callWall": 268,
     "putWall": 260,
-    "gammaFlip": 267,
-    "netGEX": -0.4965,
-    "updated": "2026-01-23"
+    "gammaFlip": 239,
+    "netGEX": 0.1131,
+    "updated": "2026-01-25"
   },
   "DIA": {
-    "spot": 493.69,
+    "spot": 490.93,
     "callWall": 505,
-    "putWall": 475,
-    "gammaFlip": 490,
-    "netGEX": -0.0988,
-    "updated": "2026-01-23"
+    "putWall": 455,
+    "gammaFlip": 492,
+    "netGEX": -0.0265,
+    "updated": "2026-01-25"
   },
   "BLOK": {
-    "spot": 62.94,
+    "spot": 63.07,
     "callWall": 65,
     "putWall": 60,
-    "gammaFlip": 70,
+    "gammaFlip": 65,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "HOOD": {
-    "spot": 106.25,
-    "callWall": 111,
+    "spot": 106.99,
+    "callWall": 110,
     "putWall": 100,
-    "gammaFlip": 65,
-    "netGEX": 0.0209,
-    "updated": "2026-01-23"
+    "gammaFlip": 120,
+    "netGEX": -0.0024,
+    "updated": "2026-01-25"
   },
   "GLXY": {
-    "spot": 30.92,
-    "callWall": 33,
+    "spot": 31.9,
+    "callWall": 35,
     "putWall": 30,
     "gammaFlip": 30,
-    "netGEX": 0.0012,
-    "updated": "2026-01-23"
+    "netGEX": -0.0004,
+    "updated": "2026-01-25"
   },
   "HUT": {
-    "spot": 55.12,
+    "spot": 58.22,
     "callWall": 60,
     "putWall": 55,
-    "gammaFlip": 45,
-    "netGEX": 0.0055,
-    "updated": "2026-01-23"
+    "gammaFlip": 65,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "CIFR": {
-    "spot": 17.39,
+    "spot": 17.57,
     "callWall": 18,
     "putWall": 16,
-    "gammaFlip": 10,
-    "netGEX": 0.0014,
-    "updated": "2026-01-23"
+    "gammaFlip": 9,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "IBM": {
-    "spot": 294.67,
-    "callWall": 315,
-    "putWall": 285,
-    "gammaFlip": 380,
-    "netGEX": 0.0051,
-    "updated": "2026-01-23"
+    "spot": 292.44,
+    "callWall": 305,
+    "putWall": 280,
+    "gammaFlip": 220,
+    "netGEX": 0.0012,
+    "updated": "2026-01-25"
   },
   "NU": {
-    "spot": 18.0,
+    "spot": 18.04,
     "callWall": 19,
-    "putWall": 16,
-    "gammaFlip": 17,
-    "netGEX": -0.0026,
-    "updated": "2026-01-23"
+    "putWall": 17,
+    "gammaFlip": 20,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "CLSK": {
-    "spot": 13.19,
+    "spot": 13.71,
     "callWall": 14,
     "putWall": 12,
     "gammaFlip": 13,
-    "netGEX": -0.0021,
-    "updated": "2026-01-23"
+    "netGEX": -0.0013,
+    "updated": "2026-01-25"
   },
   "COIN": {
-    "spot": 223.14,
-    "callWall": 242,
-    "putWall": 220,
-    "gammaFlip": 420,
-    "netGEX": 0.0218,
-    "updated": "2026-01-23"
+    "spot": 216.95,
+    "callWall": 230,
+    "putWall": 200,
+    "gammaFlip": 237,
+    "netGEX": -0.0098,
+    "updated": "2026-01-25"
   },
   "PYPL": {
-    "spot": 57.15,
+    "spot": 56.62,
     "callWall": 60,
     "putWall": 55,
-    "gammaFlip": 57,
-    "netGEX": -0.0154,
-    "updated": "2026-01-23"
+    "gammaFlip": 60,
+    "netGEX": -0.0035,
+    "updated": "2026-01-25"
   },
   "IGV": {
-    "spot": 96.94,
+    "spot": 97.71,
     "callWall": 105,
     "putWall": 95,
     "gammaFlip": 75,
-    "netGEX": 0.0095,
-    "updated": "2026-01-23"
+    "netGEX": 0.0005,
+    "updated": "2026-01-25"
   },
   "MSFT": {
-    "spot": 451.14,
-    "callWall": 460,
+    "spot": 465.95,
+    "callWall": 500,
     "putWall": 430,
-    "gammaFlip": 455,
-    "netGEX": -0.1567,
-    "updated": "2026-01-23"
+    "gammaFlip": 460,
+    "netGEX": -0.1434,
+    "updated": "2026-01-25"
   },
   "PLTR": {
-    "spot": 165.9,
-    "callWall": 180,
-    "putWall": 150,
-    "gammaFlip": 130,
-    "netGEX": 0.0219,
-    "updated": "2026-01-23"
+    "spot": 169.6,
+    "callWall": 170,
+    "putWall": 160,
+    "gammaFlip": 175,
+    "netGEX": -0.0532,
+    "updated": "2026-01-25"
   },
   "CRM": {
-    "spot": 228.09,
-    "callWall": 240,
+    "spot": 228.05,
+    "callWall": 230,
     "putWall": 220,
-    "gammaFlip": 310,
-    "netGEX": 0.008,
-    "updated": "2026-01-23"
+    "gammaFlip": 170,
+    "netGEX": 0.0067,
+    "updated": "2026-01-25"
   },
   "ORCL": {
-    "spot": 178.18,
-    "callWall": 190,
-    "putWall": 170,
-    "gammaFlip": 305,
-    "netGEX": 0.0377,
-    "updated": "2026-01-23"
+    "spot": 177.16,
+    "callWall": 185,
+    "putWall": 160,
+    "gammaFlip": 105,
+    "netGEX": 0.0084,
+    "updated": "2026-01-25"
   },
   "INTU": {
-    "spot": 547.69,
+    "spot": 563.97,
     "callWall": 570,
-    "putWall": 530,
+    "putWall": 510,
     "gammaFlip": 570,
-    "netGEX": -0.0015,
-    "updated": "2026-01-23"
+    "netGEX": -0.0021,
+    "updated": "2026-01-25"
   },
   "APP": {
-    "spot": 521.94,
-    "callWall": 545,
+    "spot": 524.41,
+    "callWall": 530,
     "putWall": 500,
     "gammaFlip": 1010,
-    "netGEX": 0.0669,
-    "updated": "2026-01-23"
+    "netGEX": 0.0141,
+    "updated": "2026-01-25"
   },
   "ADBE": {
-    "spot": 299.73,
+    "spot": 301.07,
     "callWall": 310,
-    "putWall": 285,
-    "gammaFlip": 300,
-    "netGEX": -0.0162,
-    "updated": "2026-01-23"
+    "putWall": 290,
+    "gammaFlip": 420,
+    "netGEX": 0.0102,
+    "updated": "2026-01-25"
   },
   "NOW": {
-    "spot": 128.56,
-    "callWall": 130,
-    "putWall": 122,
-    "gammaFlip": 130,
-    "netGEX": -0.0021,
-    "updated": "2026-01-23"
+    "spot": 133.11,
+    "callWall": 145,
+    "putWall": 130,
+    "gammaFlip": 140,
+    "netGEX": -0.0017,
+    "updated": "2026-01-25"
   },
   "PANW": {
-    "spot": 182.27,
-    "callWall": 200,
-    "putWall": 180,
-    "gammaFlip": 200,
-    "netGEX": -0.0088,
-    "updated": "2026-01-23"
+    "spot": 180.18,
+    "callWall": 195,
+    "putWall": 175,
+    "gammaFlip": 125,
+    "netGEX": -0.0144,
+    "updated": "2026-01-25"
   },
   "CRWD": {
-    "spot": 453.77,
+    "spot": 452.49,
     "callWall": 480,
-    "putWall": 450,
-    "gammaFlip": 300,
-    "netGEX": 0.0058,
-    "updated": "2026-01-23"
+    "putWall": 440,
+    "gammaFlip": 270,
+    "netGEX": 0.0112,
+    "updated": "2026-01-25"
   },
   "CLOU": {
-    "spot": 21.38,
+    "spot": 21.42,
     "callWall": 23,
     "putWall": 20,
-    "gammaFlip": 20,
+    "gammaFlip": 17,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "AKAM": {
-    "spot": 97.03,
+    "spot": 95.08,
     "callWall": 100,
     "putWall": 90,
     "gammaFlip": 100,
-    "netGEX": -0.0014,
-    "updated": "2026-01-23"
+    "netGEX": -0.0013,
+    "updated": "2026-01-25"
   },
   "TWLO": {
-    "spot": 126.42,
+    "spot": 128.3,
     "callWall": 130,
-    "putWall": 120,
-    "gammaFlip": 120,
-    "netGEX": -0.0012,
-    "updated": "2026-01-23"
+    "putWall": 116,
+    "gammaFlip": 128,
+    "netGEX": -0.0021,
+    "updated": "2026-01-25"
   },
   "ZM": {
-    "spot": 84.65,
-    "callWall": 90,
-    "putWall": 77,
-    "gammaFlip": 83,
-    "netGEX": -0.003,
-    "updated": "2026-01-23"
+    "spot": 85.78,
+    "callWall": 89,
+    "putWall": 81,
+    "gammaFlip": 85,
+    "netGEX": -0.0016,
+    "updated": "2026-01-25"
   },
   "SHOP": {
-    "spot": 137.64,
+    "spot": 137.89,
     "callWall": 140,
-    "putWall": 130,
-    "gammaFlip": 125,
-    "netGEX": 0.0091,
-    "updated": "2026-01-23"
+    "putWall": 125,
+    "gammaFlip": 210,
+    "netGEX": 0.0015,
+    "updated": "2026-01-25"
   },
   "HUBS": {
-    "spot": 319.5,
+    "spot": 322.78,
     "callWall": 350,
     "putWall": 300,
-    "gammaFlip": 720,
+    "gammaFlip": 650,
     "netGEX": 0.0009,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "PAYC": {
-    "spot": 152.57,
-    "callWall": 165,
+    "spot": 152.29,
+    "callWall": 155,
     "putWall": 150,
     "gammaFlip": 90,
-    "netGEX": 0.0002,
-    "updated": "2026-01-23"
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "DBX": {
-    "spot": 26.24,
+    "spot": 26.3,
     "callWall": 28,
-    "putWall": 26,
-    "gammaFlip": 23,
-    "netGEX": 0.0,
-    "updated": "2026-01-23"
+    "putWall": 25,
+    "gammaFlip": 28,
+    "netGEX": -0.0,
+    "updated": "2026-01-25"
   },
   "WK": {
-    "spot": 81.69,
+    "spot": 81.44,
     "callWall": 85,
     "putWall": 80,
     "gammaFlip": 85,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "WDAY": {
-    "spot": 188.18,
+    "spot": 189.26,
     "callWall": 192,
-    "putWall": 182,
-    "gammaFlip": 170,
-    "netGEX": -0.0023,
-    "updated": "2026-01-23"
+    "putWall": 185,
+    "gammaFlip": 192,
+    "netGEX": -0.0016,
+    "updated": "2026-01-25"
   },
   "MAGS": {
-    "spot": 64.93,
-    "callWall": 68,
-    "putWall": 64,
-    "gammaFlip": 62,
-    "netGEX": 0.0004,
-    "updated": "2026-01-23"
+    "spot": 65.62,
+    "callWall": 70,
+    "putWall": 63,
+    "gammaFlip": 66,
+    "netGEX": -0.0008,
+    "updated": "2026-01-25"
   },
   "GOOGL": {
-    "spot": 330.54,
+    "spot": 327.93,
     "callWall": 335,
     "putWall": 310,
-    "gammaFlip": 332,
-    "netGEX": -0.1784,
-    "updated": "2026-01-23"
+    "gammaFlip": 340,
+    "netGEX": -0.0483,
+    "updated": "2026-01-25"
   },
   "AAPL": {
-    "spot": 248.35,
-    "callWall": 260,
-    "putWall": 240,
-    "gammaFlip": 250,
-    "netGEX": -0.1075,
-    "updated": "2026-01-23"
+    "spot": 248.04,
+    "callWall": 270,
+    "putWall": 230,
+    "gammaFlip": 267,
+    "netGEX": -0.034,
+    "updated": "2026-01-25"
   },
   "TSLA": {
-    "spot": 449.36,
+    "spot": 449.06,
     "callWall": 450,
-    "putWall": 420,
-    "gammaFlip": 440,
-    "netGEX": -0.8554,
-    "updated": "2026-01-23"
+    "putWall": 435,
+    "gammaFlip": 465,
+    "netGEX": -0.1155,
+    "updated": "2026-01-25"
   },
   "AMZN": {
-    "spot": 234.34,
+    "spot": 239.16,
     "callWall": 250,
     "putWall": 230,
-    "gammaFlip": 232,
-    "netGEX": -0.2588,
-    "updated": "2026-01-23"
+    "gammaFlip": 240,
+    "netGEX": -0.2018,
+    "updated": "2026-01-25"
   },
   "NVDA": {
-    "spot": 184.84,
+    "spot": 187.67,
     "callWall": 190,
     "putWall": 180,
-    "gammaFlip": 185,
-    "netGEX": -0.4625,
-    "updated": "2026-01-23"
+    "gammaFlip": 190,
+    "netGEX": -0.396,
+    "updated": "2026-01-25"
   },
   "QTUM": {
-    "spot": 119.35,
+    "spot": 118.69,
     "callWall": 120,
     "putWall": 110,
     "gammaFlip": 125,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "MU": {
-    "spot": 397.58,
+    "spot": 399.65,
     "callWall": 400,
-    "putWall": 360,
-    "gammaFlip": 380,
-    "netGEX": -0.1247,
-    "updated": "2026-01-23"
+    "putWall": 365,
+    "gammaFlip": 400,
+    "netGEX": -0.0306,
+    "updated": "2026-01-25"
   },
   "NTNX": {
-    "spot": 42.98,
+    "spot": 42.81,
     "callWall": 45,
     "putWall": 40,
-    "gammaFlip": 50,
+    "gammaFlip": 52,
     "netGEX": -0.0003,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "RTX": {
-    "spot": 196.34,
+    "spot": 195.93,
     "callWall": 205,
-    "putWall": 190,
-    "gammaFlip": 195,
-    "netGEX": -0.0283,
-    "updated": "2026-01-23"
+    "putWall": 195,
+    "gammaFlip": 200,
+    "netGEX": -0.0252,
+    "updated": "2026-01-25"
   },
   "NOK": {
-    "spot": 6.5,
-    "callWall": 6,
+    "spot": 6.77,
+    "callWall": 7,
     "putWall": 6,
-    "gammaFlip": 6,
-    "netGEX": -0.0006,
-    "updated": "2026-01-23"
+    "gammaFlip": 7,
+    "netGEX": -0.0001,
+    "updated": "2026-01-25"
   },
   "BIDU": {
-    "spot": 162.52,
+    "spot": 161.44,
     "callWall": 165,
     "putWall": 150,
-    "gammaFlip": 152,
-    "netGEX": -0.0274,
-    "updated": "2026-01-23"
+    "gammaFlip": 157,
+    "netGEX": -0.0078,
+    "updated": "2026-01-25"
   },
   "URA": {
-    "spot": 56.56,
-    "callWall": 57,
-    "putWall": 54,
+    "spot": 57.0,
+    "callWall": 60,
+    "putWall": 52,
     "gammaFlip": 55,
-    "netGEX": -0.0012,
-    "updated": "2026-01-23"
+    "netGEX": -0.0005,
+    "updated": "2026-01-25"
   },
   "OKLO": {
-    "spot": 90.93,
-    "callWall": 100,
-    "putWall": 90,
-    "gammaFlip": 100,
-    "netGEX": -0.0009,
-    "updated": "2026-01-23"
-  },
-  "UEC": {
-    "spot": 19.86,
-    "callWall": 20,
-    "putWall": 18,
-    "gammaFlip": 15,
-    "netGEX": -0.0007,
-    "updated": "2026-01-23"
-  },
-  "LEU": {
-    "spot": 302.37,
-    "callWall": 320,
-    "putWall": 290,
-    "gammaFlip": 350,
-    "netGEX": -0.0012,
-    "updated": "2026-01-23"
-  },
-  "UFO": {
-    "spot": 46.85,
-    "callWall": 50,
-    "putWall": 45,
-    "gammaFlip": 31,
-    "netGEX": -0.0006,
-    "updated": "2026-01-23"
-  },
-  "PL": {
-    "spot": 26.06,
-    "callWall": 28,
-    "putWall": 25,
-    "gammaFlip": 30,
-    "netGEX": -0.0001,
-    "updated": "2026-01-23"
-  },
-  "RKLB": {
-    "spot": 87.98,
+    "spot": 87.63,
     "callWall": 95,
     "putWall": 80,
-    "gammaFlip": 34,
+    "gammaFlip": 40,
+    "netGEX": 0.0,
+    "updated": "2026-01-25"
+  },
+  "UEC": {
+    "spot": 18.62,
+    "callWall": 20,
+    "putWall": 17,
+    "gammaFlip": 17,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
+  },
+  "LEU": {
+    "spot": 296.19,
+    "callWall": 300,
+    "putWall": 290,
+    "gammaFlip": 360,
+    "netGEX": -0.0011,
+    "updated": "2026-01-25"
+  },
+  "UFO": {
+    "spot": 46.95,
+    "callWall": 50,
+    "putWall": 45,
+    "gammaFlip": 32,
+    "netGEX": -0.0006,
+    "updated": "2026-01-25"
+  },
+  "PL": {
+    "spot": 26.94,
+    "callWall": 29,
+    "putWall": 25,
+    "gammaFlip": 28,
     "netGEX": -0.0003,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
+  },
+  "RKLB": {
+    "spot": 88.9,
+    "callWall": 90,
+    "putWall": 85,
+    "gammaFlip": 91,
+    "netGEX": -0.0044,
+    "updated": "2026-01-25"
   },
   "SATS": {
-    "spot": 127.97,
+    "spot": 126.5,
     "callWall": 135,
-    "putWall": 125,
+    "putWall": 120,
     "gammaFlip": 128,
-    "netGEX": -0.0016,
-    "updated": "2026-01-23"
+    "netGEX": -0.0003,
+    "updated": "2026-01-25"
   },
   "GRMN": {
-    "spot": 206.12,
+    "spot": 206.17,
     "callWall": 210,
     "putWall": 195,
     "gammaFlip": 210,
     "netGEX": -0.0007,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "TRMB": {
-    "spot": 71.48,
+    "spot": 71.19,
     "callWall": 75,
     "putWall": 70,
-    "gammaFlip": 80,
+    "gammaFlip": 75,
     "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "SIRI": {
-    "spot": 20.67,
+    "spot": 20.51,
     "callWall": 21,
     "putWall": 20,
-    "gammaFlip": 20,
-    "netGEX": -0.0051,
-    "updated": "2026-01-23"
+    "gammaFlip": 21,
+    "netGEX": -0.0035,
+    "updated": "2026-01-25"
   },
   "VSAT": {
-    "spot": 44.23,
+    "spot": 43.28,
     "callWall": 45,
-    "putWall": 40,
+    "putWall": 39,
     "gammaFlip": 37,
     "netGEX": -0.0012,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "ASTS": {
-    "spot": 116.37,
+    "spot": 113.57,
     "callWall": 120,
-    "putWall": 105,
-    "gammaFlip": 98,
-    "netGEX": -0.0144,
-    "updated": "2026-01-23"
+    "putWall": 110,
+    "gammaFlip": 115,
+    "netGEX": -0.0041,
+    "updated": "2026-01-25"
   },
   "ROBO": {
-    "spot": 74.15,
+    "spot": 73.76,
     "callWall": 75,
     "putWall": 70,
-    "gammaFlip": 68,
-    "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "gammaFlip": 63,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "NOVT": {
-    "spot": 138.31,
+    "spot": 137.89,
     "callWall": 145,
     "putWall": 125,
-    "gammaFlip": 95,
+    "gammaFlip": 70,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "ISRG": {
-    "spot": 525.81,
+    "spot": 523.99,
     "callWall": 565,
-    "putWall": 510,
-    "gammaFlip": 400,
-    "netGEX": 0.0058,
-    "updated": "2026-01-23"
+    "putWall": 500,
+    "gammaFlip": 565,
+    "netGEX": -0.0009,
+    "updated": "2026-01-25"
   },
   "ROK": {
-    "spot": 425.32,
+    "spot": 417.84,
     "callWall": 430,
-    "putWall": 390,
+    "putWall": 380,
     "gammaFlip": 410,
-    "netGEX": -0.0031,
-    "updated": "2026-01-23"
+    "netGEX": -0.0034,
+    "updated": "2026-01-25"
   },
   "TER": {
-    "spot": 229.14,
-    "callWall": 240,
+    "spot": 229.18,
+    "callWall": 230,
     "putWall": 215,
-    "gammaFlip": 227,
-    "netGEX": -0.0024,
-    "updated": "2026-01-23"
+    "gammaFlip": 230,
+    "netGEX": -0.0006,
+    "updated": "2026-01-25"
   },
   "OIH": {
-    "spot": 341.54,
-    "callWall": 355,
+    "spot": 339.9,
+    "callWall": 340,
     "putWall": 310,
     "gammaFlip": 315,
-    "netGEX": -0.0019,
-    "updated": "2026-01-23"
+    "netGEX": -0.0021,
+    "updated": "2026-01-25"
   },
   "SLB": {
-    "spot": 49.32,
+    "spot": 49.15,
     "callWall": 50,
     "putWall": 45,
-    "gammaFlip": 31,
-    "netGEX": -0.0031,
-    "updated": "2026-01-23"
+    "gammaFlip": 47,
+    "netGEX": -0.0016,
+    "updated": "2026-01-25"
   },
   "BKR": {
-    "spot": 54.46,
+    "spot": 53.92,
     "callWall": 55,
-    "putWall": 50,
+    "putWall": 49,
     "gammaFlip": 50,
-    "netGEX": -0.0023,
-    "updated": "2026-01-23"
+    "netGEX": -0.0024,
+    "updated": "2026-01-25"
   },
   "HAL": {
-    "spot": 33.72,
+    "spot": 33.95,
     "callWall": 34,
     "putWall": 31,
-    "gammaFlip": 33,
-    "netGEX": -0.0057,
-    "updated": "2026-01-23"
+    "gammaFlip": 35,
+    "netGEX": -0.0001,
+    "updated": "2026-01-25"
   },
   "FTI": {
-    "spot": 53.97,
+    "spot": 54.26,
     "callWall": 55,
     "putWall": 50,
     "gammaFlip": 40,
     "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "TS": {
-    "spot": 44.36,
+    "spot": 44.43,
     "callWall": 45,
     "putWall": 40,
-    "gammaFlip": 42,
-    "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "gammaFlip": 45,
+    "netGEX": -0.0001,
+    "updated": "2026-01-25"
   },
   "WFRD": {
-    "spot": 89.12,
+    "spot": 89.93,
     "callWall": 90,
     "putWall": 85,
     "gammaFlip": 80,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "RIG": {
-    "spot": 4.7,
+    "spot": 4.83,
     "callWall": 5,
     "putWall": 4,
-    "gammaFlip": 2,
-    "netGEX": -0.0005,
-    "updated": "2026-01-23"
+    "gammaFlip": 4,
+    "netGEX": -0.0006,
+    "updated": "2026-01-25"
   },
   "NOV": {
-    "spot": 18.48,
+    "spot": 18.39,
     "callWall": 20,
     "putWall": 17,
     "gammaFlip": 9,
     "netGEX": -0.0003,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "NE": {
-    "spot": 33.91,
+    "spot": 33.73,
     "callWall": 35,
     "putWall": 32,
     "gammaFlip": 32,
     "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "LBRT": {
-    "spot": 21.51,
+    "spot": 20.84,
     "callWall": 22,
-    "putWall": 20,
-    "gammaFlip": 13,
+    "putWall": 19,
+    "gammaFlip": 20,
     "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "XLK": {
-    "spot": 144.88,
+    "spot": 145.09,
     "callWall": 148,
     "putWall": 140,
-    "gammaFlip": 148,
-    "netGEX": -0.0089,
-    "updated": "2026-01-23"
+    "gammaFlip": 147,
+    "netGEX": -0.0094,
+    "updated": "2026-01-25"
   },
   "AVGO": {
-    "spot": 325.49,
+    "spot": 320.05,
     "callWall": 350,
-    "putWall": 320,
-    "gammaFlip": 270,
-    "netGEX": 0.1642,
-    "updated": "2026-01-23"
+    "putWall": 315,
+    "gammaFlip": 255,
+    "netGEX": 0.0581,
+    "updated": "2026-01-25"
   },
   "AMD": {
-    "spot": 253.73,
+    "spot": 259.68,
     "callWall": 260,
-    "putWall": 230,
-    "gammaFlip": 235,
-    "netGEX": -0.1721,
-    "updated": "2026-01-23"
+    "putWall": 240,
+    "gammaFlip": 260,
+    "netGEX": -0.0512,
+    "updated": "2026-01-25"
   },
   "CSCO": {
-    "spot": 74.33,
-    "callWall": 76,
+    "spot": 74.59,
+    "callWall": 77,
     "putWall": 70,
-    "gammaFlip": 74,
-    "netGEX": -0.0114,
-    "updated": "2026-01-23"
+    "gammaFlip": 77,
+    "netGEX": -0.003,
+    "updated": "2026-01-25"
   },
   "XLF": {
-    "spot": 53.81,
-    "callWall": 57,
+    "spot": 53.07,
+    "callWall": 55,
     "putWall": 53,
-    "gammaFlip": 44,
-    "netGEX": 0.0061,
-    "updated": "2026-01-23"
+    "gammaFlip": 43,
+    "netGEX": 0.0011,
+    "updated": "2026-01-25"
   },
   "BRK-B": {
-    "spot": 484.49,
-    "callWall": 505,
-    "putWall": 482,
-    "gammaFlip": 350,
-    "netGEX": 0.2365,
-    "updated": "2026-01-23"
+    "spot": 478.97,
+    "callWall": 490,
+    "putWall": 470,
+    "gammaFlip": 400,
+    "netGEX": 0.035,
+    "updated": "2026-01-25"
   },
   "JPM": {
-    "spot": 303.63,
-    "callWall": 320,
-    "putWall": 300,
-    "gammaFlip": 367,
-    "netGEX": 0.0258,
-    "updated": "2026-01-23"
-  },
-  "V": {
-    "spot": 326.36,
-    "callWall": 340,
-    "putWall": 320,
-    "gammaFlip": 425,
-    "netGEX": 0.0019,
-    "updated": "2026-01-23"
-  },
-  "MA": {
-    "spot": 532.86,
-    "callWall": 555,
-    "putWall": 505,
-    "gammaFlip": 420,
-    "netGEX": 0.0226,
-    "updated": "2026-01-23"
-  },
-  "BAC": {
-    "spot": 52.45,
-    "callWall": 55,
-    "putWall": 52,
-    "gammaFlip": 35,
-    "netGEX": 0.0271,
-    "updated": "2026-01-23"
-  },
-  "WFC": {
-    "spot": 88.04,
-    "callWall": 92,
-    "putWall": 80,
-    "gammaFlip": 89,
-    "netGEX": -0.0034,
-    "updated": "2026-01-23"
-  },
-  "GS": {
-    "spot": 954.65,
-    "callWall": 1000,
-    "putWall": 940,
-    "gammaFlip": 1170,
-    "netGEX": 0.0105,
-    "updated": "2026-01-23"
-  },
-  "MS": {
-    "spot": 183.05,
-    "callWall": 190,
-    "putWall": 180,
-    "gammaFlip": 150,
-    "netGEX": 0.0046,
-    "updated": "2026-01-23"
-  },
-  "C": {
-    "spot": 115.66,
-    "callWall": 122,
-    "putWall": 115,
-    "gammaFlip": 118,
-    "netGEX": -0.0053,
-    "updated": "2026-01-23"
-  },
-  "AXP": {
-    "spot": 368.02,
-    "callWall": 382,
-    "putWall": 350,
-    "gammaFlip": 365,
-    "netGEX": -0.0292,
-    "updated": "2026-01-23"
-  },
-  "XLY": {
-    "spot": 122.62,
-    "callWall": 125,
-    "putWall": 115,
-    "gammaFlip": 125,
-    "netGEX": -0.0003,
-    "updated": "2026-01-23"
-  },
-  "HD": {
-    "spot": 381.03,
-    "callWall": 395,
-    "putWall": 370,
-    "gammaFlip": 380,
-    "netGEX": -0.0223,
-    "updated": "2026-01-23"
-  },
-  "MCD": {
-    "spot": 306.03,
+    "spot": 297.72,
     "callWall": 310,
     "putWall": 290,
+    "gammaFlip": 230,
+    "netGEX": 0.0069,
+    "updated": "2026-01-25"
+  },
+  "V": {
+    "spot": 326.18,
+    "callWall": 342,
+    "putWall": 305,
+    "gammaFlip": 260,
+    "netGEX": 0.0019,
+    "updated": "2026-01-25"
+  },
+  "MA": {
+    "spot": 524.74,
+    "callWall": 555,
+    "putWall": 520,
+    "gammaFlip": 475,
+    "netGEX": 0.0068,
+    "updated": "2026-01-25"
+  },
+  "BAC": {
+    "spot": 51.72,
+    "callWall": 55,
+    "putWall": 50,
+    "gammaFlip": 67,
+    "netGEX": 0.0052,
+    "updated": "2026-01-25"
+  },
+  "WFC": {
+    "spot": 86.96,
+    "callWall": 91,
+    "putWall": 86,
+    "gammaFlip": 96,
+    "netGEX": -0.0006,
+    "updated": "2026-01-25"
+  },
+  "GS": {
+    "spot": 918.88,
+    "callWall": 1000,
+    "putWall": 830,
+    "gammaFlip": 580,
+    "netGEX": 0.0253,
+    "updated": "2026-01-25"
+  },
+  "MS": {
+    "spot": 179.0,
+    "callWall": 190,
+    "putWall": 177,
+    "gammaFlip": 150,
+    "netGEX": 0.0019,
+    "updated": "2026-01-25"
+  },
+  "C": {
+    "spot": 113.59,
+    "callWall": 117,
+    "putWall": 109,
+    "gammaFlip": 123,
+    "netGEX": -0.0007,
+    "updated": "2026-01-25"
+  },
+  "AXP": {
+    "spot": 361.69,
+    "callWall": 382,
+    "putWall": 350,
+    "gammaFlip": 382,
+    "netGEX": -0.004,
+    "updated": "2026-01-25"
+  },
+  "XLY": {
+    "spot": 123.13,
+    "callWall": 125,
+    "putWall": 117,
+    "gammaFlip": 105,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
+  },
+  "HD": {
+    "spot": 383.77,
+    "callWall": 405,
+    "putWall": 370,
+    "gammaFlip": 385,
+    "netGEX": -0.0041,
+    "updated": "2026-01-25"
+  },
+  "MCD": {
+    "spot": 309.25,
+    "callWall": 310,
+    "putWall": 295,
     "gammaFlip": 310,
-    "netGEX": -0.0085,
-    "updated": "2026-01-23"
+    "netGEX": -0.0132,
+    "updated": "2026-01-25"
   },
   "BKNG": {
-    "spot": 5150.9,
-    "callWall": 5350,
+    "spot": 5098.5,
+    "callWall": 5300,
     "putWall": 4900,
-    "gammaFlip": 5165,
-    "netGEX": -0.0126,
-    "updated": "2026-01-23"
+    "gammaFlip": 5900,
+    "netGEX": 0.0019,
+    "updated": "2026-01-25"
   },
   "TJX": {
-    "spot": 153.42,
+    "spot": 153.24,
     "callWall": 162,
     "putWall": 152,
     "gammaFlip": 141,
-    "netGEX": 0.004,
-    "updated": "2026-01-23"
+    "netGEX": 0.0014,
+    "updated": "2026-01-25"
   },
   "LOW": {
-    "spot": 274.95,
-    "callWall": 275,
-    "putWall": 267,
-    "gammaFlip": 275,
-    "netGEX": -0.0063,
-    "updated": "2026-01-23"
+    "spot": 276.73,
+    "callWall": 280,
+    "putWall": 265,
+    "gammaFlip": 280,
+    "netGEX": -0.0015,
+    "updated": "2026-01-25"
   },
   "SBUX": {
-    "spot": 95.83,
-    "callWall": 99,
-    "putWall": 89,
-    "gammaFlip": 89,
-    "netGEX": -0.0105,
-    "updated": "2026-01-23"
+    "spot": 97.62,
+    "callWall": 100,
+    "putWall": 90,
+    "gammaFlip": 55,
+    "netGEX": -0.002,
+    "updated": "2026-01-25"
   },
   "DASH": {
-    "spot": 207.65,
-    "callWall": 227,
+    "spot": 207.23,
+    "callWall": 225,
     "putWall": 205,
-    "gammaFlip": 227,
-    "netGEX": -0.0007,
-    "updated": "2026-01-23"
+    "gammaFlip": 220,
+    "netGEX": -0.0024,
+    "updated": "2026-01-25"
   },
   "ORLY": {
-    "spot": 98.88,
+    "spot": 99.23,
     "callWall": 100,
     "putWall": 95,
     "gammaFlip": 109,
-    "netGEX": -0.0008,
-    "updated": "2026-01-23"
+    "netGEX": -0.0009,
+    "updated": "2026-01-25"
   },
   "XLI": {
-    "spot": 165.5,
+    "spot": 164.22,
     "callWall": 169,
     "putWall": 162,
-    "gammaFlip": 142,
-    "netGEX": 0.0153,
-    "updated": "2026-01-23"
+    "gammaFlip": 147,
+    "netGEX": 0.0109,
+    "updated": "2026-01-25"
   },
   "GE": {
-    "spot": 295.0,
+    "spot": 293.87,
     "callWall": 320,
-    "putWall": 290,
+    "putWall": 280,
     "gammaFlip": 180,
-    "netGEX": 0.0385,
-    "updated": "2026-01-23"
+    "netGEX": 0.0032,
+    "updated": "2026-01-25"
   },
   "CAT": {
-    "spot": 648.41,
-    "callWall": 675,
-    "putWall": 627,
-    "gammaFlip": 642,
-    "netGEX": -0.0525,
-    "updated": "2026-01-23"
+    "spot": 626.62,
+    "callWall": 660,
+    "putWall": 615,
+    "gammaFlip": 715,
+    "netGEX": -0.0053,
+    "updated": "2026-01-25"
   },
   "GEV": {
-    "spot": 661.67,
+    "spot": 657.78,
     "callWall": 700,
-    "putWall": 612,
-    "gammaFlip": 460,
-    "netGEX": 0.0006,
-    "updated": "2026-01-23"
+    "putWall": 600,
+    "gammaFlip": 700,
+    "netGEX": -0.005,
+    "updated": "2026-01-25"
   },
   "BA": {
-    "spot": 251.41,
+    "spot": 252.15,
     "callWall": 260,
     "putWall": 240,
-    "gammaFlip": 250,
-    "netGEX": -0.0645,
-    "updated": "2026-01-23"
+    "gammaFlip": 232,
+    "netGEX": 0.0059,
+    "updated": "2026-01-25"
   },
   "UBER": {
-    "spot": 82.56,
+    "spot": 82.31,
     "callWall": 90,
     "putWall": 80,
-    "gammaFlip": 60,
-    "netGEX": 0.0079,
-    "updated": "2026-01-23"
+    "gammaFlip": 90,
+    "netGEX": -0.0019,
+    "updated": "2026-01-25"
   },
   "UNP": {
-    "spot": 231.37,
-    "callWall": 240,
+    "spot": 229.65,
+    "callWall": 245,
     "putWall": 215,
-    "gammaFlip": 210,
-    "netGEX": -0.0008,
-    "updated": "2026-01-23"
+    "gammaFlip": 235,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "HON": {
-    "spot": 222.54,
+    "spot": 221.46,
     "callWall": 225,
-    "putWall": 215,
+    "putWall": 210,
     "gammaFlip": 205,
-    "netGEX": -0.0134,
-    "updated": "2026-01-23"
+    "netGEX": -0.0023,
+    "updated": "2026-01-25"
   },
   "ETN": {
-    "spot": 334.04,
+    "spot": 331.22,
     "callWall": 350,
     "putWall": 310,
-    "gammaFlip": 335,
-    "netGEX": -0.0057,
-    "updated": "2026-01-23"
+    "gammaFlip": 345,
+    "netGEX": -0.0034,
+    "updated": "2026-01-25"
   },
   "DE": {
-    "spot": 522.38,
+    "spot": 514.43,
     "callWall": 530,
     "putWall": 500,
-    "gammaFlip": 517,
-    "netGEX": -0.0054,
-    "updated": "2026-01-23"
+    "gammaFlip": 477,
+    "netGEX": -0.0021,
+    "updated": "2026-01-25"
   },
   "XLE": {
-    "spot": 48.91,
-    "callWall": 49,
-    "putWall": 46,
-    "gammaFlip": 49,
-    "netGEX": -0.0333,
-    "updated": "2026-01-23"
+    "spot": 49.19,
+    "callWall": 50,
+    "putWall": 47,
+    "gammaFlip": 40,
+    "netGEX": 0.0102,
+    "updated": "2026-01-25"
   },
   "XOM": {
-    "spot": 133.64,
+    "spot": 134.97,
     "callWall": 135,
-    "putWall": 122,
-    "gammaFlip": 121,
-    "netGEX": -0.0665,
-    "updated": "2026-01-23"
+    "putWall": 130,
+    "gammaFlip": 134,
+    "netGEX": -0.018,
+    "updated": "2026-01-25"
   },
   "CVX": {
-    "spot": 166.66,
+    "spot": 166.72,
     "callWall": 170,
     "putWall": 165,
-    "gammaFlip": 160,
-    "netGEX": -0.0346,
-    "updated": "2026-01-23"
+    "gammaFlip": 165,
+    "netGEX": -0.0158,
+    "updated": "2026-01-25"
   },
   "COP": {
-    "spot": 96.88,
-    "callWall": 104,
-    "putWall": 94,
-    "gammaFlip": 120,
-    "netGEX": 0.0017,
-    "updated": "2026-01-23"
+    "spot": 98.35,
+    "callWall": 100,
+    "putWall": 98,
+    "gammaFlip": 99,
+    "netGEX": -0.0043,
+    "updated": "2026-01-25"
   },
   "WMB": {
-    "spot": 63.72,
-    "callWall": 64,
-    "putWall": 58,
+    "spot": 64.96,
+    "callWall": 65,
+    "putWall": 61,
     "gammaFlip": 61,
-    "netGEX": -0.0032,
-    "updated": "2026-01-23"
+    "netGEX": -0.0024,
+    "updated": "2026-01-25"
   },
   "EOG": {
-    "spot": 106.32,
+    "spot": 108.33,
     "callWall": 110,
-    "putWall": 100,
-    "gammaFlip": 113,
-    "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "putWall": 104,
+    "gammaFlip": 110,
+    "netGEX": -0.0006,
+    "updated": "2026-01-25"
   },
   "KMI": {
-    "spot": 29.69,
+    "spot": 29.57,
     "callWall": 30,
     "putWall": 27,
-    "gammaFlip": 27,
-    "netGEX": -0.0029,
-    "updated": "2026-01-23"
+    "gammaFlip": 28,
+    "netGEX": -0.0018,
+    "updated": "2026-01-25"
   },
   "PSX": {
-    "spot": 141.93,
+    "spot": 141.54,
     "callWall": 145,
-    "putWall": 136,
-    "gammaFlip": 142,
-    "netGEX": -0.0013,
-    "updated": "2026-01-23"
+    "putWall": 130,
+    "gammaFlip": 140,
+    "netGEX": -0.0007,
+    "updated": "2026-01-25"
   },
   "VLO": {
-    "spot": 186.89,
-    "callWall": 187,
-    "putWall": 170,
-    "gammaFlip": 190,
-    "netGEX": -0.0015,
-    "updated": "2026-01-23"
+    "spot": 187.09,
+    "callWall": 200,
+    "putWall": 177,
+    "gammaFlip": 195,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "MPC": {
-    "spot": 175.76,
+    "spot": 175.38,
     "callWall": 185,
     "putWall": 175,
     "gammaFlip": 190,
-    "netGEX": -0.002,
-    "updated": "2026-01-23"
+    "netGEX": -0.0019,
+    "updated": "2026-01-25"
   },
   "XLC": {
-    "spot": 116.25,
+    "spot": 116.96,
     "callWall": 120,
     "putWall": 116,
     "gammaFlip": 112,
-    "netGEX": 0.0007,
-    "updated": "2026-01-23"
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "META": {
-    "spot": 647.63,
-    "callWall": 660,
+    "spot": 658.76,
+    "callWall": 700,
     "putWall": 600,
-    "gammaFlip": 645,
-    "netGEX": -0.4827,
-    "updated": "2026-01-23"
+    "gammaFlip": 660,
+    "netGEX": -0.1675,
+    "updated": "2026-01-25"
   },
   "GOOG": {
-    "spot": 330.84,
-    "callWall": 335,
+    "spot": 328.43,
+    "callWall": 330,
     "putWall": 320,
-    "gammaFlip": 335,
-    "netGEX": -0.109,
-    "updated": "2026-01-23"
+    "gammaFlip": 355,
+    "netGEX": -0.0073,
+    "updated": "2026-01-25"
   },
   "NFLX": {
-    "spot": 83.54,
+    "spot": 86.12,
     "callWall": 90,
     "putWall": 80,
-    "gammaFlip": 70,
-    "netGEX": 0.0586,
-    "updated": "2026-01-23"
+    "gammaFlip": 87,
+    "netGEX": -0.0478,
+    "updated": "2026-01-25"
   },
   "CMCSA": {
-    "spot": 29.23,
+    "spot": 29.3,
     "callWall": 30,
     "putWall": 27,
     "gammaFlip": 29,
-    "netGEX": -0.0059,
-    "updated": "2026-01-23"
+    "netGEX": -0.0032,
+    "updated": "2026-01-25"
   },
   "DIS": {
-    "spot": 113.21,
+    "spot": 110.98,
     "callWall": 120,
     "putWall": 110,
-    "gammaFlip": 114,
-    "netGEX": -0.0154,
-    "updated": "2026-01-23"
+    "gammaFlip": 123,
+    "netGEX": -0.0004,
+    "updated": "2026-01-25"
   },
   "TTWO": {
-    "spot": 241.1,
-    "callWall": 257,
+    "spot": 245.73,
+    "callWall": 252,
     "putWall": 225,
-    "gammaFlip": 262,
-    "netGEX": 0.0024,
-    "updated": "2026-01-23"
+    "gammaFlip": 237,
+    "netGEX": 0.0034,
+    "updated": "2026-01-25"
   },
   "TMUS": {
-    "spot": 185.39,
-    "callWall": 192,
-    "putWall": 185,
-    "gammaFlip": 222,
-    "netGEX": 0.0001,
-    "updated": "2026-01-23"
+    "spot": 186.03,
+    "callWall": 195,
+    "putWall": 182,
+    "gammaFlip": 192,
+    "netGEX": -0.0027,
+    "updated": "2026-01-25"
   },
   "VZ": {
-    "spot": 39.48,
-    "callWall": 40,
-    "putWall": 37,
-    "gammaFlip": 39,
-    "netGEX": -0.0214,
-    "updated": "2026-01-23"
+    "spot": 39.52,
+    "callWall": 42,
+    "putWall": 38,
+    "gammaFlip": 41,
+    "netGEX": -0.006,
+    "updated": "2026-01-25"
   },
   "T": {
-    "spot": 23.58,
-    "callWall": 24,
+    "spot": 23.59,
+    "callWall": 25,
     "putWall": 23,
     "gammaFlip": 24,
-    "netGEX": -0.0018,
-    "updated": "2026-01-23"
+    "netGEX": -0.0028,
+    "updated": "2026-01-25"
   },
   "XLV": {
-    "spot": 158.29,
+    "spot": 157.48,
     "callWall": 159,
     "putWall": 150,
     "gammaFlip": 160,
-    "netGEX": -0.0025,
-    "updated": "2026-01-23"
+    "netGEX": -0.002,
+    "updated": "2026-01-25"
   },
   "LLY": {
-    "spot": 1087.38,
-    "callWall": 1100,
-    "putWall": 990,
-    "gammaFlip": 1070,
-    "netGEX": -0.1191,
-    "updated": "2026-01-23"
+    "spot": 1064.29,
+    "callWall": 1080,
+    "putWall": 1015,
+    "gammaFlip": 1120,
+    "netGEX": -0.0129,
+    "updated": "2026-01-25"
   },
   "JNJ": {
-    "spot": 218.49,
-    "callWall": 220,
-    "putWall": 212,
-    "gammaFlip": 205,
-    "netGEX": -0.0396,
-    "updated": "2026-01-23"
-  },
-  "ABBV": {
-    "spot": 218.11,
+    "spot": 220.14,
     "callWall": 230,
     "putWall": 210,
-    "gammaFlip": 215,
-    "netGEX": -0.0148,
-    "updated": "2026-01-23"
+    "gammaFlip": 217,
+    "netGEX": -0.0049,
+    "updated": "2026-01-25"
+  },
+  "ABBV": {
+    "spot": 219.26,
+    "callWall": 230,
+    "putWall": 210,
+    "gammaFlip": 220,
+    "netGEX": -0.0036,
+    "updated": "2026-01-25"
   },
   "UNH": {
-    "spot": 354.47,
+    "spot": 356.26,
     "callWall": 360,
     "putWall": 330,
-    "gammaFlip": 345,
-    "netGEX": -0.1346,
-    "updated": "2026-01-23"
+    "gammaFlip": 255,
+    "netGEX": -0.0304,
+    "updated": "2026-01-25"
   },
   "MRK": {
-    "spot": 109.18,
+    "spot": 108.18,
     "callWall": 113,
-    "putWall": 109,
-    "gammaFlip": 108,
-    "netGEX": -0.0155,
-    "updated": "2026-01-23"
+    "putWall": 108,
+    "gammaFlip": 111,
+    "netGEX": -0.0207,
+    "updated": "2026-01-25"
   },
   "ABT": {
-    "spot": 108.61,
-    "callWall": 118,
+    "spot": 107.42,
+    "callWall": 110,
     "putWall": 105,
-    "gammaFlip": 100,
-    "netGEX": 0.0047,
-    "updated": "2026-01-23"
+    "gammaFlip": 124,
+    "netGEX": 0.0013,
+    "updated": "2026-01-25"
   },
   "TMO": {
-    "spot": 639.45,
+    "spot": 625.98,
     "callWall": 640,
-    "putWall": 627,
-    "gammaFlip": 630,
-    "netGEX": -0.0036,
-    "updated": "2026-01-23"
+    "putWall": 575,
+    "gammaFlip": 622,
+    "netGEX": 0.0018,
+    "updated": "2026-01-25"
   },
   "AMGN": {
-    "spot": 347.07,
-    "callWall": 355,
-    "putWall": 322,
-    "gammaFlip": 335,
-    "netGEX": -0.017,
-    "updated": "2026-01-23"
+    "spot": 344.75,
+    "callWall": 350,
+    "putWall": 330,
+    "gammaFlip": 330,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "GILD": {
-    "spot": 131.14,
-    "callWall": 132,
+    "spot": 135.93,
+    "callWall": 136,
     "putWall": 123,
-    "gammaFlip": 125,
-    "netGEX": -0.0031,
-    "updated": "2026-01-23"
+    "gammaFlip": 130,
+    "netGEX": -0.001,
+    "updated": "2026-01-25"
   },
   "XLU": {
-    "spot": 42.71,
+    "spot": 42.56,
     "callWall": 44,
     "putWall": 42,
-    "gammaFlip": 46,
-    "netGEX": 0.0029,
-    "updated": "2026-01-23"
+    "gammaFlip": 39,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "NEE": {
-    "spot": 85.07,
-    "callWall": 87,
+    "spot": 84.81,
+    "callWall": 86,
     "putWall": 81,
-    "gammaFlip": 84,
-    "netGEX": -0.0086,
-    "updated": "2026-01-23"
+    "gammaFlip": 85,
+    "netGEX": -0.0021,
+    "updated": "2026-01-25"
   },
   "CEG": {
-    "spot": 287.35,
+    "spot": 289.06,
     "callWall": 315,
     "putWall": 285,
     "gammaFlip": 240,
-    "netGEX": 0.0146,
-    "updated": "2026-01-23"
+    "netGEX": 0.0043,
+    "updated": "2026-01-25"
   },
   "SO": {
-    "spot": 87.51,
-    "callWall": 92,
+    "spot": 87.54,
+    "callWall": 91,
     "putWall": 84,
-    "gammaFlip": 88,
-    "netGEX": -0.0017,
-    "updated": "2026-01-23"
+    "gammaFlip": 90,
+    "netGEX": -0.0005,
+    "updated": "2026-01-25"
   },
   "DUK": {
-    "spot": 117.71,
+    "spot": 117.43,
     "callWall": 125,
     "putWall": 110,
     "gammaFlip": 120,
-    "netGEX": -0.0063,
-    "updated": "2026-01-23"
+    "netGEX": -0.0087,
+    "updated": "2026-01-25"
   },
   "AEP": {
-    "spot": 117.18,
+    "spot": 116.63,
     "callWall": 125,
     "putWall": 110,
     "gammaFlip": 120,
-    "netGEX": -0.0038,
-    "updated": "2026-01-23"
+    "netGEX": -0.004,
+    "updated": "2026-01-25"
   },
   "SRE": {
-    "spot": 85.75,
+    "spot": 85.94,
     "callWall": 90,
     "putWall": 85,
     "gammaFlip": 90,
-    "netGEX": -0.002,
-    "updated": "2026-01-23"
+    "netGEX": -0.0022,
+    "updated": "2026-01-25"
   },
   "VST": {
-    "spot": 160.36,
-    "callWall": 175,
+    "spot": 160.12,
+    "callWall": 170,
     "putWall": 145,
-    "gammaFlip": 162,
-    "netGEX": -0.0028,
-    "updated": "2026-01-23"
+    "gammaFlip": 170,
+    "netGEX": -0.0014,
+    "updated": "2026-01-25"
   },
   "D": {
-    "spot": 59.93,
-    "callWall": 60,
+    "spot": 59.6,
+    "callWall": 65,
     "putWall": 57,
     "gammaFlip": 60,
-    "netGEX": -0.0069,
-    "updated": "2026-01-23"
+    "netGEX": -0.008,
+    "updated": "2026-01-25"
   },
   "EXC": {
-    "spot": 44.6,
+    "spot": 44.06,
     "callWall": 47,
     "putWall": 42,
-    "gammaFlip": 46,
-    "netGEX": -0.0028,
-    "updated": "2026-01-23"
+    "gammaFlip": 47,
+    "netGEX": -0.0023,
+    "updated": "2026-01-25"
   },
   "XEL": {
-    "spot": 75.86,
+    "spot": 75.01,
     "callWall": 80,
     "putWall": 75,
-    "gammaFlip": 85,
-    "netGEX": -0.0006,
-    "updated": "2026-01-23"
+    "gammaFlip": 80,
+    "netGEX": -0.0007,
+    "updated": "2026-01-25"
   },
   "XLRE": {
-    "spot": 41.14,
+    "spot": 41.25,
     "callWall": 42,
     "putWall": 41,
-    "gammaFlip": 42,
-    "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "gammaFlip": 30,
+    "netGEX": 0.0008,
+    "updated": "2026-01-25"
   },
   "WELL": {
-    "spot": 181.96,
+    "spot": 183.68,
     "callWall": 200,
     "putWall": 175,
-    "gammaFlip": 170,
-    "netGEX": -0.0007,
-    "updated": "2026-01-23"
+    "gammaFlip": 195,
+    "netGEX": -0.0015,
+    "updated": "2026-01-25"
   },
   "PLD": {
-    "spot": 126.67,
+    "spot": 127.15,
     "callWall": 135,
     "putWall": 115,
     "gammaFlip": 135,
-    "netGEX": -0.0021,
-    "updated": "2026-01-23"
+    "netGEX": -0.0025,
+    "updated": "2026-01-25"
   },
   "AMT": {
-    "spot": 176.95,
+    "spot": 178.75,
     "callWall": 190,
     "putWall": 175,
-    "gammaFlip": 105,
-    "netGEX": 0.0001,
-    "updated": "2026-01-23"
+    "gammaFlip": 210,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "EQIX": {
-    "spot": 792.76,
+    "spot": 791.27,
     "callWall": 850,
     "putWall": 750,
     "gammaFlip": 400,
     "netGEX": 0.0103,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "SPG": {
-    "spot": 185.1,
+    "spot": 184.73,
     "callWall": 195,
     "putWall": 175,
     "gammaFlip": 190,
-    "netGEX": -0.0016,
-    "updated": "2026-01-23"
+    "netGEX": -0.002,
+    "updated": "2026-01-25"
   },
   "CBRE": {
-    "spot": 170.17,
-    "callWall": 180,
+    "spot": 169.23,
+    "callWall": 170,
     "putWall": 160,
     "gammaFlip": 170,
     "netGEX": -0.0011,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "O": {
-    "spot": 60.85,
+    "spot": 60.74,
     "callWall": 62,
     "putWall": 60,
     "gammaFlip": 60,
-    "netGEX": -0.0127,
-    "updated": "2026-01-23"
+    "netGEX": -0.0136,
+    "updated": "2026-01-25"
   },
   "DLR": {
-    "spot": 158.71,
+    "spot": 159.16,
     "callWall": 160,
     "putWall": 155,
-    "gammaFlip": 175,
-    "netGEX": 0.0002,
-    "updated": "2026-01-23"
+    "gammaFlip": 180,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "PSA": {
-    "spot": 286.58,
+    "spot": 282.63,
     "callWall": 300,
     "putWall": 260,
     "gammaFlip": 300,
-    "netGEX": -0.0014,
-    "updated": "2026-01-23"
+    "netGEX": -0.0012,
+    "updated": "2026-01-25"
   },
   "CCI": {
-    "spot": 86.19,
-    "callWall": 90,
+    "spot": 86.6,
+    "callWall": 95,
     "putWall": 82,
-    "gammaFlip": 100,
-    "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "gammaFlip": 95,
+    "netGEX": -0.0003,
+    "updated": "2026-01-25"
   },
   "XHB": {
-    "spot": 113.6,
-    "callWall": 118,
-    "putWall": 112,
+    "spot": 111.69,
+    "callWall": 112,
+    "putWall": 109,
     "gammaFlip": 97,
-    "netGEX": -0.0141,
-    "updated": "2026-01-23"
+    "netGEX": 0.001,
+    "updated": "2026-01-25"
   },
   "W": {
-    "spot": 110.15,
-    "callWall": 120,
-    "putWall": 100,
-    "gammaFlip": 112,
-    "netGEX": 0.001,
-    "updated": "2026-01-23"
+    "spot": 109.78,
+    "callWall": 115,
+    "putWall": 102,
+    "gammaFlip": 108,
+    "netGEX": -0.0002,
+    "updated": "2026-01-25"
   },
   "JCI": {
-    "spot": 114.51,
+    "spot": 113.59,
     "callWall": 120,
     "putWall": 105,
     "gammaFlip": 120,
-    "netGEX": -0.0048,
-    "updated": "2026-01-23"
+    "netGEX": -0.0045,
+    "updated": "2026-01-25"
   },
   "MAS": {
-    "spot": 69.9,
+    "spot": 68.73,
     "callWall": 70,
     "putWall": 65,
     "gammaFlip": 65,
     "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "ALLE": {
-    "spot": 166.92,
+    "spot": 166.8,
     "callWall": 175,
     "putWall": 160,
     "gammaFlip": 155,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "CARR": {
-    "spot": 57.44,
+    "spot": 57.3,
     "callWall": 62,
     "putWall": 55,
-    "gammaFlip": 65,
-    "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "gammaFlip": 62,
+    "netGEX": -0.0008,
+    "updated": "2026-01-25"
   },
   "CVCO": {
-    "spot": 683.83,
+    "spot": 667.29,
     "callWall": 700,
     "putWall": 660,
     "gammaFlip": 700,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "TT": {
-    "spot": 390.13,
+    "spot": 386.22,
     "callWall": 410,
     "putWall": 360,
-    "gammaFlip": 260,
+    "gammaFlip": 430,
     "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "TOL": {
-    "spot": 147.56,
+    "spot": 144.92,
     "callWall": 150,
     "putWall": 135,
-    "gammaFlip": 150,
-    "netGEX": -0.0012,
-    "updated": "2026-01-23"
+    "gammaFlip": 155,
+    "netGEX": -0.001,
+    "updated": "2026-01-25"
   },
   "XBI": {
-    "spot": 131.57,
-    "callWall": 135,
-    "putWall": 120,
-    "gammaFlip": 130,
-    "netGEX": -0.0059,
-    "updated": "2026-01-23"
+    "spot": 128.04,
+    "callWall": 134,
+    "putWall": 122,
+    "gammaFlip": 90,
+    "netGEX": 0.0022,
+    "updated": "2026-01-25"
   },
   "FOLD": {
     "spot": 14.27,
@@ -1381,398 +1381,398 @@ window.WALLS = {
     "putWall": 14,
     "gammaFlip": 14,
     "netGEX": 0.001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "PRAX": {
-    "spot": 304.38,
+    "spot": 311.71,
     "callWall": 320,
     "putWall": 300,
-    "gammaFlip": 270,
+    "gammaFlip": 310,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "TVTX": {
-    "spot": 29.73,
+    "spot": 29.44,
     "callWall": 30,
     "putWall": 27,
-    "gammaFlip": 12,
+    "gammaFlip": 10,
     "netGEX": 0.0002,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "BMRN": {
-    "spot": 57.18,
+    "spot": 56.21,
     "callWall": 60,
     "putWall": 55,
     "gammaFlip": 60,
-    "netGEX": -0.0004,
-    "updated": "2026-01-23"
+    "netGEX": -0.0003,
+    "updated": "2026-01-25"
   },
   "HALO": {
-    "spot": 71.29,
+    "spot": 69.22,
     "callWall": 75,
     "putWall": 65,
-    "gammaFlip": 70,
+    "gammaFlip": 65,
     "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "ROIV": {
-    "spot": 22.97,
+    "spot": 22.58,
     "callWall": 23,
     "putWall": 22,
-    "gammaFlip": 10,
-    "netGEX": -0.0011,
-    "updated": "2026-01-23"
+    "gammaFlip": 11,
+    "netGEX": -0.0012,
+    "updated": "2026-01-25"
   },
   "EXEL": {
-    "spot": 44.5,
+    "spot": 44.27,
     "callWall": 48,
-    "putWall": 44,
+    "putWall": 40,
     "gammaFlip": 44,
-    "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "netGEX": -0.0003,
+    "updated": "2026-01-25"
   },
   "REGN": {
-    "spot": 755.51,
+    "spot": 753.55,
     "callWall": 820,
     "putWall": 750,
-    "gammaFlip": 815,
-    "netGEX": 0.0014,
-    "updated": "2026-01-23"
+    "gammaFlip": 650,
+    "netGEX": 0.0024,
+    "updated": "2026-01-25"
   },
   "PCVX": {
-    "spot": 53.83,
+    "spot": 52.73,
     "callWall": 55,
     "putWall": 50,
     "gammaFlip": 50,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "MDGL": {
-    "spot": 498.04,
+    "spot": 480.45,
     "callWall": 500,
     "putWall": 450,
     "gammaFlip": 450,
-    "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "netGEX": 0.0,
+    "updated": "2026-01-25"
   },
   "XLP": {
-    "spot": 82.27,
-    "callWall": 83,
+    "spot": 82.91,
+    "callWall": 84,
     "putWall": 78,
-    "gammaFlip": 83,
-    "netGEX": -0.0002,
-    "updated": "2026-01-23"
+    "gammaFlip": 73,
+    "netGEX": 0.0009,
+    "updated": "2026-01-25"
   },
   "WMT": {
-    "spot": 117.83,
+    "spot": 117.73,
     "callWall": 124,
-    "putWall": 115,
+    "putWall": 113,
     "gammaFlip": 124,
-    "netGEX": -0.0067,
-    "updated": "2026-01-23"
+    "netGEX": -0.0063,
+    "updated": "2026-01-25"
   },
   "COST": {
-    "spot": 976.17,
+    "spot": 983.25,
     "callWall": 1000,
     "putWall": 900,
-    "gammaFlip": 940,
-    "netGEX": -0.1353,
-    "updated": "2026-01-23"
+    "gammaFlip": 975,
+    "netGEX": -0.0402,
+    "updated": "2026-01-25"
   },
   "PG": {
-    "spot": 149.93,
-    "callWall": 150,
-    "putWall": 135,
-    "gammaFlip": 140,
-    "netGEX": -0.048,
-    "updated": "2026-01-23"
+    "spot": 150.15,
+    "callWall": 155,
+    "putWall": 145,
+    "gammaFlip": 148,
+    "netGEX": -0.0117,
+    "updated": "2026-01-25"
   },
   "KO": {
-    "spot": 71.87,
+    "spot": 72.88,
     "callWall": 73,
     "putWall": 71,
-    "gammaFlip": 70,
-    "netGEX": -0.0431,
-    "updated": "2026-01-23"
+    "gammaFlip": 71,
+    "netGEX": -0.0165,
+    "updated": "2026-01-25"
   },
   "PM": {
-    "spot": 170.05,
-    "callWall": 175,
-    "putWall": 155,
-    "gammaFlip": 165,
-    "netGEX": -0.0048,
-    "updated": "2026-01-23"
+    "spot": 173.02,
+    "callWall": 180,
+    "putWall": 160,
+    "gammaFlip": 167,
+    "netGEX": -0.0047,
+    "updated": "2026-01-25"
   },
   "PEP": {
-    "spot": 144.4,
+    "spot": 144.58,
     "callWall": 150,
-    "putWall": 143,
-    "gammaFlip": 146,
-    "netGEX": -0.0096,
-    "updated": "2026-01-23"
+    "putWall": 142,
+    "gammaFlip": 148,
+    "netGEX": -0.0052,
+    "updated": "2026-01-25"
   },
   "MDLZ": {
-    "spot": 57.58,
-    "callWall": 58,
-    "putWall": 53,
+    "spot": 58.4,
+    "callWall": 60,
+    "putWall": 54,
     "gammaFlip": 56,
-    "netGEX": -0.001,
-    "updated": "2026-01-23"
+    "netGEX": -0.0017,
+    "updated": "2026-01-25"
   },
   "MO": {
-    "spot": 61.03,
+    "spot": 61.91,
     "callWall": 63,
-    "putWall": 58,
-    "gammaFlip": 57,
-    "netGEX": -0.0078,
-    "updated": "2026-01-23"
+    "putWall": 59,
+    "gammaFlip": 58,
+    "netGEX": -0.0041,
+    "updated": "2026-01-25"
   },
   "CL": {
-    "spot": 85.81,
-    "callWall": 86,
-    "putWall": 84,
-    "gammaFlip": 85,
-    "netGEX": -0.001,
-    "updated": "2026-01-23"
+    "spot": 86.66,
+    "callWall": 90,
+    "putWall": 80,
+    "gammaFlip": 83,
+    "netGEX": -0.0001,
+    "updated": "2026-01-25"
   },
   "MNST": {
-    "spot": 80.89,
+    "spot": 82.0,
     "callWall": 82,
     "putWall": 75,
     "gammaFlip": 80,
-    "netGEX": -0.0009,
-    "updated": "2026-01-23"
+    "netGEX": -0.0012,
+    "updated": "2026-01-25"
   },
   "SOXX": {
-    "spot": 348.67,
-    "callWall": 375,
-    "putWall": 320,
-    "gammaFlip": 352,
-    "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "spot": 344.71,
+    "callWall": 345,
+    "putWall": 325,
+    "gammaFlip": 292,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "AMAT": {
-    "spot": 318.79,
-    "callWall": 345,
+    "spot": 322.38,
+    "callWall": 340,
     "putWall": 300,
-    "gammaFlip": 247,
-    "netGEX": 0.0159,
-    "updated": "2026-01-23"
+    "gammaFlip": 345,
+    "netGEX": -0.0032,
+    "updated": "2026-01-25"
   },
   "NXPI": {
-    "spot": 236.75,
+    "spot": 232.48,
     "callWall": 250,
-    "putWall": 235,
-    "gammaFlip": 240,
-    "netGEX": -0.0035,
-    "updated": "2026-01-23"
+    "putWall": 215,
+    "gammaFlip": 250,
+    "netGEX": -0.0014,
+    "updated": "2026-01-25"
   },
   "LRCX": {
-    "spot": 220.7,
-    "callWall": 230,
+    "spot": 217.94,
+    "callWall": 220,
     "putWall": 215,
-    "gammaFlip": 257,
-    "netGEX": 0.0128,
-    "updated": "2026-01-23"
+    "gammaFlip": 120,
+    "netGEX": 0.0062,
+    "updated": "2026-01-25"
   },
   "KLAC": {
-    "spot": 1500.0,
-    "callWall": 1500,
+    "spot": 1512.78,
+    "callWall": 1560,
     "putWall": 1500,
-    "gammaFlip": 360,
-    "netGEX": 0.0075,
-    "updated": "2026-01-23"
+    "gammaFlip": 720,
+    "netGEX": 0.0073,
+    "updated": "2026-01-25"
   },
   "TXN": {
-    "spot": 194.99,
-    "callWall": 197,
-    "putWall": 180,
-    "gammaFlip": 175,
-    "netGEX": -0.0042,
-    "updated": "2026-01-23"
+    "spot": 193.31,
+    "callWall": 200,
+    "putWall": 187,
+    "gammaFlip": 187,
+    "netGEX": -0.0017,
+    "updated": "2026-01-25"
   },
   "ADI": {
-    "spot": 308.52,
+    "spot": 305.6,
     "callWall": 330,
-    "putWall": 300,
-    "gammaFlip": 307,
-    "netGEX": -0.0121,
-    "updated": "2026-01-23"
+    "putWall": 282,
+    "gammaFlip": 255,
+    "netGEX": 0.0044,
+    "updated": "2026-01-25"
   },
   "XME": {
-    "spot": 130.69,
+    "spot": 131.44,
     "callWall": 135,
     "putWall": 120,
     "gammaFlip": 125,
-    "netGEX": -0.006,
-    "updated": "2026-01-23"
+    "netGEX": -0.0045,
+    "updated": "2026-01-25"
   },
   "AA": {
-    "spot": 63.14,
+    "spot": 62.21,
     "callWall": 65,
     "putWall": 60,
-    "gammaFlip": 36,
-    "netGEX": 0.0004,
-    "updated": "2026-01-23"
+    "gammaFlip": 42,
+    "netGEX": 0.0018,
+    "updated": "2026-01-25"
   },
   "CDE": {
-    "spot": 25.77,
+    "spot": 26.11,
     "callWall": 27,
-    "putWall": 23,
+    "putWall": 25,
     "gammaFlip": 18,
-    "netGEX": -0.0009,
-    "updated": "2026-01-23"
+    "netGEX": -0.0004,
+    "updated": "2026-01-25"
   },
   "HL": {
-    "spot": 31.29,
-    "callWall": 30,
-    "putWall": 29,
+    "spot": 31.81,
+    "callWall": 35,
+    "putWall": 30,
     "gammaFlip": 20,
-    "netGEX": -0.001,
-    "updated": "2026-01-23"
+    "netGEX": -0.0005,
+    "updated": "2026-01-25"
   },
   "HCC": {
-    "spot": 98.33,
+    "spot": 98.37,
     "callWall": 100,
     "putWall": 90,
     "gammaFlip": 80,
-    "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "netGEX": -0.0001,
+    "updated": "2026-01-25"
   },
   "FCX": {
-    "spot": 58.85,
-    "callWall": 60,
+    "spot": 60.41,
+    "callWall": 63,
     "putWall": 55,
-    "gammaFlip": 49,
-    "netGEX": 0.0057,
-    "updated": "2026-01-23"
+    "gammaFlip": 63,
+    "netGEX": -0.0019,
+    "updated": "2026-01-25"
   },
   "RGLD": {
-    "spot": 287.83,
-    "callWall": 290,
-    "putWall": 260,
+    "spot": 293.09,
+    "callWall": 300,
+    "putWall": 270,
     "gammaFlip": 220,
-    "netGEX": 0.0004,
-    "updated": "2026-01-23"
+    "netGEX": 0.0003,
+    "updated": "2026-01-25"
   },
   "NEM": {
-    "spot": 121.69,
+    "spot": 124.31,
     "callWall": 125,
-    "putWall": 118,
+    "putWall": 112,
     "gammaFlip": 120,
-    "netGEX": -0.0013,
-    "updated": "2026-01-23"
+    "netGEX": -0.0004,
+    "updated": "2026-01-25"
   },
   "CNR": {
-    "spot": 100.75,
-    "callWall": 105,
+    "spot": 99.21,
+    "callWall": 100,
     "putWall": 95,
     "gammaFlip": 90,
     "netGEX": -0.0007,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "CLF": {
-    "spot": 14.34,
-    "callWall": 15,
-    "putWall": 13,
-    "gammaFlip": 12,
-    "netGEX": -0.0014,
-    "updated": "2026-01-23"
+    "spot": 15.09,
+    "callWall": 16,
+    "putWall": 14,
+    "gammaFlip": 14,
+    "netGEX": -0.001,
+    "updated": "2026-01-25"
   },
   "RS": {
-    "spot": 328.21,
+    "spot": 329.83,
     "callWall": 330,
     "putWall": 320,
     "gammaFlip": 300,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "XRT": {
-    "spot": 89.68,
-    "callWall": 91,
+    "spot": 88.86,
+    "callWall": 90,
     "putWall": 85,
-    "gammaFlip": 84,
-    "netGEX": 0.0023,
-    "updated": "2026-01-23"
+    "gammaFlip": 83,
+    "netGEX": 0.0022,
+    "updated": "2026-01-25"
   },
   "ANF": {
-    "spot": 97.46,
+    "spot": 96.3,
     "callWall": 105,
-    "putWall": 96,
-    "gammaFlip": 118,
-    "netGEX": 0.001,
-    "updated": "2026-01-23"
+    "putWall": 90,
+    "gammaFlip": 122,
+    "netGEX": 0.0004,
+    "updated": "2026-01-25"
   },
   "BBW": {
-    "spot": 63.71,
+    "spot": 63.35,
     "callWall": 65,
-    "putWall": 62,
+    "putWall": 57,
     "gammaFlip": 70,
     "netGEX": -0.0001,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "AEO": {
-    "spot": 25.14,
-    "callWall": 27,
-    "putWall": 25,
-    "gammaFlip": 37,
-    "netGEX": 0.0005,
-    "updated": "2026-01-23"
+    "spot": 24.14,
+    "callWall": 26,
+    "putWall": 24,
+    "gammaFlip": 29,
+    "netGEX": 0.0001,
+    "updated": "2026-01-25"
   },
   "REAL": {
-    "spot": 16.24,
+    "spot": 15.22,
     "callWall": 17,
     "putWall": 15,
     "gammaFlip": 15,
-    "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "netGEX": 0.0,
+    "updated": "2026-01-25"
   },
   "BURL": {
-    "spot": 299.94,
-    "callWall": 320,
+    "spot": 297.96,
+    "callWall": 305,
     "putWall": 290,
-    "gammaFlip": 255,
-    "netGEX": 0.0042,
-    "updated": "2026-01-23"
+    "gammaFlip": 350,
+    "netGEX": -0.0009,
+    "updated": "2026-01-25"
   },
   "FIVE": {
-    "spot": 191.33,
-    "callWall": 210,
+    "spot": 190.37,
+    "callWall": 200,
     "putWall": 175,
-    "gammaFlip": 120,
-    "netGEX": 0.0006,
-    "updated": "2026-01-23"
+    "gammaFlip": 30,
+    "netGEX": 0.0008,
+    "updated": "2026-01-25"
   },
   "DG": {
-    "spot": 144.6,
-    "callWall": 150,
+    "spot": 146.92,
+    "callWall": 148,
     "putWall": 144,
-    "gammaFlip": 144,
-    "netGEX": 0.0038,
-    "updated": "2026-01-23"
+    "gammaFlip": 148,
+    "netGEX": -0.0005,
+    "updated": "2026-01-25"
   },
   "EBAY": {
-    "spot": 93.88,
-    "callWall": 100,
+    "spot": 93.61,
+    "callWall": 94,
     "putWall": 87,
-    "gammaFlip": 91,
-    "netGEX": -0.0017,
-    "updated": "2026-01-23"
+    "gammaFlip": 93,
+    "netGEX": -0.0011,
+    "updated": "2026-01-25"
   },
   "RVLV": {
-    "spot": 29.99,
+    "spot": 29.23,
     "callWall": 30,
     "putWall": 30,
     "gammaFlip": 30,
     "netGEX": -0.0,
-    "updated": "2026-01-23"
+    "updated": "2026-01-25"
   },
   "MUSA": {
-    "spot": 429.43,
+    "spot": 431.95,
     "callWall": 450,
     "putWall": 400,
-    "gammaFlip": 450,
-    "netGEX": 0.0,
-    "updated": "2026-01-23"
+    "gammaFlip": 390,
+    "netGEX": -0.0,
+    "updated": "2026-01-25"
   }
 };
