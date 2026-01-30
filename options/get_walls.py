@@ -18,6 +18,11 @@ ETFS = [
     "XHB", "XBI", "XLP", "SOXX", "XME", "XRT"
 ]
 
+# --- NEW: Add your custom watchlist here ---
+EXTRA_TICKERS = [
+    "SNDK"
+]
+
 TOP_HOLDINGS_COUNT = 10   # Fetch top 10 stocks for each ETF
 EXPIRATION_LOOKAHEAD = 3  # Aggregate OI across next 3 expirations
 
@@ -117,10 +122,10 @@ def get_gex_and_walls(ticker):
         total_df['total_GEX'] = total_df['call_GEX'] + total_df['put_GEX']
         
         # ---------------------------------------------------------
-        # DIRECTIONAL WALL LOGIC
+        # DAY TRADING / DIRECTIONAL WALL LOGIC
         # ---------------------------------------------------------
         
-        # Define search bounds (+/- 25% of spot) to avoid deep OTM weirdness
+        # Tighter bounds (+/- 10%) for Day Trading relevance
         lower_bound = spot * 0.90
         upper_bound = spot * 1.10
         
@@ -221,7 +226,17 @@ if __name__ == "__main__":
                     processed_tickers.add(stock)
                     time.sleep(0.5) # Prevent Rate Limiting
 
-    # 3. Export
+    # 3. Process Extra Tickers (User Watchlist)
+    logging.info("--- Processing Extra Watchlist ---")
+    for ticker in EXTRA_TICKERS:
+        if ticker not in processed_tickers:
+            res = get_gex_and_walls(ticker)
+            if res:
+                walls_dict[ticker] = res
+            processed_tickers.add(ticker)
+            time.sleep(0.5)
+
+    # 4. Export
     js_text = "window.WALLS = " + json.dumps(walls_dict, indent=2) + ";"
     
     try:
