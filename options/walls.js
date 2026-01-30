@@ -1774,5 +1774,13 @@ window.WALLS = {
     "gammaFlip": 390,
     "netGEX": 0.0,
     "updated": "2026-01-30"
+  },
+  "SNDK": {
+    "spot": 539.3,
+    "callWall": 550,
+    "putWall": 500,
+    "gammaFlip": 530,
+    "netGEX": -0.0249,
+    "updated": "2026-01-30"
   }
 };
