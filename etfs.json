@@ -1,0 +1,10 @@
+{
+    "ETFS": [
+        "BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH",
+        "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE",
+        "XHB", "XBI", "XLP", "SOXX", "XME", "XRT"
+    ],
+    "EXTRA_TICKERS": [
+        "WDC", "SNDK"
+    ]
+}
