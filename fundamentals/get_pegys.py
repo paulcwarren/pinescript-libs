@@ -25,22 +25,29 @@ def get_pegy_data(symbol, etf_ticker):
         # 1. P/E Ratio
         pe = info.get('forwardPE') or info.get('trailingPE')
         
-        # 2. Yield (New Column)
-        div_yield = (info.get('dividendYield') or 0) * 100
+        # 2. Yield Logic - Normalize to whole number (e.g., 3.5 instead of 0.035)
+        raw_yield = info.get('dividendYield') or 0
+        if raw_yield < 1.0 and raw_yield != 0:
+            div_yield = raw_yield * 100
+        else:
+            div_yield = raw_yield
         
-        # 3. Growth Rate (The culprit for N/A)
-        # Try official growth first, then quarterly earnings growth, then 0
-        growth = info.get('earningsGrowth')
-        if growth is None:
-            growth = info.get('earningsQuarterlyGrowth') or 0
-        growth_pct = growth * 100
+        # 3. Growth Logic - Normalize to whole number (e.g., 15.0 instead of 0.15)
+        raw_growth = info.get('earningsGrowth')
+        if raw_growth is None:
+            raw_growth = info.get('earningsQuarterlyGrowth') or 0
         
-        # 4. Manual PEG Calculation (P/E divided by Growth)
-        peg = round(pe / growth_pct, 2) if pe and growth_pct > 0 else None
+        if abs(raw_growth) < 1.0 and raw_growth != 0:
+            growth_pct = raw_growth * 100
+        else:
+            growth_pct = raw_growth
         
-        # 5. Manual PEGY Calculation (P/E divided by Growth + Yield)
+        # 4. Denominator for PEGY
         denominator = growth_pct + div_yield
-        pegy = round(pe / denominator, 2) if pe and denominator > 0 else None
+        
+        # 5. PEG & PEGY Logic
+        peg = round(pe / growth_pct, 2) if pe and growth_pct > 0 else "Contraction"
+        pegy = round(pe / denominator, 2) if pe and denominator > 0 else "Contraction"
             
         return {
             "sector": info.get("sector", "N/A"),
@@ -50,12 +57,12 @@ def get_pegy_data(symbol, etf_ticker):
             "pe": round(pe, 2) if pe else "N/A",
             "growth": round(growth_pct, 2),
             "yield": round(div_yield, 2),
-            "peg": peg if peg else "N/A",
-            "pegy": pegy if pegy else "N/A"
+            "peg": peg,
+            "pegy": pegy
         }
     except:
         return None
-
+        
 def main():
     config = load_config()
     etf_list = config.get("ETFS", [])

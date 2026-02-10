@@ -1,4 +1,5 @@
 {
+    "INDEXES": ["SPY", "QQQ", "IWM", "DIA"],
     "ETFS": [
         "BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH",
         "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE",
