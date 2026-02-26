@@ -56,9 +56,18 @@
       
       <div>
         <div class="row"><span class="label">Spot Price</span> <span class="value" id="res-spot">--</span></div>
-        <div class="row"><span class="label">Call Wall (Res)</span> <span class="value" id="res-call" style="color: #e74c3c;">--</span></div>
-        <div class="row"><span class="label">Put Wall (Supp)</span> <span class="value" id="res-put" style="color: #27ae60;">--</span></div>
-        <div class="row"><span class="label">Gamma Flip Pivot</span> <span class="value" id="res-flip" style="color: #f39c12;">--</span></div>
+        <div class="row">
+            <span class="label">Call Wall (Res)</span> 
+            <span class="value"><span id="res-call" style="color: #e74c3c;">--</span> <small id="res-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+        </div>
+        <div class="row">
+            <span class="label">Put Wall (Supp)</span> 
+            <span class="value"><span id="res-put" style="color: #27ae60;">--</span> <small id="res-put-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+        </div>
+        <div class="row">
+            <span class="label">Gamma Flip Pivot</span> 
+            <span class="value"><span id="res-flip" style="color: #f39c12;">--</span> <small id="res-flip-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+        </div>
         <div class="row"><span class="label">Weighted Net GEX</span> <span class="value" id="res-gex">--</span></div>
       </div>
       <div class="footer" id="res-update">As of: --</div>
