@@ -5,7 +5,7 @@
   <title>Gamma Edge | Dashboard</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f4f7f6; color: #333; }
-    .container { max-width: 500px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
+    .container { max-width: 550px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
     h1 { font-size: 24px; margin-bottom: 20px; color: #2c3e50; text-align: center; }
     
     .search-box { display: flex; gap: 10px; margin-bottom: 25px; }
@@ -14,17 +14,24 @@
     button { padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
     button:hover { background: #2980b9; }
 
-    .card { border-top: 4px solid #3498db; padding-top: 20px; display: none; }
+    .card { border-top: 4px solid #3498db; padding-top: 20px; display: none; margin-bottom: 25px; }
     .row { display: flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
     .label { font-weight: 600; color: #7f8c8d; }
     .value { font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 18px; }
     
     .outlook-badge { 
-      display: inline-block; padding: 6px 12px; border-radius: 20px; 
-      color: white; font-size: 14px; font-weight: bold; margin-top: 10px; text-align: center; width: 100%;
+      display: inline-block; padding: 8px 12px; border-radius: 8px; 
+      color: white; font-size: 14px; font-weight: bold; margin-bottom: 15px; text-align: center; width: 100%; box-sizing: border-box;
     }
+
+    /* Legend Styling */
+    .legend { background: #fafafa; padding: 15px; border-radius: 8px; border: 1px dashed #ccc; font-size: 13px; }
+    .legend-title { font-weight: bold; margin-bottom: 8px; color: #2c3e50; text-transform: uppercase; letter-spacing: 0.5px; }
+    .legend-item { display: flex; align-items: flex-start; margin-bottom: 6px; }
+    .dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 10px; margin-top: 4px; flex-shrink: 0; }
+    
     .warning { color: #e74c3c; text-align: center; margin-top: 10px; font-weight: bold; }
-    .footer { font-size: 12px; color: #95a5a6; margin-top: 20px; text-align: center; }
+    .footer { font-size: 11px; color: #95a5a6; margin-top: 15px; text-align: center; }
   </style>
 </head>
 <body>
@@ -39,14 +46,30 @@
 
     <div id="resultCard" class="card">
       <div id="outlookBadge" class="outlook-badge">STABLE</div>
-      <div style="margin-top: 20px;">
+      <div>
         <div class="row"><span class="label">Spot Price</span> <span class="value" id="res-spot">--</span></div>
-        <div class="row"><span class="label">Call Wall (Resistance)</span> <span class="value" id="res-call" style="color: #e74c3c;">--</span></div>
-        <div class="row"><span class="label">Put Wall (Support)</span> <span class="value" id="res-put" style="color: #27ae60;">--</span></div>
+        <div class="row"><span class="label">Call Wall (Res)</span> <span class="value" id="res-call" style="color: #e74c3c;">--</span></div>
+        <div class="row"><span class="label">Put Wall (Supp)</span> <span class="value" id="res-put" style="color: #27ae60;">--</span></div>
         <div class="row"><span class="label">Gamma Flip Pivot</span> <span class="value" id="res-flip" style="color: #f39c12;">--</span></div>
-        <div class="row"><span class="label">Net GEX ($Bn)</span> <span class="value" id="res-gex">--</span></div>
+        <div class="row"><span class="label">Weighted Net GEX</span> <span class="value" id="res-gex">--</span></div>
       </div>
-      <div class="footer" id="res-update">Data updated: --</div>
+      <div class="footer" id="res-update">As of: --</div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-title">Market Outlook Legend</div>
+      <div class="legend-item">
+        <span class="dot" style="background-color: #27ae60;"></span>
+        <span><strong>Stable/Grind:</strong> Pos. GEX. Dealers dampening volatility. High probability of mean reversion & "slow" moves.</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot" style="background-color: #f39c12;"></span>
+        <span><strong>Transition:</strong> Neg. GEX but Spot > Flip. Volatility is rising. Trend reversals common here.</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot" style="background-color: #e74c3c;"></span>
+        <span><strong>Danger:</strong> Neg. GEX and Spot < Flip. Dealers must sell as price drops. High risk of "waterfall" liquidations.</span>
+      </div>
     </div>
 
     <div class="warning" id="errorMsg"></div>
@@ -55,11 +78,28 @@
   <script src="walls.js"></script>
   <script>
     const form = document.getElementById("lookupForm");
+    const input = document.getElementById("tickerInput");
     const resultCard = document.getElementById("resultCard");
     const errorMsg = document.getElementById("errorMsg");
 
+    // 1. AUTO-REFRESH LOGIC (Once per day)
+    function checkAutoRefresh() {
+      const today = new Date().toDateString();
+      const lastRefresh = localStorage.getItem('lastGammaRefresh');
+      
+      if (lastRefresh !== today) {
+        localStorage.setItem('lastGammaRefresh', today);
+        window.location.reload(); 
+      }
+    }
+    checkAutoRefresh();
+
+    // 2. FOCUS LOCK
+    // Keeps the cursor in the box even if you click elsewhere
+    document.addEventListener('click', () => input.focus());
+
     function lookupTicker() {
-      const ticker = document.getElementById("tickerInput").value.toUpperCase();
+      const ticker = input.value.toUpperCase();
       
       if (!window.WALLS) {
         errorMsg.innerText = "Error: walls.js not loaded.";
@@ -75,27 +115,29 @@
         errorMsg.innerText = "";
         resultCard.style.display = "block";
         
-        // Update Values
         document.getElementById("res-spot").innerText = data.spot;
         document.getElementById("res-call").innerText = data.callWall;
         document.getElementById("res-put").innerText = data.putWall;
         document.getElementById("res-flip").innerText = data.gammaFlip;
-        document.getElementById("res-gex").innerText = data.netGEX;
+        document.getElementById("res-gex").innerText = data.netGEX + "bn";
         document.getElementById("res-update").innerText = "As of: " + data.updated;
 
-        // Update Badge
         const badge = document.getElementById("outlookBadge");
         badge.innerText = data.outlook;
         badge.style.backgroundColor = data.outlookColor;
       }
       
-      document.getElementById("tickerInput").value = "";
+      input.value = "";
+      input.focus(); // Ensure focus after submission
     }
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       lookupTicker();
     });
+
+    // Initial focus
+    input.focus();
   </script>
 </body>
 </html>
