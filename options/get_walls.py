@@ -48,12 +48,14 @@ def get_gex_and_walls(ticker):
     stock = yf.Ticker(yf_ticker)
     
     try:
+        # 1. Get Spot Price
         hist = stock.history(period="1d")
         if hist.empty:
             logging.warning(f"No price data for {ticker}")
             return None
         spot = hist['Close'].iloc[-1]
         
+        # 2. Get Expirations
         exps = stock.options
         if not exps:
             return None
@@ -61,15 +63,13 @@ def get_gex_and_walls(ticker):
         target_exps = exps[:EXPIRATION_LOOKAHEAD]
         all_calls, all_puts = [], []
 
-        # Weights for [Exp1, Exp2, Exp3]
-        # 1.0 = 100% influence, 0.5 = 50%, etc.
+        # Weights for [Exp1, Exp2, Exp3] to prioritize front-end Gamma
         weights = [1.0, 0.5, 0.25]
 
+        # 3. Process and Weight Chains
         for i, exp_date_str in enumerate(target_exps):
             try:
-                # Assign weight based on how far out the expiration is
                 current_weight = weights[i] if i < len(weights) else 0.1
-                
                 chain = stock.option_chain(exp_date_str)
                 exp_date = datetime.strptime(exp_date_str, "%Y-%m-%d").date()
                 days_to_expiry = (exp_date - date.today()).days
@@ -77,29 +77,25 @@ def get_gex_and_walls(ticker):
                 
                 c, p = chain.calls.copy(), chain.puts.copy()
                 
-                # Apply Gamma Heat Weighting to Open Interest and GEX
-                # We weight OI because we want the "Wall" to favor near-term strikes
+                # Apply the Front-Weighting here
                 c['openInterest'] = c['openInterest'] * current_weight
                 p['openInterest'] = p['openInterest'] * current_weight
                 
                 c['type'], c['T'] = 'call', T
                 p['type'], p['T'] = 'put', T
                 all_calls.append(c); all_puts.append(p)
-                
-            except Exception as e:
-                logging.debug(f"Skipping exp {exp_date_str} for {ticker}: {e}")
+            except:
                 continue
 
         if not all_calls or not all_puts:
             return None
 
+        # 4. Math & GEX Calculation
         df_calls, df_puts = pd.concat(all_calls), pd.concat(all_puts)
         df_calls['impliedVolatility'] = df_calls['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         df_puts['impliedVolatility'] = df_puts['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         
-        # Calculate Gamma
         df_calls['gamma'] = calc_gamma(spot, df_calls['strike'], df_calls['impliedVolatility'], df_calls['T'])
-        # Weighting is already baked into openInterest above
         df_calls['GEX'] = df_calls['gamma'] * df_calls['openInterest'] * (spot**2) * -1 
         
         df_puts['gamma'] = calc_gamma(spot, df_puts['strike'], df_puts['impliedVolatility'], df_puts['T'])
@@ -113,35 +109,50 @@ def get_gex_and_walls(ticker):
         total_df['put_OI'] = put_stats['openInterest'].fillna(0)
         total_df['total_GEX'] = (call_stats['GEX'].fillna(0) + put_stats['GEX'].fillna(0))
         
-        # Directional Wall Logic (remains same, but now uses weighted OI)
+        # 5. Wall Logic (+/- 10%)
         l_bound, u_bound = spot * 0.90, spot * 1.10
-        
         c_cands = total_df[(total_df.index >= spot) & (total_df.index <= u_bound)]
         call_wall = c_cands['call_OI'].idxmax() if not c_cands.empty else total_df['call_OI'].idxmax()
 
         p_cands = total_df[(total_df.index >= l_bound) & (total_df.index <= spot)]
         put_wall = p_cands['put_OI'].idxmax() if not p_cands.empty else total_df['put_OI'].idxmax()
 
-        # Gamma Flip Calculation
+        # 6. Gamma Flip
         cumulative_gex = total_df['total_GEX'].cumsum()
         signs = np.sign(cumulative_gex).diff().fillna(0)
         flips = signs[signs != 0].index
         gamma_flip = min(flips, key=lambda x: abs(x - spot)) if len(flips) > 0 else total_df['total_GEX'].abs().idxmin()
 
-        logging.info(f"{ticker}: Spot {spot:.2f} | PutWall {put_wall} | CallWall {call_wall} (Weighted)")
+        # --- NEW: OUTLOOK & COLOR LOGIC ---
+        net_gex_bn = round(total_df['total_GEX'].sum() / 10**9, 4)
+        
+        if net_gex_bn > 0:
+            outlook = "STABLE / GRIND (Long Gamma)"
+            color = "#27ae60" # Emerald Green
+        else:
+            if spot < gamma_flip:
+                outlook = "VOLATILE / DANGER (Short Gamma)"
+                color = "#e74c3c" # Alizarin Red
+            else:
+                outlook = "VOLATILE / TRANSITION"
+                color = "#f39c12" # Orange
+
+        logging.info(f"{ticker}: Spot {spot:.2f} | NetGEX {net_gex_bn}bn | Outlook: {outlook}")
 
         return {
             "spot": round(float(spot), 2),
             "callWall": int(call_wall),
             "putWall": int(put_wall),
             "gammaFlip": int(gamma_flip),
-            "netGEX": round(total_df['total_GEX'].sum() / 10**9, 4),
+            "netGEX": net_gex_bn,
+            "outlook": outlook,
+            "outlookColor": color,
             "updated": date.today().isoformat()
         }
     except Exception as e:
         logging.error(f"Error for {ticker}: {e}")
         return None
-        
+                
 # -----------------------------
 # HELPER: Fetch Holdings
 # -----------------------------
