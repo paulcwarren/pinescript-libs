@@ -126,10 +126,9 @@
         
         // Update Table Values
         document.getElementById("res-spot").innerText = data.spot;
-        document.getElementById("res-call").innerText = data.callWall;
-        document.getElementById("res-put").innerText = data.putWall;
-        document.getElementById("res-flip").innerText = data.gammaFlip;
-        document.getElementById("res-gex").innerText = data.netGEX + "bn";
+        document.getElementById("res-call").innerText = `${data.callWall} (${data.callDist > 0 ? '+' : ''}${data.callDist}%)`;
+        document.getElementById("res-put").innerText = `${data.putWall} (${data.putDist > 0 ? '+' : ''}${data.putDist}%)`;
+        document.getElementById("res-flip").innerText = `${data.gammaFlip} (${data.flipDist > 0 ? '+' : ''}${data.flipDist}%)`;        document.getElementById("res-gex").innerText = data.netGEX + "bn";
         document.getElementById("res-update").innerText = "As of: " + data.updated;
 
         // Update Outlook Badge

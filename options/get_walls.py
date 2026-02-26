@@ -139,20 +139,30 @@ def get_gex_and_walls(ticker):
 
         logging.info(f"{ticker}: Spot {spot:.2f} | NetGEX {net_gex_bn}bn | Outlook: {outlook}")
 
+         # Calculate Percentage Distance to Walls
+        # ( (Wall / Spot) - 1 ) * 100
+        call_dist = round(((call_wall / spot) - 1) * 100, 2)
+        put_dist = round(((put_wall / spot) - 1) * 100, 2)
+        flip_dist = round(((gamma_flip / spot) - 1) * 100, 2)
+
         return {
             "spot": round(float(spot), 2),
             "callWall": int(call_wall),
+            "callDist": call_dist,
             "putWall": int(put_wall),
+            "putDist": put_dist,
             "gammaFlip": int(gamma_flip),
+            "flipDist": flip_dist,
             "netGEX": net_gex_bn,
             "outlook": outlook,
             "outlookColor": color,
             "updated": date.today().isoformat()
         }
+
     except Exception as e:
         logging.error(f"Error for {ticker}: {e}")
         return None
-                
+
 # -----------------------------
 # HELPER: Fetch Holdings
 # -----------------------------
