@@ -14,7 +14,12 @@
     button { padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
     button:hover { background: #2980b9; }
 
-    .card { border-top: 4px solid #3498db; padding-top: 20px; display: none; margin-bottom: 25px; }
+    /* Result Card Styling */
+    .card { border-top: 4px solid #3498db; padding-top: 15px; display: none; margin-bottom: 25px; }
+    
+    /* New Ticker Header */
+    .ticker-header { font-size: 32px; font-weight: 800; color: #2c3e50; text-align: center; margin-bottom: 5px; letter-spacing: -1px; }
+    
     .row { display: flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
     .label { font-weight: 600; color: #7f8c8d; }
     .value { font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 18px; }
@@ -45,7 +50,10 @@
     </form>
 
     <div id="resultCard" class="card">
+      <div id="res-ticker" class="ticker-header">--</div>
+      
       <div id="outlookBadge" class="outlook-badge">STABLE</div>
+      
       <div>
         <div class="row"><span class="label">Spot Price</span> <span class="value" id="res-spot">--</span></div>
         <div class="row"><span class="label">Call Wall (Res)</span> <span class="value" id="res-call" style="color: #e74c3c;">--</span></div>
@@ -82,11 +90,10 @@
     const resultCard = document.getElementById("resultCard");
     const errorMsg = document.getElementById("errorMsg");
 
-    // 1. AUTO-REFRESH LOGIC (Once per day)
+    // AUTO-REFRESH LOGIC
     function checkAutoRefresh() {
       const today = new Date().toDateString();
       const lastRefresh = localStorage.getItem('lastGammaRefresh');
-      
       if (lastRefresh !== today) {
         localStorage.setItem('lastGammaRefresh', today);
         window.location.reload(); 
@@ -94,8 +101,7 @@
     }
     checkAutoRefresh();
 
-    // 2. FOCUS LOCK
-    // Keeps the cursor in the box even if you click elsewhere
+    // FOCUS LOCK
     document.addEventListener('click', () => input.focus());
 
     function lookupTicker() {
@@ -115,6 +121,10 @@
         errorMsg.innerText = "";
         resultCard.style.display = "block";
         
+        // Update Ticker Label
+        document.getElementById("res-ticker").innerText = ticker;
+        
+        // Update Table Values
         document.getElementById("res-spot").innerText = data.spot;
         document.getElementById("res-call").innerText = data.callWall;
         document.getElementById("res-put").innerText = data.putWall;
@@ -122,13 +132,14 @@
         document.getElementById("res-gex").innerText = data.netGEX + "bn";
         document.getElementById("res-update").innerText = "As of: " + data.updated;
 
+        // Update Outlook Badge
         const badge = document.getElementById("outlookBadge");
         badge.innerText = data.outlook;
         badge.style.backgroundColor = data.outlookColor;
       }
       
       input.value = "";
-      input.focus(); // Ensure focus after submission
+      input.focus();
     }
 
     form.addEventListener("submit", (e) => {
@@ -136,7 +147,6 @@
       lookupTicker();
     });
 
-    // Initial focus
     input.focus();
   </script>
 </body>
