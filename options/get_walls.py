@@ -61,18 +61,33 @@ def get_gex_and_walls(ticker):
         target_exps = exps[:EXPIRATION_LOOKAHEAD]
         all_calls, all_puts = [], []
 
-        for exp_date_str in target_exps:
+        # Weights for [Exp1, Exp2, Exp3]
+        # 1.0 = 100% influence, 0.5 = 50%, etc.
+        weights = [1.0, 0.5, 0.25]
+
+        for i, exp_date_str in enumerate(target_exps):
             try:
+                # Assign weight based on how far out the expiration is
+                current_weight = weights[i] if i < len(weights) else 0.1
+                
                 chain = stock.option_chain(exp_date_str)
                 exp_date = datetime.strptime(exp_date_str, "%Y-%m-%d").date()
                 days_to_expiry = (exp_date - date.today()).days
                 T = max(days_to_expiry, 0.5) / 365.0
                 
                 c, p = chain.calls.copy(), chain.puts.copy()
+                
+                # Apply Gamma Heat Weighting to Open Interest and GEX
+                # We weight OI because we want the "Wall" to favor near-term strikes
+                c['openInterest'] = c['openInterest'] * current_weight
+                p['openInterest'] = p['openInterest'] * current_weight
+                
                 c['type'], c['T'] = 'call', T
                 p['type'], p['T'] = 'put', T
                 all_calls.append(c); all_puts.append(p)
-            except:
+                
+            except Exception as e:
+                logging.debug(f"Skipping exp {exp_date_str} for {ticker}: {e}")
                 continue
 
         if not all_calls or not all_puts:
@@ -82,7 +97,9 @@ def get_gex_and_walls(ticker):
         df_calls['impliedVolatility'] = df_calls['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         df_puts['impliedVolatility'] = df_puts['impliedVolatility'].replace(0, np.nan).fillna(0.2)
         
+        # Calculate Gamma
         df_calls['gamma'] = calc_gamma(spot, df_calls['strike'], df_calls['impliedVolatility'], df_calls['T'])
+        # Weighting is already baked into openInterest above
         df_calls['GEX'] = df_calls['gamma'] * df_calls['openInterest'] * (spot**2) * -1 
         
         df_puts['gamma'] = calc_gamma(spot, df_puts['strike'], df_puts['impliedVolatility'], df_puts['T'])
@@ -96,7 +113,7 @@ def get_gex_and_walls(ticker):
         total_df['put_OI'] = put_stats['openInterest'].fillna(0)
         total_df['total_GEX'] = (call_stats['GEX'].fillna(0) + put_stats['GEX'].fillna(0))
         
-        # Day Trading Bounds (+/- 10%)
+        # Directional Wall Logic (remains same, but now uses weighted OI)
         l_bound, u_bound = spot * 0.90, spot * 1.10
         
         c_cands = total_df[(total_df.index >= spot) & (total_df.index <= u_bound)]
@@ -105,12 +122,13 @@ def get_gex_and_walls(ticker):
         p_cands = total_df[(total_df.index >= l_bound) & (total_df.index <= spot)]
         put_wall = p_cands['put_OI'].idxmax() if not p_cands.empty else total_df['put_OI'].idxmax()
 
+        # Gamma Flip Calculation
         cumulative_gex = total_df['total_GEX'].cumsum()
         signs = np.sign(cumulative_gex).diff().fillna(0)
         flips = signs[signs != 0].index
         gamma_flip = min(flips, key=lambda x: abs(x - spot)) if len(flips) > 0 else total_df['total_GEX'].abs().idxmin()
 
-        logging.info(f"{ticker}: Spot {spot:.2f} | PutWall {put_wall} | CallWall {call_wall}")
+        logging.info(f"{ticker}: Spot {spot:.2f} | PutWall {put_wall} | CallWall {call_wall} (Weighted)")
 
         return {
             "spot": round(float(spot), 2),
@@ -123,7 +141,7 @@ def get_gex_and_walls(ticker):
     except Exception as e:
         logging.error(f"Error for {ticker}: {e}")
         return None
-
+        
 # -----------------------------
 # HELPER: Fetch Holdings
 # -----------------------------
