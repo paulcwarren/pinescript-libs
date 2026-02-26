@@ -130,17 +130,29 @@
         errorMsg.innerText = "";
         resultCard.style.display = "block";
         
-        // Update Ticker Label
+        // 1. Update Ticker Label
         document.getElementById("res-ticker").innerText = ticker;
         
-        // Update Table Values
+        // 2. Update Spot Price
         document.getElementById("res-spot").innerText = data.spot;
-        document.getElementById("res-call").innerText = `${data.callWall} (${data.callDist > 0 ? '+' : ''}${data.callDist}%)`;
-        document.getElementById("res-put").innerText = `${data.putWall} (${data.putDist > 0 ? '+' : ''}${data.putDist}%)`;
-        document.getElementById("res-flip").innerText = `${data.gammaFlip} (${data.flipDist > 0 ? '+' : ''}${data.flipDist}%)`;        document.getElementById("res-gex").innerText = data.netGEX + "bn";
+        
+        // 3. Update Call Wall + Pct
+        document.getElementById("res-call").innerText = data.callWall;
+        document.getElementById("res-call-pct").innerText = ` (${data.callDist > 0 ? '+' : ''}${data.callDist}%)`;
+
+        // 4. Update Put Wall + Pct
+        document.getElementById("res-put").innerText = data.putWall;
+        document.getElementById("res-put-pct").innerText = ` (${data.putDist > 0 ? '+' : ''}${data.putDist}%)`;
+
+        // 5. Update Gamma Flip + Pct
+        document.getElementById("res-flip").innerText = data.gammaFlip;
+        document.getElementById("res-flip-pct").innerText = ` (${data.flipDist > 0 ? '+' : ''}${data.flipDist}%)`;
+
+        // 6. Update GEX and Timestamp
+        document.getElementById("res-gex").innerText = data.netGEX + "bn";
         document.getElementById("res-update").innerText = "As of: " + data.updated;
 
-        // Update Outlook Badge
+        // 7. Update Outlook Badge
         const badge = document.getElementById("outlookBadge");
         badge.innerText = data.outlook;
         badge.style.backgroundColor = data.outlookColor;
@@ -149,7 +161,7 @@
       input.value = "";
       input.focus();
     }
-
+    
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       lookupTicker();
