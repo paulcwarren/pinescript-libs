@@ -192,24 +192,40 @@ if __name__ == "__main__":
     def process_list(ticker_list, label, handle_holdings=False):
         logging.info(f"--- Processing {label} ---")
         for ticker in ticker_list:
-            if ticker not in processed_tickers:
+            if not ticker or ticker in processed_tickers:
+                continue
+            
+            # 1. Process the main Ticker (ETF or Index)
+            try:
                 res = get_gex_and_walls(ticker)
                 if res:
                     walls_dict[ticker] = res
-                processed_tickers.add(ticker)
-                
-                if handle_holdings:
-                    holdings = get_top_holdings(ticker, TOP_HOLDINGS_COUNT)
-                    if holdings:
-                        logging.info(f"[{ticker}] Holdings: {holdings}")
-                        for stock in holdings:
-                            if stock not in processed_tickers:
-                                h_res = get_gex_and_walls(stock)
-                                if h_res:
-                                    walls_dict[stock] = h_res
-                                processed_tickers.add(stock)
-                                time.sleep(0.5)
-                time.sleep(0.5)
+            except Exception as e:
+                logging.error(f"Skipping main ticker {ticker} due to error: {e}")
+            
+            processed_tickers.add(ticker)
+
+            # 2. Process Holdings if requested
+            if handle_holdings:
+                holdings = get_top_holdings(ticker, TOP_HOLDINGS_COUNT)
+                if holdings:
+                    for stock in holdings:
+                        if not stock or stock in processed_tickers:
+                            continue
+                        
+                        # Isolated try block for each individual holding
+                        try:
+                            h_res = get_gex_and_walls(stock)
+                            if h_res:
+                                walls_dict[stock] = h_res
+                        except Exception as e:
+                            # Log the error and move to the next holding immediately
+                            logging.error(f"Skipping holding {stock} in {ticker} due to error: {e}")
+                        
+                        processed_tickers.add(stock)
+                        time.sleep(0.5) 
+            
+            time.sleep(0.5)
 
     # Run the sequences
     process_list(index_list, "Indexes")

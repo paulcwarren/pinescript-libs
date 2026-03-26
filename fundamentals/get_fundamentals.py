@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+import argparse
 import sys
 
 def get_felix_metrics(ticker_symbol):
@@ -7,7 +8,7 @@ def get_felix_metrics(ticker_symbol):
         stock = yf.Ticker(ticker_symbol)
         info = stock.info
         
-        # 1. Gross Margin (HG)
+        # 1. Gross Margin
         gross_margin = info.get('grossMargins', 0) * 100
         
         # 2. Free Cash Flow (FCF)
@@ -17,10 +18,10 @@ def get_felix_metrics(ticker_symbol):
             fcf = cashflow.loc['Free Cash Flow'].iloc[0]
         
         # 3. ROIC (Return on Invested Capital)
-        bs = stock.balance_sheet
-        is_stmt = stock.financials
         roic = 0
         try:
+            bs = stock.balance_sheet
+            is_stmt = stock.financials
             net_income = is_stmt.loc['Net Income'].iloc[0]
             total_assets = bs.loc['Total Assets'].iloc[0]
             curr_liab = bs.loc['Current Liabilities'].iloc[0]
@@ -35,41 +36,55 @@ def get_felix_metrics(ticker_symbol):
             "Gross Margin %": round(gross_margin, 2),
             "ROIC %": round(roic, 2)
         }
-    except Exception as e:
-        # Silently fail for symbols like SESGL to avoid clutter
+    except Exception:
         return None
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python script.py <ETF_TICKER>")
-        return
+    parser = argparse.ArgumentParser(description="Analyze stock fundamentals.")
+    # Add optional -i flags that can be repeated
+    parser.add_argument('-i', '--individual', action='append', help="Individual tickers to analyze")
+    # Add positional argument for ETF (optional if -i is used)
+    parser.add_argument('etf', nargs='?', help="ETF ticker to pull top 10 holdings from")
 
-    etf_ticker = sys.argv[1].upper()
-    print(f"--- Analyzing Sector ETF: {etf_ticker} ---")
+    args = parser.parse_args()
+
+    tickers_to_process = []
+
+    # Case 1: Individual tickers provided
+    if args.individual:
+        tickers_to_process = [t.upper() for t in args.individual]
+        print(f"--- Analyzing Individual Tickers: {', '.join(tickers_to_process)} ---")
     
-    etf = yf.Ticker(etf_ticker)
-    try:
-        holdings_df = etf.funds_data.top_holdings
-        top_10 = holdings_df.index.tolist()[:10]
-    except:
-        print("Error: Could not retrieve holdings.")
+    # Case 2: ETF provided
+    elif args.etf:
+        etf_ticker = args.etf.upper()
+        print(f"--- Analyzing Sector ETF: {etf_ticker} ---")
+        etf = yf.Ticker(etf_ticker)
+        try:
+            # Note: funds_data depends on current yfinance version support for the specific ETF
+            holdings_df = etf.funds_data.top_holdings
+            tickers_to_process = holdings_df.index.tolist()[:10]
+        except Exception:
+            print("Error: Could not retrieve holdings for this ETF.")
+            return
+    else:
+        parser.print_help()
         return
 
     results = []
-    for t in top_10:
+    for t in tickers_to_process:
         print(f"Fetching metrics for {t}...")
         data = get_felix_metrics(t)
         if data:
             results.append(data)
 
-    # --- THE FIX: SIMPLE NUMERICAL SORT BY FCF ---
-    df = pd.DataFrame(results)
-    
-    # Sort descending by FCF (M)
-    df = df.sort_values(by='FCF (M)', ascending=False)
-
-    print("\n--- Top Performers (Ranked by Free Cash Flow) ---")
-    print(df.to_string(index=False))
+    if results:
+        df = pd.DataFrame(results)
+        df = df.sort_values(by='FCF (M)', ascending=False)
+        print("\n--- Fundamentals Ranking (By Free Cash Flow) ---")
+        print(df.to_string(index=False))
+    else:
+        print("No data retrieved.")
 
 if __name__ == "__main__":
     main()
