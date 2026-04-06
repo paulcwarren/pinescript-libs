@@ -5,12 +5,12 @@ window.WALLS = {
     "callDist": 2.16,
     "putWall": 625,
     "putDist": -4.7,
-    "gammaFlip": 525,
-    "flipDist": -19.95,
-    "netGEX": 0.2429,
+    "gammaFlip": 950,
+    "flipDist": 44.85,
+    "netGEX": 0.1496,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "QQQ": {
     "spot": 584.98,
@@ -18,12 +18,12 @@ window.WALLS = {
     "callDist": 1.71,
     "putWall": 580,
     "putDist": -0.85,
-    "gammaFlip": 593,
-    "flipDist": 1.37,
-    "netGEX": -0.1523,
+    "gammaFlip": 590,
+    "flipDist": 0.86,
+    "netGEX": -0.2092,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "IWM": {
     "spot": 251.29,
@@ -31,12 +31,12 @@ window.WALLS = {
     "callDist": 0.28,
     "putWall": 245,
     "putDist": -2.5,
-    "gammaFlip": 285,
-    "flipDist": 13.41,
-    "netGEX": 0.0424,
+    "gammaFlip": 227,
+    "flipDist": -9.67,
+    "netGEX": 0.025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DIA": {
     "spot": 465.06,
@@ -46,10 +46,10 @@ window.WALLS = {
     "putDist": -3.24,
     "gammaFlip": 485,
     "flipDist": 4.29,
-    "netGEX": -0.0064,
+    "netGEX": -0.0047,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BLOK": {
     "spot": 50.27,
@@ -62,7 +62,7 @@ window.WALLS = {
     "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WULF": {
     "spot": 14.88,
@@ -75,7 +75,7 @@ window.WALLS = {
     "netGEX": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CIFR": {
     "spot": 12.82,
@@ -88,7 +88,7 @@ window.WALLS = {
     "netGEX": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GLXY": {
     "spot": 17.64,
@@ -96,12 +96,12 @@ window.WALLS = {
     "callDist": 2.04,
     "putWall": 16,
     "putDist": -9.3,
-    "gammaFlip": 28,
-    "flipDist": 61.56,
-    "netGEX": 0.0003,
+    "gammaFlip": 13,
+    "flipDist": -26.3,
+    "netGEX": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HUT": {
     "spot": 48.11,
@@ -109,12 +109,12 @@ window.WALLS = {
     "callDist": 3.93,
     "putWall": 47,
     "putDist": -2.31,
-    "gammaFlip": 34,
-    "flipDist": -29.33,
+    "gammaFlip": 25,
+    "flipDist": -48.04,
     "netGEX": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HOOD": {
     "spot": 68.9,
@@ -122,12 +122,12 @@ window.WALLS = {
     "callDist": 8.85,
     "putWall": 65,
     "putDist": -5.66,
-    "gammaFlip": 73,
-    "flipDist": 5.95,
-    "netGEX": -0.0058,
+    "gammaFlip": 75,
+    "flipDist": 8.85,
+    "netGEX": -0.0055,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "OPRA": {
     "spot": 14.73,
@@ -140,7 +140,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BBBY": {
     "spot": 4.62,
@@ -153,7 +153,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "COIN": {
     "spot": 171.46,
@@ -163,10 +163,10 @@ window.WALLS = {
     "putDist": -0.85,
     "gammaFlip": 170,
     "flipDist": -0.85,
-    "netGEX": -0.0135,
+    "netGEX": -0.0136,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NU": {
     "spot": 14.15,
@@ -176,10 +176,10 @@ window.WALLS = {
     "putDist": -1.06,
     "gammaFlip": 9,
     "flipDist": -36.4,
-    "netGEX": 0.002,
+    "netGEX": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "IGV": {
     "spot": 80.34,
@@ -187,12 +187,12 @@ window.WALLS = {
     "callDist": 5.8,
     "putWall": 78,
     "putDist": -2.91,
-    "gammaFlip": 83,
-    "flipDist": 3.31,
-    "netGEX": -0.0103,
+    "gammaFlip": 82,
+    "flipDist": 2.69,
+    "netGEX": -0.0101,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MSFT": {
     "spot": 373.46,
@@ -202,10 +202,10 @@ window.WALLS = {
     "putDist": -6.28,
     "gammaFlip": 372,
     "flipDist": -0.26,
-    "netGEX": -0.0593,
+    "netGEX": -0.0622,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PLTR": {
     "spot": 148.46,
@@ -215,10 +215,10 @@ window.WALLS = {
     "putDist": -5.7,
     "gammaFlip": 149,
     "flipDist": 0.36,
-    "netGEX": -0.0405,
+    "netGEX": -0.041,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CRM": {
     "spot": 187.18,
@@ -228,10 +228,10 @@ window.WALLS = {
     "putDist": -9.18,
     "gammaFlip": 265,
     "flipDist": 41.57,
-    "netGEX": 0.0001,
+    "netGEX": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ORCL": {
     "spot": 146.38,
@@ -241,10 +241,10 @@ window.WALLS = {
     "putDist": -7.77,
     "gammaFlip": 170,
     "flipDist": 16.14,
-    "netGEX": -0.0019,
+    "netGEX": -0.001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PANW": {
     "spot": 163.21,
@@ -254,10 +254,10 @@ window.WALLS = {
     "putDist": -8.09,
     "gammaFlip": 175,
     "flipDist": 7.22,
-    "netGEX": -0.0013,
+    "netGEX": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "APP": {
     "spot": 386.37,
@@ -265,12 +265,12 @@ window.WALLS = {
     "callDist": 8.7,
     "putWall": 380,
     "putDist": -1.65,
-    "gammaFlip": 615,
-    "flipDist": 59.17,
-    "netGEX": -0.0002,
+    "gammaFlip": 630,
+    "flipDist": 63.06,
+    "netGEX": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "INTU": {
     "spot": 422.48,
@@ -280,10 +280,10 @@ window.WALLS = {
     "putDist": -5.32,
     "gammaFlip": 480,
     "flipDist": 13.61,
-    "netGEX": -0.0028,
+    "netGEX": -0.0024,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ADBE": {
     "spot": 242.92,
@@ -293,10 +293,10 @@ window.WALLS = {
     "putDist": -5.32,
     "gammaFlip": 260,
     "flipDist": 7.03,
-    "netGEX": -0.0015,
+    "netGEX": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CRWD": {
     "spot": 399.12,
@@ -306,10 +306,10 @@ window.WALLS = {
     "putDist": -4.79,
     "gammaFlip": 420,
     "flipDist": 5.23,
-    "netGEX": -0.0034,
+    "netGEX": -0.0039,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NOW": {
     "spot": 102.0,
@@ -319,10 +319,10 @@ window.WALLS = {
     "putDist": -1.96,
     "gammaFlip": 85,
     "flipDist": -16.67,
-    "netGEX": 0.0015,
+    "netGEX": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CLOU": {
     "spot": 19.89,
@@ -335,7 +335,7 @@ window.WALLS = {
     "netGEX": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AKAM": {
     "spot": 118.0,
@@ -345,10 +345,10 @@ window.WALLS = {
     "putDist": -6.78,
     "gammaFlip": 115,
     "flipDist": -2.54,
-    "netGEX": -0.0008,
+    "netGEX": -0.0007,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DOCN": {
     "spot": 90.01,
@@ -361,7 +361,7 @@ window.WALLS = {
     "netGEX": -0.0014,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DLR": {
     "spot": 181.69,
@@ -374,7 +374,7 @@ window.WALLS = {
     "netGEX": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TWLO": {
     "spot": 130.95,
@@ -382,12 +382,12 @@ window.WALLS = {
     "callDist": 6.91,
     "putWall": 120,
     "putDist": -8.36,
-    "gammaFlip": 126,
-    "flipDist": -3.78,
-    "netGEX": -0.0011,
+    "gammaFlip": 128,
+    "flipDist": -2.25,
+    "netGEX": -0.001,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ZM": {
     "spot": 82.36,
@@ -397,10 +397,10 @@ window.WALLS = {
     "putDist": -8.94,
     "gammaFlip": 80,
     "flipDist": -2.87,
-    "netGEX": -0.0032,
+    "netGEX": -0.0033,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DBX": {
     "spot": 23.4,
@@ -413,7 +413,7 @@ window.WALLS = {
     "netGEX": 0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SHOP": {
     "spot": 118.25,
@@ -421,12 +421,12 @@ window.WALLS = {
     "callDist": 9.94,
     "putWall": 115,
     "putDist": -2.75,
-    "gammaFlip": 260,
-    "flipDist": 119.87,
+    "gammaFlip": 96,
+    "flipDist": -18.82,
     "netGEX": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PAYC": {
     "spot": 123.56,
@@ -439,7 +439,7 @@ window.WALLS = {
     "netGEX": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BOX": {
     "spot": 24.02,
@@ -452,7 +452,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MAGS": {
     "spot": 58.27,
@@ -465,7 +465,7 @@ window.WALLS = {
     "netGEX": -0.0026,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "QTUM": {
     "spot": 109.96,
@@ -473,12 +473,12 @@ window.WALLS = {
     "callDist": 0.04,
     "putWall": 100,
     "putDist": -9.06,
-    "gammaFlip": 119,
-    "flipDist": 8.22,
+    "gammaFlip": 118,
+    "flipDist": 7.31,
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TER": {
     "spot": 309.61,
@@ -491,7 +491,7 @@ window.WALLS = {
     "netGEX": -0.0019,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MU": {
     "spot": 366.24,
@@ -499,12 +499,12 @@ window.WALLS = {
     "callDist": 9.22,
     "putWall": 350,
     "putDist": -4.43,
-    "gammaFlip": 410,
-    "flipDist": 11.95,
-    "netGEX": -0.0187,
+    "gammaFlip": 407,
+    "flipDist": 11.27,
+    "netGEX": -0.0199,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MKSI": {
     "spot": 234.66,
@@ -514,10 +514,10 @@ window.WALLS = {
     "putDist": -6.25,
     "gammaFlip": 220,
     "flipDist": -6.25,
-    "netGEX": -0.0006,
+    "netGEX": -0.0005,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LMT": {
     "spot": 622.79,
@@ -525,12 +525,12 @@ window.WALLS = {
     "callDist": 7.58,
     "putWall": 585,
     "putDist": -6.07,
-    "gammaFlip": 642,
-    "flipDist": 3.16,
-    "netGEX": 0.001,
+    "gammaFlip": 562,
+    "flipDist": -9.68,
+    "netGEX": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LRCX": {
     "spot": 218.44,
@@ -538,12 +538,12 @@ window.WALLS = {
     "callDist": 9.87,
     "putWall": 205,
     "putDist": -6.15,
-    "gammaFlip": 305,
-    "flipDist": 39.63,
-    "netGEX": 0.0007,
+    "gammaFlip": 262,
+    "flipDist": 20.17,
+    "netGEX": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AMAT": {
     "spot": 348.47,
@@ -553,10 +553,10 @@ window.WALLS = {
     "putDist": -5.3,
     "gammaFlip": 370,
     "flipDist": 6.18,
-    "netGEX": -0.0044,
+    "netGEX": -0.0041,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "URA": {
     "spot": 48.9,
@@ -569,7 +569,7 @@ window.WALLS = {
     "netGEX": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "OKLO": {
     "spot": 48.13,
@@ -579,10 +579,10 @@ window.WALLS = {
     "putDist": -6.5,
     "gammaFlip": 160,
     "flipDist": 232.43,
-    "netGEX": 0.0008,
+    "netGEX": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "UEC": {
     "spot": 13.57,
@@ -595,20 +595,20 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "UFO": {
     "spot": 49.17,
     "callWall": 50,
     "callDist": 1.69,
-    "putWall": 45,
-    "putDist": -8.48,
+    "putWall": 48,
+    "putDist": -2.38,
     "gammaFlip": 45,
     "flipDist": -8.48,
     "netGEX": -0.0007,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PL": {
     "spot": 35.88,
@@ -621,7 +621,7 @@ window.WALLS = {
     "netGEX": -0.0006,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GRMN": {
     "spot": 237.65,
@@ -634,7 +634,7 @@ window.WALLS = {
     "netGEX": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VSAT": {
     "spot": 53.69,
@@ -644,10 +644,10 @@ window.WALLS = {
     "putDist": -8.74,
     "gammaFlip": 40,
     "flipDist": -25.5,
-    "netGEX": -0.0013,
+    "netGEX": -0.0014,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SATS": {
     "spot": 128.68,
@@ -657,10 +657,10 @@ window.WALLS = {
     "putDist": -6.75,
     "gammaFlip": 115,
     "flipDist": -10.63,
-    "netGEX": -0.0036,
+    "netGEX": -0.0038,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RKLB": {
     "spot": 67.73,
@@ -670,10 +670,10 @@ window.WALLS = {
     "putDist": -4.03,
     "gammaFlip": 73,
     "flipDist": 7.78,
-    "netGEX": -0.0027,
+    "netGEX": -0.0026,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SIRI": {
     "spot": 23.79,
@@ -683,10 +683,10 @@ window.WALLS = {
     "putDist": -9.63,
     "gammaFlip": 22,
     "flipDist": -5.42,
-    "netGEX": -0.0029,
+    "netGEX": -0.0053,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ASTS": {
     "spot": 92.62,
@@ -696,10 +696,10 @@ window.WALLS = {
     "putDist": -8.23,
     "gammaFlip": 95,
     "flipDist": 2.57,
-    "netGEX": -0.0042,
+    "netGEX": -0.0043,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ROBO": {
     "spot": 69.24,
@@ -712,7 +712,7 @@ window.WALLS = {
     "netGEX": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "IPGP": {
     "spot": 113.94,
@@ -725,7 +725,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NOVT": {
     "spot": 117.04,
@@ -738,7 +738,7 @@ window.WALLS = {
     "netGEX": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "OIH": {
     "spot": 399.05,
@@ -746,12 +746,12 @@ window.WALLS = {
     "callDist": 7.76,
     "putWall": 370,
     "putDist": -7.28,
-    "gammaFlip": 370,
-    "flipDist": -7.28,
-    "netGEX": 0.0014,
+    "gammaFlip": 360,
+    "flipDist": -9.79,
+    "netGEX": 0.0015,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SLB": {
     "spot": 49.44,
@@ -761,10 +761,10 @@ window.WALLS = {
     "putDist": -0.89,
     "gammaFlip": 50,
     "flipDist": 1.13,
-    "netGEX": -0.0029,
+    "netGEX": -0.0028,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BKR": {
     "spot": 60.38,
@@ -777,7 +777,7 @@ window.WALLS = {
     "netGEX": -0.0015,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HAL": {
     "spot": 38.17,
@@ -790,7 +790,7 @@ window.WALLS = {
     "netGEX": -0.002,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "FTI": {
     "spot": 71.02,
@@ -800,10 +800,10 @@ window.WALLS = {
     "putDist": -8.48,
     "gammaFlip": 40,
     "flipDist": -43.68,
-    "netGEX": -0.0004,
+    "netGEX": -0.0005,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RIG": {
     "spot": 6.59,
@@ -816,7 +816,7 @@ window.WALLS = {
     "netGEX": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TS": {
     "spot": 58.11,
@@ -829,7 +829,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NE": {
     "spot": 49.86,
@@ -842,7 +842,7 @@ window.WALLS = {
     "netGEX": -0.0003,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WFRD": {
     "spot": 95.29,
@@ -852,10 +852,10 @@ window.WALLS = {
     "putDist": -5.55,
     "gammaFlip": 85,
     "flipDist": -10.8,
-    "netGEX": -0.001,
+    "netGEX": -0.0011,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VAL": {
     "spot": 98.04,
@@ -865,10 +865,10 @@ window.WALLS = {
     "putDist": -8.2,
     "gammaFlip": 100,
     "flipDist": 2.0,
-    "netGEX": -0.0002,
+    "netGEX": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NOV": {
     "spot": 18.78,
@@ -881,7 +881,7 @@ window.WALLS = {
     "netGEX": -0.0001,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLK": {
     "spot": 135.99,
@@ -894,7 +894,7 @@ window.WALLS = {
     "netGEX": -0.0021,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NVDA": {
     "spot": 177.39,
@@ -904,10 +904,10 @@ window.WALLS = {
     "putDist": -4.17,
     "gammaFlip": 177,
     "flipDist": 0.06,
-    "netGEX": -0.0841,
+    "netGEX": -0.0869,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AAPL": {
     "spot": 255.92,
@@ -917,10 +917,10 @@ window.WALLS = {
     "putDist": -6.22,
     "gammaFlip": 255,
     "flipDist": -0.36,
-    "netGEX": -0.0689,
+    "netGEX": -0.0713,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AVGO": {
     "spot": 314.55,
@@ -928,25 +928,25 @@ window.WALLS = {
     "callDist": 4.91,
     "putWall": 300,
     "putDist": -4.63,
-    "gammaFlip": 320,
-    "flipDist": 1.73,
-    "netGEX": -0.0112,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "gammaFlip": 310,
+    "flipDist": -1.45,
+    "netGEX": -0.0213,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "AMD": {
     "spot": 217.5,
-    "callWall": 220,
-    "callDist": 1.15,
+    "callWall": 230,
+    "callDist": 5.75,
     "putWall": 200,
     "putDist": -8.05,
-    "gammaFlip": 220,
-    "flipDist": 1.15,
-    "netGEX": -0.039,
+    "gammaFlip": 225,
+    "flipDist": 3.45,
+    "netGEX": -0.0244,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CSCO": {
     "spot": 79.02,
@@ -956,10 +956,10 @@ window.WALLS = {
     "putDist": -5.09,
     "gammaFlip": 82,
     "flipDist": 4.4,
-    "netGEX": -0.0039,
+    "netGEX": -0.0037,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLF": {
     "spot": 49.53,
@@ -969,10 +969,10 @@ window.WALLS = {
     "putDist": -1.07,
     "gammaFlip": 55,
     "flipDist": 12.05,
-    "netGEX": 0.0159,
+    "netGEX": 0.017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BRK-B": {
     "spot": 477.35,
@@ -982,10 +982,10 @@ window.WALLS = {
     "putDist": -5.73,
     "gammaFlip": 340,
     "flipDist": -28.77,
-    "netGEX": 0.002,
+    "netGEX": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "JPM": {
     "spot": 294.6,
@@ -993,12 +993,12 @@ window.WALLS = {
     "callDist": 5.23,
     "putWall": 275,
     "putDist": -6.65,
-    "gammaFlip": 307,
-    "flipDist": 4.38,
-    "netGEX": -0.0146,
+    "gammaFlip": 305,
+    "flipDist": 3.53,
+    "netGEX": -0.0145,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "V": {
     "spot": 300.8,
@@ -1008,10 +1008,10 @@ window.WALLS = {
     "putDist": -5.25,
     "gammaFlip": 235,
     "flipDist": -21.87,
-    "netGEX": 0.0041,
+    "netGEX": 0.0043,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MA": {
     "spot": 493.44,
@@ -1024,7 +1024,7 @@ window.WALLS = {
     "netGEX": 0.003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BAC": {
     "spot": 49.38,
@@ -1034,10 +1034,10 @@ window.WALLS = {
     "putDist": -8.87,
     "gammaFlip": 50,
     "flipDist": 1.26,
-    "netGEX": -0.0157,
+    "netGEX": -0.0155,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GS": {
     "spot": 863.04,
@@ -1047,10 +1047,10 @@ window.WALLS = {
     "putDist": -7.3,
     "gammaFlip": 900,
     "flipDist": 4.28,
-    "netGEX": -0.0138,
+    "netGEX": -0.0152,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WFC": {
     "spot": 80.6,
@@ -1063,7 +1063,7 @@ window.WALLS = {
     "netGEX": -0.0073,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MS": {
     "spot": 165.81,
@@ -1073,10 +1073,10 @@ window.WALLS = {
     "putDist": -3.5,
     "gammaFlip": 175,
     "flipDist": 5.54,
-    "netGEX": -0.0032,
+    "netGEX": -0.0031,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "C": {
     "spot": 115.25,
@@ -1086,10 +1086,10 @@ window.WALLS = {
     "putDist": -4.56,
     "gammaFlip": 115,
     "flipDist": -0.22,
-    "netGEX": -0.0189,
+    "netGEX": -0.0193,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AXP": {
     "spot": 300.18,
@@ -1099,10 +1099,10 @@ window.WALLS = {
     "putDist": -6.72,
     "gammaFlip": 310,
     "flipDist": 3.27,
-    "netGEX": -0.0063,
+    "netGEX": -0.0067,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLY": {
     "spot": 108.15,
@@ -1112,10 +1112,10 @@ window.WALLS = {
     "putDist": -9.85,
     "gammaFlip": 114,
     "flipDist": 5.87,
-    "netGEX": 0.002,
+    "netGEX": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AMZN": {
     "spot": 209.77,
@@ -1123,25 +1123,25 @@ window.WALLS = {
     "callDist": 4.88,
     "putWall": 190,
     "putDist": -9.42,
-    "gammaFlip": 212,
-    "flipDist": 1.3,
-    "netGEX": -0.0255,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "gammaFlip": 172,
+    "flipDist": -17.77,
+    "netGEX": -0.0552,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "TSLA": {
     "spot": 360.59,
-    "callWall": 380,
-    "callDist": 5.38,
+    "callWall": 390,
+    "callDist": 8.16,
     "putWall": 350,
     "putDist": -2.94,
-    "gammaFlip": 120,
-    "flipDist": -66.72,
-    "netGEX": 0.0512,
+    "gammaFlip": 437,
+    "flipDist": 21.33,
+    "netGEX": 0.0191,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HD": {
     "spot": 321.63,
@@ -1149,12 +1149,12 @@ window.WALLS = {
     "callDist": 8.82,
     "putWall": 300,
     "putDist": -6.73,
-    "gammaFlip": 560,
-    "flipDist": 74.11,
-    "netGEX": 0.0012,
+    "gammaFlip": 292,
+    "flipDist": -9.06,
+    "netGEX": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MCD": {
     "spot": 307.14,
@@ -1162,12 +1162,12 @@ window.WALLS = {
     "callDist": 5.81,
     "putWall": 300,
     "putDist": -2.32,
-    "gammaFlip": 250,
-    "flipDist": -18.6,
-    "netGEX": 0.0036,
+    "gammaFlip": 155,
+    "flipDist": -49.53,
+    "netGEX": 0.004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TJX": {
     "spot": 161.29,
@@ -1180,7 +1180,7 @@ window.WALLS = {
     "netGEX": -0.0056,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LOW": {
     "spot": 231.03,
@@ -1190,23 +1190,23 @@ window.WALLS = {
     "putDist": -4.77,
     "gammaFlip": 155,
     "flipDist": -32.91,
-    "netGEX": 0.0026,
+    "netGEX": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BKNG": {
-    "spot": 4194.31,
-    "callWall": 4500,
-    "callDist": 7.29,
+    "spot": 167.77,
+    "callWall": 5900,
+    "callDist": 3416.67,
     "putWall": 4000,
-    "putDist": -4.63,
-    "gammaFlip": 4510,
-    "flipDist": 7.53,
-    "netGEX": -0.0037,
+    "putDist": 2284.18,
+    "gammaFlip": 3960,
+    "flipDist": 2260.34,
+    "netGEX": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SBUX": {
     "spot": 90.37,
@@ -1216,10 +1216,10 @@ window.WALLS = {
     "putDist": -5.94,
     "gammaFlip": 112,
     "flipDist": 23.93,
-    "netGEX": 0.0021,
+    "netGEX": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ORLY": {
     "spot": 91.42,
@@ -1232,7 +1232,7 @@ window.WALLS = {
     "netGEX": -0.0029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RCL": {
     "spot": 273.59,
@@ -1242,10 +1242,10 @@ window.WALLS = {
     "putDist": -4.97,
     "gammaFlip": 175,
     "flipDist": -36.04,
-    "netGEX": 0.0022,
+    "netGEX": 0.0024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLI": {
     "spot": 163.77,
@@ -1253,12 +1253,12 @@ window.WALLS = {
     "callDist": 2.58,
     "putWall": 160,
     "putDist": -2.3,
-    "gammaFlip": 182,
-    "flipDist": 11.44,
-    "netGEX": 0.0214,
+    "gammaFlip": 187,
+    "flipDist": 14.18,
+    "netGEX": 0.023,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GE": {
     "spot": 281.16,
@@ -1266,12 +1266,12 @@ window.WALLS = {
     "callDist": 6.7,
     "putWall": 275,
     "putDist": -2.19,
-    "gammaFlip": 440,
-    "flipDist": 56.49,
-    "netGEX": 0.0098,
+    "gammaFlip": 165,
+    "flipDist": -41.31,
+    "netGEX": 0.0122,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CAT": {
     "spot": 717.22,
@@ -1281,10 +1281,10 @@ window.WALLS = {
     "putDist": -9.37,
     "gammaFlip": 760,
     "flipDist": 5.96,
-    "netGEX": -0.008,
+    "netGEX": -0.0086,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RTX": {
     "spot": 196.21,
@@ -1294,10 +1294,10 @@ window.WALLS = {
     "putDist": -8.26,
     "gammaFlip": 135,
     "flipDist": -31.2,
-    "netGEX": 0.0007,
+    "netGEX": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GEV": {
     "spot": 898.57,
@@ -1307,10 +1307,10 @@ window.WALLS = {
     "putDist": -8.74,
     "gammaFlip": 880,
     "flipDist": -2.07,
-    "netGEX": -0.017,
+    "netGEX": -0.0184,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BA": {
     "spot": 208.22,
@@ -1320,10 +1320,10 @@ window.WALLS = {
     "putDist": -8.75,
     "gammaFlip": 210,
     "flipDist": 0.85,
-    "netGEX": -0.0136,
+    "netGEX": -0.0139,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DE": {
     "spot": 575.71,
@@ -1331,12 +1331,12 @@ window.WALLS = {
     "callDist": 4.22,
     "putWall": 560,
     "putDist": -2.73,
-    "gammaFlip": 590,
-    "flipDist": 2.48,
-    "netGEX": -0.0024,
+    "gammaFlip": 600,
+    "flipDist": 4.22,
+    "netGEX": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "UNP": {
     "spot": 244.71,
@@ -1344,12 +1344,12 @@ window.WALLS = {
     "callDist": 2.16,
     "putWall": 225,
     "putDist": -8.05,
-    "gammaFlip": 210,
-    "flipDist": -14.18,
+    "gammaFlip": 240,
+    "flipDist": -1.92,
     "netGEX": -0.0088,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "UBER": {
     "spot": 71.84,
@@ -1359,10 +1359,10 @@ window.WALLS = {
     "putDist": -9.52,
     "gammaFlip": 45,
     "flipDist": -37.36,
-    "netGEX": 0.0049,
+    "netGEX": 0.005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HON": {
     "spot": 229.45,
@@ -1372,10 +1372,10 @@ window.WALLS = {
     "putDist": -6.3,
     "gammaFlip": 240,
     "flipDist": 4.6,
-    "netGEX": -0.0023,
+    "netGEX": -0.0024,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ETN": {
     "spot": 361.1,
@@ -1385,10 +1385,10 @@ window.WALLS = {
     "putDist": -8.61,
     "gammaFlip": 195,
     "flipDist": -46.0,
-    "netGEX": 0.0011,
+    "netGEX": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLE": {
     "spot": 59.25,
@@ -1401,7 +1401,7 @@ window.WALLS = {
     "netGEX": -0.0174,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XOM": {
     "spot": 160.69,
@@ -1411,23 +1411,23 @@ window.WALLS = {
     "putDist": -6.65,
     "gammaFlip": 160,
     "flipDist": -0.43,
-    "netGEX": -0.025,
+    "netGEX": -0.0253,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CVX": {
     "spot": 198.97,
     "callWall": 200,
     "callDist": 0.52,
-    "putWall": 185,
-    "putDist": -7.02,
-    "gammaFlip": 200,
-    "flipDist": 0.52,
-    "netGEX": -0.0181,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "putWall": 180,
+    "putDist": -9.53,
+    "gammaFlip": 120,
+    "flipDist": -39.69,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "COP": {
     "spot": 130.52,
@@ -1440,7 +1440,7 @@ window.WALLS = {
     "netGEX": -0.0076,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WMB": {
     "spot": 72.0,
@@ -1448,25 +1448,25 @@ window.WALLS = {
     "callDist": 4.17,
     "putWall": 65,
     "putDist": -9.72,
-    "gammaFlip": 75,
-    "flipDist": 4.17,
-    "netGEX": -0.0019,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "gammaFlip": 35,
+    "flipDist": -51.39,
+    "netGEX": -0.0044,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "EOG": {
     "spot": 142.64,
-    "callWall": 145,
-    "callDist": 1.65,
-    "putWall": 140,
-    "putDist": -1.85,
-    "gammaFlip": 140,
-    "flipDist": -1.85,
-    "netGEX": -0.0031,
+    "callWall": 143,
+    "callDist": 0.25,
+    "putWall": 129,
+    "putDist": -9.56,
+    "gammaFlip": 85,
+    "flipDist": -40.41,
+    "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "KMI": {
     "spot": 32.97,
@@ -1479,7 +1479,7 @@ window.WALLS = {
     "netGEX": -0.0017,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VLO": {
     "spot": 244.09,
@@ -1489,10 +1489,10 @@ window.WALLS = {
     "putDist": -7.82,
     "gammaFlip": 165,
     "flipDist": -32.4,
-    "netGEX": 0.0014,
+    "netGEX": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PSX": {
     "spot": 176.21,
@@ -1505,7 +1505,7 @@ window.WALLS = {
     "netGEX": -0.0006,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLC": {
     "spot": 111.7,
@@ -1515,36 +1515,36 @@ window.WALLS = {
     "putDist": -3.31,
     "gammaFlip": 115,
     "flipDist": 2.95,
-    "netGEX": -0.0003,
+    "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "META": {
     "spot": 574.46,
-    "callWall": 610,
-    "callDist": 6.19,
-    "putWall": 520,
-    "putDist": -9.48,
-    "gammaFlip": 580,
-    "flipDist": 0.96,
-    "netGEX": -0.0364,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "callWall": 597,
+    "callDist": 4.01,
+    "putWall": 517,
+    "putDist": -9.92,
+    "gammaFlip": 310,
+    "flipDist": -46.04,
+    "netGEX": -0.0326,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "GOOGL": {
     "spot": 295.77,
-    "callWall": 300,
-    "callDist": 1.43,
-    "putWall": 280,
-    "putDist": -5.33,
-    "gammaFlip": 295,
-    "flipDist": -0.26,
-    "netGEX": -0.0278,
+    "callWall": 310,
+    "callDist": 4.81,
+    "putWall": 267,
+    "putDist": -9.56,
+    "gammaFlip": 150,
+    "flipDist": -49.28,
+    "netGEX": -0.02,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GOOG": {
     "spot": 294.46,
@@ -1554,23 +1554,23 @@ window.WALLS = {
     "putDist": -4.91,
     "gammaFlip": 305,
     "flipDist": 3.58,
-    "netGEX": -0.0329,
+    "netGEX": -0.0326,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NFLX": {
     "spot": 98.66,
     "callWall": 100,
     "callDist": 1.36,
-    "putWall": 95,
-    "putDist": -3.71,
-    "gammaFlip": 99,
-    "flipDist": 0.34,
-    "netGEX": -0.0413,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "putWall": 89,
+    "putDist": -9.79,
+    "gammaFlip": 2,
+    "flipDist": -97.97,
+    "netGEX": -0.077,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "VZ": {
     "spot": 49.4,
@@ -1578,12 +1578,12 @@ window.WALLS = {
     "callDist": 3.24,
     "putWall": 49,
     "putDist": -0.81,
-    "gammaFlip": 42,
-    "flipDist": -14.98,
-    "netGEX": -0.0108,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "gammaFlip": 49,
+    "flipDist": 0.2,
+    "netGEX": -0.0105,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "T": {
     "spot": 28.33,
@@ -1593,10 +1593,10 @@ window.WALLS = {
     "putDist": -4.69,
     "gammaFlip": 28,
     "flipDist": -1.16,
-    "netGEX": -0.007,
+    "netGEX": -0.0071,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CMCSA": {
     "spot": 27.93,
@@ -1604,12 +1604,12 @@ window.WALLS = {
     "callDist": 7.41,
     "putWall": 27,
     "putDist": -1.54,
-    "gammaFlip": 40,
-    "flipDist": 43.22,
+    "gammaFlip": 19,
+    "flipDist": -31.97,
     "netGEX": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TMUS": {
     "spot": 201.4,
@@ -1617,25 +1617,25 @@ window.WALLS = {
     "callDist": 4.27,
     "putWall": 185,
     "putDist": -8.14,
-    "gammaFlip": 212,
-    "flipDist": 5.51,
-    "netGEX": 0.0004,
+    "gammaFlip": 187,
+    "flipDist": -6.9,
+    "netGEX": 0.0016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "EA": {
     "spot": 203.6,
-    "callWall": 210,
-    "callDist": 3.14,
+    "callWall": 205,
+    "callDist": 0.69,
     "putWall": 195,
     "putDist": -4.22,
     "gammaFlip": 202,
     "flipDist": -0.54,
-    "netGEX": 0.0032,
+    "netGEX": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DIS": {
     "spot": 96.61,
@@ -1645,10 +1645,10 @@ window.WALLS = {
     "putDist": -1.67,
     "gammaFlip": 65,
     "flipDist": -32.72,
-    "netGEX": 0.0058,
+    "netGEX": 0.006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLV": {
     "spot": 146.81,
@@ -1656,12 +1656,12 @@ window.WALLS = {
     "callDist": 5.58,
     "putWall": 145,
     "putDist": -1.23,
-    "gammaFlip": 132,
-    "flipDist": -10.09,
-    "netGEX": 0.003,
+    "gammaFlip": 171,
+    "flipDist": 16.48,
+    "netGEX": 0.0029,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LLY": {
     "spot": 935.58,
@@ -1669,12 +1669,12 @@ window.WALLS = {
     "callDist": 6.89,
     "putWall": 900,
     "putDist": -3.8,
-    "gammaFlip": 470,
-    "flipDist": -49.76,
-    "netGEX": 0.0095,
+    "gammaFlip": 957,
+    "flipDist": 2.34,
+    "netGEX": 0.0096,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "JNJ": {
     "spot": 243.04,
@@ -1682,12 +1682,12 @@ window.WALLS = {
     "callDist": 2.86,
     "putWall": 230,
     "putDist": -5.37,
-    "gammaFlip": 220,
-    "flipDist": -9.48,
-    "netGEX": -0.0027,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "gammaFlip": 250,
+    "flipDist": 2.86,
+    "netGEX": -0.0079,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "ABBV": {
     "spot": 208.84,
@@ -1697,10 +1697,10 @@ window.WALLS = {
     "putDist": -9.02,
     "gammaFlip": 160,
     "flipDist": -23.39,
-    "netGEX": 0.0,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "netGEX": 0.0001,
+    "outlook": "STABLE / GRIND (Long Gamma)",
+    "outlookColor": "#27ae60",
+    "updated": "2026-04-06"
   },
   "MRK": {
     "spot": 120.87,
@@ -1710,10 +1710,10 @@ window.WALLS = {
     "putDist": -8.99,
     "gammaFlip": 100,
     "flipDist": -17.27,
-    "netGEX": -0.0173,
+    "netGEX": -0.0183,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "UNH": {
     "spot": 277.26,
@@ -1723,10 +1723,10 @@ window.WALLS = {
     "putDist": -2.62,
     "gammaFlip": 295,
     "flipDist": 6.4,
-    "netGEX": -0.0128,
+    "netGEX": -0.0129,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AMGN": {
     "spot": 347.94,
@@ -1734,12 +1734,12 @@ window.WALLS = {
     "callDist": 7.78,
     "putWall": 340,
     "putDist": -2.28,
-    "gammaFlip": 340,
-    "flipDist": -2.28,
-    "netGEX": -0.004,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "gammaFlip": 360,
+    "flipDist": 3.47,
+    "netGEX": -0.0038,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "ABT": {
     "spot": 102.87,
@@ -1747,12 +1747,12 @@ window.WALLS = {
     "callDist": 6.93,
     "putWall": 100,
     "putDist": -2.79,
-    "gammaFlip": 109,
-    "flipDist": 5.96,
-    "netGEX": -0.0008,
+    "gammaFlip": 110,
+    "flipDist": 6.93,
+    "netGEX": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TMO": {
     "spot": 491.46,
@@ -1762,10 +1762,10 @@ window.WALLS = {
     "putDist": -6.4,
     "gammaFlip": 590,
     "flipDist": 20.05,
-    "netGEX": -0.0006,
+    "netGEX": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "GILD": {
     "spot": 139.71,
@@ -1778,7 +1778,7 @@ window.WALLS = {
     "netGEX": -0.004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ISRG": {
     "spot": 452.07,
@@ -1788,10 +1788,10 @@ window.WALLS = {
     "putDist": -3.78,
     "gammaFlip": 270,
     "flipDist": -40.27,
-    "netGEX": 0.0071,
+    "netGEX": 0.0094,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLU": {
     "spot": 46.34,
@@ -1804,7 +1804,7 @@ window.WALLS = {
     "netGEX": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NEE": {
     "spot": 93.15,
@@ -1817,7 +1817,7 @@ window.WALLS = {
     "netGEX": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SO": {
     "spot": 97.45,
@@ -1827,10 +1827,10 @@ window.WALLS = {
     "putDist": -2.51,
     "gammaFlip": 95,
     "flipDist": -2.51,
-    "netGEX": -0.0036,
+    "netGEX": -0.0041,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CEG": {
     "spot": 272.82,
@@ -1838,12 +1838,12 @@ window.WALLS = {
     "callDist": 9.96,
     "putWall": 265,
     "putDist": -2.87,
-    "gammaFlip": 190,
-    "flipDist": -30.36,
-    "netGEX": 0.0025,
+    "gammaFlip": 312,
+    "flipDist": 14.54,
+    "netGEX": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DUK": {
     "spot": 132.22,
@@ -1853,10 +1853,10 @@ window.WALLS = {
     "putDist": -9.24,
     "gammaFlip": 120,
     "flipDist": -9.24,
-    "netGEX": -0.0145,
+    "netGEX": -0.0146,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "AEP": {
     "spot": 132.68,
@@ -1869,7 +1869,7 @@ window.WALLS = {
     "netGEX": -0.0046,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SRE": {
     "spot": 99.2,
@@ -1877,12 +1877,12 @@ window.WALLS = {
     "callDist": 0.81,
     "putWall": 90,
     "putDist": -9.27,
-    "gammaFlip": 95,
-    "flipDist": -4.23,
-    "netGEX": -0.0017,
+    "gammaFlip": 65,
+    "flipDist": -34.48,
+    "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VST": {
     "spot": 151.18,
@@ -1890,12 +1890,12 @@ window.WALLS = {
     "callDist": 2.53,
     "putWall": 140,
     "putDist": -7.4,
-    "gammaFlip": 90,
-    "flipDist": -40.47,
-    "netGEX": 0.0015,
+    "gammaFlip": 260,
+    "flipDist": 71.98,
+    "netGEX": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "D": {
     "spot": 62.77,
@@ -1908,7 +1908,7 @@ window.WALLS = {
     "netGEX": -0.0054,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "EXC": {
     "spot": 49.33,
@@ -1921,20 +1921,20 @@ window.WALLS = {
     "netGEX": -0.005,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XEL": {
     "spot": 80.74,
     "callWall": 85,
     "callDist": 5.28,
-    "putWall": 75,
-    "putDist": -7.11,
-    "gammaFlip": 80,
-    "flipDist": -0.92,
-    "netGEX": -0.0006,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "putWall": 80,
+    "putDist": -0.92,
+    "gammaFlip": 85,
+    "flipDist": 5.28,
+    "netGEX": -0.0005,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "XLRE": {
     "spot": 41.61,
@@ -1947,7 +1947,7 @@ window.WALLS = {
     "netGEX": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WELL": {
     "spot": 202.33,
@@ -1960,7 +1960,7 @@ window.WALLS = {
     "netGEX": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PLD": {
     "spot": 133.77,
@@ -1973,20 +1973,20 @@ window.WALLS = {
     "netGEX": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "EQIX": {
     "spot": 1000.37,
-    "callWall": 1030,
-    "callDist": 2.96,
-    "putWall": 920,
-    "putDist": -8.03,
-    "gammaFlip": 1010,
-    "flipDist": 0.96,
-    "netGEX": -0.0113,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "callWall": 1010,
+    "callDist": 0.96,
+    "putWall": 910,
+    "putDist": -9.03,
+    "gammaFlip": 500,
+    "flipDist": -50.02,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "AMT": {
     "spot": 173.73,
@@ -1996,10 +1996,10 @@ window.WALLS = {
     "putDist": -2.15,
     "gammaFlip": 110,
     "flipDist": -36.68,
-    "netGEX": 0.0032,
+    "netGEX": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "O": {
     "spot": 62.21,
@@ -2012,7 +2012,7 @@ window.WALLS = {
     "netGEX": -0.0031,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SPG": {
     "spot": 188.67,
@@ -2025,7 +2025,7 @@ window.WALLS = {
     "netGEX": -0.0012,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PSA": {
     "spot": 280.35,
@@ -2038,7 +2038,7 @@ window.WALLS = {
     "netGEX": -0.0012,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VTR": {
     "spot": 83.27,
@@ -2051,7 +2051,7 @@ window.WALLS = {
     "netGEX": -0.0013,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CCI": {
     "spot": 84.78,
@@ -2064,7 +2064,7 @@ window.WALLS = {
     "netGEX": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XHB": {
     "spot": 98.22,
@@ -2072,12 +2072,12 @@ window.WALLS = {
     "callDist": 6.9,
     "putWall": 95,
     "putDist": -3.28,
-    "gammaFlip": 110,
-    "flipDist": 11.99,
-    "netGEX": -0.0001,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "gammaFlip": 123,
+    "flipDist": 25.23,
+    "netGEX": 0.0011,
+    "outlook": "STABLE / GRIND (Long Gamma)",
+    "outlookColor": "#27ae60",
+    "updated": "2026-04-06"
   },
   "JCI": {
     "spot": 132.97,
@@ -2087,10 +2087,10 @@ window.WALLS = {
     "putDist": -2.23,
     "gammaFlip": 140,
     "flipDist": 5.29,
-    "netGEX": -0.0042,
+    "netGEX": -0.0041,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CARR": {
     "spot": 55.71,
@@ -2100,10 +2100,10 @@ window.WALLS = {
     "putDist": -1.27,
     "gammaFlip": 110,
     "flipDist": 97.45,
-    "netGEX": 0.0005,
+    "netGEX": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CSL": {
     "spot": 331.11,
@@ -2111,12 +2111,12 @@ window.WALLS = {
     "callDist": 5.71,
     "putWall": 310,
     "putDist": -6.38,
-    "gammaFlip": 260,
-    "flipDist": -21.48,
+    "gammaFlip": 450,
+    "flipDist": 35.91,
     "netGEX": -0.0,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "TT": {
     "spot": 427.07,
@@ -2129,12 +2129,12 @@ window.WALLS = {
     "netGEX": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "IBP": {
     "spot": 268.71,
-    "callWall": 280,
-    "callDist": 4.2,
+    "callWall": 290,
+    "callDist": 7.92,
     "putWall": 260,
     "putDist": -3.24,
     "gammaFlip": 185,
@@ -2142,20 +2142,20 @@ window.WALLS = {
     "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WMS": {
     "spot": 137.67,
     "callWall": 140,
     "callDist": 1.69,
-    "putWall": 135,
-    "putDist": -1.94,
-    "gammaFlip": 175,
-    "flipDist": 27.12,
-    "netGEX": 0.0001,
-    "outlook": "STABLE / GRIND (Long Gamma)",
-    "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "putWall": 125,
+    "putDist": -9.2,
+    "gammaFlip": 135,
+    "flipDist": -1.94,
+    "netGEX": -0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "TOL": {
     "spot": 135.83,
@@ -2163,12 +2163,12 @@ window.WALLS = {
     "callDist": 6.75,
     "putWall": 130,
     "putDist": -4.29,
-    "gammaFlip": 55,
-    "flipDist": -59.51,
+    "gammaFlip": 75,
+    "flipDist": -44.78,
     "netGEX": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MAS": {
     "spot": 59.12,
@@ -2181,7 +2181,7 @@ window.WALLS = {
     "netGEX": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LII": {
     "spot": 454.64,
@@ -2194,20 +2194,20 @@ window.WALLS = {
     "netGEX": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WSM": {
     "spot": 180.17,
-    "callWall": 190,
-    "callDist": 5.46,
+    "callWall": 185,
+    "callDist": 2.68,
     "putWall": 175,
     "putDist": -2.87,
-    "gammaFlip": 135,
-    "flipDist": -25.07,
-    "netGEX": 0.0016,
+    "gammaFlip": 230,
+    "flipDist": 27.66,
+    "netGEX": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XBI": {
     "spot": 128.96,
@@ -2217,10 +2217,10 @@ window.WALLS = {
     "putDist": -8.5,
     "gammaFlip": 100,
     "flipDist": -22.46,
-    "netGEX": 0.0135,
+    "netGEX": 0.0109,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MRNA": {
     "spot": 49.2,
@@ -2233,7 +2233,7 @@ window.WALLS = {
     "netGEX": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ROIV": {
     "spot": 28.33,
@@ -2246,7 +2246,7 @@ window.WALLS = {
     "netGEX": -0.0002,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PCVX": {
     "spot": 58.38,
@@ -2259,7 +2259,7 @@ window.WALLS = {
     "netGEX": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ACLX": {
     "spot": 114.77,
@@ -2269,10 +2269,10 @@ window.WALLS = {
     "putDist": -8.51,
     "gammaFlip": 115,
     "flipDist": 0.2,
-    "netGEX": -0.0597,
+    "netGEX": -0.0593,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RVMD": {
     "spot": 99.12,
@@ -2285,7 +2285,7 @@ window.WALLS = {
     "netGEX": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PRAX": {
     "spot": 310.38,
@@ -2298,7 +2298,7 @@ window.WALLS = {
     "netGEX": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "FOLD": {
     "spot": 14.44,
@@ -2311,7 +2311,7 @@ window.WALLS = {
     "netGEX": -0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MIRM": {
     "spot": 94.17,
@@ -2321,10 +2321,10 @@ window.WALLS = {
     "putDist": -9.74,
     "gammaFlip": 70,
     "flipDist": -25.67,
-    "netGEX": -0.0,
+    "netGEX": -0.0001,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLP": {
     "spot": 81.89,
@@ -2334,23 +2334,23 @@ window.WALLS = {
     "putDist": -2.31,
     "gammaFlip": 50,
     "flipDist": -38.94,
-    "netGEX": 0.0536,
+    "netGEX": 0.055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WMT": {
     "spot": 125.79,
-    "callWall": 135,
-    "callDist": 7.32,
-    "putWall": 115,
-    "putDist": -8.58,
-    "gammaFlip": 135,
-    "flipDist": 7.32,
-    "netGEX": -0.0049,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "callWall": 126,
+    "callDist": 0.17,
+    "putWall": 114,
+    "putDist": -9.37,
+    "gammaFlip": 65,
+    "flipDist": -48.33,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "COST": {
     "spot": 1014.96,
@@ -2360,10 +2360,10 @@ window.WALLS = {
     "putDist": -6.4,
     "gammaFlip": 1015,
     "flipDist": 0.0,
-    "netGEX": -0.0451,
+    "netGEX": -0.0453,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PG": {
     "spot": 143.12,
@@ -2373,10 +2373,10 @@ window.WALLS = {
     "putDist": -5.67,
     "gammaFlip": 150,
     "flipDist": 4.81,
-    "netGEX": -0.0026,
+    "netGEX": -0.0024,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "KO": {
     "spot": 76.72,
@@ -2386,23 +2386,23 @@ window.WALLS = {
     "putDist": -2.24,
     "gammaFlip": 77,
     "flipDist": 0.36,
-    "netGEX": -0.0168,
+    "netGEX": -0.0172,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PM": {
     "spot": 158.1,
-    "callWall": 170,
-    "callDist": 7.53,
-    "putWall": 155,
-    "putDist": -1.96,
+    "callWall": 165,
+    "callDist": 4.36,
+    "putWall": 152,
+    "putDist": -3.54,
     "gammaFlip": 115,
     "flipDist": -27.26,
-    "netGEX": 0.0008,
+    "netGEX": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CL": {
     "spot": 85.14,
@@ -2410,12 +2410,12 @@ window.WALLS = {
     "callDist": 5.71,
     "putWall": 85,
     "putDist": -0.16,
-    "gammaFlip": 94,
-    "flipDist": 10.41,
+    "gammaFlip": 73,
+    "flipDist": -14.26,
     "netGEX": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PEP": {
     "spot": 157.01,
@@ -2425,10 +2425,10 @@ window.WALLS = {
     "putDist": -1.28,
     "gammaFlip": 160,
     "flipDist": 1.9,
-    "netGEX": -0.0086,
+    "netGEX": -0.0087,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MO": {
     "spot": 65.76,
@@ -2438,23 +2438,23 @@ window.WALLS = {
     "putDist": -1.16,
     "gammaFlip": 69,
     "flipDist": 4.93,
-    "netGEX": -0.0014,
+    "netGEX": -0.0013,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MDLZ": {
     "spot": 57.54,
-    "callWall": 60,
-    "callDist": 4.28,
+    "callWall": 58,
+    "callDist": 0.8,
     "putWall": 52,
-    "putDist": -8.76,
-    "gammaFlip": 60,
-    "flipDist": 4.28,
-    "netGEX": -0.0002,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "putDist": -9.63,
+    "gammaFlip": 45,
+    "flipDist": -21.79,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "MNST": {
     "spot": 72.37,
@@ -2467,7 +2467,7 @@ window.WALLS = {
     "netGEX": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "SOXX": {
     "spot": 339.61,
@@ -2477,10 +2477,10 @@ window.WALLS = {
     "putDist": -4.3,
     "gammaFlip": 150,
     "flipDist": -55.83,
-    "netGEX": 0.0078,
+    "netGEX": 0.0082,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ADI": {
     "spot": 318.34,
@@ -2490,10 +2490,10 @@ window.WALLS = {
     "putDist": -2.62,
     "gammaFlip": 320,
     "flipDist": 0.52,
-    "netGEX": -0.005,
+    "netGEX": -0.0048,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "KLAC": {
     "spot": 1516.84,
@@ -2506,7 +2506,7 @@ window.WALLS = {
     "netGEX": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ASML": {
     "spot": 1317.23,
@@ -2516,10 +2516,10 @@ window.WALLS = {
     "putDist": -8.9,
     "gammaFlip": 560,
     "flipDist": -57.49,
-    "netGEX": 0.005,
+    "netGEX": 0.0055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XME": {
     "spot": 110.78,
@@ -2529,10 +2529,10 @@ window.WALLS = {
     "putDist": -9.73,
     "gammaFlip": 50,
     "flipDist": -54.87,
-    "netGEX": 0.0006,
+    "netGEX": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CDE": {
     "spot": 19.09,
@@ -2545,7 +2545,7 @@ window.WALLS = {
     "netGEX": -0.0011,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "FCX": {
     "spot": 61.38,
@@ -2555,10 +2555,10 @@ window.WALLS = {
     "putDist": -2.25,
     "gammaFlip": 63,
     "flipDist": 2.64,
-    "netGEX": -0.0041,
+    "netGEX": -0.0043,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "HL": {
     "spot": 19.18,
@@ -2571,33 +2571,33 @@ window.WALLS = {
     "netGEX": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RGLD": {
     "spot": 262.63,
     "callWall": 270,
     "callDist": 2.81,
-    "putWall": 250,
-    "putDist": -4.81,
-    "gammaFlip": 290,
-    "flipDist": 10.42,
-    "netGEX": -0.0014,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "putWall": 240,
+    "putDist": -8.62,
+    "gammaFlip": 100,
+    "flipDist": -61.92,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "AA": {
     "spot": 71.53,
-    "callWall": 75,
-    "callDist": 4.85,
+    "callWall": 72,
+    "callDist": 0.66,
     "putWall": 65,
     "putDist": -9.13,
-    "gammaFlip": 63,
-    "flipDist": -11.93,
-    "netGEX": -0.003,
+    "gammaFlip": 20,
+    "flipDist": -72.04,
+    "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NEM": {
     "spot": 114.05,
@@ -2605,12 +2605,12 @@ window.WALLS = {
     "callDist": 5.22,
     "putWall": 105,
     "putDist": -7.94,
-    "gammaFlip": 70,
-    "flipDist": -38.62,
+    "gammaFlip": 128,
+    "flipDist": 12.23,
     "netGEX": -0.0001,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "STLD": {
     "spot": 180.2,
@@ -2620,10 +2620,10 @@ window.WALLS = {
     "putDist": -5.66,
     "gammaFlip": 185,
     "flipDist": 2.66,
-    "netGEX": -0.0019,
+    "netGEX": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "RS": {
     "spot": 305.38,
@@ -2631,12 +2631,12 @@ window.WALLS = {
     "callDist": 4.79,
     "putWall": 280,
     "putDist": -8.31,
-    "gammaFlip": 310,
-    "flipDist": 1.51,
+    "gammaFlip": 320,
+    "flipDist": 4.79,
     "netGEX": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "NUE": {
     "spot": 172.46,
@@ -2646,10 +2646,10 @@ window.WALLS = {
     "putDist": -7.22,
     "gammaFlip": 175,
     "flipDist": 1.47,
-    "netGEX": -0.0018,
+    "netGEX": -0.0019,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XRT": {
     "spot": 80.45,
@@ -2659,10 +2659,10 @@ window.WALLS = {
     "putDist": -8.02,
     "gammaFlip": 88,
     "flipDist": 10.01,
-    "netGEX": 0.001,
+    "netGEX": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CASY": {
     "spot": 743.42,
@@ -2675,7 +2675,7 @@ window.WALLS = {
     "netGEX": -0.0014,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "FIVE": {
     "spot": 235.39,
@@ -2688,20 +2688,20 @@ window.WALLS = {
     "netGEX": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "DG": {
     "spot": 119.74,
-    "callWall": 123,
-    "callDist": 2.72,
+    "callWall": 122,
+    "callDist": 1.89,
     "putWall": 113,
     "putDist": -5.63,
     "gammaFlip": 118,
     "flipDist": -1.45,
-    "netGEX": -0.0005,
+    "netGEX": -0.0006,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "PSMT": {
     "spot": 152.48,
@@ -2714,7 +2714,7 @@ window.WALLS = {
     "netGEX": 0.0,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VVV": {
     "spot": 33.33,
@@ -2727,7 +2727,7 @@ window.WALLS = {
     "netGEX": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "VSCO": {
     "spot": 46.0,
@@ -2735,12 +2735,12 @@ window.WALLS = {
     "callDist": 8.7,
     "putWall": 45,
     "putDist": -2.17,
-    "gammaFlip": 25,
-    "flipDist": -45.65,
+    "gammaFlip": 45,
+    "flipDist": -2.17,
     "netGEX": -0.0005,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "TGT": {
     "spot": 120.45,
@@ -2750,23 +2750,23 @@ window.WALLS = {
     "putDist": -4.52,
     "gammaFlip": 120,
     "flipDist": -0.37,
-    "netGEX": -0.0034,
+    "netGEX": -0.0035,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "BBWI": {
     "spot": 18.57,
-    "callWall": 20,
-    "callDist": 7.7,
+    "callWall": 19,
+    "callDist": 2.32,
     "putWall": 17,
-    "putDist": -5.76,
-    "gammaFlip": 20,
-    "flipDist": 10.39,
-    "netGEX": -0.0,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "putDist": -8.45,
+    "gammaFlip": 10,
+    "flipDist": -46.15,
+    "netGEX": 0.0,
+    "outlook": "VOLATILE / TRANSITION",
+    "outlookColor": "#f39c12",
+    "updated": "2026-04-06"
   },
   "ULTA": {
     "spot": 537.39,
@@ -2774,12 +2774,12 @@ window.WALLS = {
     "callDist": 5.14,
     "putWall": 500,
     "putDist": -6.96,
-    "gammaFlip": 565,
-    "flipDist": 5.14,
-    "netGEX": -0.0011,
+    "gammaFlip": 745,
+    "flipDist": 38.63,
+    "netGEX": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "XLB": {
     "spot": 50.41,
@@ -2789,10 +2789,10 @@ window.WALLS = {
     "putDist": -4.78,
     "gammaFlip": 57,
     "flipDist": 14.06,
-    "netGEX": 0.0059,
+    "netGEX": 0.006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "LIN": {
     "spot": 502.6,
@@ -2800,12 +2800,12 @@ window.WALLS = {
     "callDist": 1.47,
     "putWall": 460,
     "putDist": -8.48,
-    "gammaFlip": 310,
-    "flipDist": -38.32,
+    "gammaFlip": 575,
+    "flipDist": 14.41,
     "netGEX": -0.001,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "SHW": {
     "spot": 318.0,
@@ -2818,7 +2818,7 @@ window.WALLS = {
     "netGEX": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CRH": {
     "spot": 104.63,
@@ -2828,10 +2828,10 @@ window.WALLS = {
     "putDist": -4.43,
     "gammaFlip": 97,
     "flipDist": -6.81,
-    "netGEX": 0.0006,
+    "netGEX": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "ECL": {
     "spot": 264.28,
@@ -2844,7 +2844,7 @@ window.WALLS = {
     "netGEX": -0.0046,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "CTVA": {
     "spot": 85.46,
@@ -2857,7 +2857,7 @@ window.WALLS = {
     "netGEX": -0.0011,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "APD": {
     "spot": 293.55,
@@ -2870,7 +2870,7 @@ window.WALLS = {
     "netGEX": -0.011,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "MLM": {
     "spot": 597.18,
@@ -2883,7 +2883,7 @@ window.WALLS = {
     "netGEX": -0.0005,
     "outlook": "VOLATILE / TRANSITION",
     "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   },
   "WDC": {
     "spot": 294.97,
@@ -2891,25 +2891,25 @@ window.WALLS = {
     "callDist": 1.71,
     "putWall": 270,
     "putDist": -8.47,
-    "gammaFlip": 125,
-    "flipDist": -57.62,
-    "netGEX": -0.0085,
-    "outlook": "VOLATILE / TRANSITION",
-    "outlookColor": "#f39c12",
-    "updated": "2026-04-03"
+    "gammaFlip": 310,
+    "flipDist": 5.1,
+    "netGEX": -0.009,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "outlookColor": "#e74c3c",
+    "updated": "2026-04-06"
   },
   "SNDK": {
     "spot": 701.59,
-    "callWall": 750,
-    "callDist": 6.9,
-    "putWall": 700,
-    "putDist": -0.23,
-    "gammaFlip": 740,
-    "flipDist": 5.47,
-    "netGEX": -0.015,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "outlookColor": "#e74c3c",
-    "updated": "2026-04-03"
+    "callWall": 702,
+    "callDist": 0.13,
+    "putWall": 650,
+    "putDist": -7.35,
+    "gammaFlip": 310,
+    "flipDist": -55.81,
+    "netGEX": 0.014,
+    "outlook": "STABLE / GRIND (Long Gamma)",
+    "outlookColor": "#27ae60",
+    "updated": "2026-04-06"
   },
   "CRDO": {
     "spot": 101.45,
@@ -2922,6 +2922,6 @@ window.WALLS = {
     "netGEX": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "outlookColor": "#27ae60",
-    "updated": "2026-04-03"
+    "updated": "2026-04-06"
   }
 };
