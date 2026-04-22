@@ -6,6 +6,6 @@
         "XHB", "XBI", "XLP", "SOXX", "XME", "XRT", "XLB"
     ],
     "EXTRA_TICKERS": [
-        "WDC", "SNDK", "CRDO"
+        "WDC", "SNDK", "CRDO", "DELL", "HPE", "HPQ"
     ]
 }
