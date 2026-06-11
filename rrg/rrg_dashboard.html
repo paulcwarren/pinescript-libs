@@ -1,0 +1,293 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>Sector RRG Dashboard</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #131722; color: #d1d4dc; padding: 30px; margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h2 { color: #ffffff; border-bottom: 2px solid #2a2e39; padding-bottom: 10px; margin-bottom: 20px;}
+        .graph-container { margin-bottom: 40px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        table { border-collapse: collapse; width: 100%; font-size: 14px; background-color: #1e222d; border-radius: 8px; overflow: hidden; }
+        th { background-color: #181c25; color: #787b86; font-weight: 600; text-transform: uppercase; padding: 14px 15px; text-align: left; border-bottom: 1px solid #2a2e39; }
+        td { padding: 12px 15px; border-bottom: 1px solid #2a2e39; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background-color: #2a2e39; }
+        
+        .bucket-Leading { background-color: rgba(38, 166, 154, 0.15); color: #26a69a; font-weight: 600; border-radius: 4px; padding: 4px 8px; }
+        .bucket-Improving { background-color: rgba(156, 204, 101, 0.15); color: #9ccc65; font-weight: 600; border-radius: 4px; padding: 4px 8px; }
+        .bucket-Weakening { background-color: rgba(255, 167, 38, 0.15); color: #ffa726; font-weight: 600; border-radius: 4px; padding: 4px 8px; }
+        .bucket-Lagging { background-color: rgba(239, 83, 80, 0.15); color: #ef5350; font-weight: 600; border-radius: 4px; padding: 4px 8px; }
+        .bucket-Neutral { background-color: rgba(158, 158, 158, 0.15); color: #9e9e9e; font-weight: 600; border-radius: 4px; padding: 4px 8px; }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Sector Relative Rotation Graph (RRG) vs SPY</h2>
+            <div class="graph-container">
+                <div style="height:700px; width:100%;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.6.0.min.js" integrity="sha256-QaOVwtVY0T02VaHrr6pnoHLCwayMJp4O5n4YyaE3rJk=" crossorigin="anonymous"></script>                <div id="8e30627f-1214-4055-b550-dbab1d8cd1a2" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("8e30627f-1214-4055-b550-dbab1d8cd1a2")) {                    Plotly.newPlot(                        "8e30627f-1214-4055-b550-dbab1d8cd1a2",                        [{"hovertemplate":"\u003cb\u003eIGV\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9ccc65","width":2},"marker":{"color":"#9ccc65","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"IGV","x":[-0.026332104563773315,-0.025825949986126334,-0.02509755776667716,-0.024518499847064196,-0.02411191227082371,-0.02373642547730287,-0.023438096941828607,-0.023163075765986224,-0.022994794257019835,-0.022827379730119973],"y":[0.2127893502256437,0.3942883060112341,0.5583259884610016,0.4509794819583634,0.32414262178719105,0.2993136248310072,0.23959972970973298,0.22045510748685254,0.1368141978443798,0.13503877966495073],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLY\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ef5350","width":2},"marker":{"color":"#ef5350","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLY","x":[-0.009668766246143712,-0.009755457346357299,-0.009959354995328767,-0.0101838998813841,-0.010398624719244076,-0.010598785202065975,-0.01076220840924122,-0.010905293617336304,-0.011005678890383175,-0.011099439568717812],"y":[-0.018022237468663077,-0.053849597368586716,-0.1273888355898201,-0.14098274191681887,-0.13501622335519028,-0.1259706809044216,-0.10259783974586573,-0.08984030032909708,-0.06276398243544508,-0.058788065165337626],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLP\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ef5350","width":2},"marker":{"color":"#ef5350","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLP","x":[-0.006148996478254995,-0.006363485972637764,-0.006613253404238809,-0.006864378840228752,-0.007066870031759348,-0.007277364302661432,-0.007330016524858818,-0.007402250962787599,-0.0074162635345758204,-0.0074278988228681925],"y":[-0.13212900463103425,-0.1893640340458201,-0.22218117835489606,-0.2241826566018032,-0.1797979650295541,-0.1877781013833933,-0.04277468954646885,-0.06056768718718984,-0.009250746914663537,-0.007610160917062819],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLF\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9ccc65","width":2},"marker":{"color":"#9ccc65","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLF","x":[-0.006185717587446349,-0.0062747089914887005,-0.006370559517735824,-0.006462732995956691,-0.0065591324682291174,-0.0066039781852005736,-0.006584202816018833,-0.006582377003950826,-0.006551967941272302,-0.0065211234683740515],"y":[-0.14699818513703725,-0.12836017628492158,-0.13882115057641886,-0.1338279098517359,-0.1404853838869683,-0.06448711839790867,0.02894019507647639,0.0033592762114563607,0.04373940287321085,0.0440927558547834],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLV\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9ccc65","width":2},"marker":{"color":"#9ccc65","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLV","x":[-0.016405724549766743,-0.01663463963200984,-0.016933796066347567,-0.017284099501232802,-0.017527004973166505,-0.01759345701694348,-0.017448893445121016,-0.017335272677499264,-0.01712217871614785,-0.016913146049311434],"y":[-0.0805517382662721,-0.1123311323565592,-0.1483777879004357,-0.1752090610388686,-0.12015738473593583,-0.03049835651041486,0.07412317369548399,0.058776211084712,0.10653134075670956,0.10416439940147448],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLI\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLI","x":[0.002520721335570686,0.0021456280957555807,0.0017354927267648756,0.0014043927562054637,0.0011303169060818685,0.000926098355329974,0.0008374828519556732,0.0007125012851483536,0.000696511265494415,0.00068097132410877],"y":[-0.14238717602581452,-0.15680686147403977,-0.17245662892814193,-0.13805610344990935,-0.11350245514499764,-0.08350339654197711,-0.034056604333747194,-0.049663170058141755,-0.0034718248432876065,-0.0034840059108237707],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXRT\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9ccc65","width":2},"marker":{"color":"#9ccc65","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XRT","x":[-0.008888425303289094,-0.009026798977240597,-0.009194291008725416,-0.009342102800240393,-0.009471277694463098,-0.009599435527242281,-0.009667445519556367,-0.009691294848708343,-0.009656052136699192,-0.009619795263376973],"y":[-0.055853896362993545,-0.11825258590809895,-0.145051975560201,-0.12777282875815543,-0.11145110758337276,-0.11107987450956455,-0.05710482738273559,-0.01813911546601118,0.03361653897820552,0.034124731710620616],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXME\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XME","x":[0.01904402603427016,0.018941105355751664,0.01891553592086964,0.019098408592158195,0.019131010219390288,0.01914264270263888,0.01886621378993189,0.018584197585771928,0.018218468136121352,0.017862467915765207],"y":[-0.03506950224682394,-0.07570460636319272,-0.029567604587646415,0.09387765036052842,0.007096040006619425,-0.005934475369689773,-0.17614058554578876,-0.18047411246249065,-0.2334895492571415,-0.2282246739460294],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLC\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ef5350","width":2},"marker":{"color":"#ef5350","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLC","x":[-0.005730012016143093,-0.006008293719367341,-0.006290409836592931,-0.006649668723073515,-0.007021794993025021,-0.00735287229821191,-0.007607069167222369,-0.007884426252644294,-0.008118921924217454,-0.00834228815157198],"y":[-0.14735412047019625,-0.17450654321158027,-0.17743532433797873,-0.22848506358800857,-0.23770891017496426,-0.21074884918669134,-0.15987759802598878,-0.17563746625457266,-0.14762653233310719,-0.14071305737297418],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXBI\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XBI","x":[0.013821722839254175,0.01361805548303574,0.013278257726860698,0.01270181054020969,0.012266592173145019,0.011972198382132399,0.011631382100647847,0.011278668345689524,0.01107683812274557,0.010880124357803306],"y":[-0.12669990361201447,-0.11592434612028993,-0.19161541863110665,-0.32643752103605905,-0.24345218466167107,-0.16239702387751234,-0.18935352415498136,-0.19682435393770586,-0.11063150394541318,-0.10831552478932753],"type":"scatter"},{"hovertemplate":"\u003cb\u003eROBO\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"ROBO","x":[0.00806310467839455,0.008161849406029972,0.008282881163201292,0.008423621754344357,0.008554089759595929,0.008620090557295013,0.008558911804376373,0.008529924402547892,0.008454005164214101,0.008378951359396453],"y":[0.11168538710606116,0.08789909578949164,0.10647964604165235,0.12270257725523663,0.11356903421201837,0.058852038910995386,-0.0502414737276981,-0.022152895183659288,-0.06367279327079196,-0.06328046857512616],"type":"scatter"},{"hovertemplate":"\u003cb\u003eXLE\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"XLE","x":[0.006500293421200634,0.006264155327605422,0.0060706729323269926,0.0059069819016244335,0.005795747166360471,0.005679961992602095,0.005585618564810921,0.00551577017686318,0.005414939454217144,0.005316694181018378],"y":[-0.2537544700684181,-0.2899602860677483,-0.23408330326595056,-0.1959222123562992,-0.12834487401904288,-0.13524190426980276,-0.10863661263047703,-0.07827640790151011,-0.11845676570995187,-0.11606310353392678],"type":"scatter"},{"hovertemplate":"\u003cb\u003eQTUM\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#26a69a","width":2},"marker":{"color":"#26a69a","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"QTUM","x":[0.02609580047783383,0.02672448427615895,0.027431845259454163,0.028336289408835785,0.029206115391900128,0.029956918059955817,0.0302754319099732,0.030767588789974654,0.031126703131579336,0.03146415561252833],"y":[0.3240017441955819,0.3130324819343298,0.34866813431810395,0.4386271526541549,0.42062353080363574,0.3647556762595595,0.16609594444338258,0.24847272094982953,0.18435082390559862,0.17249051739332333],"type":"scatter"},{"hovertemplate":"\u003cb\u003eURA\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"URA","x":[0.006769614041558,0.006525164431400998,0.006273972660893648,0.006145754520315683,0.0059118674950781325,0.0056733183445210195,0.0052882837598598464,0.004938204346084302,0.0045304816265887005,0.004137503434438458],"y":[-0.3555958649583312,-0.3528184396154137,-0.36478634690906114,-0.18215339188428062,-0.3339898968079402,-0.34306612531576336,-0.5657264980038127,-0.5125081512030927,-0.6086314111849112,-0.588107022908824],"type":"scatter"},{"hovertemplate":"\u003cb\u003eSOXX\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#26a69a","width":2},"marker":{"color":"#26a69a","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"SOXX","x":[0.1567286363296917,0.15973176605968809,0.16263173573880968,0.16669761599799882,0.17117680909267824,0.1748134544294791,0.17627320495836407,0.17891001821423003,0.18107899045449144,0.18311883914774296],"y":[0.4725668037874355,0.4365881488240149,0.4187887072012314,0.5694394150257809,0.6160819818153567,0.5071515057845027,0.2287737873403713,0.38596375664788596,0.32086524908431063,0.2997509890774884],"type":"scatter"},{"hovertemplate":"\u003cb\u003eUFO\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"UFO","x":[0.017089153793106347,0.017349615579925197,0.01741550040649527,0.01747684844640316,0.017406105346126653,0.017390400441909162,0.017240766084559378,0.01709337084910844,0.016881070022245932,0.016672859192964608],"y":[0.44547915186738907,0.29901957356490705,0.07101255425101691,0.06342571990569904,-0.10234398450532428,-0.032152366176871505,-0.20477244943906098,-0.2035414895435147,-0.29273180088791484,-0.288867523983715],"type":"scatter"},{"hovertemplate":"\u003cb\u003eMAGS\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#ffa726","width":2},"marker":{"color":"#ffa726","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"MAGS","x":[0.0009839916151401507,0.0009988003629583797,0.0009701751429835731,0.0009103885482932422,0.0008418259053171728,0.0007938010854073307,0.000712725451185614,0.0006291509824943031,0.0005202926802594932,0.0004155413172345912],"y":[0.030989566891863222,0.014691781685173218,-0.031875263381035156,-0.06581993488064238,-0.07558814061179014,-0.05308422734056824,-0.08940488105620303,-0.09233085361056853,-0.12057965222708156,-0.11616616847922655],"type":"scatter"},{"hovertemplate":"\u003cb\u003eDRAM\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#26a69a","width":2},"marker":{"color":"#26a69a","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"DRAM","x":[0.013506177475719132,0.014211073941077436,0.015074184492820546,0.01596030212496806,0.016833821223979334,0.01749419775894609,0.01777926916162615,0.018241935617246012,0.018661805109326406,0.019060728146339606],"y":[1.1584807481609734,1.1304451585877833,1.306193928850313,1.315654598451447,1.2853350462670958,1.038344457374592,0.5921562719032822,0.8163266350318603,0.7515389980177609,0.7138685152189046],"type":"scatter"},{"hovertemplate":"\u003cb\u003eIYT\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#9ccc65","width":2},"marker":{"color":"#9ccc65","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"IYT","x":[-0.0008226248281356374,-0.0008505174155577638,-0.0008443435635247659,-0.0008775969881338747,-0.000902380951633211,-0.0009049188778918887,-0.0008063320438284338,-0.0007118673511413154,-0.0005624801000269214,-0.0004187662708370621],"y":[-0.008783745491537443,-0.022763104252417374,0.007723637818581935,-0.027787972883153787,-0.020389876369086204,-0.0005602315370150556,0.08992279439327558,0.08600670448550306,0.13357880915859777,0.12833312055926943],"type":"scatter"},{"hovertemplate":"\u003cb\u003eDTCR\u003c\u002fb\u003e\u003cbr\u003eRS: %{x:.4f}\u003cbr\u003eRM: %{y:.4f}\u003cextra\u003e\u003c\u002fextra\u003e","line":{"color":"#26a69a","width":2},"marker":{"color":"#26a69a","size":[4,4,4,4,4,4,4,4,4,10]},"mode":"lines+markers","name":"DTCR","x":[0.005856615919291805,0.005894533466265672,0.0059325430928322265,0.005993603750980785,0.006050296862011834,0.006108136610904473,0.006122157490049601,0.006145470458111382,0.006167239117267638,0.006186637271746426],"y":[0.1057140648464254,0.08374277972859412,0.08341362251553436,0.13794207339984244,0.12701179934189744,0.1290298306884486,0.026059930142973836,0.04793145533035231,0.04372096604609496,0.03756155496890984],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"shapes":[{"line":{"color":"#363a45","width":2},"type":"line","x0":0,"x1":1,"xref":"x domain","y0":0,"y1":0,"yref":"y"},{"line":{"color":"#363a45","width":2},"type":"line","x0":0,"x1":0,"xref":"x","y0":0,"y1":1,"yref":"y domain"}],"font":{"color":"#d1d4dc"},"margin":{"l":40,"r":40,"t":60,"b":40},"title":{"text":"Interactive Relative Rotation Graph (RRG)"},"xaxis":{"title":{"text":"Relative Strength (RS)"}},"yaxis":{"title":{"text":"Relative Momentum (RM)"}},"plot_bgcolor":"#131722","paper_bgcolor":"#131722","showlegend":true,"height":700,"annotations":[{"font":{"color":"rgba(38, 166, 154, 0.3)","size":30},"showarrow":false,"text":"LEADING","x":0.95,"xref":"x domain","y":0.95,"yref":"y domain"},{"font":{"color":"rgba(255, 167, 38, 0.3)","size":30},"showarrow":false,"text":"WEAKENING","x":0.95,"xref":"x domain","y":0.05,"yref":"y domain"},{"font":{"color":"rgba(239, 83, 80, 0.3)","size":30},"showarrow":false,"text":"LAGGING","x":0.05,"xref":"x domain","y":0.05,"yref":"y domain"},{"font":{"color":"rgba(156, 204, 101, 0.3)","size":30},"showarrow":false,"text":"IMPROVING","x":0.05,"xref":"x domain","y":0.95,"yref":"y domain"}]},                        {"responsive": true}                    )                };            </script>        </div>
+            </div>
+            <table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>3M Perf</th>
+      <th>1M Perf</th>
+      <th>RRG Bucket</th>
+      <th>Days</th>
+      <th>RS Rnk</th>
+      <th>RM Rnk</th>
+      <th>Avg Rnk</th>
+      <th>RS Val</th>
+      <th>RM Val</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SOXX</td>
+      <td>50.5%</td>
+      <td>5.8%</td>
+      <td><span class="bucket-Leading">Leading</span></td>
+      <td>49</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1.5</td>
+      <td>0.6542</td>
+      <td>0.58</td>
+    </tr>
+    <tr>
+      <td>QTUM</td>
+      <td>26.2%</td>
+      <td>5.0%</td>
+      <td><span class="bucket-Leading">Leading</span></td>
+      <td>43</td>
+      <td>4</td>
+      <td>3</td>
+      <td>3.5</td>
+      <td>0.1917</td>
+      <td>0.33</td>
+    </tr>
+    <tr>
+      <td>DRAM</td>
+      <td>nan%</td>
+      <td>9.0%</td>
+      <td><span class="bucket-Leading">Leading</span></td>
+      <td>47</td>
+      <td>19</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>0.0641</td>
+      <td>0.99</td>
+    </tr>
+    <tr>
+      <td>DTCR</td>
+      <td>11.3%</td>
+      <td>0.4%</td>
+      <td><span class="bucket-Leading">Leading</span></td>
+      <td>49</td>
+      <td>20</td>
+      <td>4</td>
+      <td>12.0</td>
+      <td>0.0398</td>
+      <td>0.18</td>
+    </tr>
+    <tr>
+      <td>XLI</td>
+      <td>-4.9%</td>
+      <td>0.6%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>41</td>
+      <td>2</td>
+      <td>9</td>
+      <td>5.5</td>
+      <td>0.2386</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>XBI</td>
+      <td>-4.9%</td>
+      <td>-2.2%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>34</td>
+      <td>5</td>
+      <td>12</td>
+      <td>8.5</td>
+      <td>0.1817</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <td>ROBO</td>
+      <td>4.8%</td>
+      <td>-4.3%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>4</td>
+      <td>12</td>
+      <td>8</td>
+      <td>10.0</td>
+      <td>0.1129</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>XME</td>
+      <td>-7.5%</td>
+      <td>-6.5%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>5</td>
+      <td>6</td>
+      <td>16</td>
+      <td>11.0</td>
+      <td>0.1641</td>
+      <td>-0.11</td>
+    </tr>
+    <tr>
+      <td>XLE</td>
+      <td>-7.2%</td>
+      <td>0.7%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>15</td>
+      <td>15</td>
+      <td>13</td>
+      <td>14.0</td>
+      <td>0.0796</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <td>UFO</td>
+      <td>7.0%</td>
+      <td>-5.4%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>6</td>
+      <td>16</td>
+      <td>14</td>
+      <td>15.0</td>
+      <td>0.0744</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <td>MAGS</td>
+      <td>-3.3%</td>
+      <td>-5.2%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>8</td>
+      <td>14</td>
+      <td>17</td>
+      <td>15.5</td>
+      <td>0.0922</td>
+      <td>-0.11</td>
+    </tr>
+    <tr>
+      <td>URA</td>
+      <td>-21.4%</td>
+      <td>-22.7%</td>
+      <td><span class="bucket-Weakening">Weakening</span></td>
+      <td>24</td>
+      <td>18</td>
+      <td>20</td>
+      <td>19.0</td>
+      <td>0.0710</td>
+      <td>-0.49</td>
+    </tr>
+    <tr>
+      <td>XLY</td>
+      <td>-6.9%</td>
+      <td>-2.6%</td>
+      <td><span class="bucket-Lagging">Lagging</span></td>
+      <td>35</td>
+      <td>7</td>
+      <td>18</td>
+      <td>12.5</td>
+      <td>0.1629</td>
+      <td>-0.11</td>
+    </tr>
+    <tr>
+      <td>XLP</td>
+      <td>-8.5%</td>
+      <td>1.2%</td>
+      <td><span class="bucket-Lagging">Lagging</span></td>
+      <td>46</td>
+      <td>11</td>
+      <td>15</td>
+      <td>13.0</td>
+      <td>0.1163</td>
+      <td>-0.05</td>
+    </tr>
+    <tr>
+      <td>XLC</td>
+      <td>-12.5%</td>
+      <td>-3.3%</td>
+      <td><span class="bucket-Lagging">Lagging</span></td>
+      <td>35</td>
+      <td>8</td>
+      <td>19</td>
+      <td>13.5</td>
+      <td>0.1602</td>
+      <td>-0.18</td>
+    </tr>
+    <tr>
+      <td>XLV</td>
+      <td>-7.1%</td>
+      <td>8.4%</td>
+      <td><span class="bucket-Improving">Improving</span></td>
+      <td>4</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4.5</td>
+      <td>0.2074</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <td>IGV</td>
+      <td>-0.8%</td>
+      <td>2.8%</td>
+      <td><span class="bucket-Improving">Improving</span></td>
+      <td>28</td>
+      <td>9</td>
+      <td>7</td>
+      <td>8.0</td>
+      <td>0.1266</td>
+      <td>0.02</td>
+    </tr>
+    <tr>
+      <td>IYT</td>
+      <td>4.1%</td>
+      <td>7.7%</td>
+      <td><span class="bucket-Improving">Improving</span></td>
+      <td>4</td>
+      <td>13</td>
+      <td>5</td>
+      <td>9.0</td>
+      <td>0.1122</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <td>XRT</td>
+      <td>-4.8%</td>
+      <td>4.2%</td>
+      <td><span class="bucket-Improving">Improving</span></td>
+      <td>2</td>
+      <td>10</td>
+      <td>11</td>
+      <td>10.5</td>
+      <td>0.1163</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <td>XLF</td>
+      <td>-2.8%</td>
+      <td>2.8%</td>
+      <td><span class="bucket-Improving">Improving</span></td>
+      <td>4</td>
+      <td>17</td>
+      <td>10</td>
+      <td>13.5</td>
+      <td>0.0718</td>
+      <td>-0.02</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    
