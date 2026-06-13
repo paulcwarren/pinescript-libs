@@ -7,7 +7,7 @@ import os
 # === Configuration ===
 TICKERS = [
     "IGV", "XLY", "XLP", "XLF", "XLV", "XLI", "XRT", "XME", "XLC", 
-    "XBI", "ROBO", "XLE", "QTUM", "URA", "SOXX", "UFO", "MAGS",
+    "XBI", "ROBO", "XLE", "QTUM", "URA", "SOXX", "UFO", "MAGS", "TAN",
     "DRAM", "IYT", "DTCR"
 ]
 BENCHMARK = "SPY"
