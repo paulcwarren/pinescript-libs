@@ -6,7 +6,7 @@ import os
 
 # === Configuration ===
 TICKERS = [
-    "IGV", "XLY", "XLP", "XLF", "XLV", "XLI", "XRT", "XME", "XLC", 
+    "IGV", "XLY", "XLP", "XLF", "XLV", "XLI", "XRT", "XME", "XLC", "XLB",
     "XBI", "ROBO", "XLE", "QTUM", "URA", "SOXX", "UFO", "MAGS", "TAN",
     "DRAM", "IYT", "DTCR"
 ]
