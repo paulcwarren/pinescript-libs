@@ -109,7 +109,6 @@ def build_plotly_figure(graph_data, sorted_tickers):
         "Lagging": "#ef5350", "Improving": "#9ccc65"
     }
 
-    # Loop through the tickers in the EXACT order of the sorted table
     for sym in sorted_tickers:
         if sym not in graph_data:
             continue
@@ -133,17 +132,31 @@ def build_plotly_figure(graph_data, sorted_tickers):
             hovertemplate=f"<b>{sym}</b><br>RS: %{{x:.4f}}<br>RM: %{{y:.4f}}<extra></extra>"
         ))
 
-    fig.add_hline(y=0, line_width=1.5, line_color="#2a2e39", line_dash="solid")
-    fig.add_vline(x=0, line_width=1.5, line_color="#2a2e39", line_dash="solid")
+    # Center Crosshairs
+    fig.add_hline(y=0, line_width=1.5, line_color="#363a45", line_dash="solid")
+    fig.add_vline(x=0, line_width=1.5, line_color="#363a45", line_dash="solid")
     
+    # RESTORED AND UPGRADED AXIS CONFIGURATION
     fig.update_layout(
         title=dict(text="Systematic Rotation Tracker (36-Day Macro Tails)", font=dict(size=18, color="#ffffff")),
+        xaxis=dict(
+            title=dict(text="Relative Strength (RS)", font=dict(size=14, color="#d1d4dc")),
+            gridcolor="#2a2e39",
+            zeroline=False, # Handled by our custom hline/vline
+            tickfont=dict(color="#787b86")
+        ),
+        yaxis=dict(
+            title=dict(text="Relative Momentum (RM)", font=dict(size=14, color="#d1d4dc")),
+            gridcolor="#2a2e39",
+            zeroline=False,
+            tickfont=dict(color="#787b86")
+        ),
         plot_bgcolor="#131722",
         paper_bgcolor="#131722",
         font=dict(color="#d1d4dc"),
         showlegend=True,
         height=680,
-        margin=dict(l=50, r=50, t=80, b=50),
+        margin=dict(l=60, r=50, t=80, b=60), # Slightly widened left/bottom margins for axis text
         hovermode="closest",
         legend=dict(itemsizing='constant', title=dict(text="Hover to Isolate", font=dict(size=12, color="#787b86")))
     )
@@ -154,7 +167,7 @@ def build_plotly_figure(graph_data, sorted_tickers):
     fig.add_annotation(x=0.05, y=0.95, text="IMPROVING", showarrow=False, font=dict(color="rgba(156, 204, 101, 0.15)", size=28, weight="bold"), xref="x domain", yref="y domain")
 
     return fig.to_html(full_html=False, include_plotlyjs='cdn', div_id="rrg-plotly-chart")
-
+    
 def generate_dashboard(df, graph_html, filename):
     html_template = """
     <!DOCTYPE html>
