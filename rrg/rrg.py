@@ -6,9 +6,9 @@ import os
 
 # === Configuration ===
 TICKERS = [
-    "IGV", "XLY", "XLP", "XLF", "XLV", "XLI", "XRT", "XME", "XLC", "XLB",
-    "XBI", "ROBO", "XLE", "QTUM", "URA", "SOXX", "UFO", "MAGS", "TAN",
-    "DRAM", "IYT", "DTCR"
+    "XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLK", "XLB", "XLRE"
+#    "XRT", "XME", "XBI", "ROBO", "QTUM", "URA", "SOXX", "UFO", "MAGS", "TAN", "IGV", 
+#    "DRAM", "IYT", "DTCR"
 ]
 BENCHMARK = "SPY"
 TRAIL_LENGTH = 36
