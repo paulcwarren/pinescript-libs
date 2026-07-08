@@ -7,8 +7,8 @@ on:
     paths:
       - 'rrg/rrg.py' # Runs on push if you modify the python script itself
   schedule:
-    # Runs at 02:00 UTC on Saturday (Friday evening US Time)
-    - cron: '0 2 * * 6'
+    # Runs at 18:00 UTC on Sun, Mon, Tue, Wed, Thu
+    - cron: '0 2 * * 1-6'
   workflow_dispatch:  # allows manual trigger
 
 jobs:
