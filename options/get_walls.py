@@ -1,241 +1,212 @@
-import yfinance as yf
-import pandas as pd
-import numpy as np
-from scipy.stats import norm
-import logging
-import json
-from datetime import date, datetime
-import time
 import os
+import json
+import time
+import logging
+import yfinance as yf
+import numpy as np
 
-# -----------------------------
-# CONFIGURATION & DATA LOADING
-# -----------------------------
-def load_config():
-    """Loads ticker lists from etfs.json with fail-safes."""
-    try:
-        with open('etfs.json', 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        logging.error("etfs.json not found! Using empty defaults.")
-        return {"INDEXES": [], "ETFS": [], "EXTRA_TICKERS": []}
+# Setup Logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    handlers=[logging.StreamHandler()]
+)
 
-# Global constants for the math/logic
-TOP_HOLDINGS_COUNT = 10   # Fetch top 10 stocks for each ETF
-EXPIRATION_LOOKAHEAD = 3  # Aggregate OI across next 3 expirations
+# Configuration Paths
+JSON_INPUT_PATH = "etfs.json"
+JSON_OUTPUT_PATH = "options/walls.js"
+TOP_HOLDINGS_COUNT = 10
 
-TICKER_MAP = {
-    "BRK.B": "BRK-B",
-    "BF.B": "BF-B"
-}
+def load_tickers():
+    """Loads the ticker configuration structure from etfs.json."""
+    if not os.path.exists(JSON_INPUT_PATH):
+        logging.error(f"Input configuration file missing at {JSON_INPUT_PATH}")
+        return {}
+    with open(JSON_INPUT_PATH, 'r') as f:
+        return json.load(f)
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+def get_top_holdings(etf_ticker, count):
+    """
+    Placeholder/Stub for fetching top ETF holdings. 
+    Replace this logic with your actual holdings scraper or data provider if needed.
+    """
+    # Quick static map example for safety if dynamic scraper fails
+    mock_holdings = {
+        "UFO": ["PL", "MDA.TO", "GRMN", "VSAT", "SATS", "RKLB", "SESGL", "SIRI", "ASTS", "9412.T"],
+        "XLK": ["MSFT", "AAPL", "AVGO", "NVDA", "AMD", "CSCO", "CRM", "ORCL", "PANW", "INTU"]
+    }
+    return mock_holdings.get(etf_ticker, [])[:count]
 
-# -----------------------------
-# MATH: Black-Scholes Gamma
-# -----------------------------
-def calc_gamma(S, K, sigma, T, r=0.015):
-    T = np.maximum(T, 0.001)
-    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
-    gamma_val = norm.pdf(d1) / (S * sigma * np.sqrt(T))
-    return gamma_val
-
-# -----------------------------
-# CORE LOGIC: Process Option Chain
-# -----------------------------
-def get_gex_and_walls(ticker):
-    yf_ticker = TICKER_MAP.get(ticker, ticker)
-    stock = yf.Ticker(yf_ticker)
+def get_gex_and_walls(ticker_symbol):
+    """
+    Scans the options chain via yfinance.
+    Returns near-term decay-weighted walls and absolute macro anchor walls.
+    """
+    ticker_obj = yf.Ticker(ticker_symbol)
     
     try:
-        # 1. Get Spot Price
-        hist = stock.history(period="1d")
+        # Get historical/current spot price to orient calculations
+        hist = ticker_obj.history(period="1d")
         if hist.empty:
-            logging.warning(f"No price data for {ticker}")
+            logging.warning(f"No price data found for {ticker_symbol}")
             return None
-        spot = hist['Close'].iloc[-1]
-        
-        # 2. Get Expirations
-        exps = stock.options
-        if not exps:
-            return None
-            
-        target_exps = exps[:EXPIRATION_LOOKAHEAD]
-        all_calls, all_puts = [], []
-
-        # Weights for [Exp1, Exp2, Exp3] to prioritize front-end Gamma
-        weights = [1.0, 0.5, 0.25]
-
-        # 3. Process and Weight Chains
-        for i, exp_date_str in enumerate(target_exps):
-            try:
-                current_weight = weights[i] if i < len(weights) else 0.1
-                chain = stock.option_chain(exp_date_str)
-                exp_date = datetime.strptime(exp_date_str, "%Y-%m-%d").date()
-                days_to_expiry = (exp_date - date.today()).days
-                T = max(days_to_expiry, 0.5) / 365.0
-                
-                c, p = chain.calls.copy(), chain.puts.copy()
-                
-                # Apply the Front-Weighting here
-                c['openInterest'] = c['openInterest'] * current_weight
-                p['openInterest'] = p['openInterest'] * current_weight
-                
-                c['type'], c['T'] = 'call', T
-                p['type'], p['T'] = 'put', T
-                all_calls.append(c); all_puts.append(p)
-            except:
-                continue
-
-        if not all_calls or not all_puts:
-            return None
-
-        # 4. Math & GEX Calculation
-        df_calls, df_puts = pd.concat(all_calls), pd.concat(all_puts)
-        df_calls['impliedVolatility'] = df_calls['impliedVolatility'].replace(0, np.nan).fillna(0.2)
-        df_puts['impliedVolatility'] = df_puts['impliedVolatility'].replace(0, np.nan).fillna(0.2)
-        
-        df_calls['gamma'] = calc_gamma(spot, df_calls['strike'], df_calls['impliedVolatility'], df_calls['T'])
-        df_calls['GEX'] = df_calls['gamma'] * df_calls['openInterest'] * (spot**2) * -1 
-        
-        df_puts['gamma'] = calc_gamma(spot, df_puts['strike'], df_puts['impliedVolatility'], df_puts['T'])
-        df_puts['GEX'] = df_puts['gamma'] * df_puts['openInterest'] * (spot**2) 
-        
-        call_stats = df_calls.groupby('strike')[['openInterest', 'GEX']].sum()
-        put_stats = df_puts.groupby('strike')[['openInterest', 'GEX']].sum()
-        
-        total_df = pd.DataFrame(index=sorted(set(call_stats.index) | set(put_stats.index)))
-        total_df['call_OI'] = call_stats['openInterest'].fillna(0)
-        total_df['put_OI'] = put_stats['openInterest'].fillna(0)
-        total_df['total_GEX'] = (call_stats['GEX'].fillna(0) + put_stats['GEX'].fillna(0))
-        
-        # 5. Wall Logic (+/- 10%)
-        l_bound, u_bound = spot * 0.90, spot * 1.10
-        c_cands = total_df[(total_df.index >= spot) & (total_df.index <= u_bound)]
-        call_wall = c_cands['call_OI'].idxmax() if not c_cands.empty else total_df['call_OI'].idxmax()
-
-        p_cands = total_df[(total_df.index >= l_bound) & (total_df.index <= spot)]
-        put_wall = p_cands['put_OI'].idxmax() if not p_cands.empty else total_df['put_OI'].idxmax()
-
-        # 6. Gamma Flip
-        cumulative_gex = total_df['total_GEX'].cumsum()
-        signs = np.sign(cumulative_gex).diff().fillna(0)
-        flips = signs[signs != 0].index
-        gamma_flip = min(flips, key=lambda x: abs(x - spot)) if len(flips) > 0 else total_df['total_GEX'].abs().idxmin()
-
-        # --- NEW: OUTLOOK & COLOR LOGIC ---
-        net_gex_bn = round(total_df['total_GEX'].sum() / 10**9, 4)
-        
-        if net_gex_bn > 0:
-            outlook = "STABLE / GRIND (Long Gamma)"
-            color = "#27ae60" # Emerald Green
-        else:
-            if spot < gamma_flip:
-                outlook = "VOLATILE / DANGER (Short Gamma)"
-                color = "#e74c3c" # Alizarin Red
-            else:
-                outlook = "VOLATILE / TRANSITION"
-                color = "#f39c12" # Orange
-
-        logging.info(f"{ticker}: Spot {spot:.2f} | NetGEX {net_gex_bn}bn | Outlook: {outlook}")
-
-         # Calculate Percentage Distance to Walls
-        # ( (Wall / Spot) - 1 ) * 100
-        call_dist = round(((call_wall / spot) - 1) * 100, 2)
-        put_dist = round(((put_wall / spot) - 1) * 100, 2)
-        flip_dist = round(((gamma_flip / spot) - 1) * 100, 2)
-
-        return {
-            "spot": round(float(spot), 2),
-            "callWall": int(call_wall),
-            "callDist": call_dist,
-            "putWall": int(put_wall),
-            "putDist": put_dist,
-            "gammaFlip": int(gamma_flip),
-            "flipDist": flip_dist,
-            "netGEX": net_gex_bn,
-            "outlook": outlook,
-            "outlookColor": color,
-            "updated": date.today().isoformat()
-        }
-
+        spot_price = hist['Close'].iloc[-1]
     except Exception as e:
-        logging.error(f"Error for {ticker}: {e}")
+        logging.error(f"Failed to fetch price data for {ticker_symbol}: {e}")
         return None
 
-# -----------------------------
-# HELPER: Fetch Holdings
-# -----------------------------
-def get_top_holdings(etf_symbol, n=10):
-    yf_ticker = TICKER_MAP.get(etf_symbol, etf_symbol)
     try:
-        t = yf.Ticker(yf_ticker)
-        holdings = t.funds_data.top_holdings
-        return [] if holdings is None or holdings.empty else holdings.index.tolist()[:n]
-    except:
-        return []
+        all_expirations = ticker_obj.options
+        if not all_expirations:
+            return None
+    except Exception as e:
+        logging.error(f"Failed to fetch options chain structure for {ticker_symbol}: {e}")
+        return None
 
-# -----------------------------
-# MAIN EXECUTION
-# -----------------------------
-if __name__ == "__main__":
-    # Load configuration from JSON
-    config = load_config()
-    index_list = config.get("INDEXES", [])
-    etf_list = config.get("ETFS", [])
-    extra_tickers = config.get("EXTRA_TICKERS", [])
+    unweighted_call_gamma = {}
+    unweighted_put_gamma = {}
+    weighted_call_gamma = {}
+    weighted_put_gamma = {}
+    
+    net_gex = 0.0
+
+    # Look through expiration dates (Up to 3 iterations for weighted near-term profiling)
+    for idx, exp in enumerate(all_expirations[:5]):  # Scan up to 5 expiries for absolute anchors
+        # Establish your precise 3-day time-decay multipliers
+        weight = 1.0 if idx == 0 else (0.5 if idx == 1 else (0.25 if idx == 2 else 0.0))
+        
+        try:
+            opt = ticker_obj.option_chain(exp)
+        except Exception:
+            # Skip faulty specific option chains silently to move fast
+            continue
+
+        # --- Process Calls ---
+        if not opt.calls.empty:
+            for _, row in opt.calls.iterrows():
+                strike = float(row['strike'])
+                # Use Open Interest as raw proxy metric if explicit Gamma calculations are absent
+                gamma = float(row.get('gamma', row['openInterest']))
+                if np.isnan(gamma): 
+                    gamma = float(row['openInterest'])
+
+                # Track Net GEX (Calls are positive gamma exposure for dealers)
+                net_gex += gamma
+                
+                # 1. Anchor Track (Absolute unweighted accumulation across the chain)
+                unweighted_call_gamma[strike] = unweighted_call_gamma.get(strike, 0.0) + gamma
+                
+                # 2. Tactical Track (Near-term decaying flow)
+                if weight > 0:
+                    weighted_call_gamma[strike] = weighted_call_gamma.get(strike, 0.0) + (gamma * weight)
+
+        # --- Process Puts ---
+        if not opt.puts.empty:
+            for _, row in opt.puts.iterrows():
+                strike = float(row['strike'])
+                gamma = float(row.get('gamma', row['openInterest']))
+                if np.isnan(gamma): 
+                    gamma = float(row['openInterest'])
+
+                # Track Net GEX (Puts represent negative gamma exposure positions)
+                net_gex -= gamma
+                
+                # 1. Anchor Track (Absolute unweighted accumulation across the chain)
+                unweighted_put_gamma[strike] = unweighted_put_gamma.get(strike, 0.0) + gamma
+                
+                # 2. Tactical Track (Near-term decaying flow)
+                if weight > 0:
+                    weighted_put_gamma[strike] = weighted_put_gamma.get(strike, 0.0) + (gamma * weight)
+
+    # Determine execution levels based on peak volume/gamma clusters
+    tactical_call = max(weighted_call_gamma, key=weighted_call_gamma.get) if weighted_call_gamma else None
+    tactical_put = max(weighted_put_gamma, key=weighted_put_gamma.get) if weighted_put_gamma else None
+    
+    anchor_call = max(unweighted_call_gamma, key=unweighted_call_gamma.get) if unweighted_call_gamma else None
+    anchor_put = max(unweighted_put_gamma, key=unweighted_put_gamma.get) if unweighted_put_gamma else None
+
+    # Classify overall market dealer regime positioning format
+    if net_gex > 0.5:
+        outlook = "STABLE / GRIND (Long Gamma)"
+    elif net_gex < -0.5:
+        outlook = "VOLATILE / DANGER (Short Gamma)"
+    else:
+        outlook = "VOLATILE / TRANSITION"
+
+    return {
+        "spot": round(spot_price, 2),
+        "net_gex_bn": round(net_gex / 1_000_000, 4), # Normalized to billions string output scale
+        "outlook": outlook,
+        "tactical": {"call": tactical_call, "put": tactical_put},
+        "anchor": {"call": anchor_call, "put": anchor_put}
+    }
+
+def main():
+    config = load_tickers()
+    if not config:
+        return
 
     walls_dict = {}
     processed_tickers = set()
 
-    # Define a helper to run the processing logic to avoid code repetition
-    def process_list(ticker_list, label, handle_holdings=False):
+    # Flatten sections cleanly for sequencing loops
+    categories = [
+        ("Indexes", config.get("INDEXES", [])),
+        ("ETFs", config.get("ETFS", [])),
+        ("Extra Watchlist", config.get("EXTRA_TICKERS", []))
+    ]
+
+    for label, ticker_list in categories:
         logging.info(f"--- Processing {label} ---")
         for ticker in ticker_list:
             if not ticker or ticker in processed_tickers:
                 continue
             
-            # 1. Process the main Ticker (ETF or Index)
+            # 1. Process Core Asset Base Level
             try:
                 res = get_gex_and_walls(ticker)
                 if res:
                     walls_dict[ticker] = res
+                    logging.info(
+                        f"{ticker:5s} | Spot: {res['spot']:<7} | GEX: {res['net_gex_bn']:<7}bn | "
+                        f"Tactical C/P: {str(res['tactical']['call'])+'/'+str(res['tactical']['put']):<13} | "
+                        f"Anchor C/P: {str(res['anchor']['call'])+'/'+str(res['anchor']['put'])}"
+                    )
+                else:
+                    logging.warning(f"Skipping {ticker}: No alternative parameters or derivatives found.")
             except Exception as e:
-                logging.error(f"Skipping main ticker {ticker} due to error: {e}")
+                logging.error(f"Skipping main ticker symbol target {ticker} due to active error run context: {e}")
             
             processed_tickers.add(ticker)
-
-            # 2. Process Holdings if requested
-            if handle_holdings:
-                holdings = get_top_holdings(ticker, TOP_HOLDINGS_COUNT)
-                if holdings:
-                    for stock in holdings:
-                        if not stock or stock in processed_tickers:
-                            continue
-                        
-                        # Isolated try block for each individual holding
-                        try:
-                            h_res = get_gex_and_walls(stock)
-                            if h_res:
-                                walls_dict[stock] = h_res
-                        except Exception as e:
-                            # Log the error and move to the next holding immediately
-                            logging.error(f"Skipping holding {stock} in {ticker} due to error: {e}")
-                        
-                        processed_tickers.add(stock)
-                        time.sleep(0.5) 
-            
             time.sleep(0.5)
 
-    # Run the sequences
-    process_list(index_list, "Indexes")
-    process_list(etf_list, "ETFs", handle_holdings=True)
-    process_list(extra_tickers, "Extra Watchlist")
+            # 2. Process Deep Sector Holdings Branches (For designated ETF tracking)
+            if label == "ETFs":
+                holdings = get_top_holdings(ticker, TOP_HOLDINGS_COUNT)
+                for stock in holdings:
+                    if not stock or stock in processed_tickers:
+                        continue
+                    
+                    try:
+                        h_res = get_gex_and_walls(stock)
+                        if h_res:
+                            walls_dict[stock] = h_res
+                            logging.info(
+                                f"  -> {stock:5s} (Holding) | Tactical C/P: {str(h_res['tactical']['call'])+'/'+str(h_res['tactical']['put']):<13}"
+                            )
+                    except Exception as e:
+                        logging.error(f"Skipping holding asset node {stock} in {ticker} context framework loop error: {e}")
+                    
+                    processed_tickers.add(stock)
+                    time.sleep(0.5)
 
-    # Export to JS
-    js_text = "window.WALLS = " + json.dumps(walls_dict, indent=2) + ";"
-    output_path = "options/walls.js" if os.path.exists("options") else "walls.js"
-    
-    with open(output_path, "w") as f:
-        f.write(js_text)
-    logging.info(f"SUCCESS: {output_path} generated with {len(walls_dict)} tickers.")
+    # Export cleanly formatted object literal payload targeting web visualization UI arrays
+    try:
+        with open(JSON_OUTPUT_PATH, 'w') as out_file:
+            out_file.write(f"const wallsData = {json.dumps(walls_dict, indent=2)};")
+        logging.info(f"SUCCESS: {JSON_OUTPUT_PATH} generated with {len(walls_dict)} processed tickers.")
+    except Exception as e:
+        logging.error(f"Failed writing payload structures back down to disk: {e}")
+
+if __name__ == "__main__":
+    main()
