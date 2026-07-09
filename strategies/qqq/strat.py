@@ -2,31 +2,45 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import math
+import warnings
+
+# Suppress yfinance multi-index/formatting warnings for clean output
+warnings.filterwarnings('ignore')
 
 # =====================
 # 1. Configuration & Data Fetching
 # =====================
-start_date = "2007-01-01" 
+start_date = "2020-12-02" 
 primary_ticker = "QQQ"
 hedge_ticker = "DBMF"
 initial_capital = 10000
 
+# --- LIVE TRADING PORTFOLIO INPUTS (For console output only) ---
+strategy_capital = 50000            # Total capital assigned strictly to this strategy
+current_qqq_shares = 100            # How many QQQ shares you currently hold in your account
+# ---------------------------------------------------------------
+
 # --- STRATEGY FLAGS ---
-allocation_profile = "Moderate"     # Options: "Conservative", "Moderate", "Aggressive", "Insane".  Testing suggests Aggressive is the best option.
+allocation_profile = "Moderate"     # Options: "Conservative", "Moderate", "Aggressive", "Insane"
 rebalance_freq = "Weekly"           # Options: "Daily", "Weekly"
-ma_type = "SMA"                     # Options: "SMA", "EMA".  Testing suggests SMA is better than EMA.
+ma_type = "SMA"                     # Options: "SMA", "EMA"
 
 # Volatility Circuit Breaker Settings
 enable_vol_override = False         # Preemptively cut leverage during high volatility
-vol_override_cap = 0.75            # Max QQQ allocation during extreme vol (0.75 = 75% QQQ / 25% KMLM)
+vol_override_cap = 0.75             # Max QQQ allocation during extreme vol
 # --------------------------
 
 print(f"Downloading data for {primary_ticker} and {hedge_ticker}...")
-data = yf.download([primary_ticker, hedge_ticker], start=start_date)
+data = yf.download([primary_ticker, hedge_ticker], start=start_date, progress=False)
 
 # Separate into usable dataframes
-qqq = data.xs(primary_ticker, level=1, axis=1).copy()
-kmlm = data.xs(hedge_ticker, level=1, axis=1).copy()
+if isinstance(data.columns, pd.MultiIndex):
+    qqq = data.xs(primary_ticker, level=1, axis=1).copy()
+    hedge = data.xs(hedge_ticker, level=1, axis=1).copy()
+else:
+    qqq = data[primary_ticker].copy() # Fallback for single tickers if structured differently
+    hedge = data[hedge_ticker].copy()
 
 # =====================
 # 2. Replicate Pine Script Indicators
@@ -36,7 +50,7 @@ atr_len = 14
 slope_lookback = 5
 vol_len = 50
 
-# Core Moving Average Math (Dynamic based on config)
+# Core Moving Average Math
 if ma_type.upper() == "EMA":
     qqq['MA'] = qqq['Close'].ewm(span=ma_len, adjust=False).mean()
 else:
@@ -89,14 +103,13 @@ qqq['Target_QQQ_Base'] = qqq['Regime'].map(alloc_map)
 
 # --- APPLICATION OF VOLATILITY OVERRIDE ---
 if enable_vol_override:
-    # Cap QQQ ONLY during 2-Sigma Volatility events
     qqq['Target_QQQ_Base'] = np.where(
         qqq['Vol_Extreme'], 
         np.minimum(qqq['Target_QQQ_Base'], vol_override_cap), 
         qqq['Target_QQQ_Base']
     )
 
-qqq['Target_KMLM_Base'] = np.maximum(0, 1.0 - qqq['Target_QQQ_Base'])
+qqq['Target_Hedge_Base'] = np.maximum(0, 1.0 - qqq['Target_QQQ_Base'])
 
 # Apply Rebalancing Frequency
 if rebalance_freq == "Weekly":
@@ -104,21 +117,21 @@ if rebalance_freq == "Weekly":
     is_end_of_week = weeks != weeks.shift(-1)
     
     qqq['Target_QQQ'] = qqq['Target_QQQ_Base'].where(is_end_of_week).ffill().bfill()
-    qqq['Target_KMLM'] = qqq['Target_KMLM_Base'].where(is_end_of_week).ffill().bfill()
+    qqq['Target_Hedge'] = qqq['Target_Hedge_Base'].where(is_end_of_week).ffill().bfill()
 else:
     qqq['Target_QQQ'] = qqq['Target_QQQ_Base']
-    qqq['Target_KMLM'] = qqq['Target_KMLM_Base']
+    qqq['Target_Hedge'] = qqq['Target_Hedge_Base']
 
 # =====================
 # 4. Portfolio Simulation
 # =====================
 qqq['Alloc_QQQ'] = qqq['Target_QQQ'].shift(1)
-qqq['Alloc_KMLM'] = qqq['Target_KMLM'].shift(1)
+qqq['Alloc_Hedge'] = qqq['Target_Hedge'].shift(1)
 
 qqq['Ret_QQQ'] = qqq['Close'].pct_change()
-qqq['Ret_KMLM'] = kmlm['Close'].pct_change()
+qqq['Ret_Hedge'] = hedge['Close'].pct_change()
 
-qqq['Port_Ret'] = (qqq['Alloc_QQQ'] * qqq['Ret_QQQ']) + (qqq['Alloc_KMLM'] * qqq['Ret_KMLM'].fillna(0))
+qqq['Port_Ret'] = (qqq['Alloc_QQQ'] * qqq['Ret_QQQ']) + (qqq['Alloc_Hedge'] * qqq['Ret_Hedge'].fillna(0))
 
 # Margin Borrowing Drag
 margin_rate_annual = 0.0683 
@@ -137,7 +150,7 @@ qqq['Port_Return_Pct'] = (qqq['Portfolio_Value'] / initial_capital - 1) * 100
 qqq['BnH_Return_Pct'] = (qqq['BnH_Value'] / initial_capital - 1) * 100
 
 # =====================
-# 5. Performance Metrics
+# 5. Performance Metrics & Live Orders
 # =====================
 total_days = len(qqq)
 years = total_days / 252
@@ -167,7 +180,7 @@ gross_profit = qqq.loc[qqq['Port_Ret'] > 0, 'Port_Ret'].sum()
 gross_loss = abs(qqq.loc[qqq['Port_Ret'] < 0, 'Port_Ret'].sum())
 profit_factor = gross_profit / gross_loss if gross_loss != 0 else np.nan
 
-print("\n=== STRATEGY PERFORMANCE METRICS ===")
+print("\n=== STRATEGY HISTORICAL PERFORMANCE ===")
 print(f"Hedge Vehicle:      {hedge_ticker}")
 print(f"Profile:            {allocation_profile}")
 print(f"Rebalance Freq:     {rebalance_freq}")
@@ -181,29 +194,26 @@ print(f"CAGR:               {cagr * 100:.2f}%")
 print(f"Max Drawdown:       {max_drawdown * 100:.2f}%")
 print(f"Sharpe Ratio:       {sharpe_ratio:.2f}")
 print(f"Sortino Ratio:      {sortino_ratio:.2f}")
-print(f"Profitable Days:    {positive_days} / {total_days} ({win_rate * 100:.1f}%)")
-print(f"Profit Factor:      {profit_factor:.2f}")
-print("====================================\n")
+print("========================================\n")
 
-# Extract the most recent data point
-latest_date = qqq.index[-1]
-latest_qqq_alloc = qqq['Alloc_QQQ'].iloc[-1]
-latest_hedge_alloc = qqq['Alloc_KMLM'].iloc[-1]
+# --- LIVE REBALANCE LINK GENERATOR ---
+live_regime = int(qqq['Regime'].iloc[-1])
+current_price = qqq['Close'].iloc[-1]
+hedge_price = hedge['Close'].iloc[-1]
 
-print("\n=== LIVE TRADING TARGETS ===")
-print(f"As of Close: {latest_date.strftime('%Y-%m-%d')}")
-print(f"Target Primary (QQQ): {latest_qqq_alloc * 100:.1f}%")
-print(f"Target Hedge (KMLM): {latest_hedge_alloc * 100:.1f}%")
-print("============================")
+base_url = "https://paulcwarren.github.io/pinescript-libs/strategies/qqq/rebal.html" 
+
+print("\n=== REBALANCE LINK FOR THE FAMILY ===")
+print(f"{base_url}?regime={live_regime}&qqq={current_price:.2f}&hedge={hedge_price:.2f}")
+print("=====================================\n")
 
 # =====================
 # 6. Visualization
 # =====================
 plt.figure(figsize=(12, 6))
-plt.plot(qqq.index, qqq['Port_Return_Pct'], label=f'Adaptive Strategy ({allocation_profile} / {ma_type})', color='blue', linewidth=2)
+plt.plot(qqq.index, qqq['Port_Return_Pct'], label=f'Adaptive Strategy ({allocation_profile})', color='blue', linewidth=2)
 plt.plot(qqq.index, qqq['BnH_Return_Pct'], label='Buy & Hold QQQ', color='orange', alpha=0.7)
-
-plt.title(f'Regime Strategy Returns (%) with {ma_type} & 2-Sigma Vol Override')
+plt.title(f'Regime Strategy Comparison (2020 - Present)')
 plt.ylabel('Return (%)')
 plt.grid(True, alpha=0.3)
 plt.legend()
