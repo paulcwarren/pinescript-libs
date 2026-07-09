@@ -9,14 +9,12 @@
 <body class="bg-gray-100 p-4 md:p-8 font-sans" onload="init()">
     <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         
-        <!-- Header -->
         <div class="bg-blue-600 p-6 text-white text-center">
             <h1 class="text-2xl font-bold">Weekly Rebalance Calculator</h1>
             <p class="text-blue-100 text-sm mt-1">Enter your current Fidelity balances to get your trades.</p>
         </div>
 
         <div class="p-6 md:p-8">
-            <!-- STEP 1: Python Signals (Read-Only) -->
             <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                     <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -25,7 +23,6 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="bg-white p-3 rounded-lg border border-gray-200">
                         <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Current Regime</p>
-                        <!-- Hidden inputs keep the math working behind the scenes -->
                         <input type="hidden" id="sys-regime" value="">
                         <p id="display-regime" class="text-lg font-bold text-gray-800">Waiting for link...</p>
                     </div>
@@ -35,14 +32,13 @@
                         <p id="display-qqq" class="text-lg font-bold text-gray-800">Waiting...</p>
                     </div>
                     <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Hedge Price</p>
+                        <p id="label-sys-hedge" class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Hedge Price</p>
                         <input type="hidden" id="sys-hedge-price" value="">
                         <p id="display-hedge" class="text-lg font-bold text-gray-800">Waiting...</p>
                     </div>
                 </div>
             </div>
 
-            <!-- STEP 2: Fidelity Balances -->
             <div class="mb-8">
                 <div class="flex justify-between items-end mb-4">
                     <h2 class="text-lg font-semibold text-gray-800 flex items-center">
@@ -55,14 +51,13 @@
                     </div>
                 </div>
                 
-                <!-- Inputs -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-600 mb-1">QQQ Shares</label>
                         <input type="number" id="user-qqq-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-600 mb-1">Hedge Shares</label>
+                        <label id="label-user-hedge" class="block text-sm font-medium text-gray-600 mb-1">Hedge Shares</label>
                         <input type="number" id="user-hedge-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
                     </div>
                     <div>
@@ -76,7 +71,6 @@
                 </div>
             </div>
 
-            <!-- STEP 3: Actionable Trades -->
             <div class="bg-gray-800 rounded-xl p-6 shadow-md text-white">
                 <h2 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Required Trades</h2>
                 
@@ -89,7 +83,7 @@
                     </div>
                     
                     <div class="flex justify-between items-center bg-gray-700 p-4 rounded-lg">
-                        <span class="text-lg font-bold w-20">Hedge</span>
+                        <span id="label-trade-hedge" class="text-lg font-bold w-20">HEDGE</span>
                         <div id="hedge-result" class="text-lg text-right">
                             <span class="text-gray-400">Awaiting inputs...</span>
                         </div>
@@ -115,6 +109,15 @@
             const urlRegime = urlParams.get('regime');
             const urlQqq = urlParams.get('qqq');
             const urlHedge = urlParams.get('hedge');
+            
+            // Get the ticker symbol from URL, default to "Hedge" if missing
+            const urlHedgeTicker = urlParams.get('hticker') || 'Hedge';
+            const displayTicker = urlHedgeTicker.toUpperCase();
+
+            // Update UI Labels with actual ticker
+            document.getElementById('label-sys-hedge').innerText = `${displayTicker} Price`;
+            document.getElementById('label-user-hedge').innerText = `${displayTicker} Shares`;
+            document.getElementById('label-trade-hedge').innerText = displayTicker;
 
             // Apply values if they exist in the URL to the read-only badges and hidden inputs
             if (urlRegime && regimeMap[urlRegime]) {

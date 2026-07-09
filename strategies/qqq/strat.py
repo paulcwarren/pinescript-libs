@@ -192,7 +192,7 @@ hedge_price = hedge['Close'].iloc[-1]
 base_url = "https://paulcwarren.github.io/pinescript-libs/strategies/qqq/rebal.html" 
 
 print("\n=== REBALANCE LINK FOR THE FAMILY ===")
-print(f"{base_url}?regime={live_regime}&qqq={current_price:.2f}&hedge={hedge_price:.2f}")
+print(f"{base_url}?regime={live_regime}&qqq={current_price:.2f}&hedge={hedge_price:.2f}&hticker={hedge_ticker}")
 print("=====================================\n")
 
 # =====================
