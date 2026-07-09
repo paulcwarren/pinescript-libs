@@ -5,7 +5,7 @@
   <title>Gamma Edge | Dashboard</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f4f7f6; color: #333; }
-    .container { max-width: 550px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
+    .container { max-width: 580px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
     h1 { font-size: 24px; margin-bottom: 20px; color: #2c3e50; text-align: center; }
     
     .search-box { display: flex; gap: 10px; margin-bottom: 25px; }
@@ -29,6 +29,9 @@
       color: white; font-size: 14px; font-weight: bold; margin-bottom: 15px; text-align: center; width: 100%; box-sizing: border-box;
     }
 
+    /* Sub-section Dividers */
+    .section-title { font-size: 12px; font-weight: bold; color: #34495e; text-transform: uppercase; letter-spacing: 1px; margin: 15px 0 8px 0; background: #eaedf1; padding: 4px 8px; border-radius: 4px; }
+
     /* Legend Styling */
     .legend { background: #fafafa; padding: 15px; border-radius: 8px; border: 1px dashed #ccc; font-size: 13px; }
     .legend-title { font-weight: bold; margin-bottom: 8px; color: #2c3e50; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -51,41 +54,47 @@
 
     <div id="resultCard" class="card">
       <div id="res-ticker" class="ticker-header">--</div>
-      
       <div id="outlookBadge" class="outlook-badge">STABLE</div>
       
       <div>
         <div class="row"><span class="label">Spot Price</span> <span class="value" id="res-spot">--</span></div>
+        <div class="row"><span class="label">Net GEX Exposure</span> <span class="value" id="res-gex">--</span></div>
+        
+        <div class="section-title">Tactical Execution (Near-Term 3-Day)</div>
         <div class="row">
-            <span class="label">Call Wall (Res)</span> 
-            <span class="value"><span id="res-call" style="color: #e74c3c;">--</span> <small id="res-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+            <span class="label">Call Wall (Resistance)</span> 
+            <span class="value"><span id="res-tactical-call" style="color: #e74c3c;">--</span> <small id="res-tactical-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
         </div>
         <div class="row">
-            <span class="label">Put Wall (Supp)</span> 
-            <span class="value"><span id="res-put" style="color: #27ae60;">--</span> <small id="res-put-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+            <span class="label">Put Wall (Support)</span> 
+            <span class="value"><span id="res-tactical-put" style="color: #27ae60;">--</span> <small id="res-tactical-put-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+        </div>
+
+        <div class="section-title">Institutional Anchor (Absolute Macro)</div>
+        <div class="row">
+            <span class="label">Anchor Call Ceiling</span> 
+            <span class="value"><span id="res-anchor-call" style="color: #c0392b;">--</span> <small id="res-anchor-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
         </div>
         <div class="row">
-            <span class="label">Gamma Flip Pivot</span> 
-            <span class="value"><span id="res-flip" style="color: #f39c12;">--</span> <small id="res-flip-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
+            <span class="label">Anchor Put Floor</span> 
+            <span class="value"><span id="res-anchor-put" style="color: #1e824c;">--</span> <small id="res-anchor-put-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
         </div>
-        <div class="row"><span class="label">Weighted Net GEX</span> <span class="value" id="res-gex">--</span></div>
       </div>
-      <div class="footer" id="res-update">As of: --</div>
     </div>
 
     <div class="legend">
       <div class="legend-title">Market Outlook Legend</div>
       <div class="legend-item">
         <span class="dot" style="background-color: #27ae60;"></span>
-        <span><strong>Stable/Grind:</strong> Pos. GEX. Dealers dampening volatility. High probability of mean reversion & "slow" moves.</span>
+        <span><strong>Stable/Grind:</strong> Pos. GEX. Dealers dampening volatility. Mean reversion favored.</span>
       </div>
       <div class="legend-item">
         <span class="dot" style="background-color: #f39c12;"></span>
-        <span><strong>Transition:</strong> Neg. GEX but Spot > Flip. Volatility is rising. Trend reversals common here.</span>
+        <span><strong>Transition:</strong> Volatility shifting or near neutral boundaries. Higher churn.</span>
       </div>
       <div class="legend-item">
         <span class="dot" style="background-color: #e74c3c;"></span>
-        <span><strong>Danger:</strong> Neg. GEX and Spot < Flip. Dealers must sell as price drops. High risk of "waterfall" liquidations.</span>
+        <span><strong>Danger / Volatile:</strong> Neg. GEX. Dealers hedging by shorting into downmoves. Waterfall risk.</span>
       </div>
     </div>
 
@@ -93,35 +102,33 @@
   </div>
 
   <script src="walls.js"></script>
+  
   <script>
     const form = document.getElementById("lookupForm");
     const input = document.getElementById("tickerInput");
     const resultCard = document.getElementById("resultCard");
     const errorMsg = document.getElementById("errorMsg");
 
-    // AUTO-REFRESH LOGIC
-    function checkAutoRefresh() {
-      const today = new Date().toDateString();
-      const lastRefresh = localStorage.getItem('lastGammaRefresh');
-      if (lastRefresh !== today) {
-        localStorage.setItem('lastGammaRefresh', today);
-        window.location.reload(); 
-      }
-    }
-    checkAutoRefresh();
-
     // FOCUS LOCK
     document.addEventListener('click', () => input.focus());
 
+    // Helper utility to generate cleaner distance percentages relative to current spot metrics
+    function getPctStr(strike, spot) {
+      if (!strike || !spot) return "";
+      const pct = ((strike - spot) / spot * 100).toFixed(1);
+      return ` (${pct > 0 ? '+' : ''}${pct}%)`;
+    }
+
     function lookupTicker() {
-      const ticker = input.value.toUpperCase();
+      const ticker = input.value.toUpperCase().trim();
       
-      if (!window.WALLS) {
-        errorMsg.innerText = "Error: walls.js not loaded.";
+      // Match python export schema definition signature
+      if (typeof wallsData === 'undefined') {
+        errorMsg.innerText = "Error: wallsData assignment object block missing inside walls.js source file.";
         return;
       }
 
-      const data = window.WALLS[ticker];
+      const data = wallsData[ticker];
       
       if (!data) {
         resultCard.style.display = "none";
@@ -130,32 +137,41 @@
         errorMsg.innerText = "";
         resultCard.style.display = "block";
         
-        // 1. Update Ticker Label
+        const spot = data.spot;
+
+        // Base Elements Mapping
         document.getElementById("res-ticker").innerText = ticker;
+        document.getElementById("res-spot").innerText = spot.toFixed(2);
         
-        // 2. Update Spot Price
-        document.getElementById("res-spot").innerText = data.spot;
+        // Safety format handling for missing/nan explicit GEX array returns
+        const gexVal = (data.net_gex_bn === null || isNaN(data.net_gex_bn)) ? "0.0000" : data.net_gex_bn;
+        document.getElementById("res-gex").innerText = gexVal + "bn";
         
-        // 3. Update Call Wall + Pct
-        document.getElementById("res-call").innerText = data.callWall;
-        document.getElementById("res-call-pct").innerText = ` (${data.callDist > 0 ? '+' : ''}${data.callDist}%)`;
+        // 1. Map Tactical Near-Term Layout Target Metrics
+        document.getElementById("res-tactical-call").innerText = data.tactical.call || "N/A";
+        document.getElementById("res-tactical-call-pct").innerText = getPctStr(data.tactical.call, spot);
+        
+        document.getElementById("res-tactical-put").innerText = data.tactical.put || "N/A";
+        document.getElementById("res-tactical-put-pct").innerText = getPctStr(data.tactical.put, spot);
 
-        // 4. Update Put Wall + Pct
-        document.getElementById("res-put").innerText = data.putWall;
-        document.getElementById("res-put-pct").innerText = ` (${data.putDist > 0 ? '+' : ''}${data.putDist}%)`;
+        // 2. Map Anchor Institutional Structural Target Metrics
+        document.getElementById("res-anchor-call").innerText = data.anchor.call || "N/A";
+        document.getElementById("res-anchor-call-pct").innerText = getPctStr(data.anchor.call, spot);
 
-        // 5. Update Gamma Flip + Pct
-        document.getElementById("res-flip").innerText = data.gammaFlip;
-        document.getElementById("res-flip-pct").innerText = ` (${data.flipDist > 0 ? '+' : ''}${data.flipDist}%)`;
+        document.getElementById("res-anchor-put").innerText = data.anchor.put || "N/A";
+        document.getElementById("res-anchor-put-pct").innerText = getPctStr(data.anchor.put, spot);
 
-        // 6. Update GEX and Timestamp
-        document.getElementById("res-gex").innerText = data.netGEX + "bn";
-        document.getElementById("res-update").innerText = "As of: " + data.updated;
-
-        // 7. Update Outlook Badge
+        // 3. Dynamic Badge Variant Coloring Engine Checks
         const badge = document.getElementById("outlookBadge");
         badge.innerText = data.outlook;
-        badge.style.backgroundColor = data.outlookColor;
+        
+        if (data.outlook.includes("STABLE")) {
+          badge.style.backgroundColor = "#27ae60";
+        } else if (data.outlook.includes("TRANSITION")) {
+          badge.style.backgroundColor = "#f39c12";
+        } else {
+          badge.style.backgroundColor = "#e74c3c";
+        }
       }
       
       input.value = "";
