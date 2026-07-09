@@ -61,12 +61,18 @@
                         <input type="number" id="user-hedge-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-600 mb-1">Cash ($)</label>
+                        <label class="block text-sm font-medium text-gray-600 mb-1 cursor-help" title='Look for "Available without margin impact" on your Fidelity Balances page.'>
+                            Cash ($) <span class="text-blue-500 text-xs ml-1">ⓘ</span>
+                        </label>
                         <input type="number" id="user-cash" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
+                        <p class="text-[10px] text-gray-400 mt-1 leading-tight">"Available without margin impact"</p>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-red-600 mb-1">Margin Debt ($)</label>
+                        <label class="block text-sm font-medium text-red-600 mb-1 cursor-help" title='Look for "Margin debit" on your Fidelity Balances page. If you have cash, leave this as 0.'>
+                            Margin Debit ($) <span class="text-red-400 text-xs ml-1">ⓘ</span>
+                        </label>
                         <input type="number" id="user-margin" placeholder="0" class="w-full p-2 border border-red-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none bg-red-50">
+                        <p class="text-[10px] text-red-400 mt-1 leading-tight">"Margin debit" (if any)</p>
                     </div>
                 </div>
             </div>
