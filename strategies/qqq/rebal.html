@@ -3,225 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friday Portfolio Rebalancer</title>
+    <title>Family Rebalance Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        .buy-action { color: #16a34a; background-color: #dcfce7; border-color: #bbf7d0; }
-        .sell-action { color: #dc2626; background-color: #fee2e2; border-color: #fecaca; }
-        .hold-action { color: #4b5563; background-color: #f3f4f6; border-color: #e5e7eb; }
-    </style>
 </head>
-<body class="bg-gray-100 min-h-screen p-4 md:p-8">
-
-    <div class="max-w-2xl mx-auto space-y-6">
+<body class="bg-gray-100 p-4 md:p-8 font-sans" onload="init()">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         
         <!-- Header -->
-        <div class="text-center">
-            <h1 class="text-3xl font-bold text-gray-900">Friday Portfolio Rebalancer</h1>
-            <p class="text-gray-500 mt-2">Dual-Asset Regime Calculator (QQQ + Hedge)</p>
+        <div class="bg-blue-600 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold">Weekly Rebalance Calculator</h1>
+            <p class="text-blue-100 text-sm mt-1">Enter your current Fidelity balances to get your trades.</p>
         </div>
 
-        <!-- STEP 1: Python Signals -->
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
-                <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">1</span>
-                System Signals (From Python)
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Current Regime</label>
-                    <select id="sys-regime" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-white">
-                        <option value="4">Regime 4 (1.35x QQQ)</option>
-                        <option value="3">Regime 3 (1.15x QQQ)</option>
-                        <option value="2">Regime 2 (1.00x QQQ)</option>
-                        <option value="1">Regime 1 (0.60x QQQ / 0.40x Hedge)</option>
-                        <option value="0">Regime 0 (1.00x Hedge)</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">QQQ Price ($)</label>
-                    <input type="number" id="sys-qqq-price" step="0.01" placeholder="e.g. 450.00" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Hedge Price ($)</label>
-                    <input type="number" id="sys-hedge-price" step="0.01" placeholder="e.g. 30.00" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-                </div>
-            </div>
-        </div>
-
-        <!-- STEP 2: Portfolio -->
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-            <div class="flex justify-between items-center mb-4 border-b border-gray-100 pb-3">
-                <h2 class="text-lg font-bold text-gray-800 flex items-center">
-                    <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">2</span>
-                    My Fidelity Account
+        <div class="p-6 md:p-8">
+            <!-- STEP 1: Python Signals (Read-Only) -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    System Signals (Live)
                 </h2>
-                <div class="text-right text-sm text-gray-500">
-                    Total Value: <span id="user-val" class="font-bold text-gray-800">$0.00</span>
-                </div>
-            </div>
-            
-            <!-- Inputs -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-600 mb-1">Current QQQ Shares</label>
-                    <input type="number" id="user-qqq-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-600 mb-1">Current Hedge Shares</label>
-                    <input type="number" id="user-hedge-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-600 mb-1">Available Cash ($)</label>
-                    <input type="number" id="user-cash" placeholder="0.00" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
-                </div>
-            </div>
-            
-            <!-- Outputs -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- QQQ Instruction -->
-                <div id="user-qqq-box" class="p-4 rounded-lg border flex items-center justify-between transition-colors duration-200 bg-white">
-                    <div>
-                        <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">QQQ Action</p>
-                        <p id="user-qqq-instruction" class="text-lg font-bold text-gray-400">Awaiting prices...</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-3 rounded-lg border border-gray-200">
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Current Regime</p>
+                        <!-- Hidden inputs keep the math working behind the scenes -->
+                        <input type="hidden" id="sys-regime" value="">
+                        <p id="display-regime" class="text-lg font-bold text-gray-800">Waiting for link...</p>
                     </div>
-                    <div class="text-right text-xs text-gray-500">
-                        Target: <span id="user-qqq-tgt">0</span> shs
+                    <div class="bg-white p-3 rounded-lg border border-gray-200">
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">QQQ Price</p>
+                        <input type="hidden" id="sys-qqq-price" value="">
+                        <p id="display-qqq" class="text-lg font-bold text-gray-800">Waiting...</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border border-gray-200">
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Hedge Price</p>
+                        <input type="hidden" id="sys-hedge-price" value="">
+                        <p id="display-hedge" class="text-lg font-bold text-gray-800">Waiting...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2: Fidelity Balances -->
+            <div class="mb-8">
+                <div class="flex justify-between items-end mb-4">
+                    <h2 class="text-lg font-semibold text-gray-800 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        Your Current Holdings
+                    </h2>
+                    <div class="text-right">
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Total Account Value</p>
+                        <p id="user-total-value" class="text-xl font-bold text-green-600">$0.00</p>
                     </div>
                 </div>
                 
-                <!-- Hedge Instruction -->
-                <div id="user-hedge-box" class="p-4 rounded-lg border flex items-center justify-between transition-colors duration-200 bg-white">
+                <!-- Inputs -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Hedge Action</p>
-                        <p id="user-hedge-instruction" class="text-lg font-bold text-gray-400">Awaiting prices...</p>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">QQQ Shares</label>
+                        <input type="number" id="user-qqq-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
                     </div>
-                    <div class="text-right text-xs text-gray-500">
-                        Target: <span id="user-hedge-tgt">0</span> shs
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Hedge Shares</label>
+                        <input type="number" id="user-hedge-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Cash ($)</label>
+                        <input type="number" id="user-cash" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-red-600 mb-1">Margin Debt ($)</label>
+                        <input type="number" id="user-margin" placeholder="0" class="w-full p-2 border border-red-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none bg-red-50">
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3: Actionable Trades -->
+            <div class="bg-gray-800 rounded-xl p-6 shadow-md text-white">
+                <h2 class="text-lg font-semibold mb-4 border-b border-gray-600 pb-2">Required Trades</h2>
+                
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center bg-gray-700 p-4 rounded-lg">
+                        <span class="text-lg font-bold w-20">QQQ</span>
+                        <div id="qqq-result" class="text-lg text-right">
+                            <span class="text-gray-400">Awaiting inputs...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center bg-gray-700 p-4 rounded-lg">
+                        <span class="text-lg font-bold w-20">Hedge</span>
+                        <div id="hedge-result" class="text-lg text-right">
+                            <span class="text-gray-400">Awaiting inputs...</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <script>
-        // Allocation Mapping (from your Python script's 'Moderate' profile)
+        // Allocation targets based on Moderate profile
         const regimeMap = {
-            "4": { qqq: 1.35, hedge: 0.00 },
-            "3": { qqq: 1.15, hedge: 0.00 },
-            "2": { qqq: 1.00, hedge: 0.00 },
-            "1": { qqq: 0.60, hedge: 0.40 },
-            "0": { qqq: 0.00, hedge: 1.00 }
+            4: { q: 1.35, h: 0.00 },
+            3: { q: 1.15, h: 0.00 },
+            2: { q: 1.00, h: 0.00 },
+            1: { q: 0.60, h: 0.40 },
+            0: { q: 0.00, h: 1.00 }
         };
 
         // Initialize the UI
         function init() {
-            // Attach event listeners to all input fields
-            const inputIds = [
-                'sys-regime', 'sys-qqq-price', 'sys-hedge-price',
-                'user-qqq-shares', 'user-hedge-shares', 'user-cash'
-            ];
-            
-            inputIds.forEach(id => {
-                document.getElementById(id).addEventListener('input', calculateTrades);
-            });
-
-            // --- NEW: Parse URL Query Strings ---
             const urlParams = new URLSearchParams(window.location.search);
             const urlRegime = urlParams.get('regime');
             const urlQqq = urlParams.get('qqq');
             const urlHedge = urlParams.get('hedge');
 
-            let autoFilled = false;
-
-            // Apply values if they exist in the URL
+            // Apply values if they exist in the URL to the read-only badges and hidden inputs
             if (urlRegime && regimeMap[urlRegime]) {
                 document.getElementById('sys-regime').value = urlRegime;
-                autoFilled = true;
+                document.getElementById('display-regime').innerText = `Regime ${urlRegime} (${regimeMap[urlRegime].q}x QQQ)`; 
             }
             if (urlQqq) {
                 document.getElementById('sys-qqq-price').value = urlQqq;
-                autoFilled = true;
+                document.getElementById('display-qqq').innerText = `$${parseFloat(urlQqq).toFixed(2)}`; 
             }
             if (urlHedge) {
                 document.getElementById('sys-hedge-price').value = urlHedge;
-                autoFilled = true;
+                document.getElementById('display-hedge').innerText = `$${parseFloat(urlHedge).toFixed(2)}`; 
             }
 
-            // Trigger an initial calculation if we pre-filled data
-            if (autoFilled) {
-                calculateTrades();
-            }
+            // Attach event listeners to all input fields
+            const inputIds = [
+                'user-qqq-shares', 'user-hedge-shares', 'user-cash', 'user-margin'
+            ];
+            
+            inputIds.forEach(id => {
+                const el = document.getElementById(id);
+                if(el) {
+                    el.addEventListener('input', calculateTrades);
+                }
+            });
+
+            // Run initial calculation in case they refresh the page with numbers already typed in
+            calculateTrades();
         }
 
-        // Action Formatter
-        function formatAction(action, boxElement, textElement) {
-            boxElement.className = 'p-4 rounded-lg border flex items-center justify-between transition-colors duration-200'; // reset
-            if (action > 0) {
-                boxElement.classList.add('buy-action');
-                textElement.innerText = `BUY ${action}`;
-                textElement.className = 'text-xl font-black text-green-700';
-            } else if (action < 0) {
-                boxElement.classList.add('sell-action');
-                textElement.innerText = `SELL ${Math.abs(action)}`;
-                textElement.className = 'text-xl font-black text-red-700';
-            } else {
-                boxElement.classList.add('hold-action');
-                textElement.innerText = `HOLD`;
-                textElement.className = 'text-xl font-bold text-gray-700';
-            }
-        }
-
-        // The Core Math Engine
+        // Core Calculation Engine
         function calculateTrades() {
-            const regime = document.getElementById('sys-regime').value;
+            // Get System Signals from hidden inputs
+            const regime = parseInt(document.getElementById('sys-regime').value);
             const qqqPrice = parseFloat(document.getElementById('sys-qqq-price').value);
             const hedgePrice = parseFloat(document.getElementById('sys-hedge-price').value);
-            
+
+            if (isNaN(regime) || isNaN(qqqPrice) || isNaN(hedgePrice)) {
+                return; // Stop if URL didn't provide signals yet
+            }
+
+            // Get User Inputs
             const qqqShares = parseFloat(document.getElementById('user-qqq-shares').value) || 0;
             const hedgeShares = parseFloat(document.getElementById('user-hedge-shares').value) || 0;
-            const cash = parseFloat(document.getElementById('user-cash').value) || 0;
+            const userCash = parseFloat(document.getElementById('user-cash').value) || 0;
             
-            const qqqLev = regimeMap[regime].qqq;
-            const hedgeLev = regimeMap[regime].hedge;
-            
-            // If account is totally empty, stop here
-            if (qqqShares === 0 && hedgeShares === 0 && cash === 0) return;
+            // Force margin debt to be a positive number so we can safely subtract it
+            const marginDebt = Math.abs(parseFloat(document.getElementById('user-margin').value) || 0);
 
-            // 1. Calculate Total Liquid Value of the Account
-            let totalValue = cash;
-            if (!isNaN(qqqPrice)) totalValue += (qqqShares * qqqPrice);
-            if (!isNaN(hedgePrice)) totalValue += (hedgeShares * hedgePrice);
+            // Calculate Total Account Value (Net Liquidation)
+            const totalValue = (qqqShares * qqqPrice) + (hedgeShares * hedgePrice) + userCash - marginDebt;
+            document.getElementById('user-total-value').innerText = '$' + totalValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
-            document.getElementById('user-val').innerText = `$${totalValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            if (totalValue <= 0) return;
 
-            // 2. QQQ Math
-            if (!isNaN(qqqPrice) && qqqPrice > 0) {
-                const targetQqqShares = Math.floor((totalValue * qqqLev) / qqqPrice);
-                const qqqAction = targetQqqShares - qqqShares;
-                document.getElementById('user-qqq-tgt').innerText = targetQqqShares;
-                formatAction(qqqAction, document.getElementById('user-qqq-box'), document.getElementById('user-qqq-instruction'));
+            // Determine Target Leverage
+            const target = regimeMap[regime];
+            const targetQqqValue = totalValue * target.q;
+            const targetHedgeValue = totalValue * target.h;
+
+            // Calculate Target Shares (Floored to avoid fractional shares)
+            const targetQqqShares = Math.floor(targetQqqValue / qqqPrice);
+            const targetHedgeShares = Math.floor(targetHedgeValue / hedgePrice);
+
+            // Calculate Required Trades
+            const qqqTrade = targetQqqShares - qqqShares;
+            const hedgeTrade = targetHedgeShares - hedgeShares;
+
+            // Update UI: QQQ
+            const qqqResult = document.getElementById('qqq-result');
+            if (qqqTrade > 0) {
+                qqqResult.innerHTML = `<span class="text-green-400 font-bold">BUY ${qqqTrade}</span> <span class="text-sm text-gray-400">(Target: ${targetQqqShares})</span>`;
+            } else if (qqqTrade < 0) {
+                qqqResult.innerHTML = `<span class="text-red-400 font-bold">SELL ${Math.abs(qqqTrade)}</span> <span class="text-sm text-gray-400">(Target: ${targetQqqShares})</span>`;
             } else {
-                 document.getElementById('user-qqq-instruction').innerText = "Enter QQQ Price...";
-                 document.getElementById('user-qqq-instruction').className = "text-lg font-bold text-gray-400";
+                qqqResult.innerHTML = `<span class="text-gray-400 font-bold">HOLD</span> <span class="text-sm text-gray-500">(Target: ${targetQqqShares})</span>`;
             }
 
-            // 3. Hedge Math
-            if (!isNaN(hedgePrice) && hedgePrice > 0) {
-                const targetHedgeShares = Math.floor((totalValue * hedgeLev) / hedgePrice);
-                const hedgeAction = targetHedgeShares - hedgeShares;
-                document.getElementById('user-hedge-tgt').innerText = targetHedgeShares;
-                formatAction(hedgeAction, document.getElementById('user-hedge-box'), document.getElementById('user-hedge-instruction'));
+            // Update UI: Hedge
+            const hedgeResult = document.getElementById('hedge-result');
+            if (hedgeTrade > 0) {
+                hedgeResult.innerHTML = `<span class="text-green-400 font-bold">BUY ${hedgeTrade}</span> <span class="text-sm text-gray-400">(Target: ${targetHedgeShares})</span>`;
+            } else if (hedgeTrade < 0) {
+                hedgeResult.innerHTML = `<span class="text-red-400 font-bold">SELL ${Math.abs(hedgeTrade)}</span> <span class="text-sm text-gray-400">(Target: ${targetHedgeShares})</span>`;
             } else {
-                 document.getElementById('user-hedge-instruction').innerText = "Enter Hedge Price...";
-                 document.getElementById('user-hedge-instruction').className = "text-lg font-bold text-gray-400";
+                hedgeResult.innerHTML = `<span class="text-gray-400 font-bold">HOLD</span> <span class="text-sm text-gray-500">(Target: ${targetHedgeShares})</span>`;
             }
         }
-
-        // Start app
-        init();
     </script>
 </body>
 </html>

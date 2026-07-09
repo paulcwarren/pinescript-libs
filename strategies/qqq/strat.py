@@ -16,11 +16,6 @@ primary_ticker = "QQQ"
 hedge_ticker = "DBMF"
 initial_capital = 10000
 
-# --- LIVE TRADING PORTFOLIO INPUTS (For console output only) ---
-strategy_capital = 50000            # Total capital assigned strictly to this strategy
-current_qqq_shares = 100            # How many QQQ shares you currently hold in your account
-# ---------------------------------------------------------------
-
 # --- STRATEGY FLAGS ---
 allocation_profile = "Moderate"     # Options: "Conservative", "Moderate", "Aggressive", "Insane"
 rebalance_freq = "Weekly"           # Options: "Daily", "Weekly"
@@ -172,13 +167,6 @@ downside_returns = excess_returns.copy()
 downside_returns[downside_returns > 0] = 0
 downside_deviation = downside_returns.std()
 sortino_ratio = (excess_returns.mean() / downside_deviation) * np.sqrt(252)
-
-positive_days = (qqq['Port_Ret'] > 0).sum()
-win_rate = positive_days / total_days
-
-gross_profit = qqq.loc[qqq['Port_Ret'] > 0, 'Port_Ret'].sum()
-gross_loss = abs(qqq.loc[qqq['Port_Ret'] < 0, 'Port_Ret'].sum())
-profit_factor = gross_profit / gross_loss if gross_loss != 0 else np.nan
 
 print("\n=== STRATEGY HISTORICAL PERFORMANCE ===")
 print(f"Hedge Vehicle:      {hedge_ticker}")
