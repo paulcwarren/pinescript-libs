@@ -10,7 +10,6 @@
 
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
         
-        <!-- Header & System Status -->
         <div class="bg-blue-900 text-white p-6">
             <h1 class="text-2xl font-bold mb-4">Weekly Portfolio Rebalance</h1>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -34,73 +33,63 @@
         </div>
 
         <div class="p-6">
-            <!-- Hidden inputs to store URL parameters -->
             <input type="hidden" id="sys-regime">
             <input type="hidden" id="sys-qqq-price">
             <input type="hidden" id="sys-hedge-price">
             <input type="hidden" id="sys-tqqq-price">
 
-            <!-- Account Type Toggle -->
             <div class="mb-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <label class="block text-sm font-medium text-gray-700 mb-2">Account Type</label>
                 <div class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
                     <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="accountType" value="margin" class="form-radio text-blue-600 h-5 w-5" checked onchange="toggleAccountMode()">
+                        <input type="radio" name="accountType" value="margin" class="form-radio text-blue-600 h-5 w-5" onchange="toggleAccountMode()">
                         <span class="ml-2 text-gray-800 font-medium">Margin Account (Adults)</span>
                     </label>
                     <label class="inline-flex items-center cursor-pointer">
-                        <input type="radio" name="accountType" value="utma" class="form-radio text-blue-600 h-5 w-5" onchange="toggleAccountMode()">
-                        <span class="ml-2 text-gray-800 font-medium">Cash-Only / UTMA (Youngest Son)</span>
+                        <input type="radio" name="accountType" value="utma" class="form-radio text-blue-600 h-5 w-5" checked onchange="toggleAccountMode()">
+                        <span class="ml-2 text-gray-800 font-medium">Cash-Only / UTMA</span>
                     </label>
                 </div>
             </div>
 
-            <!-- User Inputs -->
             <h2 class="text-lg font-bold text-gray-800 mb-4">Current Holdings</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="input-grid">
                 
-                <!-- QQQ Shares -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">QQQ Shares</label>
                     <input type="number" id="user-qqq-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none" oninput="calculateTrades()">
                     <p class="text-xs text-gray-500 mt-1">Current shares owned</p>
                 </div>
                 
-                <!-- UTMA Specific: TQQQ Shares (Hidden by default) -->
-                <div id="tqqq-container" class="hidden">
+                <div id="tqqq-container">
                     <label class="block text-sm font-medium text-gray-700 mb-1">TQQQ Shares</label>
                     <input type="number" id="user-tqqq-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none bg-blue-50" oninput="calculateTrades()">
                     <p class="text-xs text-gray-500 mt-1">Current shares owned</p>
                 </div>
 
-                <!-- Hedge Shares -->
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Hedge Shares</label>
+                    <label id="input-hedge-label" class="block text-sm font-medium text-gray-700 mb-1">Hedge Shares</label>
                     <input type="number" id="user-hedge-shares" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none" oninput="calculateTrades()">
                     <p class="text-xs text-gray-500 mt-1">Current shares owned</p>
                 </div>
                 
-                <!-- Cash -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Cash ($)</label>
                     <input type="number" id="user-cash" placeholder="0" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 outline-none" oninput="calculateTrades()">
                     <p class="text-xs text-gray-500 mt-1">"Available without margin impact"</p>
                 </div>
                 
-                <!-- Margin Specific: Margin Debit -->
-                <div id="margin-container">
+                <div id="margin-container" class="hidden">
                     <label class="block text-sm font-medium text-red-600 mb-1">Margin Debit ($)</label>
                     <input type="number" id="user-margin" placeholder="0" class="w-full p-2 border border-red-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none bg-red-50" oninput="calculateTrades()">
                     <p class="text-xs text-red-400 mt-1">"Margin debit" (leave 0 if none)</p>
                 </div>
             </div>
 
-            <!-- Action Button (Optional since it auto-calculates on input, but good for UX) -->
             <button onclick="calculateTrades()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 mb-8 shadow-sm">
                 Calculate Required Trades
             </button>
 
-            <!-- Results Section -->
             <div class="bg-gray-50 rounded-lg border border-gray-200 p-6">
                 <div class="flex justify-between items-end border-b border-gray-200 pb-4 mb-4">
                     <h2 class="text-xl font-bold text-gray-800">Trade Instructions</h2>
@@ -111,19 +100,16 @@
                 </div>
 
                 <div class="space-y-4">
-                    <!-- QQQ Trade -->
                     <div class="flex justify-between items-center bg-white p-4 rounded border shadow-sm">
                         <span class="font-bold text-lg text-gray-700">QQQ</span>
                         <div id="qqq-result" class="text-lg">--</div>
                     </div>
                     
-                    <!-- TQQQ Trade (Dynamically shown) -->
-                    <div id="tqqq-result-row" class="hidden flex justify-between items-center bg-white p-4 rounded border shadow-sm">
+                    <div id="tqqq-result-row" class="flex justify-between items-center bg-white p-4 rounded border shadow-sm">
                         <span class="font-bold text-lg text-gray-700">TQQQ</span>
                         <div id="tqqq-result" class="text-lg">--</div>
                     </div>
 
-                    <!-- Hedge Trade -->
                     <div class="flex justify-between items-center bg-white p-4 rounded border shadow-sm">
                         <span class="font-bold text-lg text-gray-700" id="hedge-result-label">Hedge</span>
                         <div id="hedge-result" class="text-lg">--</div>
@@ -165,7 +151,11 @@
             if(hticker) {
                 document.getElementById('disp-hticker').innerText = hticker;
                 document.getElementById('hedge-result-label').innerText = hticker;
+                document.getElementById('input-hedge-label').innerText = hticker + ' Shares';
             }
+            
+            // Trigger calculation on load in case inputs are pre-filled
+            calculateTrades();
         };
 
         // UI Toggle for Account Modes
@@ -179,12 +169,12 @@
                 marginContainer.classList.add('hidden');
                 tqqqContainer.classList.remove('hidden');
                 tqqqResultRow.classList.remove('hidden');
-                document.getElementById('user-margin').value = ''; // Clear margin value when switching to UTMA
+                document.getElementById('user-margin').value = ''; 
             } else {
                 marginContainer.classList.remove('hidden');
                 tqqqContainer.classList.add('hidden');
                 tqqqResultRow.classList.add('hidden');
-                document.getElementById('user-tqqq-shares').value = ''; // Clear TQQQ value when switching to Margin
+                document.getElementById('user-tqqq-shares').value = ''; 
             }
             calculateTrades();
         }
