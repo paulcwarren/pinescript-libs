@@ -166,7 +166,7 @@ def build_plotly_figure(graph_data, sorted_tickers):
     fig.add_annotation(x=0.05, y=0.05, text="LAGGING", showarrow=False, font=dict(color="rgba(239, 83, 80, 0.15)", size=28, weight="bold"), xref="x domain", yref="y domain")
     fig.add_annotation(x=0.05, y=0.95, text="IMPROVING", showarrow=False, font=dict(color="rgba(156, 204, 101, 0.15)", size=28, weight="bold"), xref="x domain", yref="y domain")
 
-    return fig.to_html(full_html=False, include_plotlyjs='cdn', div_id="rrg-plotly-chart")
+    return fig.to_html(full_html=False, include_plotlyjs='https://unpkg.com/plotly.js@3.7.0/dist/plotly.min.js', div_id="rrg-plotly-chart")
     
 def generate_dashboard(df, graph_html, filename):
     html_template = """
