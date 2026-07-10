@@ -394,12 +394,12 @@ const wallsData = {
     "net_gex_bn": NaN,
     "outlook": "VOLATILE / TRANSITION",
     "tactical": {
-      "call": 56.5,
-      "put": 55.5
+      "call": 56.0,
+      "put": 55.0
     },
     "anchor": {
-      "call": 54.0,
-      "put": 45.0
+      "call": 55.0,
+      "put": 52.0
     }
   },
   "XLY": {
@@ -430,8 +430,8 @@ const wallsData = {
   },
   "XLE": {
     "spot": 54.82,
-    "net_gex_bn": NaN,
-    "outlook": "VOLATILE / TRANSITION",
+    "net_gex_bn": 0.2248,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 60.0,
       "put": 55.0
@@ -2536,7 +2536,7 @@ const wallsData = {
   },
   "EME": {
     "spot": 783.41,
-    "net_gex_bn": 0.0016,
+    "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 830.0,
@@ -5828,11 +5828,11 @@ const wallsData = {
     "net_gex_bn": NaN,
     "outlook": "VOLATILE / TRANSITION",
     "tactical": {
-      "call": 105.0,
+      "call": 240.0,
       "put": 155.0
     },
     "anchor": {
-      "call": 105.0,
+      "call": 225.0,
       "put": 155.0
     }
   },
