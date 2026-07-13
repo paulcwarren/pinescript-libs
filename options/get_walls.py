@@ -150,7 +150,11 @@ def get_gex_and_walls(ticker_symbol):
         "tactical": {"call": tactical_call, "put": tactical_put},
         "anchor": {"call": anchor_call, "put": anchor_put}
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 367a5d5 (Wall service updates (weeklies/opex))
 def process_full_list():
     """Handles the standard execution of the full etfs.json payload."""
     config = load_tickers()
@@ -204,6 +208,73 @@ def process_full_list():
                             )
                     except Exception as e:
                         logging.error(f"Skipping holding asset node {stock} in {ticker} error: {e}")
+<<<<<<< HEAD
+=======
+                    
+                    processed_tickers.add(stock)
+                    time.sleep(0.5)
+
+    try:
+        with open(JSON_OUTPUT_PATH, 'w') as out_file:
+            out_file.write(f"const wallsData = {json.dumps(walls_dict, indent=2)};")
+        logging.info(f"SUCCESS: {JSON_OUTPUT_PATH} generated with {len(walls_dict)} processed tickers.")
+    except Exception as e:
+        logging.error(f"Failed writing payload structures back down to disk: {e}")
+
+def main():
+    """Handles the standard execution of the full etfs.json payload."""
+    config = load_tickers()
+    if not config:
+        return
+
+    walls_dict = {}
+    processed_tickers = set()
+
+    categories = [
+        ("Indexes", config.get("INDEXES", [])),
+        ("ETFs", config.get("ETFs", [])),
+        ("Extra Watchlist", config.get("EXTRA_TICKERS", []))
+    ]
+
+    for label, ticker_list in categories:
+        logging.info(f"--- Processing {label} ---")
+        for ticker in ticker_list:
+            if not ticker or ticker in processed_tickers:
+                continue
+            
+            try:
+                res = get_gex_and_walls(ticker)
+                if res:
+                    walls_dict[ticker] = res
+                    logging.info(
+                        f"{ticker:5s} | Spot: {res['spot']:<7} | GEX: {res['net_gex_bn']:<7}bn | "
+                        f"Weekly C/P: {str(res['tactical']['call'])+'/'+str(res['tactical']['put']):<13} | "
+                        f"OPEX C/P: {str(res['anchor']['call'])+'/'+str(res['anchor']['put'])}"
+                    )
+                else:
+                    logging.warning(f"Skipping {ticker}: No alternative parameters or derivatives found.")
+            except Exception as e:
+                logging.error(f"Skipping main ticker symbol target {ticker} due to error: {e}")
+            
+            processed_tickers.add(ticker)
+            time.sleep(0.5)
+
+            if label == "ETFs":
+                holdings = get_top_holdings(ticker, TOP_HOLDINGS_COUNT)
+                for stock in holdings:
+                    if not stock or stock in processed_tickers:
+                        continue
+                    
+                    try:
+                        h_res = get_gex_and_walls(stock)
+                        if h_res:
+                            walls_dict[stock] = h_res
+                            logging.info(
+                                f"  -> {stock:5s} (Holding) | Weekly C/P: {str(h_res['tactical']['call'])+'/'+str(h_res['tactical']['put']):<13}"
+                            )
+                    except Exception as e:
+                        logging.error(f"Skipping holding asset node {stock} in {ticker} error: {e}")
+>>>>>>> 367a5d5 (Wall service updates (weeklies/opex))
                     
                     processed_tickers.add(stock)
                     time.sleep(0.5)
@@ -216,7 +287,10 @@ def process_full_list():
         logging.error(f"Failed writing payload structures back down to disk: {e}")
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     import argparse
+=======
+>>>>>>> 367a5d5 (Wall service updates (weeklies/opex))
     parser = argparse.ArgumentParser(description="Gamma Edge Options Wall Generator")
     parser.add_argument('-t', '--ticker', type=str, help="Test a single ticker without processing the full JSON list.")
     
@@ -229,6 +303,7 @@ if __name__ == "__main__":
         if res:
             logging.info(
                 f"{ticker:5s} | Spot: {res['spot']:<7} | GEX: {res['net_gex_bn']:<7}bn | "
+<<<<<<< HEAD
                 f"Tactical C/P: {str(res['tactical']['call'])+'/'+str(res['tactical']['put']):<13} | "
                 f"Anchor C/P: {str(res['anchor']['call'])+'/'+str(res['anchor']['put'])}"
             )
@@ -237,4 +312,13 @@ if __name__ == "__main__":
             logging.error(f"Analysis returned None for {ticker}. Check bounding boxes or liquidity.")
     else:
         # Default behavior if no flag is provided
+=======
+                f"Weekly C/P: {str(res['tactical']['call'])+'/'+str(res['tactical']['put']):<13} | "
+                f"OPEX C/P: {str(res['anchor']['call'])+'/'+str(res['anchor']['put'])}"
+            )
+            print(f"\nRaw JSON Output:\n{json.dumps(res, indent=2)}")
+        else:
+            logging.error(f"Analysis returned None for {ticker}")
+    else:
+>>>>>>> 367a5d5 (Wall service updates (weeklies/opex))
         main()
