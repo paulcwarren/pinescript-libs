@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gamma Edge | Dashboard</title>
+  <title>Call/Put Walls</title>
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f4f7f6; color: #333; }
     .container { max-width: 580px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
@@ -60,7 +60,7 @@
         <div class="row"><span class="label">Spot Price</span> <span class="value" id="res-spot">--</span></div>
         <div class="row"><span class="label">Net GEX Exposure</span> <span class="value" id="res-gex">--</span></div>
         
-        <div class="section-title">Tactical Execution (Near-Term 3-Day)</div>
+        <div class="section-title">Weekly Gamma (Near-Term)</div>
         <div class="row">
             <span class="label">Call Wall (Resistance)</span> 
             <span class="value"><span id="res-tactical-call" style="color: #e74c3c;">--</span> <small id="res-tactical-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
@@ -70,7 +70,7 @@
             <span class="value"><span id="res-tactical-put" style="color: #27ae60;">--</span> <small id="res-tactical-put-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
         </div>
 
-        <div class="section-title">Institutional Anchor (Absolute Macro)</div>
+        <div class="section-title">Monthly OPEX (Structural)</div>
         <div class="row">
             <span class="label">Anchor Call Ceiling</span> 
             <span class="value"><span id="res-anchor-call" style="color: #c0392b;">--</span> <small id="res-anchor-call-pct" style="font-size: 12px; color: #7f8c8d;"></small></span>
