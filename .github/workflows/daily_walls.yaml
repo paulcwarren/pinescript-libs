@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # Runs at 18:00 UTC on Sun, Mon, Tue, Wed, Thu
-    - cron: '0 2 * * 1-5'
+    # Runs at 09:00 UTC (2:00 AM Pacific) on Mon, Tue, Wed, Thu, Fri
+    - cron: '0 9 * * 1-5'
   workflow_dispatch:  # allows manual trigger
 
 jobs:
