@@ -6,36 +6,55 @@ import yfinance as yf
 # 1. Define the dictionary first
 mapping = {}
 
-sector_etfs = ["BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XHB", "XBI", "XLP", "XLB", "SOXX", "XME", "XRT"]
+# Indices first, then major GICS sectors, then thematic ETFs
+sector_etfs = [
+    "SPY", "QQQ", "IWM", "DIA", 
+    "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XLP",
+    "BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "SOXX", "XME", "XRT", "XHB", "XBI"
+]
+
+# Keep track of tickers we have already assigned to a sector
+seen_tickers = set()
 
 print("--- Starting Scrape ---")
 for etf in sector_etfs:
     try:
         print(f"Processing {etf}...")
-        t = yf.Ticker(etf)
-        holdings = t.funds_data.top_holdings
         
-        # --- FIXED INDENTATION START ---
-        if holdings is not None and not holdings.empty:
-            raw_tickers = holdings.index.tolist()[:10]
-            clean_tickers = []
-            for tk in raw_tickers:
-                # Remove spaces/swap info
-                s = str(tk).split()[0] 
-                # Clean ticker to match Pine cleanT (removes .T, -B, etc.)
-                s = re.sub(r'[.\-].*$', '', s) 
-                clean_tickers.append(s)
-            
-            mapping[etf] = clean_tickers
-            print(f"✅ {etf}: Found {len(clean_tickers)} tickers")
+        # Handle manual indices or ETFs if they aren't standard yfinance lookups
+        if etf in ["SPY", "QQQ", "IWM", "DIA"]:
+            if etf == "SPY": raw_tickers = ["SPY"]
+            elif etf == "QQQ": raw_tickers = ["QQQ"]
+            elif etf == "IWM": raw_tickers = ["IWM"]
+            elif etf == "DIA": raw_tickers = ["DIA"]
         else:
-            if etf == "MAGS":
-                mapping[etf] = ["MSFT", "AAPL", "NVDA", "AMZN", "GOOGL", "META", "TSLA"]
-                print(f"ℹ️ {etf}: Used manual fallback")
-            else:
-                mapping[etf] = []
-                print(f"⚠️ {etf}: No holdings found")
-        # --- FIXED INDENTATION END ---
+            t = yf.Ticker(etf)
+            holdings = t.funds_data.top_holdings
+            raw_tickers = holdings.index.tolist()[:10] if (holdings is not None and not holdings.empty) else []
+
+        clean_tickers = []
+        for tk in raw_tickers:
+            # Remove spaces/swap info
+            s = str(tk).split()[0] 
+            # Clean ticker to match Pine cleanT (removes .T, -B, etc.)
+            s = re.sub(r'[.\-].*$', '', s) 
+            
+            # Only add the ticker if it hasn't appeared in a prior sector yet
+            if s not in seen_tickers:
+                seen_tickers.add(s)
+                clean_tickers.append(s)
+        
+        # Fallback for MAGS if needed and empty
+        if not clean_tickers and etf == "MAGS":
+            mags_fallback = ["MSFT", "AAPL", "NVDA", "AMZN", "GOOGL", "META", "TSLA"]
+            for m in mags_fallback:
+                if m not in seen_tickers:
+                    seen_tickers.add(m)
+                    clean_tickers.append(m)
+            print(f"ℹ️ {etf}: Used manual fallback")
+
+        mapping[etf] = clean_tickers
+        print(f"✅ {etf}: Found {len(clean_tickers)} unique tickers")
                 
     except Exception as e:
         print(f"❌ {etf}: Error - {e}")
