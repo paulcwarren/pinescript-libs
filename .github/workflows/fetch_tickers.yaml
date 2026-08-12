@@ -1,0 +1,34 @@
+name: Fetch Tickers (Weekly)
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every Sunday
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install pandas yfinance
+
+      - name: Generate Top 1000 Lists (CSV and Line Formats)
+        run: python fetch_tickers.py --top 1000 --format csv --format line
+
+      - name: Upload Files as Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: top1000-lists
+          path: |
+            top1000_listed.csv
+            top1000_listed.txt
+          retention-days: 5
