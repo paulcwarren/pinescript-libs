@@ -22,7 +22,7 @@ jobs:
         run: pip install pandas yfinance
 
       - name: Generate Top 1000 Lists (CSV and Line Formats)
-        run: python stocks/get_stocks_csv.py --top 1000 --format csv --format line
+        run: python stocks/get_stocks_csv.py --top 1000 --format csv --format line --min-market-cap 10B
 
       - name: Upload Files as Artifacts
         uses: actions/upload-artifact@v4

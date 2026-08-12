@@ -1,78 +1,101 @@
 import pandas as pd
 import argparse
-import yfinance as yf
-from concurrent.futures import ThreadPoolExecutor
+import requests
 
-def get_market_cap(ticker):
-    """Fetches market cap safely handling None types and rate limits."""
+def parse_market_cap(value):
+    """Converts string multipliers (e.g., '10B', '500M') to numeric float values."""
+    if not value:
+        return 0
+    value = str(value).upper().strip()
+    multipliers = {'K': 1e3, 'M': 1e6, 'B': 1e9, 'T': 1e12}
+    
+    if value[-1] in multipliers:
+        try:
+            return float(value[:-1]) * multipliers[value[-1]]
+        except ValueError:
+            return 0
     try:
-        mc = yf.Ticker(ticker).fast_info['marketCap']
-        if mc is None:
-            return ticker, 0
-        return ticker, float(mc)
-    except Exception:
-        return ticker, 0
+        return float(value)
+    except ValueError:
+        return 0
 
 def main():
     parser = argparse.ArgumentParser(description="Download and filter US stock tickers.")
     parser.add_argument('--top', type=int, help="Limit to the N most important stocks by Market Cap (e.g., 1000)")
-    # 'extend' allows repeating the flag: --format csv --format line
+    parser.add_argument('--min-market-cap', type=str, help="Minimum market cap (e.g., 10B, 500M, 2T)")
     parser.add_argument('--format', choices=['csv', 'line'], nargs='+', action='extend',
                         help="Output format(s): 'csv' (quoted, comma-separated) and/or 'line' (unquoted, one per line).")
     args = parser.parse_args()
 
-    # Standardize formats to avoid duplicates while retaining default behavior
     formats = args.format if args.format else ['csv']
     formats = list(dict.fromkeys(formats))
 
-    print("Fetching raw data from NASDAQ FTP...")
+    print("Fetching full screener data directly from the NASDAQ API...")
     
-    # 1. Load the raw pipe-delimited data
-    nasdaq = pd.read_csv("ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqlisted.txt", sep="|")
-    other = pd.read_csv("ftp://ftp.nasdaqtrader.com/SymbolDirectory/otherlisted.txt", sep="|")
+    # Official NASDAQ JSON Screener Endpoint
+    url = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=25&offset=0&download=true"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"Failed to fetch data from NASDAQ: {e}")
+        return
 
-    # 2. Align the primary ticker column names
-    nasdaq = nasdaq.rename(columns={"Symbol": "Ticker"})
-    other = other.rename(columns={"ACT Symbol": "Ticker"})
+    # Extract rows from the JSON payload
+    rows = data.get('data', {}).get('rows', [])
+    if not rows:
+        print("No data returned from NASDAQ API.")
+        return
 
-    # 3. Append the datasets
-    df = pd.concat([nasdaq, other], ignore_index=True)
+    df = pd.DataFrame(rows)
 
-    # 4. Clean system rows and test issues
-    df = df.dropna(subset=['Ticker']) 
-    df = df[df['Test Issue'] == 'N']
+    # 1. Standardize column names
+    df = df.rename(columns={"symbol": "Ticker", "name": "Security Name"})
+    df['Ticker'] = df['Ticker'].str.strip()
 
-    # 5. Filter out non-alphabetical tickers
+    # 2. Filter out non-alphabetical tickers (drops preferreds, warrants)
     df = df[~df['Ticker'].str.contains(r'[^A-Za-z]', regex=True, na=False)]
 
-    # 6. Filter Security Names for junk assets
+    # 3. Filter Security Names for junk assets
     junk_keywords = 'Warrant|Wts|Right|Unit|Preferred|%'
     df = df[~df['Security Name'].str.contains(junk_keywords, case=False, na=False, regex=True)]
 
-    # 7. Drop ETFs
-    df = df[df['ETF'] == 'N']
+    # 4. Remove ETFs and Funds (The screener API mixes these in)
+    etf_keywords = 'ETF|Fund|Trust|Portfolio|Invesco|iShares|ProShares|Vanguard|SPDR|Direxion'
+    df = df[~df['Security Name'].str.contains(etf_keywords, case=False, na=False, regex=True)]
 
-    # 8. Extract the tickers to a Python list
+    # 5. Clean and convert Market Cap to raw float
+    df['marketCap'] = df['marketCap'].replace({',': ''}, regex=True)
+    df['marketCap'] = pd.to_numeric(df['marketCap'], errors='coerce').fillna(0)
+
+    # 6. Apply --min-market-cap filter
+    if args.min_market_cap:
+        min_mc = parse_market_cap(args.min_market_cap)
+        print(f"Filtering for stocks with Market Cap >= {min_mc:,.0f}...")
+        df = df[df['marketCap'] >= min_mc]
+
+    # Sort descending by Market Cap so --top isolates the largest
+    df = df.sort_values(by='marketCap', ascending=False)
+
+    # 7. Apply --top filter
+    if args.top:
+        print(f"Selecting the top {args.top} stocks by Market Cap...")
+        df = df.head(args.top)
+
     clean_tickers = df['Ticker'].tolist()
 
-    # Calculate Market Caps if requested
-    if args.top:
-        print(f"Fetching market caps for {len(clean_tickers)} tickers to determine the top {args.top}...")
-        print("Using throttled concurrent threads to avoid Yahoo rate limits. Please wait...")
-        
-        market_caps = []
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            results = executor.map(get_market_cap, clean_tickers)
-            for result in results:
-                market_caps.append(result)
-        
-        # Sort the list of tuples by market cap descending
-        market_caps.sort(key=lambda x: x[1], reverse=True)
-        
-        # Slice the top N and extract just the ticker strings
-        clean_tickers = [x[0] for x in market_caps[:args.top]]
+    if not clean_tickers:
+        print("No tickers matched your criteria.")
+        return
 
-    # 9. Loop through the requested formats and generate outputs
+    # 8. Format output data based on the chosen flags
     for fmt in formats:
         if fmt == 'csv':
             output_data = ",".join(f'"{ticker}"' for ticker in clean_tickers)
@@ -81,7 +104,13 @@ def main():
             output_data = "\n".join(clean_tickers) + "\n"
             ext = ".txt"
 
-        filename = f"top{args.top}_listed{ext}" if args.top else f"alllisted{ext}"
+        # Dynamically name the file based on the filters used
+        if args.top:
+            filename = f"top{args.top}_listed{ext}"
+        elif args.min_market_cap:
+            filename = f"min{args.min_market_cap}_listed{ext}"
+        else:
+            filename = f"alllisted{ext}"
         
         with open(filename, "w") as f:
             f.write(output_data)
