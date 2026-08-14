@@ -29,23 +29,25 @@
             margin: 10px 0;
         }
         .leverage-label { text-align: center; color: #6b7280; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-        label { font-weight: 600; display: block; margin-bottom: 8px; }
+        .total-value { text-align: center; font-size: 1.2rem; font-weight: bold; color: #059669; margin-top: 15px; }
+        label { font-weight: 600; display: block; margin-bottom: 8px; margin-top: 15px; }
         input {
             width: 100%;
             padding: 12px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border: 2px solid #e5e7eb;
             border-radius: 8px;
             box-sizing: border-box;
-            margin-bottom: 20px;
             transition: border-color 0.2s;
         }
         input:focus { outline: none; border-color: #2563eb; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 12px 4px; text-align: left; border-bottom: 1px solid #e5e7eb; }
         th { color: #6b7280; font-weight: 600; font-size: 0.9rem; }
         .ticker { font-weight: bold; color: #111827; }
-        .shares { font-weight: bold; color: #059669; font-size: 1.1rem; }
+        .action-buy { color: #059669; font-weight: bold; }
+        .action-sell { color: #dc2626; font-weight: bold; }
+        .action-hold { color: #6b7280; }
     </style>
 </head>
 <body>
@@ -54,18 +56,27 @@
         <h1>Volatility Target Rebalance</h1>
         <div class="leverage-label">Current Algorithm Target</div>
         <div class="leverage-display" id="display-lev">-- x</div>
+        <div class="total-value" id="display-total">Total Value: $0.00</div>
     </div>
 
     <div class="card">
-        <label for="portfolioValue">Enter Total Account Value ($)</label>
-        <input type="number" id="portfolioValue" placeholder="e.g. 50000" oninput="calculateAllocation()">
+        <div class="leverage-label" style="margin-bottom: 15px;">Enter Current Holdings</div>
+        
+        <label for="currentQQQ">Current QQQ Shares</label>
+        <input type="number" id="currentQQQ" placeholder="0" oninput="calculateAllocation()">
+
+        <label for="currentTQQQ">Current TQQQ Shares</label>
+        <input type="number" id="currentTQQQ" placeholder="0" oninput="calculateAllocation()">
+
+        <label for="currentCash">Current Cash Balance ($) - Include new deposits</label>
+        <input type="number" id="currentCash" placeholder="0" oninput="calculateAllocation()">
 
         <table id="resultsTable" style="display: none;">
             <thead>
                 <tr>
                     <th>Asset</th>
-                    <th>Target %</th>
-                    <th>Shares to Hold</th>
+                    <th>Target</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody id="resultsBody">
@@ -84,12 +95,33 @@
         // Display the current leverage target
         document.getElementById('display-lev').innerText = lev.toFixed(2) + 'x';
 
+        function getActionText(target, current, isCash = false) {
+            const diff = target - current;
+            if (diff === 0) return `<span class="action-hold">Hold</span>`;
+            
+            if (isCash) {
+                if (diff > 0) return `<span class="action-buy">Add $${diff.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+                return `<span class="action-sell">Deploy $${Math.abs(diff).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+            } else {
+                if (diff > 0) return `<span class="action-buy">Buy ${diff}</span>`;
+                return `<span class="action-sell">Sell ${Math.abs(diff)}</span>`;
+            }
+        }
+
         function calculateAllocation() {
-            const value = parseFloat(document.getElementById('portfolioValue').value);
+            const currentQQQ = parseFloat(document.getElementById('currentQQQ').value) || 0;
+            const currentTQQQ = parseFloat(document.getElementById('currentTQQQ').value) || 0;
+            const currentCash = parseFloat(document.getElementById('currentCash').value) || 0;
+
             const resultsTable = document.getElementById('resultsTable');
             const resultsBody = document.getElementById('resultsBody');
             
-            if (!value || value <= 0) {
+            // 2. Calculate true total portfolio value dynamically
+            const totalValue = (currentQQQ * qqqPrice) + (currentTQQQ * tqqqPrice) + currentCash;
+            
+            document.getElementById('display-total').innerText = `Total Value: $${totalValue.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+            if (totalValue <= 0) {
                 resultsTable.style.display = 'none';
                 return;
             }
@@ -98,55 +130,55 @@
             let tqqqWeight = 0;
             let cashWeight = 0;
 
-            // 2. Calculate ETF blending weights
+            // 3. Calculate ETF blending weights
             if (lev > 1.0) {
-                // Blend QQQ (1x) and TQQQ (3x)
                 tqqqWeight = (lev - 1) / 2;
                 qqqWeight = 1 - tqqqWeight;
             } else if (lev < 1.0) {
-                // Blend QQQ (1x) and Cash (0x)
                 qqqWeight = lev;
                 cashWeight = 1 - lev;
             } else {
                 qqqWeight = 1.0;
             }
 
-            // 3. Calculate target dollar amounts
-            const qqqTarget = value * qqqWeight;
-            const tqqqTarget = value * tqqqWeight;
-            const cashTarget = value * cashWeight;
+            // 4. Calculate target dollar amounts and shares
+            const qqqTargetVal = totalValue * qqqWeight;
+            const tqqqTargetVal = totalValue * tqqqWeight;
+            const cashTargetVal = totalValue * cashWeight;
 
-            // 4. Render Table
+            const qqqTargetShares = qqqPrice > 0 ? Math.floor(qqqTargetVal / qqqPrice) : 0;
+            const tqqqTargetShares = tqqqPrice > 0 ? Math.floor(tqqqTargetVal / tqqqPrice) : 0;
+
+            // 5. Render Table with Buy/Sell Actions
             let html = '';
 
-            if (qqqWeight > 0) {
-                const qqqShares = qqqPrice > 0 ? Math.floor(qqqTarget / qqqPrice) : 0;
+            // QQQ Row
+            html += `
+                <tr>
+                    <td class="ticker">QQQ<br><span style="font-size:0.8em; color:#6b7280; font-weight:normal;">${(qqqWeight * 100).toFixed(1)}%</span></td>
+                    <td style="font-weight: bold; color: #111827;">${qqqTargetShares}</td>
+                    <td>${getActionText(qqqTargetShares, currentQQQ)}</td>
+                </tr>
+            `;
+
+            // TQQQ Row (Only show if target or current > 0)
+            if (tqqqWeight > 0 || currentTQQQ > 0) {
                 html += `
                     <tr>
-                        <td class="ticker">QQQ</td>
-                        <td>${(qqqWeight * 100).toFixed(1)}%</td>
-                        <td class="shares">${qqqShares}</td>
+                        <td class="ticker">TQQQ<br><span style="font-size:0.8em; color:#6b7280; font-weight:normal;">${(tqqqWeight * 100).toFixed(1)}%</span></td>
+                        <td style="font-weight: bold; color: #111827;">${tqqqTargetShares}</td>
+                        <td>${getActionText(tqqqTargetShares, currentTQQQ)}</td>
                     </tr>
                 `;
             }
 
-            if (tqqqWeight > 0) {
-                const tqqqShares = tqqqPrice > 0 ? Math.floor(tqqqTarget / tqqqPrice) : 0;
+            // Cash Row (Only show if target or current > 0)
+            if (cashWeight > 0 || currentCash > 0) {
                 html += `
                     <tr>
-                        <td class="ticker">TQQQ</td>
-                        <td>${(tqqqWeight * 100).toFixed(1)}%</td>
-                        <td class="shares">${tqqqShares}</td>
-                    </tr>
-                `;
-            }
-
-            if (cashWeight > 0) {
-                html += `
-                    <tr>
-                        <td class="ticker">CASH</td>
-                        <td>${(cashWeight * 100).toFixed(1)}%</td>
-                        <td class="shares">$${cashTarget.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                        <td class="ticker">CASH<br><span style="font-size:0.8em; color:#6b7280; font-weight:normal;">${(cashWeight * 100).toFixed(1)}%</span></td>
+                        <td style="font-weight: bold; color: #111827;">$${cashTargetVal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 0})}</td>
+                        <td>${getActionText(cashTargetVal, currentCash, true)}</td>
                     </tr>
                 `;
             }
