@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     # Runs at 09:00 UTC (2:00 AM Pacific) on Mon, Tue, Wed, Thu, Fri
-    - cron: '0 9 * * 1-5'
+    - cron: '0 11 * * 1-5'
   workflow_dispatch:  # allows manual trigger
 
 jobs:
