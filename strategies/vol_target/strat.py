@@ -32,7 +32,7 @@ def run_volatility_targeting():
     leverage = leverage.shift(1).fillna(1.0)
     
     # 4. Calculate Margin Borrowing Costs (Assuming 4% rate on borrowed funds)
-    margin_rate = 0.04 / 252
+    margin_rate = 0.0 # for real margin use 0.04 / 252
     borrowed_amount = (leverage - 1.0).clip(lower=0.0)
     
     # 5. Calculate Strategy Returns
