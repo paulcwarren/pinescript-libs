@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Rebalance</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f5f7;
+            color: #111827;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1 { font-size: 1.5rem; text-align: center; margin-top: 0; }
+        .leverage-display {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2563eb;
+            margin: 10px 0;
+        }
+        .leverage-label { text-align: center; color: #6b7280; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        label { font-weight: 600; display: block; margin-bottom: 8px; }
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: border-color 0.2s;
+        }
+        input:focus { outline: none; border-color: #2563eb; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px 4px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { color: #6b7280; font-weight: 600; font-size: 0.9rem; }
+        .ticker { font-weight: bold; color: #111827; }
+        .shares { font-weight: bold; color: #059669; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Volatility Target Rebalance</h1>
+        <div class="leverage-label">Current Algorithm Target</div>
+        <div class="leverage-display" id="display-lev">-- x</div>
+    </div>
+
+    <div class="card">
+        <label for="portfolioValue">Enter Total Account Value ($)</label>
+        <input type="number" id="portfolioValue" placeholder="e.g. 50000" oninput="calculateAllocation()">
+
+        <table id="resultsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Target %</th>
+                    <th>Shares to Hold</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Rows injected by JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // 1. Extract URL Parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const lev = parseFloat(urlParams.get('lev')) || 1.0;
+        const qqqPrice = parseFloat(urlParams.get('qqq')) || 0;
+        const tqqqPrice = parseFloat(urlParams.get('tqqq')) || 0;
+
+        // Display the current leverage target
+        document.getElementById('display-lev').innerText = lev.toFixed(2) + 'x';
+
+        function calculateAllocation() {
+            const value = parseFloat(document.getElementById('portfolioValue').value);
+            const resultsTable = document.getElementById('resultsTable');
+            const resultsBody = document.getElementById('resultsBody');
+            
+            if (!value || value <= 0) {
+                resultsTable.style.display = 'none';
+                return;
+            }
+
+            let qqqWeight = 0;
+            let tqqqWeight = 0;
+            let cashWeight = 0;
+
+            // 2. Calculate ETF blending weights
+            if (lev > 1.0) {
+                // Blend QQQ (1x) and TQQQ (3x)
+                tqqqWeight = (lev - 1) / 2;
+                qqqWeight = 1 - tqqqWeight;
+            } else if (lev < 1.0) {
+                // Blend QQQ (1x) and Cash (0x)
+                qqqWeight = lev;
+                cashWeight = 1 - lev;
+            } else {
+                qqqWeight = 1.0;
+            }
+
+            // 3. Calculate target dollar amounts
+            const qqqTarget = value * qqqWeight;
+            const tqqqTarget = value * tqqqWeight;
+            const cashTarget = value * cashWeight;
+
+            // 4. Render Table
+            let html = '';
+
+            if (qqqWeight > 0) {
+                const qqqShares = qqqPrice > 0 ? Math.floor(qqqTarget / qqqPrice) : 0;
+                html += `
+                    <tr>
+                        <td class="ticker">QQQ</td>
+                        <td>${(qqqWeight * 100).toFixed(1)}%</td>
+                        <td class="shares">${qqqShares}</td>
+                    </tr>
+                `;
+            }
+
+            if (tqqqWeight > 0) {
+                const tqqqShares = tqqqPrice > 0 ? Math.floor(tqqqTarget / tqqqPrice) : 0;
+                html += `
+                    <tr>
+                        <td class="ticker">TQQQ</td>
+                        <td>${(tqqqWeight * 100).toFixed(1)}%</td>
+                        <td class="shares">${tqqqShares}</td>
+                    </tr>
+                `;
+            }
+
+            if (cashWeight > 0) {
+                html += `
+                    <tr>
+                        <td class="ticker">CASH</td>
+                        <td>${(cashWeight * 100).toFixed(1)}%</td>
+                        <td class="shares">$${cashTarget.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                    </tr>
+                `;
+            }
+
+            resultsBody.innerHTML = html;
+            resultsTable.style.display = 'table';
+        }
+    </script>
+</body>
+</html>
