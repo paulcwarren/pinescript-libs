@@ -3,16 +3,21 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import os
+import json
 
 # === Configuration ===
-TICKERS = [
+# These will always show on the dashboard by default
+CORE_TICKERS = [
     "XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLK", "XLB", "XLRE", "XLU"
-#    "XRT", "XME", "XBI", "ROBO", "QTUM", "URA", "SOXX", "UFO", "MAGS", "TAN", "IGV", 
-#    "DRAM", "IYT", "DTCR"
 ]
+
+# These are pre-calculated, embedded in the HTML, and get a checkbox toggle
+EXTENDED_UNIVERSE = [
+    "IGV", "CLOU", "XBI", "IYT", "KRE", "XHB", "XRT", "XME", "ROBO", "UFO", "SOXX", "TAN"
+]
+
 BENCHMARK = "SPY"
 TRAIL_LENGTH = 36
-
 RS_LEN = 63
 CENTER_LEN = 252
 LOOKBACK_3M = 63
@@ -20,7 +25,7 @@ LOOKBACK_1M = 21
 
 def fetch_and_calculate(tickers, benchmark):
     print("Fetching data from Yahoo Finance...")
-    all_symbols = tickers + [benchmark]
+    all_symbols = list(dict.fromkeys(tickers + [benchmark]))
     data = yf.download(all_symbols, period="3y", interval="1d", progress=False)['Close']
     data = data.dropna(axis=1, how='all').ffill()
     
@@ -62,7 +67,8 @@ def fetch_and_calculate(tickers, benchmark):
         graph_data[sym] = {
             "x": x_plot.iloc[-TRAIL_LENGTH:].tolist(),
             "y": y_plot.iloc[-TRAIL_LENGTH:].tolist(),
-            "bucket": buckets[-1]
+            "bucket": buckets[-1],
+            "is_core": sym in CORE_TICKERS
         }
         
         prio_map = {"Leading": 4, "Weakening": 3, "Lagging": 2, "Improving": 1, "Neutral": 0}
@@ -90,7 +96,6 @@ def fetch_and_calculate(tickers, benchmark):
     df['RS Rnk'] = df['RS Val'].rank(ascending=False, method='min').astype(int)
     df['RM Rnk'] = df['RM Val'].rank(ascending=False, method='min').astype(int)
     df['Avg Rnk'] = (df['RS Rnk'] + df['RM Rnk']) / 2.0
-    
     df = df.sort_values(by=['Prio', 'Avg Rnk'], ascending=[False, True]).reset_index(drop=True)
     
     df['3M Perf'] = (df['3M Perf'] * 100).map("{:.1f}%".format)
@@ -117,10 +122,14 @@ def build_plotly_figure(graph_data, sorted_tickers):
         x_vals, y_vals = data["x"], data["y"]
         color = bucket_colors.get(data["bucket"], "#ffffff")
         
+        # Determine visibility for initialization (Core = True, Extended = False)
+        is_visible = True if data["is_core"] else False
+        
         fig.add_trace(go.Scatter(
             x=x_vals, y=y_vals,
             mode='lines+markers',
             name=sym,
+            visible=is_visible,
             line=dict(color=color, width=1.5),
             opacity=0.4, 
             marker=dict(
@@ -132,32 +141,15 @@ def build_plotly_figure(graph_data, sorted_tickers):
             hovertemplate=f"<b>{sym}</b><br>RS: %{{x:.4f}}<br>RM: %{{y:.4f}}<extra></extra>"
         ))
 
-    # Center Crosshairs
     fig.add_hline(y=0, line_width=1.5, line_color="#363a45", line_dash="solid")
     fig.add_vline(x=0, line_width=1.5, line_color="#363a45", line_dash="solid")
     
-    # RESTORED AND UPGRADED AXIS CONFIGURATION
     fig.update_layout(
         title=dict(text="Systematic Rotation Tracker (36-Day Macro Tails)", font=dict(size=18, color="#ffffff")),
-        xaxis=dict(
-            title=dict(text="Relative Strength (RS)", font=dict(size=14, color="#d1d4dc")),
-            gridcolor="#2a2e39",
-            zeroline=False, # Handled by our custom hline/vline
-            tickfont=dict(color="#787b86")
-        ),
-        yaxis=dict(
-            title=dict(text="Relative Momentum (RM)", font=dict(size=14, color="#d1d4dc")),
-            gridcolor="#2a2e39",
-            zeroline=False,
-            tickfont=dict(color="#787b86")
-        ),
-        plot_bgcolor="#131722",
-        paper_bgcolor="#131722",
-        font=dict(color="#d1d4dc"),
-        showlegend=True,
-        height=680,
-        margin=dict(l=60, r=50, t=80, b=60), # Slightly widened left/bottom margins for axis text
-        hovermode="closest",
+        xaxis=dict(title=dict(text="Relative Strength (RS)", font=dict(size=14, color="#d1d4dc")), gridcolor="#2a2e39", zeroline=False, tickfont=dict(color="#787b86")),
+        yaxis=dict(title=dict(text="Relative Momentum (RM)", font=dict(size=14, color="#d1d4dc")), gridcolor="#2a2e39", zeroline=False, tickfont=dict(color="#787b86")),
+        plot_bgcolor="#131722", paper_bgcolor="#131722", font=dict(color="#d1d4dc"),
+        showlegend=True, height=680, margin=dict(l=60, r=50, t=80, b=60), hovermode="closest",
         legend=dict(itemsizing='constant', title=dict(text="Hover to Isolate", font=dict(size=12, color="#787b86")))
     )
     
@@ -167,8 +159,14 @@ def build_plotly_figure(graph_data, sorted_tickers):
     fig.add_annotation(x=0.05, y=0.95, text="IMPROVING", showarrow=False, font=dict(color="rgba(156, 204, 101, 0.15)", size=28, weight="bold"), xref="x domain", yref="y domain")
 
     return fig.to_html(full_html=False, include_plotlyjs='https://unpkg.com/plotly.js@3.7.0/dist/plotly.min.js', div_id="rrg-plotly-chart")
+
+def generate_dashboard(df, graph_html, core_tickers, extended_tickers, filename):
     
-def generate_dashboard(df, graph_html, filename):
+    # Dynamically build the checkbox HTML based on the EXTENDED_UNIVERSE list
+    checkboxes_html = ""
+    for ticker in extended_tickers:
+        checkboxes_html += f'<label class="cb-label"><input type="checkbox" class="ticker-cb" value="{ticker}"> {ticker}</label>\n'
+
     html_template = """
     <!DOCTYPE html>
     <html>
@@ -178,42 +176,23 @@ def generate_dashboard(df, graph_html, filename):
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #131722; color: #d1d4dc; padding: 30px; margin: 0; }
         .container { max-width: 1400px; margin: 0 auto; }
-        h2 { color: #ffffff; border-bottom: 2px solid #2a2e39; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px;}
-        .layout-grid { display: grid; grid-template-columns: 100%; gap: 25px; margin-bottom: 25px; }
+        .header-bar { border-bottom: 2px solid #2a2e39; padding-bottom: 15px; margin-bottom: 20px; }
+        h2 { color: #ffffff; margin: 0 0 10px 0;}
         
-        .matrix-card { background-color: #1e222d; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #2a2e39; }
-        .matrix-title { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; color: #787b86; }
-        .matrix-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
-        .matrix-table th { background-color: #181c25; color: #d1d4dc; font-weight: 600; padding: 10px; border: 1px solid #2a2e39; text-transform: uppercase; font-size: 11px; }
-        .matrix-table td { padding: 12px 10px; border: 1px solid #2a2e39; font-weight: 500; }
+        .checkbox-container { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px; }
+        .cb-label { display: flex; align-items: center; gap: 6px; cursor: pointer; color: #787b86; font-size: 13px; font-weight: 600; transition: color 0.2s; }
+        .cb-label input { cursor: pointer; accent-color: #26a69a; width: 15px; height: 15px; margin: 0; }
+        .cb-label:hover { color: #d1d4dc; }
         
-        .status-hold { background-color: rgba(38, 166, 154, 0.2); color: #26a69a; }
-        .status-observe { background-color: rgba(255, 167, 38, 0.2); color: #ffa726; border-left: 4px solid #ffa726 !important; }
-        .status-exit { background-color: rgba(239, 83, 80, 0.25); color: #ef5350; font-weight: bold; animation: pulse 2s infinite; }
-        .status-avoid { color: #787b86; background-color: rgba(30, 34, 45, 0.5); }
-        .status-alpha { background-color: rgba(156, 204, 101, 0.15); color: #9ccc65; }
-
         .data-card { background-color: #1e222d; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #2a2e39; }
-        
-        /* Strict Data Table Alignment Rules */
         .data-table { border-collapse: collapse; width: 100%; font-size: 13px; }
         .data-table th { background-color: #181c25; color: #787b86; font-weight: 600; text-transform: uppercase; padding: 14px 15px; border-bottom: 1px solid #2a2e39; font-size: 11px; }
         .data-table td { padding: 12px 15px; border-bottom: 1px solid #2a2e39; vertical-align: middle; }
         .data-table tr:hover { background-color: #2a2e39; }
-        
-        /* Force Center by default to fix Pandas overrides */
         .data-table th, .data-table td { text-align: center !important; }
-        
-        /* 1: Ticker (Left) */
         .data-table th:nth-child(1), .data-table td:nth-child(1) { text-align: left !important; }
-        
-        /* 2 & 3: Percentages (Right for decimal alignment) */
-        .data-table th:nth-child(2), .data-table td:nth-child(2),
-        .data-table th:nth-child(3), .data-table td:nth-child(3) { text-align: right !important; }
-        
-        /* 9 & 10: Raw RS/RM Values (Right for decimal alignment) */
-        .data-table th:nth-child(9), .data-table td:nth-child(9),
-        .data-table th:nth-child(10), .data-table td:nth-child(10) { text-align: right !important; }
+        .data-table th:nth-child(2), .data-table td:nth-child(2), .data-table th:nth-child(3), .data-table td:nth-child(3) { text-align: right !important; }
+        .data-table th:nth-child(9), .data-table td:nth-child(9), .data-table th:nth-child(10), .data-table td:nth-child(10) { text-align: right !important; }
 
         .bucket-Leading { background-color: rgba(38, 166, 154, 0.15); color: #26a69a; font-weight: 600; border-radius: 4px; padding: 4px 8px; display: inline-block; width: 80px; text-align: center;}
         .bucket-Improving { background-color: rgba(156, 204, 101, 0.15); color: #9ccc65; font-weight: 600; border-radius: 4px; padding: 4px 8px; display: inline-block; width: 80px; text-align: center;}
@@ -225,109 +204,149 @@ def generate_dashboard(df, graph_html, filename):
     </head>
     <body>
         <div class="container">
-            <h2>Systematic Alpha Matrix & Execution Framework</h2>
+            <div class="header-bar">
+                <h2>Systematic Alpha Matrix</h2>
+                <div class="checkbox-container">
+                    {checkboxes}
+                </div>
+            </div>
             
             <div class="data-card" style="margin-bottom: 25px;">
                 {graph}
             </div>
             
-            <div class="layout-grid">
-                <div class="matrix-card">
-                    <div class="matrix-title">Systematic Rule Logic Reference (Weekly Matrix Setup)</div>
-                    <table class="matrix-table">
-                        <thead>
-                            <tr>
-                                <th>RRG Quadrant Condition</th>
-                                <th>Price Structure &gt; 36SMA</th>
-                                <th>Price Structure &lt; 36SMA</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="font-weight:bold; color:#26a69a;">LEADING</td>
-                                <td class="status-hold">STRONG ASSET ALLOCATION / CORE HOLD</td>
-                                <td class="status-observe">RISK WARNING / PREPARE ASSET LIQUIDATION</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:bold; color:#ffa726;">WEAKENING</td>
-                                <td class="status-observe">MONITORING BIAS (STAY IN ASSET)</td>
-                                <td class="status-exit">AND CONDITION VALIDATED &rarr; HARD EXIT SYSTEM CONSTRAINTS</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:bold; color:#ef5350;">LAGGING</td>
-                                <td class="status-alpha">EARLY LONG CONVICTION DISCOVERY ZONE</td>
-                                <td class="status-avoid">CORE SYSTEM AVOIDANCE ARCHITECTURE</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight:bold; color:#9ccc65;">IMPROVING</td>
-                                <td class="status-hold">SYSTEM ENTRY CONFIRMATION WINDOW</td>
-                                <td class="status-avoid">MOMENTUM NOISE / UNCONFIRMED BY TREND</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
             <div class="data-card">
                 {table}
             </div>
         </div>
 
         <script>
+            const coreTickers = {core_tickers_json};
+            
             window.addEventListener('load', function() {
-                var plotDiv = document.getElementById('rrg-plotly-chart');
-                if (!plotDiv) return;
+                const plotDiv = document.getElementById('rrg-plotly-chart');
+                const checkboxes = document.querySelectorAll('.ticker-cb');
+                const tableRows = document.querySelectorAll('.data-table tbody tr');
+                
+                // 1. Tag HTML Table Rows with data attributes
+                tableRows.forEach(row => {
+                    const tickerCell = row.querySelector('td:first-child');
+                    if(tickerCell) {
+                        row.setAttribute('data-ticker', tickerCell.textContent.trim());
+                    }
+                });
 
-                function resetTraces() {
-                    Plotly.restyle(plotDiv, {
-                        'opacity': plotDiv.data.map(() => 0.4),
-                        'line.width': plotDiv.data.map(() => 1.5)
+                // 2. Main function to update UI state
+                function updateVisibility(activeExtendedTickers) {
+                    // Update Plotly
+                    if(plotDiv && plotDiv.data) {
+                        const visibilityUpdate = plotDiv.data.map(trace => {
+                            return (coreTickers.includes(trace.name) || activeExtendedTickers.includes(trace.name)) ? true : false;
+                        });
+                        Plotly.restyle(plotDiv, {'visible': visibilityUpdate});
+                    }
+                    
+                    // Update Table
+                    tableRows.forEach(row => {
+                        const ticker = row.getAttribute('data-ticker');
+                        if(coreTickers.includes(ticker) || activeExtendedTickers.includes(ticker)) {
+                            row.style.display = 'table-row';
+                        } else {
+                            row.style.display = 'none';
+                        }
                     });
                 }
 
-                function highlightTrace(index) {
-                    Plotly.restyle(plotDiv, {
-                        'opacity': plotDiv.data.map((_, i) => (i === index) ? 1.0 : 0.08),
-                        'line.width': plotDiv.data.map((_, i) => (i === index) ? 3.5 : 1.5)
-                    });
+                // 3. Update URL without reloading the page
+                function updateUrlParams(activeTickers) {
+                    const url = new URL(window.location);
+                    if (activeTickers.length > 0) {
+                        url.searchParams.set('tickers', activeTickers.join(','));
+                    } else {
+                        url.searchParams.delete('tickers');
+                    }
+                    window.history.replaceState({}, '', url);
                 }
 
-                plotDiv.on('plotly_hover', function(data) {
-                    if(data.points.length > 0) highlightTrace(data.points[0].curveNumber);
-                });
-                plotDiv.on('plotly_unhover', resetTraces);
-
-                plotDiv.addEventListener('mouseover', function(e) {
-                    let el = e.target;
-                    let traceNode = null;
-                    while (el && el !== plotDiv) {
-                        if (el.classList && el.classList.contains('traces')) {
-                            traceNode = el;
-                            break;
+                // 4. Initialize state from URL on page load
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlTickersParam = urlParams.get('tickers');
+                let initialActiveTickers = [];
+                
+                if (urlTickersParam) {
+                    initialActiveTickers = urlTickersParam.split(',').map(t => t.trim().toUpperCase());
+                    // Check the corresponding boxes
+                    checkboxes.forEach(cb => {
+                        if (initialActiveTickers.includes(cb.value)) {
+                            cb.checked = true;
                         }
-                        el = el.parentNode;
-                    }
+                    });
+                }
+                
+                // Run initial visibility check
+                updateVisibility(initialActiveTickers);
 
-                    if (traceNode) {
-                        let textNode = traceNode.querySelector('.legendtext');
-                        if (textNode) {
-                            let traceName = textNode.textContent;
-                            let traceIndex = plotDiv.data.findIndex(t => t.name === traceName);
-                            if (traceIndex > -1) highlightTrace(traceIndex);
-                        }
-                    }
+                // 5. Handle Checkbox Toggles
+                checkboxes.forEach(cb => {
+                    cb.addEventListener('change', function() {
+                        const checkedVals = Array.from(document.querySelectorAll('.ticker-cb:checked')).map(box => box.value);
+                        updateVisibility(checkedVals);
+                        updateUrlParams(checkedVals);
+                    });
                 });
 
-                plotDiv.addEventListener('mouseout', function(e) {
-                    let el = e.target;
-                    while (el && el !== plotDiv) {
-                        if (el.classList && el.classList.contains('traces')) {
-                            resetTraces();
-                            break;
-                        }
-                        el = el.parentNode;
+                // 6. Plotly Hover Effects
+                if(plotDiv) {
+                    function resetTraces() {
+                        Plotly.restyle(plotDiv, {
+                            'opacity': plotDiv.data.map(() => 0.4),
+                            'line.width': plotDiv.data.map(() => 1.5)
+                        });
                     }
-                });
+                    function highlightTrace(index) {
+                        Plotly.restyle(plotDiv, {
+                            'opacity': plotDiv.data.map((_, i) => (i === index) ? 1.0 : 0.08),
+                            'line.width': plotDiv.data.map((_, i) => (i === index) ? 3.5 : 1.5)
+                        });
+                    }
+                    
+                    plotDiv.on('plotly_hover', function(data) {
+                        if(data.points.length > 0) highlightTrace(data.points[0].curveNumber);
+                    });
+                    plotDiv.on('plotly_unhover', resetTraces);
+
+                    plotDiv.addEventListener('mouseover', function(e) {
+                        let el = e.target;
+                        let traceNode = null;
+                        while (el && el !== plotDiv) {
+                            if (el.classList && el.classList.contains('traces')) {
+                                traceNode = el;
+                                break;
+                            }
+                            el = el.parentNode;
+                        }
+
+                        if (traceNode) {
+                            let textNode = traceNode.querySelector('.legendtext');
+                            if (textNode) {
+                                let traceName = textNode.textContent;
+                                let traceIndex = plotDiv.data.findIndex(t => t.name === traceName);
+                                if (traceIndex > -1) highlightTrace(traceIndex);
+                            }
+                        }
+                    });
+
+                    plotDiv.addEventListener('mouseout', function(e) {
+                        let el = e.target;
+                        while (el && el !== plotDiv) {
+                            if (el.classList && el.classList.contains('traces')) {
+                                resetTraces();
+                                break;
+                            }
+                            el = el.parentNode;
+                        }
+                    });
+                }
             });
         </script>
     </body>
@@ -339,12 +358,14 @@ def generate_dashboard(df, graph_html, filename):
 
     df_html = df.copy()
     df_html['RRG Bucket'] = df_html['RRG Bucket'].apply(color_bucket)
-    
-    # Strip Pandas' inline alignments and inject our class
     table_html = df_html.to_html(index=False, escape=False, border=0)
     table_html = table_html.replace('class="dataframe"', 'class="data-table"')
     
-    final_html = html_template.replace('{graph}', graph_html).replace('{table}', table_html)
+    # Inject variables into the HTML template
+    final_html = html_template.replace('{graph}', graph_html)\
+                              .replace('{table}', table_html)\
+                              .replace('{checkboxes}', checkboxes_html)\
+                              .replace('{core_tickers_json}', json.dumps(core_tickers))
     
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(final_html)
@@ -353,14 +374,12 @@ def generate_dashboard(df, graph_html, filename):
 if __name__ == "__main__":
     os.makedirs("rrg", exist_ok=True)
     
-    # 1. Fetch data and calculate table
-    final_table, graph_data = fetch_and_calculate(TICKERS, BENCHMARK)
+    # Combine lists to pre-fetch everything at once
+    combined_universe = CORE_TICKERS + EXTENDED_UNIVERSE
+    print(f"Calculating {len(combined_universe)} total tickers for static embedding...")
     
-    # 2. Extract the sorted list of tickers directly from the final DataFrame
+    final_table, graph_data = fetch_and_calculate(combined_universe, BENCHMARK)
     sorted_tickers_list = final_table['Ticker'].tolist()
-    
-    # 3. Pass the sorted list into the Plotly builder
     graph_html = build_plotly_figure(graph_data, sorted_tickers_list)
     
-    # 4. Generate the dashboard
-    generate_dashboard(final_table, graph_html, "rrg/rrg_dashboard.html")
+    generate_dashboard(final_table, graph_html, CORE_TICKERS, EXTENDED_UNIVERSE, "rrg/rrg_dashboard.html")
