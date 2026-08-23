@@ -10,7 +10,7 @@ mapping = {}
 sector_etfs = [
     "SPY", "QQQ", "IWM", "DIA", 
     "XLK", "XLF", "XLY", "XLI", "XLE", "XLC", "XLV", "XLU", "XLRE", "XLP",
-    "BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "SOXX", "XME", "XRT", "XHB", "XBI"
+    "BLOK", "IGV", "CLOU", "MAGS", "QTUM", "URA", "UFO", "ROBO", "OIH", "SOXX", "XME", "XRT", "XHB", "XBI", "XLB"
 ]
 
 # Keep track of tickers we have already assigned to a sector
