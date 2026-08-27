@@ -11,14 +11,13 @@ def run_volatility_targeting():
     initial_capital = 10000
     print("Downloading Volatility Targeting data...")
     
-    # Start in 2019 to match DBMF's history for an apples-to-apples comparison
-    data = yf.download('QQQ', start='2019-05-08', progress=False)['Close'].squeeze()
+    # Updated start date to match the hybrid strategy (Dec 2, 2020)
+    data = yf.download('QQQ', start='2020-12-02', progress=False)['Close'].squeeze()
     data.dropna(inplace=True)
     
     daily_ret = data.pct_change().fillna(0)
     
     # 1. Calculate Current Market Volatility (20-day annualized realized volatility)
-    # Require at least 20 days of data before calculating
     rolling_vol = daily_ret.rolling(window=20).std() * np.sqrt(252)
     
     # 2. Set Target Volatility
@@ -31,14 +30,14 @@ def run_volatility_targeting():
     # Shift by 1 day to prevent look-ahead bias
     leverage = leverage.shift(1).fillna(1.0)
     
-    # 4. Calculate Margin Borrowing Costs (Assuming 4% rate on borrowed funds)
-    margin_rate = 0.0 # for real margin use 0.04 / 252
+    # 4. Calculate Margin Borrowing Costs (4% rate on borrowed funds to match text output description)
+    margin_rate = 0.04 / 252
     borrowed_amount = (leverage - 1.0).clip(lower=0.0)
     
     # 5. Calculate Strategy Returns
     strat_ret = (leverage * daily_ret) - (borrowed_amount * margin_rate)
     
-    # Drop warmup period
+    # Drop warmup period (21 days to match rolling window)
     strat_ret = strat_ret.iloc[21:]
     daily_ret = daily_ret.iloc[21:]
     
@@ -84,7 +83,6 @@ def run_volatility_targeting():
     # =====================
     # LIVE REBALANCE LINK GENERATOR
     # =====================
-    # Fetch TQQQ price specifically for the retail ETF translation
     tqqq_data = yf.download('TQQQ', period='5d', progress=False)['Close']
     if isinstance(tqqq_data, pd.DataFrame): 
         tqqq_data = tqqq_data.squeeze()
@@ -93,7 +91,6 @@ def run_volatility_targeting():
     qqq_price = data.iloc[-1]
     tqqq_price = tqqq_data.iloc[-1]
 
-    # You can update this base URL to wherever you host the new HTML file
     base_url = "https://paulcwarren.github.io/pinescript-libs/strategies/vol_target/rebal.html" 
     final_link = f"{base_url}?lev={live_leverage:.2f}&qqq={qqq_price:.2f}&tqqq={tqqq_price:.2f}"
 
