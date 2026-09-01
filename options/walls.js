@@ -1,24 +1,24 @@
 const wallsData = {
   "SPY": {
-    "spot": 766.64,
-    "net_gex_bn": -0.5001,
+    "spot": 763.41,
+    "net_gex_bn": -0.1247,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 785.0,
-      "put": 760.0
+      "call": 766.0,
+      "put": 766.0
     },
     "anchor": {
-      "call": 785.0,
+      "call": 770.0,
       "put": 765.0
     }
   },
   "QQQ": {
-    "spot": 715.38,
-    "net_gex_bn": -0.1055,
+    "spot": 709.83,
+    "net_gex_bn": -0.2475,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 745.0,
-      "put": 700.0
+      "call": 725.0,
+      "put": 708.0
     },
     "anchor": {
       "call": 735.0,
@@ -26,12 +26,12 @@ const wallsData = {
     }
   },
   "IWM": {
-    "spot": 293.19,
-    "net_gex_bn": -0.1421,
+    "spot": 291.93,
+    "net_gex_bn": -0.1089,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 300.0,
-      "put": 297.0
+      "call": 295.0,
+      "put": 290.0
     },
     "anchor": {
       "call": 300.0,
@@ -39,12 +39,12 @@ const wallsData = {
     }
   },
   "DIA": {
-    "spot": 532.06,
-    "net_gex_bn": -0.0488,
+    "spot": 529.5,
+    "net_gex_bn": -0.045,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 540.0,
-      "put": 530.0
+      "put": 532.0
     },
     "anchor": {
       "call": 545.0,
@@ -52,86 +52,86 @@ const wallsData = {
     }
   },
   "NVDA": {
-    "spot": 219.7,
-    "net_gex_bn": 0.4996,
+    "spot": 218.48,
+    "net_gex_bn": 0.5723,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 220.0,
+      "call": 225.0,
       "put": 210.0
     },
     "anchor": {
       "call": 240.0,
-      "put": 190.0
+      "put": 180.0
     }
   },
   "AAPL": {
-    "spot": 314.95,
-    "net_gex_bn": 0.0271,
+    "spot": 324.77,
+    "net_gex_bn": 0.1842,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 325.0,
-      "put": 315.0
+      "put": 310.0
     },
     "anchor": {
-      "call": 325.0,
-      "put": 315.0
+      "call": 320.0,
+      "put": 300.0
     }
   },
   "GOOGL": {
-    "spot": 338.49,
-    "net_gex_bn": 0.0394,
+    "spot": 336.22,
+    "net_gex_bn": 0.1603,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 350.0,
-      "put": 345.0
+      "put": 335.0
     },
     "anchor": {
       "call": 350.0,
-      "put": 345.0
+      "put": 310.0
     }
   },
   "GOOG": {
-    "spot": 334.69,
-    "net_gex_bn": 0.0374,
+    "spot": 333.05,
+    "net_gex_bn": 0.0416,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 350.0,
+      "call": 340.0,
       "put": 330.0
     },
     "anchor": {
-      "call": 360.0,
+      "call": 350.0,
       "put": 330.0
     }
   },
   "MSFT": {
-    "spot": 510.89,
-    "net_gex_bn": 0.0642,
+    "spot": 501.5,
+    "net_gex_bn": 0.2105,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 535.0,
+      "call": 515.0,
       "put": 500.0
     },
     "anchor": {
-      "call": 535.0,
-      "put": 500.0
+      "call": 525.0,
+      "put": 480.0
     }
   },
   "AMZN": {
-    "spot": 261.09,
-    "net_gex_bn": 0.0872,
+    "spot": 254.59,
+    "net_gex_bn": 0.2236,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 270.0,
-      "put": 265.0
+      "call": 265.0,
+      "put": 255.0
     },
     "anchor": {
-      "call": 270.0,
+      "call": 280.0,
       "put": 240.0
     }
   },
   "TSM": {
-    "spot": 416.65,
-    "net_gex_bn": -0.0864,
+    "spot": 416.6,
+    "net_gex_bn": -0.0851,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 425.0,
@@ -143,24 +143,24 @@ const wallsData = {
     }
   },
   "AVGO": {
-    "spot": 370.08,
-    "net_gex_bn": 0.0381,
+    "spot": 368.61,
+    "net_gex_bn": 0.0162,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 380.0,
-      "put": 355.0
+      "call": 375.0,
+      "put": 360.0
     },
     "anchor": {
-      "call": 400.0,
-      "put": 295.0
+      "call": 450.0,
+      "put": 350.0
     }
   },
   "SPCX": {
-    "spot": 142.99,
-    "net_gex_bn": -0.0106,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 143.97,
+    "net_gex_bn": 0.0292,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 145.0,
+      "call": 150.0,
       "put": 140.0
     },
     "anchor": {
@@ -169,8 +169,8 @@ const wallsData = {
     }
   },
   "META": {
-    "spot": 571.55,
-    "net_gex_bn": 0.1035,
+    "spot": 578.82,
+    "net_gex_bn": 0.1488,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 600.0,
@@ -178,42 +178,42 @@ const wallsData = {
     },
     "anchor": {
       "call": 600.0,
-      "put": 540.0
+      "put": 550.0
     }
   },
   "TSLA": {
-    "spot": 367.89,
-    "net_gex_bn": 0.0767,
+    "spot": 359.03,
+    "net_gex_bn": 0.1235,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 365.0,
+      "call": 370.0,
       "put": 350.0
     },
     "anchor": {
       "call": 400.0,
-      "put": 315.0
+      "put": 340.0
     }
   },
   "LLY": {
-    "spot": 1156.29,
-    "net_gex_bn": -0.0129,
+    "spot": 1174.0,
+    "net_gex_bn": -0.009,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1200.0,
-      "put": 1100.0
+      "put": 1120.0
     },
     "anchor": {
-      "call": 1320.0,
+      "call": 1400.0,
       "put": 1000.0
     }
   },
   "SKHY": {
-    "spot": 163.35,
-    "net_gex_bn": -0.0391,
+    "spot": 161.36,
+    "net_gex_bn": -0.0496,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 170.0,
-      "put": 157.5
+      "call": 160.0,
+      "put": 155.0
     },
     "anchor": {
       "call": 200.0,
@@ -221,21 +221,21 @@ const wallsData = {
     }
   },
   "MU": {
-    "spot": 947.2,
-    "net_gex_bn": -0.0361,
+    "spot": 955.67,
+    "net_gex_bn": -0.1065,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 950.0,
-      "put": 900.0
+      "call": 1000.0,
+      "put": 940.0
     },
     "anchor": {
       "call": 1000.0,
-      "put": 850.0
+      "put": 800.0
     }
   },
   "JPM": {
-    "spot": 355.84,
-    "net_gex_bn": -0.0236,
+    "spot": 358.36,
+    "net_gex_bn": -0.0255,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 360.0,
@@ -247,12 +247,12 @@ const wallsData = {
     }
   },
   "WMT": {
-    "spot": 104.47,
-    "net_gex_bn": 0.146,
+    "spot": 105.9,
+    "net_gex_bn": 0.1525,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 105.0,
-      "put": 100.0
+      "call": 110.0,
+      "put": 105.0
     },
     "anchor": {
       "call": 120.0,
@@ -260,25 +260,25 @@ const wallsData = {
     }
   },
   "AMD": {
-    "spot": 468.66,
-    "net_gex_bn": -0.007,
+    "spot": 458.1,
+    "net_gex_bn": -0.065,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 485.0,
+      "call": 480.0,
       "put": 450.0
     },
     "anchor": {
-      "call": 535.0,
+      "call": 500.0,
       "put": 400.0
     }
   },
   "ASML": {
-    "spot": 1689.2,
+    "spot": 1655.27,
     "net_gex_bn": -0.0113,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 1765.0,
-      "put": 1700.0
+      "call": 1670.0,
+      "put": 1600.0
     },
     "anchor": {
       "call": 2000.0,
@@ -286,12 +286,12 @@ const wallsData = {
     }
   },
   "XOM": {
-    "spot": 160.18,
-    "net_gex_bn": 0.0304,
+    "spot": 163.2,
+    "net_gex_bn": 0.0352,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 165.0,
-      "put": 155.0
+      "put": 160.0
     },
     "anchor": {
       "call": 175.0,
@@ -299,8 +299,8 @@ const wallsData = {
     }
   },
   "V": {
-    "spot": 380.83,
-    "net_gex_bn": -0.0267,
+    "spot": 376.72,
+    "net_gex_bn": -0.027,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 385.0,
@@ -312,8 +312,8 @@ const wallsData = {
     }
   },
   "JNJ": {
-    "spot": 266.25,
-    "net_gex_bn": 0.0139,
+    "spot": 268.15,
+    "net_gex_bn": 0.0129,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
@@ -325,8 +325,8 @@ const wallsData = {
     }
   },
   "INTC": {
-    "spot": 89.62,
-    "net_gex_bn": 0.0718,
+    "spot": 88.91,
+    "net_gex_bn": 0.0713,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 90.0,
@@ -338,8 +338,8 @@ const wallsData = {
     }
   },
   "MA": {
-    "spot": 592.68,
-    "net_gex_bn": 0.0036,
+    "spot": 585.76,
+    "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 600.0,
@@ -351,12 +351,12 @@ const wallsData = {
     }
   },
   "CSCO": {
-    "spot": 110.54,
-    "net_gex_bn": 0.0673,
+    "spot": 109.16,
+    "net_gex_bn": 0.0725,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
-      "put": 110.0
+      "call": 110.0,
+      "put": 105.0
     },
     "anchor": {
       "call": 120.0,
@@ -364,11 +364,11 @@ const wallsData = {
     }
   },
   "BAC": {
-    "spot": 62.22,
-    "net_gex_bn": 0.0017,
+    "spot": 62.42,
+    "net_gex_bn": 0.0111,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 65.0,
+      "call": 63.0,
       "put": 60.0
     },
     "anchor": {
@@ -377,21 +377,21 @@ const wallsData = {
     }
   },
   "ABBV": {
-    "spot": 255.82,
-    "net_gex_bn": 0.0234,
+    "spot": 260.33,
+    "net_gex_bn": 0.0246,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 260.0,
+      "call": 270.0,
       "put": 250.0
     },
     "anchor": {
       "call": 280.0,
-      "put": 220.0
+      "put": 250.0
     }
   },
   "PLTR": {
-    "spot": 186.41,
-    "net_gex_bn": 0.0564,
+    "spot": 183.79,
+    "net_gex_bn": 0.034,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 190.0,
@@ -403,21 +403,21 @@ const wallsData = {
     }
   },
   "ORCL": {
-    "spot": 149.79,
-    "net_gex_bn": 0.1415,
+    "spot": 142.54,
+    "net_gex_bn": 0.1459,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 145.0
+      "call": 145.0,
+      "put": 140.0
     },
     "anchor": {
-      "call": 180.0,
+      "call": 160.0,
       "put": 140.0
     }
   },
   "COST": {
-    "spot": 944.03,
-    "net_gex_bn": -0.0168,
+    "spot": 944.52,
+    "net_gex_bn": -0.0152,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 980.0,
@@ -429,8 +429,8 @@ const wallsData = {
     }
   },
   "AMAT": {
-    "spot": 457.91,
-    "net_gex_bn": -0.013,
+    "spot": 444.79,
+    "net_gex_bn": -0.0118,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 460.0,
@@ -442,12 +442,12 @@ const wallsData = {
     }
   },
   "LRCX": {
-    "spot": 301.39,
-    "net_gex_bn": -0.0067,
+    "spot": 291.96,
+    "net_gex_bn": -0.005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 300.0,
-      "put": 300.0
+      "put": 280.0
     },
     "anchor": {
       "call": 350.0,
@@ -455,12 +455,12 @@ const wallsData = {
     }
   },
   "CVX": {
-    "spot": 205.13,
-    "net_gex_bn": 0.0543,
+    "spot": 209.05,
+    "net_gex_bn": 0.0573,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 215.0,
-      "put": 195.0
+      "put": 200.0
     },
     "anchor": {
       "call": 215.0,
@@ -468,25 +468,25 @@ const wallsData = {
     }
   },
   "CAT": {
-    "spot": 794.93,
-    "net_gex_bn": -0.0201,
+    "spot": 781.13,
+    "net_gex_bn": -0.0223,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 830.0,
-      "put": 780.0
+      "call": 800.0,
+      "put": 750.0
     },
     "anchor": {
-      "call": 830.0,
+      "call": 850.0,
       "put": 600.0
     }
   },
   "GE": {
-    "spot": 335.82,
-    "net_gex_bn": 0.007,
+    "spot": 331.0,
+    "net_gex_bn": 0.008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 340.0,
-      "put": 340.0
+      "put": 330.0
     },
     "anchor": {
       "call": 410.0,
@@ -494,8 +494,8 @@ const wallsData = {
     }
   },
   "KO": {
-    "spot": 89.06,
-    "net_gex_bn": 0.0689,
+    "spot": 88.43,
+    "net_gex_bn": 0.0683,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 91.0,
@@ -507,7 +507,7 @@ const wallsData = {
     }
   },
   "HSBC": {
-    "spot": 103.14,
+    "spot": 103.62,
     "net_gex_bn": -0.0132,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -520,12 +520,12 @@ const wallsData = {
     }
   },
   "HD": {
-    "spot": 327.89,
-    "net_gex_bn": 0.0009,
+    "spot": 321.43,
+    "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 340.0,
-      "put": 330.0
+      "call": 335.0,
+      "put": 315.0
     },
     "anchor": {
       "call": 350.0,
@@ -533,9 +533,9 @@ const wallsData = {
     }
   },
   "MS": {
-    "spot": 213.29,
-    "net_gex_bn": 0.0008,
-    "outlook": "STABLE / GRIND (Long Gamma)",
+    "spot": 214.18,
+    "net_gex_bn": -0.0009,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 220.0,
       "put": 210.0
@@ -546,12 +546,12 @@ const wallsData = {
     }
   },
   "PG": {
-    "spot": 145.21,
-    "net_gex_bn": 0.0478,
+    "spot": 147.77,
+    "net_gex_bn": 0.0528,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 150.0,
-      "put": 140.0
+      "call": 155.0,
+      "put": 145.0
     },
     "anchor": {
       "call": 155.0,
@@ -559,11 +559,11 @@ const wallsData = {
     }
   },
   "MRK": {
-    "spot": 147.92,
-    "net_gex_bn": 0.0774,
+    "spot": 149.44,
+    "net_gex_bn": 0.0748,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 145.0,
+      "call": 155.0,
       "put": 145.0
     },
     "anchor": {
@@ -572,21 +572,21 @@ const wallsData = {
     }
   },
   "PANW": {
-    "spot": 378.41,
-    "net_gex_bn": -0.0128,
+    "spot": 359.92,
+    "net_gex_bn": -0.0165,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 390.0,
-      "put": 360.0
+      "call": 370.0,
+      "put": 350.0
     },
     "anchor": {
-      "call": 450.0,
-      "put": 290.0
+      "call": 420.0,
+      "put": 320.0
     }
   },
   "RTX": {
-    "spot": 208.84,
-    "net_gex_bn": 0.008,
+    "spot": 206.46,
+    "net_gex_bn": 0.0086,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
@@ -594,12 +594,12 @@ const wallsData = {
     },
     "anchor": {
       "call": 230.0,
-      "put": 170.0
+      "put": 210.0
     }
   },
   "GS": {
-    "spot": 1025.66,
-    "net_gex_bn": -0.0158,
+    "spot": 1022.38,
+    "net_gex_bn": -0.029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1040.0,
@@ -607,15 +607,15 @@ const wallsData = {
     },
     "anchor": {
       "call": 1100.0,
-      "put": 800.0
+      "put": 1000.0
     }
   },
   "TM": {
-    "spot": 196.76,
-    "net_gex_bn": 0.0006,
+    "spot": 199.21,
+    "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 195.0,
+      "call": 200.0,
       "put": 190.0
     },
     "anchor": {
@@ -624,11 +624,11 @@ const wallsData = {
     }
   },
   "BABA": {
-    "spot": 114.6,
-    "net_gex_bn": 0.1804,
+    "spot": 113.25,
+    "net_gex_bn": 0.187,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 120.0,
+      "call": 115.0,
       "put": 110.0
     },
     "anchor": {
@@ -637,12 +637,12 @@ const wallsData = {
     }
   },
   "NVS": {
-    "spot": 152.16,
-    "net_gex_bn": -0.0457,
+    "spot": 161.13,
+    "net_gex_bn": -0.0465,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 150.0
+      "call": 165.0,
+      "put": 155.0
     },
     "anchor": {
       "call": 165.0,
@@ -650,7 +650,7 @@ const wallsData = {
     }
   },
   "RY": {
-    "spot": 203.64,
+    "spot": 201.99,
     "net_gex_bn": 0.004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -663,11 +663,11 @@ const wallsData = {
     }
   },
   "PM": {
-    "spot": 189.71,
-    "net_gex_bn": -0.0075,
+    "spot": 190.66,
+    "net_gex_bn": -0.0068,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 195.0,
+      "call": 200.0,
       "put": 185.0
     },
     "anchor": {
@@ -676,25 +676,25 @@ const wallsData = {
     }
   },
   "ARM": {
-    "spot": 240.52,
-    "net_gex_bn": -0.0067,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 234.12,
+    "net_gex_bn": 0.0021,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 250.0,
+      "call": 245.0,
       "put": 230.0
     },
     "anchor": {
-      "call": 300.0,
+      "call": 280.0,
       "put": 250.0
     }
   },
   "DELL": {
-    "spot": 465.9,
-    "net_gex_bn": 0.0167,
+    "spot": 437.32,
+    "net_gex_bn": 0.0088,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 480.0,
-      "put": 460.0
+      "call": 450.0,
+      "put": 440.0
     },
     "anchor": {
       "call": 450.0,
@@ -702,21 +702,21 @@ const wallsData = {
     }
   },
   "GEV": {
-    "spot": 892.49,
-    "net_gex_bn": -0.02,
+    "spot": 884.91,
+    "net_gex_bn": -0.0189,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 890.0,
+      "call": 900.0,
       "put": 900.0
     },
     "anchor": {
       "call": 1100.0,
-      "put": 740.0
+      "put": 850.0
     }
   },
   "WFC": {
-    "spot": 86.74,
-    "net_gex_bn": -0.0166,
+    "spot": 87.11,
+    "net_gex_bn": -0.0168,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 90.0,
@@ -728,11 +728,11 @@ const wallsData = {
     }
   },
   "MUFG": {
-    "spot": 22.82,
+    "spot": 23.0,
     "net_gex_bn": 0.002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 22.5,
+      "call": null,
       "put": 22.5
     },
     "anchor": {
@@ -741,11 +741,11 @@ const wallsData = {
     }
   },
   "KLAC": {
-    "spot": 175.12,
-    "net_gex_bn": -0.0432,
+    "spot": 169.83,
+    "net_gex_bn": -0.0438,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 180.0,
+      "call": 170.0,
       "put": 170.0
     },
     "anchor": {
@@ -754,12 +754,12 @@ const wallsData = {
     }
   },
   "SAP": {
-    "spot": 222.19,
-    "net_gex_bn": 0.0042,
+    "spot": 213.54,
+    "net_gex_bn": 0.0045,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 220.0,
-      "put": 220.0
+      "put": 210.0
     },
     "anchor": {
       "call": 200.0,
@@ -767,12 +767,12 @@ const wallsData = {
     }
   },
   "SHEL": {
-    "spot": 91.32,
-    "net_gex_bn": 0.0045,
+    "spot": 93.12,
+    "net_gex_bn": 0.0065,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 95.0,
-      "put": 87.5
+      "call": 93.0,
+      "put": 90.0
     },
     "anchor": {
       "call": 110.0,
@@ -780,11 +780,11 @@ const wallsData = {
     }
   },
   "TXN": {
-    "spot": 260.0,
-    "net_gex_bn": -0.0021,
+    "spot": 253.8,
+    "net_gex_bn": -0.0015,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 270.0,
+      "call": 265.0,
       "put": 250.0
     },
     "anchor": {
@@ -793,8 +793,8 @@ const wallsData = {
     }
   },
   "ANET": {
-    "spot": 195.0,
-    "net_gex_bn": 0.0089,
+    "spot": 191.15,
+    "net_gex_bn": 0.0092,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
@@ -806,8 +806,8 @@ const wallsData = {
     }
   },
   "AZN": {
-    "spot": 161.99,
-    "net_gex_bn": 0.0211,
+    "spot": 162.07,
+    "net_gex_bn": 0.0213,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 170.0,
@@ -819,8 +819,8 @@ const wallsData = {
     }
   },
   "AXP": {
-    "spot": 330.69,
-    "net_gex_bn": -0.0137,
+    "spot": 326.42,
+    "net_gex_bn": -0.0141,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 337.5,
@@ -832,8 +832,8 @@ const wallsData = {
     }
   },
   "BHP": {
-    "spot": 94.14,
-    "net_gex_bn": -0.0006,
+    "spot": 93.36,
+    "net_gex_bn": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 95.0,
@@ -845,11 +845,11 @@ const wallsData = {
     }
   },
   "C": {
-    "spot": 132.01,
-    "net_gex_bn": -0.0164,
+    "spot": 133.21,
+    "net_gex_bn": -0.0145,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 136.0,
+      "call": 135.0,
       "put": 130.0
     },
     "anchor": {
@@ -858,12 +858,12 @@ const wallsData = {
     }
   },
   "LIN": {
-    "spot": 488.94,
-    "net_gex_bn": -0.0088,
+    "spot": 483.87,
+    "net_gex_bn": -0.0087,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 510.0,
-      "put": 480.0
+      "call": 500.0,
+      "put": 460.0
     },
     "anchor": {
       "call": 510.0,
@@ -871,25 +871,25 @@ const wallsData = {
     }
   },
   "CRWD": {
-    "spot": 226.63,
-    "net_gex_bn": -0.0042,
+    "spot": 214.57,
+    "net_gex_bn": -0.0023,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 225.0,
-      "put": 220.0
+      "put": 205.0
     },
     "anchor": {
-      "call": 225.0,
+      "call": 230.0,
       "put": 187.5
     }
   },
   "IBM": {
-    "spot": 234.53,
-    "net_gex_bn": 0.0423,
+    "spot": 231.26,
+    "net_gex_bn": 0.0435,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 230.0,
-      "put": 230.0
+      "call": 240.0,
+      "put": 220.0
     },
     "anchor": {
       "call": 250.0,
@@ -897,8 +897,8 @@ const wallsData = {
     }
   },
   "AMGN": {
-    "spot": 430.15,
-    "net_gex_bn": -0.0066,
+    "spot": 433.69,
+    "net_gex_bn": -0.0088,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 440.0,
@@ -910,12 +910,12 @@ const wallsData = {
     }
   },
   "TMO": {
-    "spot": 615.22,
-    "net_gex_bn": 0.0008,
+    "spot": 605.18,
+    "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 630.0,
-      "put": 622.5
+      "call": 600.0,
+      "put": 590.0
     },
     "anchor": {
       "call": 730.0,
@@ -923,7 +923,7 @@ const wallsData = {
     }
   },
   "SAN": {
-    "spot": 14.59,
+    "spot": 14.52,
     "net_gex_bn": 0.0156,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -936,8 +936,8 @@ const wallsData = {
     }
   },
   "NVO": {
-    "spot": 45.44,
-    "net_gex_bn": 0.0215,
+    "spot": 45.57,
+    "net_gex_bn": 0.022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
@@ -949,12 +949,12 @@ const wallsData = {
     }
   },
   "APH": {
-    "spot": 157.94,
-    "net_gex_bn": 0.0089,
+    "spot": 157.89,
+    "net_gex_bn": 0.0094,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 165.0,
-      "put": 160.0
+      "put": 150.0
     },
     "anchor": {
       "call": 180.0,
@@ -962,25 +962,25 @@ const wallsData = {
     }
   },
   "TD": {
-    "spot": 121.25,
-    "net_gex_bn": -0.0046,
+    "spot": 118.41,
+    "net_gex_bn": -0.0045,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 125.0,
-      "put": 120.0
+      "call": 120.0,
+      "put": 115.0
     },
     "anchor": {
       "call": 125.0,
-      "put": 100.0
+      "put": 90.0
     }
   },
   "SHOP": {
-    "spot": 146.78,
+    "spot": 142.01,
     "net_gex_bn": 0.2569,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 150.0,
-      "put": 145.0
+      "call": 140.0,
+      "put": 140.0
     },
     "anchor": {
       "call": 160.0,
@@ -988,8 +988,8 @@ const wallsData = {
     }
   },
   "VZ": {
-    "spot": 50.24,
-    "net_gex_bn": 0.0669,
+    "spot": 50.35,
+    "net_gex_bn": 0.0736,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
@@ -1001,8 +1001,8 @@ const wallsData = {
     }
   },
   "MCD": {
-    "spot": 265.6,
-    "net_gex_bn": 0.0164,
+    "spot": 261.16,
+    "net_gex_bn": 0.016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
@@ -1014,11 +1014,11 @@ const wallsData = {
     }
   },
   "TTE": {
-    "spot": 87.94,
-    "net_gex_bn": 0.0024,
+    "spot": 89.92,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 90.0,
+      "call": 92.5,
       "put": 87.5
     },
     "anchor": {
@@ -1027,12 +1027,12 @@ const wallsData = {
     }
   },
   "TMUS": {
-    "spot": 181.28,
-    "net_gex_bn": 0.0053,
+    "spot": 181.9,
+    "net_gex_bn": 0.0055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 190.0,
-      "put": 175.0
+      "put": 180.0
     },
     "anchor": {
       "call": 190.0,
@@ -1040,8 +1040,8 @@ const wallsData = {
     }
   },
   "ABT": {
-    "spot": 110.59,
-    "net_gex_bn": 0.0254,
+    "spot": 109.61,
+    "net_gex_bn": 0.0259,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -1053,8 +1053,8 @@ const wallsData = {
     }
   },
   "PEP": {
-    "spot": 140.26,
-    "net_gex_bn": 0.0637,
+    "spot": 140.01,
+    "net_gex_bn": 0.0634,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 145.0,
@@ -1066,37 +1066,37 @@ const wallsData = {
     }
   },
   "SNDK": {
-    "spot": 1500.64,
-    "net_gex_bn": -0.0281,
+    "spot": 1562.07,
+    "net_gex_bn": -0.0285,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 1500.0,
-      "put": 1450.0
+      "call": 1600.0,
+      "put": 1500.0
     },
     "anchor": {
-      "call": 1500.0,
-      "put": 1200.0
+      "call": 1800.0,
+      "put": 1300.0
     }
   },
   "ADI": {
-    "spot": 363.23,
-    "net_gex_bn": 0.0082,
+    "spot": 353.58,
+    "net_gex_bn": 0.0066,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 370.0,
-      "put": 355.0
+      "put": 340.0
     },
     "anchor": {
-      "call": 450.0,
+      "call": 350.0,
       "put": 340.0
     }
   },
   "SCHW": {
-    "spot": 110.01,
-    "net_gex_bn": 0.0072,
+    "spot": 108.92,
+    "net_gex_bn": 0.0076,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 110.0,
       "put": 110.0
     },
     "anchor": {
@@ -1105,12 +1105,12 @@ const wallsData = {
     }
   },
   "STX": {
-    "spot": 815.37,
-    "net_gex_bn": -0.0121,
+    "spot": 821.52,
+    "net_gex_bn": -0.012,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 850.0,
-      "put": 780.0
+      "put": 800.0
     },
     "anchor": {
       "call": 850.0,
@@ -1118,12 +1118,12 @@ const wallsData = {
     }
   },
   "MRVL": {
-    "spot": 211.18,
-    "net_gex_bn": -0.0076,
+    "spot": 208.46,
+    "net_gex_bn": -0.0015,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 220.0,
-      "put": 210.0
+      "call": 215.0,
+      "put": 200.0
     },
     "anchor": {
       "call": 250.0,
@@ -1131,8 +1131,8 @@ const wallsData = {
     }
   },
   "BA": {
-    "spot": 206.91,
-    "net_gex_bn": 0.0186,
+    "spot": 206.68,
+    "net_gex_bn": 0.0216,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 215.0,
@@ -1144,8 +1144,8 @@ const wallsData = {
     }
   },
   "NEE": {
-    "spot": 82.26,
-    "net_gex_bn": 0.0096,
+    "spot": 82.69,
+    "net_gex_bn": 0.0109,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
@@ -1157,8 +1157,8 @@ const wallsData = {
     }
   },
   "DIS": {
-    "spot": 107.46,
-    "net_gex_bn": 0.0078,
+    "spot": 107.43,
+    "net_gex_bn": 0.0095,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -1170,24 +1170,24 @@ const wallsData = {
     }
   },
   "ETN": {
-    "spot": 402.17,
-    "net_gex_bn": -0.0007,
+    "spot": 391.69,
+    "net_gex_bn": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 405.0,
       "put": 390.0
     },
     "anchor": {
-      "call": 500.0,
+      "call": 440.0,
       "put": 390.0
     }
   },
   "BLK": {
-    "spot": 1158.13,
-    "net_gex_bn": 0.0013,
+    "spot": 1134.76,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 1200.0,
+      "call": 1140.0,
       "put": 1120.0
     },
     "anchor": {
@@ -1196,12 +1196,12 @@ const wallsData = {
     }
   },
   "UNP": {
-    "spot": 301.89,
+    "spot": 294.33,
     "net_gex_bn": 0.0265,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 310.0,
-      "put": 307.5
+      "call": 305.0,
+      "put": 280.0
     },
     "anchor": {
       "call": 310.0,
@@ -1209,8 +1209,8 @@ const wallsData = {
     }
   },
   "TJX": {
-    "spot": 134.17,
-    "net_gex_bn": 0.0123,
+    "spot": 133.77,
+    "net_gex_bn": 0.0128,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 137.0,
@@ -1222,12 +1222,12 @@ const wallsData = {
     }
   },
   "QCOM": {
-    "spot": 169.97,
-    "net_gex_bn": 0.0522,
+    "spot": 165.77,
+    "net_gex_bn": 0.06,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 170.0,
-      "put": 165.0
+      "put": 160.0
     },
     "anchor": {
       "call": 170.0,
@@ -1235,12 +1235,12 @@ const wallsData = {
     }
   },
   "GILD": {
-    "spot": 146.35,
-    "net_gex_bn": 0.0151,
+    "spot": 148.43,
+    "net_gex_bn": 0.0152,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
-      "put": 140.0
+      "put": 143.0
     },
     "anchor": {
       "call": 150.0,
@@ -1248,8 +1248,8 @@ const wallsData = {
     }
   },
   "T": {
-    "spot": 26.07,
-    "net_gex_bn": 0.0444,
+    "spot": 26.11,
+    "net_gex_bn": 0.0439,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 26.0,
@@ -1261,25 +1261,25 @@ const wallsData = {
     }
   },
   "DE": {
-    "spot": 652.04,
-    "net_gex_bn": -0.0002,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 671.97,
+    "net_gex_bn": 0.0007,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 680.0,
-      "put": 620.0
+      "put": 660.0
     },
     "anchor": {
       "call": 680.0,
-      "put": 590.0
+      "put": 580.0
     }
   },
   "UBS": {
-    "spot": 55.39,
-    "net_gex_bn": -0.0131,
+    "spot": 54.34,
+    "net_gex_bn": -0.0134,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 55.0,
-      "put": 55.0
+      "put": 52.5
     },
     "anchor": {
       "call": 55.0,
@@ -1287,21 +1287,21 @@ const wallsData = {
     }
   },
   "WELL": {
-    "spot": 235.26,
+    "spot": 241.76,
     "net_gex_bn": 0.0039,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 240.0,
-      "put": 230.0
+      "put": 240.0
     },
     "anchor": {
       "call": 260.0,
-      "put": 210.0
+      "put": 220.0
     }
   },
   "BBVA": {
-    "spot": 28.98,
-    "net_gex_bn": -0.0017,
+    "spot": 28.78,
+    "net_gex_bn": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 30.0,
@@ -1313,11 +1313,11 @@ const wallsData = {
     }
   },
   "SCCO": {
-    "spot": 208.21,
+    "spot": 204.08,
     "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 210.0,
+      "call": 200.0,
       "put": 202.5
     },
     "anchor": {
@@ -1326,8 +1326,8 @@ const wallsData = {
     }
   },
   "CRM": {
-    "spot": 261.95,
-    "net_gex_bn": -0.0161,
+    "spot": 257.94,
+    "net_gex_bn": -0.0208,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 260.0,
@@ -1335,15 +1335,15 @@ const wallsData = {
     },
     "anchor": {
       "call": 250.0,
-      "put": 240.0
+      "put": 210.0
     }
   },
   "UBER": {
-    "spot": 75.99,
-    "net_gex_bn": 0.0388,
+    "spot": 75.34,
+    "net_gex_bn": 0.0391,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 79.0,
+      "call": 78.0,
       "put": 75.0
     },
     "anchor": {
@@ -1352,8 +1352,8 @@ const wallsData = {
     }
   },
   "BKNG": {
-    "spot": 199.99,
-    "net_gex_bn": 0.0078,
+    "spot": 199.48,
+    "net_gex_bn": 0.0077,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 204.0,
@@ -1365,7 +1365,7 @@ const wallsData = {
     }
   },
   "BUD": {
-    "spot": 79.24,
+    "spot": 79.28,
     "net_gex_bn": 0.0091,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -1378,11 +1378,11 @@ const wallsData = {
     }
   },
   "PFE": {
-    "spot": 28.51,
-    "net_gex_bn": 0.0633,
+    "spot": 28.65,
+    "net_gex_bn": 0.0798,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 28.0,
+      "call": 28.5,
       "put": 28.0
     },
     "anchor": {
@@ -1391,12 +1391,12 @@ const wallsData = {
     }
   },
   "COP": {
-    "spot": 132.27,
-    "net_gex_bn": 0.0081,
+    "spot": 134.91,
+    "net_gex_bn": 0.0086,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 130.0,
-      "put": 126.0
+      "call": 140.0,
+      "put": 130.0
     },
     "anchor": {
       "call": 130.0,
@@ -1404,8 +1404,8 @@ const wallsData = {
     }
   },
   "WDC": {
-    "spot": 445.99,
-    "net_gex_bn": -0.0253,
+    "spot": 453.82,
+    "net_gex_bn": -0.0227,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 450.0,
@@ -1413,28 +1413,28 @@ const wallsData = {
     },
     "anchor": {
       "call": 500.0,
-      "put": 350.0
+      "put": 410.0
     }
   },
   "DHR": {
-    "spot": 214.41,
-    "net_gex_bn": 0.0115,
+    "spot": 209.49,
+    "net_gex_bn": 0.0113,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 225.0,
+      "call": 210.0,
       "put": 210.0
     },
     "anchor": {
       "call": 240.0,
-      "put": 170.0
+      "put": 160.0
     }
   },
   "ISRG": {
-    "spot": 373.95,
-    "net_gex_bn": -0.0026,
+    "spot": 368.58,
+    "net_gex_bn": -0.002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 380.0,
+      "call": 385.0,
       "put": 370.0
     },
     "anchor": {
@@ -1443,12 +1443,12 @@ const wallsData = {
     }
   },
   "SONY": {
-    "spot": 24.73,
-    "net_gex_bn": 0.0152,
+    "spot": 24.92,
+    "net_gex_bn": 0.0153,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 25.0,
-      "put": 23.5
+      "put": 24.5
     },
     "anchor": {
       "call": 25.0,
@@ -1456,9 +1456,9 @@ const wallsData = {
     }
   },
   "LMT": {
-    "spot": 561.99,
-    "net_gex_bn": 0.0007,
-    "outlook": "STABLE / GRIND (Long Gamma)",
+    "spot": 550.69,
+    "net_gex_bn": -0.0008,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 570.0,
       "put": 535.0
@@ -1469,12 +1469,12 @@ const wallsData = {
     }
   },
   "GLW": {
-    "spot": 148.39,
-    "net_gex_bn": -0.0087,
+    "spot": 146.12,
+    "net_gex_bn": -0.0076,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 150.0
+      "call": 150.0,
+      "put": 140.0
     },
     "anchor": {
       "call": 175.0,
@@ -1482,8 +1482,8 @@ const wallsData = {
     }
   },
   "UL": {
-    "spot": 64.87,
-    "net_gex_bn": -0.0007,
+    "spot": 65.12,
+    "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 65.0,
@@ -1495,8 +1495,8 @@ const wallsData = {
     }
   },
   "COF": {
-    "spot": 214.28,
-    "net_gex_bn": 0.0121,
+    "spot": 213.44,
+    "net_gex_bn": 0.0129,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
@@ -1508,12 +1508,12 @@ const wallsData = {
     }
   },
   "VRTX": {
-    "spot": 542.26,
-    "net_gex_bn": -0.0028,
+    "spot": 548.33,
+    "net_gex_bn": -0.0029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 550.0,
-      "put": 520.0
+      "put": 530.0
     },
     "anchor": {
       "call": 550.0,
@@ -1521,7 +1521,7 @@ const wallsData = {
     }
   },
   "CB": {
-    "spot": 339.33,
+    "spot": 338.95,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -1534,12 +1534,12 @@ const wallsData = {
     }
   },
   "PH": {
-    "spot": 980.21,
-    "net_gex_bn": 0.001,
+    "spot": 959.86,
+    "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 1020.0,
-      "put": 990.0
+      "call": 980.0,
+      "put": 930.0
     },
     "anchor": {
       "call": 1100.0,
@@ -1547,12 +1547,12 @@ const wallsData = {
     }
   },
   "SYK": {
-    "spot": 325.33,
+    "spot": 321.91,
     "net_gex_bn": 0.0121,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 340.0,
-      "put": 330.0
+      "call": 330.0,
+      "put": 320.0
     },
     "anchor": {
       "call": 370.0,
@@ -1560,7 +1560,7 @@ const wallsData = {
     }
   },
   "PLD": {
-    "spot": 139.8,
+    "spot": 139.36,
     "net_gex_bn": 0.0059,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -1573,12 +1573,12 @@ const wallsData = {
     }
   },
   "NOW": {
-    "spot": 147.83,
-    "net_gex_bn": 0.0121,
+    "spot": 143.16,
+    "net_gex_bn": 0.0123,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
-      "put": 145.0
+      "put": 140.0
     },
     "anchor": {
       "call": 150.0,
@@ -1586,7 +1586,7 @@ const wallsData = {
     }
   },
   "MFG": {
-    "spot": 10.66,
+    "spot": 10.84,
     "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -1599,11 +1599,11 @@ const wallsData = {
     }
   },
   "BMY": {
-    "spot": 66.59,
-    "net_gex_bn": 0.0229,
+    "spot": 67.04,
+    "net_gex_bn": 0.0225,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 67.5,
+      "call": 70.0,
       "put": 65.0
     },
     "anchor": {
@@ -1612,8 +1612,8 @@ const wallsData = {
     }
   },
   "PDD": {
-    "spot": 84.06,
-    "net_gex_bn": 0.0501,
+    "spot": 83.4,
+    "net_gex_bn": 0.0495,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
@@ -1625,8 +1625,8 @@ const wallsData = {
     }
   },
   "BMO": {
-    "spot": 169.99,
-    "net_gex_bn": -0.0022,
+    "spot": 168.43,
+    "net_gex_bn": -0.0025,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 175.0,
@@ -1638,8 +1638,8 @@ const wallsData = {
     }
   },
   "RIO": {
-    "spot": 102.75,
-    "net_gex_bn": 0.0139,
+    "spot": 102.56,
+    "net_gex_bn": 0.0138,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 105.0,
@@ -1651,12 +1651,12 @@ const wallsData = {
     }
   },
   "LOW": {
-    "spot": 206.15,
-    "net_gex_bn": -0.0005,
+    "spot": 201.5,
+    "net_gex_bn": -0.0009,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 215.0,
-      "put": 200.0
+      "call": 210.0,
+      "put": 205.0
     },
     "anchor": {
       "call": 220.0,
@@ -1664,8 +1664,8 @@ const wallsData = {
     }
   },
   "NEM": {
-    "spot": 125.76,
-    "net_gex_bn": 0.0306,
+    "spot": 124.0,
+    "net_gex_bn": 0.0291,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
@@ -1677,11 +1677,11 @@ const wallsData = {
     }
   },
   "PGR": {
-    "spot": 218.51,
-    "net_gex_bn": -0.0025,
+    "spot": 220.07,
+    "net_gex_bn": -0.0029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 220.0,
+      "call": 230.0,
       "put": 210.0
     },
     "anchor": {
@@ -1690,21 +1690,21 @@ const wallsData = {
     }
   },
   "BTI": {
-    "spot": 55.98,
-    "net_gex_bn": 0.032,
+    "spot": 56.44,
+    "net_gex_bn": 0.0316,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 55.0,
+      "call": null,
       "put": 55.0
     },
     "anchor": {
-      "call": 65.0,
+      "call": 70.0,
       "put": 55.0
     }
   },
   "SBUX": {
-    "spot": 106.49,
-    "net_gex_bn": -0.0052,
+    "spot": 105.8,
+    "net_gex_bn": -0.0049,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 110.0,
@@ -1716,8 +1716,8 @@ const wallsData = {
     }
   },
   "SPGI": {
-    "spot": 437.97,
-    "net_gex_bn": -0.0007,
+    "spot": 429.25,
+    "net_gex_bn": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 445.0,
@@ -1729,12 +1729,12 @@ const wallsData = {
     }
   },
   "ACN": {
-    "spot": 190.98,
-    "net_gex_bn": 0.0022,
+    "spot": 188.3,
+    "net_gex_bn": 0.002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 200.0,
-      "put": 182.5
+      "call": 190.0,
+      "put": 180.0
     },
     "anchor": {
       "call": 180.0,
@@ -1742,11 +1742,11 @@ const wallsData = {
     }
   },
   "CVS": {
-    "spot": 93.99,
-    "net_gex_bn": 0.0036,
+    "spot": 97.18,
+    "net_gex_bn": 0.0046,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 94.0,
+      "call": 100.0,
       "put": 94.0
     },
     "anchor": {
@@ -1755,8 +1755,8 @@ const wallsData = {
     }
   },
   "HDB": {
-    "spot": 22.72,
-    "net_gex_bn": 0.0104,
+    "spot": 22.68,
+    "net_gex_bn": 0.0103,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 22.5,
@@ -1768,25 +1768,25 @@ const wallsData = {
     }
   },
   "FTNT": {
-    "spot": 170.38,
-    "net_gex_bn": -0.0054,
+    "spot": 162.68,
+    "net_gex_bn": -0.0035,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 175.0,
-      "put": 165.0
+      "call": 170.0,
+      "put": 155.0
     },
     "anchor": {
-      "call": 175.0,
+      "call": 185.0,
       "put": 155.0
     }
   },
   "MDT": {
-    "spot": 90.94,
-    "net_gex_bn": 0.0218,
+    "spot": 92.36,
+    "net_gex_bn": 0.0251,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 93.0,
-      "put": 87.0
+      "put": 89.0
     },
     "anchor": {
       "call": 100.0,
@@ -1794,11 +1794,11 @@ const wallsData = {
     }
   },
   "SNOW": {
-    "spot": 328.48,
-    "net_gex_bn": 0.0063,
+    "spot": 322.44,
+    "net_gex_bn": 0.0048,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 340.0,
+      "call": 320.0,
       "put": 320.0
     },
     "anchor": {
@@ -1807,12 +1807,12 @@ const wallsData = {
     }
   },
   "PBR": {
-    "spot": 19.19,
-    "net_gex_bn": 0.0821,
+    "spot": 19.93,
+    "net_gex_bn": 0.0804,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 20.0,
-      "put": 19.0
+      "put": 20.0
     },
     "anchor": {
       "call": 20.0,
@@ -1820,7 +1820,7 @@ const wallsData = {
     }
   },
   "SMFG": {
-    "spot": 25.97,
+    "spot": 26.22,
     "net_gex_bn": -0.0011,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -1833,11 +1833,11 @@ const wallsData = {
     }
   },
   "BP": {
-    "spot": 42.71,
-    "net_gex_bn": 0.058,
+    "spot": 44.21,
+    "net_gex_bn": 0.0639,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 42.0,
+      "call": 45.0,
       "put": 42.0
     },
     "anchor": {
@@ -1846,8 +1846,8 @@ const wallsData = {
     }
   },
   "ENB": {
-    "spot": 50.27,
-    "net_gex_bn": 0.0197,
+    "spot": 50.28,
+    "net_gex_bn": 0.0198,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 52.5,
@@ -1859,21 +1859,21 @@ const wallsData = {
     }
   },
   "HWM": {
-    "spot": 248.85,
-    "net_gex_bn": -0.0047,
+    "spot": 253.77,
+    "net_gex_bn": -0.0027,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 260.0,
-      "put": 250.0
+      "call": 250.0,
+      "put": 245.0
     },
     "anchor": {
-      "call": 280.0,
-      "put": 255.0
+      "call": 260.0,
+      "put": 230.0
     }
   },
   "ABNB": {
-    "spot": 183.11,
-    "net_gex_bn": 0.0028,
+    "spot": 182.53,
+    "net_gex_bn": 0.005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 190.0,
@@ -1885,24 +1885,24 @@ const wallsData = {
     }
   },
   "BX": {
-    "spot": 142.16,
-    "net_gex_bn": 0.0037,
+    "spot": 137.89,
+    "net_gex_bn": 0.006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 145.0,
+      "call": 140.0,
       "put": 140.0
     },
     "anchor": {
-      "call": 175.0,
+      "call": 145.0,
       "put": 140.0
     }
   },
   "BN": {
-    "spot": 41.26,
-    "net_gex_bn": -0.0079,
+    "spot": 39.9,
+    "net_gex_bn": -0.008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 43.0,
+      "call": 41.0,
       "put": 40.0
     },
     "anchor": {
@@ -1911,12 +1911,12 @@ const wallsData = {
     }
   },
   "NET": {
-    "spot": 306.2,
-    "net_gex_bn": 0.0071,
+    "spot": 291.49,
+    "net_gex_bn": 0.0079,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 310.0,
-      "put": 300.0
+      "call": 300.0,
+      "put": 280.0
     },
     "anchor": {
       "call": 320.0,
@@ -1924,11 +1924,11 @@ const wallsData = {
     }
   },
   "BNS": {
-    "spot": 91.93,
-    "net_gex_bn": 0.0021,
+    "spot": 91.12,
+    "net_gex_bn": 0.002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 95.0,
+      "call": 90.0,
       "put": 87.5
     },
     "anchor": {
@@ -1937,7 +1937,7 @@ const wallsData = {
     }
   },
   "CM": {
-    "spot": 113.78,
+    "spot": 111.7,
     "net_gex_bn": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -1950,11 +1950,11 @@ const wallsData = {
     }
   },
   "BNY": {
-    "spot": 162.01,
-    "net_gex_bn": -0.0364,
+    "spot": 160.59,
+    "net_gex_bn": -0.0385,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 170.0,
+      "call": 160.0,
       "put": 160.0
     },
     "anchor": {
@@ -1963,7 +1963,7 @@ const wallsData = {
     }
   },
   "MO": {
-    "spot": 68.98,
+    "spot": 70.41,
     "net_gex_bn": -0.0367,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -1976,12 +1976,12 @@ const wallsData = {
     }
   },
   "VRT": {
-    "spot": 258.55,
-    "net_gex_bn": -0.0518,
+    "spot": 252.37,
+    "net_gex_bn": -0.0499,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 270.0,
-      "put": 250.0
+      "call": 250.0,
+      "put": 240.0
     },
     "anchor": {
       "call": 300.0,
@@ -1989,8 +1989,8 @@ const wallsData = {
     }
   },
   "ADP": {
-    "spot": 286.23,
-    "net_gex_bn": -0.0013,
+    "spot": 285.0,
+    "net_gex_bn": -0.0012,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 295.0,
@@ -2002,7 +2002,7 @@ const wallsData = {
     }
   },
   "IBN": {
-    "spot": 30.37,
+    "spot": 30.18,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2015,8 +2015,8 @@ const wallsData = {
     }
   },
   "APP": {
-    "spot": 311.14,
-    "net_gex_bn": 0.0273,
+    "spot": 314.59,
+    "net_gex_bn": 0.0296,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 320.0,
@@ -2028,7 +2028,7 @@ const wallsData = {
     }
   },
   "TT": {
-    "spot": 444.64,
+    "spot": 440.29,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2041,8 +2041,8 @@ const wallsData = {
     }
   },
   "SNY": {
-    "spot": 44.5,
-    "net_gex_bn": 0.0052,
+    "spot": 44.6,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
@@ -2054,7 +2054,7 @@ const wallsData = {
     }
   },
   "GD": {
-    "spot": 371.98,
+    "spot": 368.66,
     "net_gex_bn": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2067,8 +2067,8 @@ const wallsData = {
     }
   },
   "SO": {
-    "spot": 88.05,
-    "net_gex_bn": 0.0051,
+    "spot": 88.21,
+    "net_gex_bn": 0.0056,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 90.0,
@@ -2080,12 +2080,12 @@ const wallsData = {
     }
   },
   "MCK": {
-    "spot": 890.53,
+    "spot": 906.08,
     "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 900.0,
-      "put": 860.0
+      "put": 900.0
     },
     "anchor": {
       "call": 900.0,
@@ -2093,8 +2093,8 @@ const wallsData = {
     }
   },
   "ADBE": {
-    "spot": 292.38,
-    "net_gex_bn": 0.0298,
+    "spot": 289.33,
+    "net_gex_bn": 0.0264,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 300.0,
@@ -2106,12 +2106,12 @@ const wallsData = {
     }
   },
   "SPOT": {
-    "spot": 541.97,
-    "net_gex_bn": 0.0015,
+    "spot": 544.77,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 540.0,
-      "put": 540.0
+      "call": 570.0,
+      "put": 525.0
     },
     "anchor": {
       "call": 580.0,
@@ -2119,11 +2119,11 @@ const wallsData = {
     }
   },
   "GSK": {
-    "spot": 50.41,
-    "net_gex_bn": 0.0036,
+    "spot": 50.76,
+    "net_gex_bn": 0.0037,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 52.0,
+      "call": 51.0,
       "put": 50.0
     },
     "anchor": {
@@ -2145,12 +2145,12 @@ const wallsData = {
     }
   },
   "EQNR": {
-    "spot": 42.74,
-    "net_gex_bn": 0.0159,
+    "spot": 43.58,
+    "net_gex_bn": 0.0155,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 43.0,
-      "put": 41.0
+      "call": 45.0,
+      "put": 42.0
     },
     "anchor": {
       "call": 50.0,
@@ -2158,8 +2158,8 @@ const wallsData = {
     }
   },
   "EQIX": {
-    "spot": 1041.05,
-    "net_gex_bn": -0.0085,
+    "spot": 1033.78,
+    "net_gex_bn": -0.0084,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1060.0,
@@ -2171,20 +2171,20 @@ const wallsData = {
     }
   },
   "PNC": {
-    "spot": 240.18,
-    "net_gex_bn": -0.0017,
+    "spot": 239.07,
+    "net_gex_bn": -0.0019,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 250.0,
       "put": 235.0
     },
     "anchor": {
-      "call": 270.0,
+      "call": 260.0,
       "put": 190.0
     }
   },
   "USB": {
-    "spot": 61.7,
+    "spot": 61.28,
     "net_gex_bn": 0.0133,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2197,12 +2197,12 @@ const wallsData = {
     }
   },
   "KKR": {
-    "spot": 110.69,
-    "net_gex_bn": -0.001,
+    "spot": 107.12,
+    "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 110.0,
-      "put": 110.0
+      "put": 105.0
     },
     "anchor": {
       "call": 110.0,
@@ -2210,12 +2210,12 @@ const wallsData = {
     }
   },
   "FCX": {
-    "spot": 75.61,
-    "net_gex_bn": 0.0191,
+    "spot": 73.75,
+    "net_gex_bn": 0.0183,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
-      "put": 76.0
+      "put": 75.0
     },
     "anchor": {
       "call": 80.0,
@@ -2223,12 +2223,12 @@ const wallsData = {
     }
   },
   "PWR": {
-    "spot": 607.07,
-    "net_gex_bn": -0.0142,
+    "spot": 608.6,
+    "net_gex_bn": -0.0148,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 630.0,
-      "put": 580.0
+      "put": 600.0
     },
     "anchor": {
       "call": 700.0,
@@ -2236,8 +2236,8 @@ const wallsData = {
     }
   },
   "CEG": {
-    "spot": 278.04,
-    "net_gex_bn": -0.0016,
+    "spot": 282.06,
+    "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 280.0,
@@ -2249,24 +2249,24 @@ const wallsData = {
     }
   },
   "CNQ": {
-    "spot": 49.69,
-    "net_gex_bn": 0.02,
+    "spot": 51.02,
+    "net_gex_bn": 0.0184,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
-      "put": 47.5
+      "put": 50.0
     },
     "anchor": {
       "call": 50.0,
-      "put": 47.5
+      "put": 50.0
     }
   },
   "MELI": {
-    "spot": 1947.9,
-    "net_gex_bn": -0.001,
+    "spot": 1952.47,
+    "net_gex_bn": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 1985.0,
+      "call": 2000.0,
       "put": 1895.0
     },
     "anchor": {
@@ -2275,8 +2275,8 @@ const wallsData = {
     }
   },
   "BCS": {
-    "spot": 26.72,
-    "net_gex_bn": 0.0129,
+    "spot": 26.3,
+    "net_gex_bn": 0.0127,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 27.0,
@@ -2288,8 +2288,8 @@ const wallsData = {
     }
   },
   "DUK": {
-    "spot": 120.14,
-    "net_gex_bn": 0.0236,
+    "spot": 120.53,
+    "net_gex_bn": 0.0232,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 125.0,
@@ -2297,16 +2297,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 130.0,
-      "put": 115.0
+      "put": 120.0
     }
   },
   "RACE": {
-    "spot": 424.19,
+    "spot": 412.28,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 430.0,
-      "put": 410.0
+      "put": 400.0
     },
     "anchor": {
       "call": 430.0,
@@ -2314,11 +2314,11 @@ const wallsData = {
     }
   },
   "MPC": {
-    "spot": 371.36,
-    "net_gex_bn": 0.0018,
+    "spot": 377.62,
+    "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 370.0,
+      "call": 380.0,
       "put": 360.0
     },
     "anchor": {
@@ -2327,12 +2327,12 @@ const wallsData = {
     }
   },
   "MMM": {
-    "spot": 172.53,
-    "net_gex_bn": 0.0052,
+    "spot": 170.64,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 175.0,
-      "put": 175.0
+      "put": 172.5
     },
     "anchor": {
       "call": 190.0,
@@ -2340,8 +2340,8 @@ const wallsData = {
     }
   },
   "JCI": {
-    "spot": 138.52,
-    "net_gex_bn": 0.0222,
+    "spot": 138.15,
+    "net_gex_bn": 0.0226,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 145.0,
@@ -2353,12 +2353,12 @@ const wallsData = {
     }
   },
   "VLO": {
-    "spot": 356.92,
-    "net_gex_bn": 0.006,
+    "spot": 362.09,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 350.0,
-      "put": 340.0
+      "call": 380.0,
+      "put": 350.0
     },
     "anchor": {
       "call": 380.0,
@@ -2366,12 +2366,12 @@ const wallsData = {
     }
   },
   "CME": {
-    "spot": 286.84,
-    "net_gex_bn": 0.0028,
+    "spot": 283.58,
+    "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 290.0,
-      "put": 280.0
+      "call": 280.0,
+      "put": 270.0
     },
     "anchor": {
       "call": 280.0,
@@ -2379,24 +2379,24 @@ const wallsData = {
     }
   },
   "CSX": {
-    "spot": 50.58,
-    "net_gex_bn": 0.0305,
+    "spot": 48.99,
+    "net_gex_bn": 0.0314,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 52.5,
-      "put": 50.0
+      "call": 50.0,
+      "put": 47.5
     },
     "anchor": {
       "call": 55.0,
-      "put": 50.0
+      "put": 37.5
     }
   },
   "AEM": {
-    "spot": 203.16,
-    "net_gex_bn": 0.0037,
+    "spot": 196.87,
+    "net_gex_bn": 0.0023,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 210.0,
+      "call": 200.0,
       "put": 200.0
     },
     "anchor": {
@@ -2405,12 +2405,12 @@ const wallsData = {
     }
   },
   "INTU": {
-    "spot": 358.33,
-    "net_gex_bn": 0.0058,
+    "spot": 350.48,
+    "net_gex_bn": 0.006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 370.0,
-      "put": 345.0
+      "call": 355.0,
+      "put": 340.0
     },
     "anchor": {
       "call": 390.0,
@@ -2418,12 +2418,12 @@ const wallsData = {
     }
   },
   "DASH": {
-    "spot": 232.05,
-    "net_gex_bn": 0.0173,
+    "spot": 229.43,
+    "net_gex_bn": 0.0176,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 240.0,
-      "put": 235.0
+      "put": 220.0
     },
     "anchor": {
       "call": 210.0,
@@ -2431,12 +2431,12 @@ const wallsData = {
     }
   },
   "EMR": {
-    "spot": 153.04,
-    "net_gex_bn": 0.0141,
+    "spot": 149.56,
+    "net_gex_bn": 0.0127,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 155.0,
-      "put": 155.0
+      "put": 145.0
     },
     "anchor": {
       "call": 170.0,
@@ -2444,12 +2444,12 @@ const wallsData = {
     }
   },
   "MRSH": {
-    "spot": 190.73,
-    "net_gex_bn": 0.0012,
+    "spot": 188.04,
+    "net_gex_bn": 0.0015,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 195.0,
-      "put": 190.0
+      "put": 185.0
     },
     "anchor": {
       "call": 195.0,
@@ -2457,8 +2457,8 @@ const wallsData = {
     }
   },
   "MAR": {
-    "spot": 342.16,
-    "net_gex_bn": 0.0046,
+    "spot": 338.1,
+    "net_gex_bn": 0.0054,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 355.0,
@@ -2466,29 +2466,29 @@ const wallsData = {
     },
     "anchor": {
       "call": 330.0,
-      "put": 360.0
+      "put": 260.0
     }
   },
   "CMCSA": {
-    "spot": 26.76,
-    "net_gex_bn": 0.1031,
+    "spot": 26.51,
+    "net_gex_bn": 0.1024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 27.0,
-      "put": 26.0
+      "put": 27.0
     },
     "anchor": {
       "call": 30.0,
-      "put": 22.5
+      "put": 20.0
     }
   },
   "BAM": {
-    "spot": 51.59,
-    "net_gex_bn": -0.0015,
+    "spot": 49.71,
+    "net_gex_bn": -0.0017,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 52.5,
-      "put": 52.5
+      "call": 50.0,
+      "put": 50.0
     },
     "anchor": {
       "call": 55.0,
@@ -2496,11 +2496,11 @@ const wallsData = {
     }
   },
   "WM": {
-    "spot": 219.66,
-    "net_gex_bn": -0.0014,
+    "spot": 218.95,
+    "net_gex_bn": -0.0011,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 230.0,
+      "call": 220.0,
       "put": 220.0
     },
     "anchor": {
@@ -2509,12 +2509,12 @@ const wallsData = {
     }
   },
   "LYG": {
-    "spot": 5.86,
-    "net_gex_bn": 0.0223,
+    "spot": 5.95,
+    "net_gex_bn": 0.0224,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 6.0,
-      "put": null
+      "put": 6.0
     },
     "anchor": {
       "call": 6.0,
@@ -2522,21 +2522,21 @@ const wallsData = {
     }
   },
   "CDNS": {
-    "spot": 342.17,
-    "net_gex_bn": -0.007,
+    "spot": 318.61,
+    "net_gex_bn": -0.0069,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 350.0,
-      "put": 330.0
+      "call": 320.0,
+      "put": 317.5
     },
     "anchor": {
       "call": 320.0,
-      "put": 370.0
+      "put": 270.0
     }
   },
   "PSX": {
-    "spot": 245.23,
-    "net_gex_bn": -0.0041,
+    "spot": 250.13,
+    "net_gex_bn": -0.0044,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 250.0,
@@ -2548,7 +2548,7 @@ const wallsData = {
     }
   },
   "HCA": {
-    "spot": 418.1,
+    "spot": 422.85,
     "net_gex_bn": 0.0068,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2561,12 +2561,12 @@ const wallsData = {
     }
   },
   "DDOG": {
-    "spot": 235.84,
-    "net_gex_bn": -0.0015,
+    "spot": 228.43,
+    "net_gex_bn": -0.0012,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 240.0,
-      "put": 240.0
+      "call": 235.0,
+      "put": 220.0
     },
     "anchor": {
       "call": 270.0,
@@ -2574,12 +2574,12 @@ const wallsData = {
     }
   },
   "SHW": {
-    "spot": 339.11,
+    "spot": 332.51,
     "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 350.0,
-      "put": 330.0
+      "call": 340.0,
+      "put": 320.0
     },
     "anchor": {
       "call": 380.0,
@@ -2587,24 +2587,24 @@ const wallsData = {
     }
   },
   "WMB": {
-    "spot": 75.17,
-    "net_gex_bn": -0.0791,
+    "spot": 74.7,
+    "net_gex_bn": -0.0774,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 75.0,
       "put": 73.0
     },
     "anchor": {
-      "call": 85.0,
+      "call": 79.0,
       "put": 65.0
     }
   },
   "E": {
-    "spot": 54.45,
+    "spot": 54.92,
     "net_gex_bn": -0.0065,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 55.0,
+      "call": 57.5,
       "put": 52.5
     },
     "anchor": {
@@ -2613,21 +2613,21 @@ const wallsData = {
     }
   },
   "CMI": {
-    "spot": 561.74,
-    "net_gex_bn": -0.0005,
+    "spot": 557.06,
+    "net_gex_bn": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 560.0,
-      "put": 550.0
+      "put": 530.0
     },
     "anchor": {
-      "call": 700.0,
+      "call": 650.0,
       "put": 530.0
     }
   },
   "ASX": {
-    "spot": 36.89,
-    "net_gex_bn": 0.0461,
+    "spot": 36.9,
+    "net_gex_bn": 0.046,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 37.5,
@@ -2639,12 +2639,12 @@ const wallsData = {
     }
   },
   "ICE": {
-    "spot": 160.69,
+    "spot": 158.72,
     "net_gex_bn": 0.0187,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 160.0,
-      "put": 155.0
+      "put": 157.5
     },
     "anchor": {
       "call": 145.0,
@@ -2652,12 +2652,12 @@ const wallsData = {
     }
   },
   "HOOD": {
-    "spot": 104.1,
-    "net_gex_bn": 0.0508,
+    "spot": 106.49,
+    "net_gex_bn": 0.0539,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 109.0,
-      "put": 100.0
+      "call": 110.0,
+      "put": 104.0
     },
     "anchor": {
       "call": 120.0,
@@ -2665,12 +2665,12 @@ const wallsData = {
     }
   },
   "ELV": {
-    "spot": 393.6,
-    "net_gex_bn": 0.0026,
+    "spot": 402.92,
+    "net_gex_bn": 0.0023,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 410.0,
-      "put": 380.0
+      "call": 420.0,
+      "put": 390.0
     },
     "anchor": {
       "call": 420.0,
@@ -2678,25 +2678,25 @@ const wallsData = {
     }
   },
   "ITW": {
-    "spot": 276.49,
+    "spot": 271.55,
     "net_gex_bn": 0.0051,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 280.0,
-      "put": 280.0
+      "put": 270.0
     },
     "anchor": {
       "call": 280.0,
-      "put": 300.0
+      "put": 260.0
     }
   },
   "MCO": {
-    "spot": 505.29,
+    "spot": 496.73,
     "net_gex_bn": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 500.0,
-      "put": 490.0
+      "put": 480.0
     },
     "anchor": {
       "call": 500.0,
@@ -2704,11 +2704,11 @@ const wallsData = {
     }
   },
   "RCL": {
-    "spot": 269.15,
-    "net_gex_bn": -0.0218,
+    "spot": 266.44,
+    "net_gex_bn": -0.0217,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 280.0,
+      "call": 275.0,
       "put": 260.0
     },
     "anchor": {
@@ -2717,8 +2717,8 @@ const wallsData = {
     }
   },
   "CTAS": {
-    "spot": 201.48,
-    "net_gex_bn": 0.0012,
+    "spot": 200.14,
+    "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
@@ -2730,12 +2730,12 @@ const wallsData = {
     }
   },
   "REGN": {
-    "spot": 797.9,
-    "net_gex_bn": 0.0008,
+    "spot": 814.23,
+    "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 800.0,
-      "put": 760.0
+      "put": 825.0
     },
     "anchor": {
       "call": 850.0,
@@ -2743,12 +2743,12 @@ const wallsData = {
     }
   },
   "CP": {
-    "spot": 92.81,
+    "spot": 89.86,
     "net_gex_bn": 0.016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 92.5,
-      "put": 90.0
+      "call": 90.0,
+      "put": 87.5
     },
     "anchor": {
       "call": 95.0,
@@ -2756,8 +2756,8 @@ const wallsData = {
     }
   },
   "NOC": {
-    "spot": 539.23,
-    "net_gex_bn": -0.002,
+    "spot": 535.61,
+    "net_gex_bn": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 560.0,
@@ -2769,12 +2769,12 @@ const wallsData = {
     }
   },
   "EPD": {
-    "spot": 38.86,
-    "net_gex_bn": 0.0631,
+    "spot": 39.27,
+    "net_gex_bn": 0.0634,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
-      "put": 37.0
+      "put": 39.0
     },
     "anchor": {
       "call": 42.0,
@@ -2782,7 +2782,7 @@ const wallsData = {
     }
   },
   "NTES": {
-    "spot": 122.0,
+    "spot": 120.33,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -2795,21 +2795,21 @@ const wallsData = {
     }
   },
   "APO": {
-    "spot": 137.44,
-    "net_gex_bn": -0.0053,
+    "spot": 132.05,
+    "net_gex_bn": -0.0023,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 135.0,
       "put": 133.0
     },
     "anchor": {
-      "call": 145.0,
+      "call": 140.0,
       "put": 125.0
     }
   },
   "ROST": {
-    "spot": 227.48,
-    "net_gex_bn": -0.012,
+    "spot": 227.78,
+    "net_gex_bn": -0.0108,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 230.0,
@@ -2821,8 +2821,8 @@ const wallsData = {
     }
   },
   "SE": {
-    "spot": 114.15,
-    "net_gex_bn": 0.0075,
+    "spot": 113.49,
+    "net_gex_bn": 0.0076,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 115.0,
@@ -2834,7 +2834,7 @@ const wallsData = {
     }
   },
   "ECL": {
-    "spot": 283.5,
+    "spot": 280.51,
     "net_gex_bn": 0.0045,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2847,8 +2847,8 @@ const wallsData = {
     }
   },
   "SLB": {
-    "spot": 59.37,
-    "net_gex_bn": 0.0907,
+    "spot": 58.54,
+    "net_gex_bn": 0.0881,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 60.0,
@@ -2860,7 +2860,7 @@ const wallsData = {
     }
   },
   "NGG": {
-    "spot": 79.23,
+    "spot": 79.22,
     "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2873,11 +2873,11 @@ const wallsData = {
     }
   },
   "CVNA": {
-    "spot": 73.34,
-    "net_gex_bn": 0.0325,
+    "spot": 71.07,
+    "net_gex_bn": 0.0374,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 76.0,
+      "call": 74.0,
       "put": 70.0
     },
     "anchor": {
@@ -2886,8 +2886,8 @@ const wallsData = {
     }
   },
   "AMT": {
-    "spot": 176.54,
-    "net_gex_bn": 0.0052,
+    "spot": 175.2,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 175.0,
@@ -2899,7 +2899,7 @@ const wallsData = {
     }
   },
   "MDLZ": {
-    "spot": 62.24,
+    "spot": 62.33,
     "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2912,12 +2912,12 @@ const wallsData = {
     }
   },
   "SNPS": {
-    "spot": 443.24,
+    "spot": 419.89,
     "net_gex_bn": -0.0118,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 452.5,
-      "put": 440.0
+      "call": 412.5,
+      "put": 400.0
     },
     "anchor": {
       "call": 440.0,
@@ -2925,8 +2925,8 @@ const wallsData = {
     }
   },
   "GM": {
-    "spot": 86.83,
-    "net_gex_bn": 0.0285,
+    "spot": 86.25,
+    "net_gex_bn": 0.0298,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 89.0,
@@ -2938,8 +2938,8 @@ const wallsData = {
     }
   },
   "NWG": {
-    "spot": 18.23,
-    "net_gex_bn": -0.002,
+    "spot": 18.41,
+    "net_gex_bn": -0.0021,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -2951,12 +2951,12 @@ const wallsData = {
     }
   },
   "TRV": {
-    "spot": 367.14,
+    "spot": 365.72,
     "net_gex_bn": 0.0029,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 380.0,
-      "put": 370.0
+      "put": 360.0
     },
     "anchor": {
       "call": 390.0,
@@ -2964,7 +2964,7 @@ const wallsData = {
     }
   },
   "MSI": {
-    "spot": 485.13,
+    "spot": 488.02,
     "net_gex_bn": 0.0051,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2977,7 +2977,7 @@ const wallsData = {
     }
   },
   "CNI": {
-    "spot": 124.68,
+    "spot": 121.29,
     "net_gex_bn": 0.0078,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -2986,12 +2986,12 @@ const wallsData = {
     },
     "anchor": {
       "call": 125.0,
-      "put": 125.0
+      "put": 120.0
     }
   },
   "FDX": {
-    "spot": 327.79,
-    "net_gex_bn": 0.0169,
+    "spot": 324.31,
+    "net_gex_bn": 0.0165,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 330.0,
@@ -3003,11 +3003,11 @@ const wallsData = {
     }
   },
   "AON": {
-    "spot": 325.25,
-    "net_gex_bn": 0.002,
+    "spot": 326.86,
+    "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 340.0,
+      "call": 330.0,
       "put": 320.0
     },
     "anchor": {
@@ -3016,8 +3016,8 @@ const wallsData = {
     }
   },
   "EOG": {
-    "spot": 144.67,
-    "net_gex_bn": 0.0196,
+    "spot": 147.22,
+    "net_gex_bn": 0.0197,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
@@ -3029,12 +3029,12 @@ const wallsData = {
     }
   },
   "NSC": {
-    "spot": 345.27,
-    "net_gex_bn": -0.0027,
+    "spot": 335.91,
+    "net_gex_bn": -0.0028,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 340.0,
-      "put": 330.0
+      "put": 320.0
     },
     "anchor": {
       "call": 340.0,
@@ -3042,8 +3042,8 @@ const wallsData = {
     }
   },
   "ORLY": {
-    "spot": 88.87,
-    "net_gex_bn": 0.0138,
+    "spot": 87.74,
+    "net_gex_bn": 0.0137,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 92.0,
@@ -3055,11 +3055,11 @@ const wallsData = {
     }
   },
   "BSX": {
-    "spot": 48.01,
-    "net_gex_bn": 0.121,
+    "spot": 47.51,
+    "net_gex_bn": 0.1264,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 50.0,
+      "call": 49.0,
       "put": 47.0
     },
     "anchor": {
@@ -3068,24 +3068,24 @@ const wallsData = {
     }
   },
   "SU": {
-    "spot": 66.34,
-    "net_gex_bn": 0.0058,
+    "spot": 67.82,
+    "net_gex_bn": 0.0057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 68.0,
+      "call": 70.0,
       "put": 65.0
     },
     "anchor": {
-      "call": 70.0,
+      "call": 65.0,
       "put": 55.0
     }
   },
   "CL": {
-    "spot": 90.21,
-    "net_gex_bn": 0.0032,
+    "spot": 90.63,
+    "net_gex_bn": 0.0035,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 90.0,
+      "call": 95.0,
       "put": 90.0
     },
     "anchor": {
@@ -3094,7 +3094,7 @@ const wallsData = {
     }
   },
   "MFC": {
-    "spot": 42.46,
+    "spot": 42.06,
     "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3107,11 +3107,11 @@ const wallsData = {
     }
   },
   "HON": {
-    "spot": 213.63,
-    "net_gex_bn": 0.0054,
+    "spot": 210.22,
+    "net_gex_bn": 0.005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 222.5,
+      "call": 217.5,
       "put": 210.0
     },
     "anchor": {
@@ -3120,8 +3120,8 @@ const wallsData = {
     }
   },
   "CI": {
-    "spot": 277.12,
-    "net_gex_bn": 0.0019,
+    "spot": 282.08,
+    "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 280.0,
@@ -3133,12 +3133,12 @@ const wallsData = {
     }
   },
   "HPE": {
-    "spot": 52.99,
-    "net_gex_bn": 0.0288,
+    "spot": 51.21,
+    "net_gex_bn": 0.0306,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 55.0,
-      "put": 54.0
+      "call": 53.0,
+      "put": 50.0
     },
     "anchor": {
       "call": 60.0,
@@ -3146,8 +3146,8 @@ const wallsData = {
     }
   },
   "DB": {
-    "spot": 40.19,
-    "net_gex_bn": 0.0095,
+    "spot": 39.91,
+    "net_gex_bn": 0.0098,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
@@ -3155,15 +3155,15 @@ const wallsData = {
     },
     "anchor": {
       "call": 40.0,
-      "put": 35.0
+      "put": 30.0
     }
   },
   "SPG": {
-    "spot": 212.42,
-    "net_gex_bn": -0.0043,
+    "spot": 213.21,
+    "net_gex_bn": -0.0044,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 220.0,
+      "call": 210.0,
       "put": 210.0
     },
     "anchor": {
@@ -3172,8 +3172,8 @@ const wallsData = {
     }
   },
   "HLT": {
-    "spot": 315.73,
-    "net_gex_bn": -0.0032,
+    "spot": 313.56,
+    "net_gex_bn": -0.0035,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 320.0,
@@ -3185,11 +3185,11 @@ const wallsData = {
     }
   },
   "KMI": {
-    "spot": 32.24,
-    "net_gex_bn": 0.0286,
+    "spot": 31.95,
+    "net_gex_bn": 0.0305,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 33.0,
+      "call": 32.0,
       "put": 31.0
     },
     "anchor": {
@@ -3198,11 +3198,11 @@ const wallsData = {
     }
   },
   "PCAR": {
-    "spot": 124.11,
+    "spot": 123.43,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 130.0,
+      "call": 125.0,
       "put": 120.0
     },
     "anchor": {
@@ -3211,12 +3211,12 @@ const wallsData = {
     }
   },
   "TGT": {
-    "spot": 161.61,
-    "net_gex_bn": -0.0132,
+    "spot": 163.26,
+    "net_gex_bn": -0.0137,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 165.0,
-      "put": 162.5
+      "call": 170.0,
+      "put": 160.0
     },
     "anchor": {
       "call": 170.0,
@@ -3224,12 +3224,12 @@ const wallsData = {
     }
   },
   "MPWR": {
-    "spot": 1268.98,
+    "spot": 1228.71,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1280.0,
-      "put": 1280.0
+      "put": 1200.0
     },
     "anchor": {
       "call": 1380.0,
@@ -3237,25 +3237,25 @@ const wallsData = {
     }
   },
   "APD": {
-    "spot": 307.18,
-    "net_gex_bn": 0.0037,
+    "spot": 304.91,
+    "net_gex_bn": 0.0062,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 310.0,
       "put": 300.0
     },
     "anchor": {
-      "call": 310.0,
+      "call": 340.0,
       "put": 270.0
     }
   },
   "TDG": {
-    "spot": 1173.84,
+    "spot": 1157.68,
     "net_gex_bn": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1200.0,
-      "put": 1150.0
+      "put": 1110.0
     },
     "anchor": {
       "call": 1380.0,
@@ -3263,8 +3263,8 @@ const wallsData = {
     }
   },
   "WBD": {
-    "spot": 28.51,
-    "net_gex_bn": -0.181,
+    "spot": 28.49,
+    "net_gex_bn": -0.1795,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 29.0,
@@ -3276,12 +3276,12 @@ const wallsData = {
     }
   },
   "CRH": {
-    "spot": 94.79,
-    "net_gex_bn": 0.0025,
+    "spot": 91.63,
+    "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 98.0,
-      "put": 95.0
+      "call": 95.0,
+      "put": 90.0
     },
     "anchor": {
       "call": 105.0,
@@ -3289,12 +3289,12 @@ const wallsData = {
     }
   },
   "AEP": {
-    "spot": 122.3,
-    "net_gex_bn": 0.0143,
+    "spot": 122.95,
+    "net_gex_bn": 0.0145,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 125.0,
-      "put": 120.0
+      "put": 125.0
     },
     "anchor": {
       "call": 130.0,
@@ -3302,11 +3302,11 @@ const wallsData = {
     }
   },
   "B": {
-    "spot": 44.69,
-    "net_gex_bn": 0.0038,
+    "spot": 43.92,
+    "net_gex_bn": 0.0059,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 45.0,
+      "call": 46.0,
       "put": 44.0
     },
     "anchor": {
@@ -3315,8 +3315,8 @@ const wallsData = {
     }
   },
   "ALL": {
-    "spot": 258.53,
-    "net_gex_bn": -0.0063,
+    "spot": 258.23,
+    "net_gex_bn": -0.0064,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 260.0,
@@ -3328,8 +3328,8 @@ const wallsData = {
     }
   },
   "NU": {
-    "spot": 14.52,
-    "net_gex_bn": 0.0898,
+    "spot": 14.68,
+    "net_gex_bn": 0.0978,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 15.0,
@@ -3341,8 +3341,8 @@ const wallsData = {
     }
   },
   "RSG": {
-    "spot": 221.71,
-    "net_gex_bn": 0.0012,
+    "spot": 221.72,
+    "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 230.0,
@@ -3354,12 +3354,12 @@ const wallsData = {
     }
   },
   "AJG": {
-    "spot": 262.48,
-    "net_gex_bn": 0.0039,
+    "spot": 263.67,
+    "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
-      "put": 250.0
+      "put": 260.0
     },
     "anchor": {
       "call": 290.0,
@@ -3367,7 +3367,7 @@ const wallsData = {
     }
   },
   "RELX": {
-    "spot": 36.51,
+    "spot": 35.87,
     "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3380,12 +3380,12 @@ const wallsData = {
     }
   },
   "BKR": {
-    "spot": 63.43,
-    "net_gex_bn": 0.0106,
+    "spot": 64.11,
+    "net_gex_bn": 0.0108,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
-      "put": null
+      "put": 65.0
     },
     "anchor": {
       "call": 70.0,
@@ -3393,9 +3393,9 @@ const wallsData = {
     }
   },
   "COHR": {
-    "spot": 276.21,
-    "net_gex_bn": -0.002,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 271.89,
+    "net_gex_bn": 0.0002,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 280.0,
       "put": 270.0
@@ -3406,8 +3406,8 @@ const wallsData = {
     }
   },
   "TFC": {
-    "spot": 49.87,
-    "net_gex_bn": 0.0202,
+    "spot": 49.44,
+    "net_gex_bn": 0.02,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
@@ -3419,25 +3419,25 @@ const wallsData = {
     }
   },
   "LITE": {
-    "spot": 909.46,
-    "net_gex_bn": -0.0171,
+    "spot": 869.49,
+    "net_gex_bn": -0.0127,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 950.0,
-      "put": 890.0
+      "call": 900.0,
+      "put": 870.0
     },
     "anchor": {
-      "call": 1000.0,
+      "call": 970.0,
       "put": 800.0
     }
   },
   "COR": {
-    "spot": 323.89,
+    "spot": 328.63,
     "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 330.0,
-      "put": 310.0
+      "put": 320.0
     },
     "anchor": {
       "call": 380.0,
@@ -3445,8 +3445,8 @@ const wallsData = {
     }
   },
   "TRP": {
-    "spot": 62.14,
-    "net_gex_bn": 0.0055,
+    "spot": 62.71,
+    "net_gex_bn": 0.0056,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 62.5,
@@ -3458,8 +3458,8 @@ const wallsData = {
     }
   },
   "TEL": {
-    "spot": 204.07,
-    "net_gex_bn": 0.0023,
+    "spot": 202.39,
+    "net_gex_bn": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
@@ -3471,7 +3471,7 @@ const wallsData = {
     }
   },
   "IMO": {
-    "spot": 130.71,
+    "spot": 133.16,
     "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -3484,8 +3484,8 @@ const wallsData = {
     }
   },
   "BE": {
-    "spot": 204.17,
-    "net_gex_bn": 0.0142,
+    "spot": 205.14,
+    "net_gex_bn": 0.014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
@@ -3493,11 +3493,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 250.0,
-      "put": 200.0
+      "put": 180.0
     }
   },
   "NUE": {
-    "spot": 250.84,
+    "spot": 250.77,
     "net_gex_bn": 0.0077,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3506,16 +3506,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 250.0,
-      "put": 240.0
+      "put": 210.0
     }
   },
   "MET": {
-    "spot": 95.53,
-    "net_gex_bn": -0.0251,
+    "spot": 94.47,
+    "net_gex_bn": -0.0247,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 95.0,
-      "put": 95.0
+      "put": 90.0
     },
     "anchor": {
       "call": 95.0,
@@ -3523,7 +3523,7 @@ const wallsData = {
     }
   },
   "GWW": {
-    "spot": 1305.81,
+    "spot": 1306.74,
     "net_gex_bn": 0.0044,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3536,12 +3536,12 @@ const wallsData = {
     }
   },
   "NKE": {
-    "spot": 39.13,
-    "net_gex_bn": 0.0489,
+    "spot": 38.37,
+    "net_gex_bn": 0.0654,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
-      "put": 37.5
+      "put": 39.0
     },
     "anchor": {
       "call": 45.0,
@@ -3549,8 +3549,8 @@ const wallsData = {
     }
   },
   "VALE": {
-    "spot": 15.1,
-    "net_gex_bn": 0.0906,
+    "spot": 15.19,
+    "net_gex_bn": 0.0899,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 15.0,
@@ -3562,11 +3562,11 @@ const wallsData = {
     }
   },
   "WPM": {
-    "spot": 150.38,
-    "net_gex_bn": -0.0027,
+    "spot": 147.94,
+    "net_gex_bn": -0.0029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 150.0,
+      "call": 155.0,
       "put": 147.0
     },
     "anchor": {
@@ -3575,12 +3575,12 @@ const wallsData = {
     }
   },
   "AFL": {
-    "spot": 116.05,
-    "net_gex_bn": 0.0049,
+    "spot": 115.3,
+    "net_gex_bn": 0.0051,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 115.0,
-      "put": 115.0
+      "put": 110.0
     },
     "anchor": {
       "call": 130.0,
@@ -3588,12 +3588,12 @@ const wallsData = {
     }
   },
   "FAST": {
-    "spot": 49.43,
-    "net_gex_bn": 0.0216,
+    "spot": 48.99,
+    "net_gex_bn": 0.0203,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
-      "put": 50.0
+      "put": 47.5
     },
     "anchor": {
       "call": 52.5,
@@ -3601,8 +3601,8 @@ const wallsData = {
     }
   },
   "D": {
-    "spot": 65.8,
-    "net_gex_bn": 0.0273,
+    "spot": 66.07,
+    "net_gex_bn": 0.0275,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 67.5,
@@ -3614,12 +3614,12 @@ const wallsData = {
     }
   },
   "GRMN": {
-    "spot": 284.92,
+    "spot": 279.3,
     "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 290.0,
-      "put": 290.0
+      "put": 280.0
     },
     "anchor": {
       "call": 320.0,
@@ -3627,7 +3627,7 @@ const wallsData = {
     }
   },
   "NXPI": {
-    "spot": 225.02,
+    "spot": 221.65,
     "net_gex_bn": 0.1162,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3635,16 +3635,16 @@ const wallsData = {
       "put": 220.0
     },
     "anchor": {
-      "call": 280.0,
+      "call": 250.0,
       "put": 210.0
     }
   },
   "DAL": {
-    "spot": 78.25,
-    "net_gex_bn": -0.0147,
+    "spot": 76.94,
+    "net_gex_bn": -0.0129,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 82.0,
+      "call": 78.0,
       "put": 75.0
     },
     "anchor": {
@@ -3653,8 +3653,8 @@ const wallsData = {
     }
   },
   "FIX": {
-    "spot": 1534.2,
-    "net_gex_bn": -0.0029,
+    "spot": 1541.86,
+    "net_gex_bn": -0.0027,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 1600.0,
@@ -3666,21 +3666,21 @@ const wallsData = {
     }
   },
   "TER": {
-    "spot": 350.59,
-    "net_gex_bn": -0.0031,
+    "spot": 333.95,
+    "net_gex_bn": -0.0033,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 365.0,
-      "put": 350.0
+      "call": 340.0,
+      "put": 330.0
     },
     "anchor": {
       "call": 390.0,
-      "put": 330.0
+      "put": 260.0
     }
   },
   "OXY": {
-    "spot": 59.97,
-    "net_gex_bn": 0.0525,
+    "spot": 60.63,
+    "net_gex_bn": 0.0571,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 60.0,
@@ -3692,7 +3692,7 @@ const wallsData = {
     }
   },
   "AME": {
-    "spot": 235.07,
+    "spot": 231.37,
     "net_gex_bn": 0.0083,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3705,21 +3705,21 @@ const wallsData = {
     }
   },
   "KEYS": {
-    "spot": 321.31,
-    "net_gex_bn": 0.0034,
+    "spot": 319.03,
+    "net_gex_bn": 0.0036,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 330.0,
       "put": 310.0
     },
     "anchor": {
-      "call": 340.0,
+      "call": 330.0,
       "put": 280.0
     }
   },
   "O": {
-    "spot": 61.33,
-    "net_gex_bn": 0.0095,
+    "spot": 61.57,
+    "net_gex_bn": 0.0097,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 62.5,
@@ -3731,8 +3731,8 @@ const wallsData = {
     }
   },
   "OKE": {
-    "spot": 95.41,
-    "net_gex_bn": 0.0483,
+    "spot": 95.75,
+    "net_gex_bn": 0.0484,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -3740,11 +3740,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 100.0,
-      "put": 90.0
+      "put": 85.0
     }
   },
   "PSA": {
-    "spot": 306.09,
+    "spot": 307.24,
     "net_gex_bn": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -3757,8 +3757,8 @@ const wallsData = {
     }
   },
   "TRGP": {
-    "spot": 291.25,
-    "net_gex_bn": 0.009,
+    "spot": 293.64,
+    "net_gex_bn": 0.0087,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 290.0,
@@ -3770,12 +3770,12 @@ const wallsData = {
     }
   },
   "FANG": {
-    "spot": 198.99,
-    "net_gex_bn": 0.0123,
+    "spot": 201.65,
+    "net_gex_bn": 0.0124,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
-      "put": 190.0
+      "put": 200.0
     },
     "anchor": {
       "call": 220.0,
@@ -3783,8 +3783,8 @@ const wallsData = {
     }
   },
   "CAH": {
-    "spot": 235.66,
-    "net_gex_bn": 0.0015,
+    "spot": 239.45,
+    "net_gex_bn": 0.0016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 240.0,
@@ -3796,7 +3796,7 @@ const wallsData = {
     }
   },
   "MT": {
-    "spot": 74.66,
+    "spot": 73.66,
     "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3809,8 +3809,8 @@ const wallsData = {
     }
   },
   "CVE": {
-    "spot": 31.93,
-    "net_gex_bn": 0.056,
+    "spot": 32.62,
+    "net_gex_bn": 0.057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 32.0,
@@ -3822,8 +3822,8 @@ const wallsData = {
     }
   },
   "SRE": {
-    "spot": 81.69,
-    "net_gex_bn": 0.0028,
+    "spot": 83.2,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
@@ -3835,8 +3835,8 @@ const wallsData = {
     }
   },
   "TAK": {
-    "spot": 17.99,
-    "net_gex_bn": 0.0023,
+    "spot": 18.26,
+    "net_gex_bn": 0.0024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -3848,12 +3848,12 @@ const wallsData = {
     }
   },
   "CIEN": {
-    "spot": 379.54,
-    "net_gex_bn": -0.0074,
+    "spot": 364.26,
+    "net_gex_bn": -0.0069,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 380.0,
-      "put": 380.0
+      "put": 370.0
     },
     "anchor": {
       "call": 410.0,
@@ -3861,12 +3861,12 @@ const wallsData = {
     }
   },
   "LNG": {
-    "spot": 289.73,
-    "net_gex_bn": 0.0112,
+    "spot": 288.76,
+    "net_gex_bn": 0.0136,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 290.0,
-      "put": 282.5
+      "put": 275.0
     },
     "anchor": {
       "call": 290.0,
@@ -3874,8 +3874,8 @@ const wallsData = {
     }
   },
   "F": {
-    "spot": 13.98,
-    "net_gex_bn": 0.0696,
+    "spot": 13.87,
+    "net_gex_bn": 0.0849,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 14.0,
@@ -3887,8 +3887,8 @@ const wallsData = {
     }
   },
   "NOK": {
-    "spot": 10.12,
-    "net_gex_bn": 0.5611,
+    "spot": 9.9,
+    "net_gex_bn": 0.579,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 10.0,
@@ -3900,11 +3900,11 @@ const wallsData = {
     }
   },
   "ALAB": {
-    "spot": 292.86,
-    "net_gex_bn": 0.0109,
+    "spot": 281.32,
+    "net_gex_bn": 0.0117,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 305.0,
+      "call": 280.0,
       "put": 280.0
     },
     "anchor": {
@@ -3913,24 +3913,24 @@ const wallsData = {
     }
   },
   "EW": {
-    "spot": 90.88,
-    "net_gex_bn": 0.0014,
-    "outlook": "STABLE / GRIND (Long Gamma)",
+    "spot": 90.54,
+    "net_gex_bn": -0.001,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 92.5,
       "put": 90.0
     },
     "anchor": {
       "call": 100.0,
-      "put": 70.0
+      "put": 77.5
     }
   },
   "ARGX": {
-    "spot": 1026.32,
-    "net_gex_bn": 0.0011,
+    "spot": 1030.4,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 1060.0,
+      "call": 1040.0,
       "put": 990.0
     },
     "anchor": {
@@ -3939,12 +3939,12 @@ const wallsData = {
     }
   },
   "LHX": {
-    "spot": 266.81,
-    "net_gex_bn": 0.001,
+    "spot": 263.1,
+    "net_gex_bn": 0.0015,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 275.0,
-      "put": 255.0
+      "call": 270.0,
+      "put": 250.0
     },
     "anchor": {
       "call": 275.0,
@@ -3952,8 +3952,8 @@ const wallsData = {
     }
   },
   "NDAQ": {
-    "spot": 98.43,
-    "net_gex_bn": 0.0017,
+    "spot": 97.27,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -3965,12 +3965,12 @@ const wallsData = {
     }
   },
   "ADSK": {
-    "spot": 259.58,
+    "spot": 251.86,
     "net_gex_bn": -0.0019,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 270.0,
-      "put": 260.0
+      "call": 260.0,
+      "put": 240.0
     },
     "anchor": {
       "call": 300.0,
@@ -3978,7 +3978,7 @@ const wallsData = {
     }
   },
   "DEO": {
-    "spot": 92.35,
+    "spot": 90.53,
     "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -3991,12 +3991,12 @@ const wallsData = {
     }
   },
   "HONA": {
-    "spot": 158.74,
-    "net_gex_bn": 0.035,
+    "spot": 155.46,
+    "net_gex_bn": 0.0347,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 165.0,
-      "put": 160.0
+      "call": 160.0,
+      "put": 155.0
     },
     "anchor": {
       "call": 175.0,
@@ -4004,8 +4004,8 @@ const wallsData = {
     }
   },
   "CARR": {
-    "spot": 58.3,
-    "net_gex_bn": -0.0392,
+    "spot": 57.76,
+    "net_gex_bn": -0.0391,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 60.0,
@@ -4017,21 +4017,21 @@ const wallsData = {
     }
   },
   "CBRS": {
-    "spot": 183.36,
-    "net_gex_bn": 0.0172,
+    "spot": 175.99,
+    "net_gex_bn": 0.0211,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 180.0,
-      "put": 180.0
+      "put": 170.0
     },
     "anchor": {
       "call": 180.0,
-      "put": 160.0
+      "put": 135.0
     }
   },
   "FITB": {
-    "spot": 53.88,
-    "net_gex_bn": 0.0091,
+    "spot": 53.41,
+    "net_gex_bn": 0.0087,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 55.0,
@@ -4043,25 +4043,25 @@ const wallsData = {
     }
   },
   "AXON": {
-    "spot": 564.72,
-    "net_gex_bn": 0.0015,
+    "spot": 518.5,
+    "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 580.0,
-      "put": 560.0
+      "call": 510.0,
+      "put": 500.0
     },
     "anchor": {
-      "call": 700.0,
-      "put": 450.0
+      "call": 500.0,
+      "put": 560.0
     }
   },
   "STT": {
-    "spot": 192.13,
-    "net_gex_bn": -0.0003,
+    "spot": 189.33,
+    "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 200.0,
-      "put": 185.0
+      "call": 190.0,
+      "put": 180.0
     },
     "anchor": {
       "call": 220.0,
@@ -4069,7 +4069,7 @@ const wallsData = {
     }
   },
   "HEI": {
-    "spot": 331.01,
+    "spot": 327.93,
     "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -4082,24 +4082,24 @@ const wallsData = {
     }
   },
   "INFY": {
-    "spot": 12.15,
-    "net_gex_bn": -0.0374,
+    "spot": 11.98,
+    "net_gex_bn": -0.0373,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 12.0,
       "put": 12.0
     },
     "anchor": {
-      "call": 15.0,
+      "call": 12.0,
       "put": 12.0
     }
   },
   "CTVA": {
-    "spot": 84.57,
-    "net_gex_bn": 0.0094,
+    "spot": 87.42,
+    "net_gex_bn": 0.01,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 85.0,
+      "call": 90.0,
       "put": 85.0
     },
     "anchor": {
@@ -4108,7 +4108,7 @@ const wallsData = {
     }
   },
   "AMP": {
-    "spot": 554.93,
+    "spot": 546.49,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4121,12 +4121,12 @@ const wallsData = {
     }
   },
   "PYPL": {
-    "spot": 53.29,
-    "net_gex_bn": 0.1157,
+    "spot": 52.71,
+    "net_gex_bn": 0.1228,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 55.0,
-      "put": 53.0
+      "put": 52.0
     },
     "anchor": {
       "call": 65.0,
@@ -4134,12 +4134,12 @@ const wallsData = {
     }
   },
   "WAB": {
-    "spot": 287.79,
+    "spot": 281.81,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 300.0,
-      "put": 280.0
+      "call": 290.0,
+      "put": 270.0
     },
     "anchor": {
       "call": 320.0,
@@ -4147,11 +4147,11 @@ const wallsData = {
     }
   },
   "DVN": {
-    "spot": 48.08,
-    "net_gex_bn": 0.1034,
+    "spot": 48.83,
+    "net_gex_bn": 0.1031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 47.5,
+      "call": 49.0,
       "put": 47.5
     },
     "anchor": {
@@ -4160,12 +4160,12 @@ const wallsData = {
     }
   },
   "ROK": {
-    "spot": 424.57,
-    "net_gex_bn": -0.0056,
+    "spot": 419.32,
+    "net_gex_bn": -0.0055,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 440.0,
-      "put": 420.0
+      "call": 430.0,
+      "put": 400.0
     },
     "anchor": {
       "call": 460.0,
@@ -4173,7 +4173,7 @@ const wallsData = {
     }
   },
   "ETR": {
-    "spot": 106.22,
+    "spot": 106.74,
     "net_gex_bn": 0.0098,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4186,7 +4186,7 @@ const wallsData = {
     }
   },
   "AZO": {
-    "spot": 2980.73,
+    "spot": 2951.44,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4199,8 +4199,8 @@ const wallsData = {
     }
   },
   "BDX": {
-    "spot": 187.79,
-    "net_gex_bn": 0.0068,
+    "spot": 188.09,
+    "net_gex_bn": 0.0067,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 190.0,
@@ -4212,11 +4212,11 @@ const wallsData = {
     }
   },
   "AU": {
-    "spot": 111.89,
-    "net_gex_bn": -0.0225,
+    "spot": 109.46,
+    "net_gex_bn": -0.0226,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 110.0,
       "put": 110.0
     },
     "anchor": {
@@ -4225,12 +4225,12 @@ const wallsData = {
     }
   },
   "CRWV": {
-    "spot": 84.19,
-    "net_gex_bn": 0.1069,
+    "spot": 82.12,
+    "net_gex_bn": 0.1127,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
-      "put": 85.0
+      "put": 80.0
     },
     "anchor": {
       "call": 100.0,
@@ -4238,25 +4238,25 @@ const wallsData = {
     }
   },
   "FERG": {
-    "spot": 226.15,
-    "net_gex_bn": 0.0022,
+    "spot": 220.34,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 230.0,
       "put": 220.0
     },
     "anchor": {
-      "call": 280.0,
-      "put": 210.0
+      "call": 260.0,
+      "put": 200.0
     }
   },
   "STM": {
-    "spot": 50.13,
-    "net_gex_bn": 0.0295,
+    "spot": 48.96,
+    "net_gex_bn": 0.0298,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 52.0,
-      "put": 50.0
+      "call": 50.0,
+      "put": 48.0
     },
     "anchor": {
       "call": 60.0,
@@ -4264,11 +4264,11 @@ const wallsData = {
     }
   },
   "NBIS": {
-    "spot": 205.35,
-    "net_gex_bn": -0.0585,
+    "spot": 200.27,
+    "net_gex_bn": -0.057,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 215.0,
+      "call": 207.5,
       "put": 200.0
     },
     "anchor": {
@@ -4277,11 +4277,11 @@ const wallsData = {
     }
   },
   "VST": {
-    "spot": 137.24,
-    "net_gex_bn": 0.0219,
+    "spot": 138.33,
+    "net_gex_bn": 0.0243,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 145.0,
       "put": 135.0
     },
     "anchor": {
@@ -4290,8 +4290,8 @@ const wallsData = {
     }
   },
   "XEL": {
-    "spot": 75.62,
-    "net_gex_bn": -0.082,
+    "spot": 75.85,
+    "net_gex_bn": -0.0821,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 75.0,
@@ -4303,7 +4303,7 @@ const wallsData = {
     }
   },
   "CCEP": {
-    "spot": 107.98,
+    "spot": 107.4,
     "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4316,11 +4316,11 @@ const wallsData = {
     }
   },
   "XYZ": {
-    "spot": 81.81,
-    "net_gex_bn": 0.0346,
+    "spot": 79.96,
+    "net_gex_bn": 0.0355,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 85.0,
+      "call": 80.0,
       "put": 80.0
     },
     "anchor": {
@@ -4329,12 +4329,12 @@ const wallsData = {
     }
   },
   "ARES": {
-    "spot": 143.12,
-    "net_gex_bn": -0.0081,
+    "spot": 140.01,
+    "net_gex_bn": -0.0083,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 150.0,
-      "put": 145.0
+      "call": 145.0,
+      "put": 135.0
     },
     "anchor": {
       "call": 170.0,
@@ -4342,7 +4342,7 @@ const wallsData = {
     }
   },
   "FER": {
-    "spot": 58.38,
+    "spot": 58.09,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4355,12 +4355,12 @@ const wallsData = {
     }
   },
   "EBAY": {
-    "spot": 103.93,
-    "net_gex_bn": -0.0023,
+    "spot": 105.54,
+    "net_gex_bn": -0.0025,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 105.0,
-      "put": 100.0
+      "call": 110.0,
+      "put": 105.0
     },
     "anchor": {
       "call": 115.0,
@@ -4368,20 +4368,20 @@ const wallsData = {
     }
   },
   "TTWO": {
-    "spot": 220.31,
-    "net_gex_bn": -0.0228,
+    "spot": 218.18,
+    "net_gex_bn": -0.0181,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 230.0,
+      "call": 220.0,
       "put": 210.0
     },
     "anchor": {
-      "call": 270.0,
+      "call": 250.0,
       "put": 200.0
     }
   },
   "FNV": {
-    "spot": 263.21,
+    "spot": 259.17,
     "net_gex_bn": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -4394,24 +4394,24 @@ const wallsData = {
     }
   },
   "PCG": {
-    "spot": 13.57,
-    "net_gex_bn": 0.9941,
+    "spot": 13.45,
+    "net_gex_bn": 1.0321,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 14.0,
       "put": 13.0
     },
     "anchor": {
-      "call": 16.5,
+      "call": 16.0,
       "put": 14.0
     }
   },
   "EXC": {
-    "spot": 43.66,
-    "net_gex_bn": 0.0159,
+    "spot": 43.81,
+    "net_gex_bn": 0.0167,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 45.0,
+      "call": 46.0,
       "put": 43.0
     },
     "anchor": {
@@ -4420,24 +4420,24 @@ const wallsData = {
     }
   },
   "RKLB": {
-    "spot": 63.61,
-    "net_gex_bn": 0.0204,
+    "spot": 62.41,
+    "net_gex_bn": 0.0283,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 65.0,
-      "put": 63.0
+      "call": 64.0,
+      "put": 60.0
     },
     "anchor": {
-      "call": 70.0,
+      "call": 72.0,
       "put": 60.0
     }
   },
   "IDXX": {
-    "spot": 557.82,
-    "net_gex_bn": 0.0007,
+    "spot": 545.02,
+    "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 580.0,
+      "call": 570.0,
       "put": 530.0
     },
     "anchor": {
@@ -4446,12 +4446,12 @@ const wallsData = {
     }
   },
   "CRDO": {
-    "spot": 224.95,
-    "net_gex_bn": 0.0024,
+    "spot": 217.45,
+    "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 230.0,
-      "put": 220.0
+      "call": 220.0,
+      "put": 210.0
     },
     "anchor": {
       "call": 240.0,
@@ -4459,8 +4459,8 @@ const wallsData = {
     }
   },
   "MDLN": {
-    "spot": 35.44,
-    "net_gex_bn": -0.0022,
+    "spot": 35.4,
+    "net_gex_bn": -0.0023,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 35.0,
@@ -4472,7 +4472,7 @@ const wallsData = {
     }
   },
   "TRI": {
-    "spot": 106.54,
+    "spot": 106.3,
     "net_gex_bn": -0.0037,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -4485,11 +4485,11 @@ const wallsData = {
     }
   },
   "VIK": {
-    "spot": 86.67,
-    "net_gex_bn": 0.0033,
+    "spot": 85.26,
+    "net_gex_bn": 0.0037,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 90.0,
+      "call": 85.0,
       "put": 85.0
     },
     "anchor": {
@@ -4498,21 +4498,21 @@ const wallsData = {
     }
   },
   "FLEX": {
-    "spot": 109.73,
-    "net_gex_bn": 0.0108,
+    "spot": 106.98,
+    "net_gex_bn": 0.0121,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 110.0,
       "put": 105.0
     },
     "anchor": {
-      "call": 135.0,
+      "call": 130.0,
       "put": 90.0
     }
   },
   "NTRA": {
-    "spot": 320.3,
-    "net_gex_bn": -0.0031,
+    "spot": 321.63,
+    "net_gex_bn": -0.0048,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 330.0,
@@ -4524,7 +4524,7 @@ const wallsData = {
     }
   },
   "SLF": {
-    "spot": 78.19,
+    "spot": 77.49,
     "net_gex_bn": -0.0013,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -4537,8 +4537,8 @@ const wallsData = {
     }
   },
   "WDAY": {
-    "spot": 198.92,
-    "net_gex_bn": -0.0035,
+    "spot": 199.79,
+    "net_gex_bn": -0.0039,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 200.0,
@@ -4550,8 +4550,8 @@ const wallsData = {
     }
   },
   "HUM": {
-    "spot": 385.58,
-    "net_gex_bn": 0.0049,
+    "spot": 391.43,
+    "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 400.0,
@@ -4563,7 +4563,7 @@ const wallsData = {
     }
   },
   "ABEV": {
-    "spot": 2.87,
+    "spot": 2.91,
     "net_gex_bn": 0.0224,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4576,7 +4576,7 @@ const wallsData = {
     }
   },
   "VTR": {
-    "spot": 91.18,
+    "spot": 93.05,
     "net_gex_bn": 0.0057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4589,8 +4589,8 @@ const wallsData = {
     }
   },
   "MNST": {
-    "spot": 45.97,
-    "net_gex_bn": 0.0266,
+    "spot": 45.53,
+    "net_gex_bn": 0.0259,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 47.5,
@@ -4602,8 +4602,8 @@ const wallsData = {
     }
   },
   "WDS": {
-    "spot": 23.14,
-    "net_gex_bn": 0.0054,
+    "spot": 23.67,
+    "net_gex_bn": 0.0055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -4615,8 +4615,8 @@ const wallsData = {
     }
   },
   "HLN": {
-    "spot": 10.08,
-    "net_gex_bn": 0.0042,
+    "spot": 10.09,
+    "net_gex_bn": 0.0043,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 10.0,
@@ -4628,12 +4628,12 @@ const wallsData = {
     }
   },
   "RVMD": {
-    "spot": 204.2,
-    "net_gex_bn": 0.0215,
+    "spot": 207.76,
+    "net_gex_bn": 0.021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
-      "put": 195.0
+      "put": 200.0
     },
     "anchor": {
       "call": 200.0,
@@ -4641,12 +4641,12 @@ const wallsData = {
     }
   },
   "MCHP": {
-    "spot": 73.68,
-    "net_gex_bn": 0.0875,
+    "spot": 71.75,
+    "net_gex_bn": 0.0879,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
-      "put": 75.0
+      "put": 70.0
     },
     "anchor": {
       "call": 75.0,
@@ -4654,8 +4654,8 @@ const wallsData = {
     }
   },
   "JD": {
-    "spot": 28.33,
-    "net_gex_bn": 0.09,
+    "spot": 27.97,
+    "net_gex_bn": 0.0913,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 29.0,
@@ -4667,12 +4667,12 @@ const wallsData = {
     }
   },
   "ODFL": {
-    "spot": 200.65,
-    "net_gex_bn": -0.0009,
+    "spot": 191.98,
+    "net_gex_bn": -0.001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 210.0,
-      "put": 200.0
+      "call": 200.0,
+      "put": 190.0
     },
     "anchor": {
       "call": 210.0,
@@ -4680,8 +4680,8 @@ const wallsData = {
     }
   },
   "LYV": {
-    "spot": 179.74,
-    "net_gex_bn": 0.0013,
+    "spot": 178.79,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 185.0,
@@ -4693,8 +4693,8 @@ const wallsData = {
     }
   },
   "PAYX": {
-    "spot": 126.96,
-    "net_gex_bn": 0.0089,
+    "spot": 126.36,
+    "net_gex_bn": 0.0092,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
@@ -4702,12 +4702,12 @@ const wallsData = {
     },
     "anchor": {
       "call": 130.0,
-      "put": 115.0
+      "put": 95.0
     }
   },
   "CCJ": {
-    "spot": 97.64,
-    "net_gex_bn": -0.0566,
+    "spot": 97.07,
+    "net_gex_bn": -0.0569,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 100.0,
@@ -4719,8 +4719,8 @@ const wallsData = {
     }
   },
   "CBRE": {
-    "spot": 147.26,
-    "net_gex_bn": 0.0197,
+    "spot": 144.68,
+    "net_gex_bn": 0.0195,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
@@ -4732,7 +4732,7 @@ const wallsData = {
     }
   },
   "WCN": {
-    "spot": 165.46,
+    "spot": 164.42,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4745,8 +4745,8 @@ const wallsData = {
     }
   },
   "TEVA": {
-    "spot": 36.01,
-    "net_gex_bn": 0.1076,
+    "spot": 36.37,
+    "net_gex_bn": 0.1069,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 37.0,
@@ -4758,12 +4758,12 @@ const wallsData = {
     }
   },
   "A": {
-    "spot": 152.68,
-    "net_gex_bn": 0.0082,
+    "spot": 150.74,
+    "net_gex_bn": 0.008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
-      "put": 150.0
+      "put": 145.0
     },
     "anchor": {
       "call": 150.0,
@@ -4771,9 +4771,9 @@ const wallsData = {
     }
   },
   "PRU": {
-    "spot": 117.86,
-    "net_gex_bn": -0.0003,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 117.07,
+    "net_gex_bn": 0.0001,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 120.0,
       "put": 115.0
@@ -4784,8 +4784,8 @@ const wallsData = {
     }
   },
   "KB": {
-    "spot": 124.57,
-    "net_gex_bn": 0.0,
+    "spot": 124.97,
+    "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
@@ -4797,11 +4797,11 @@ const wallsData = {
     }
   },
   "DHI": {
-    "spot": 145.3,
+    "spot": 142.71,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 150.0,
+      "call": 148.0,
       "put": 145.0
     },
     "anchor": {
@@ -4810,7 +4810,7 @@ const wallsData = {
     }
   },
   "HMC": {
-    "spot": 31.99,
+    "spot": 32.15,
     "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -4823,7 +4823,7 @@ const wallsData = {
     }
   },
   "ONC": {
-    "spot": 357.99,
+    "spot": 358.49,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4836,12 +4836,12 @@ const wallsData = {
     }
   },
   "MSCI": {
-    "spot": 573.05,
-    "net_gex_bn": 0.0016,
+    "spot": 563.26,
+    "net_gex_bn": 0.0015,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 600.0,
-      "put": 550.0
+      "call": 580.0,
+      "put": 540.0
     },
     "anchor": {
       "call": 600.0,
@@ -4849,7 +4849,7 @@ const wallsData = {
     }
   },
   "WAT": {
-    "spot": 412.26,
+    "spot": 407.22,
     "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4862,24 +4862,24 @@ const wallsData = {
     }
   },
   "IBKR": {
-    "spot": 96.72,
+    "spot": 92.98,
     "net_gex_bn": 0.0149,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 95.0,
-      "put": 95.0
+      "put": 90.0
     },
     "anchor": {
       "call": 105.0,
-      "put": 85.0
+      "put": 90.0
     }
   },
   "RKT": {
-    "spot": 13.34,
-    "net_gex_bn": 0.1978,
+    "spot": 13.23,
+    "net_gex_bn": 0.1947,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 14.0,
+      "call": 13.0,
       "put": 13.0
     },
     "anchor": {
@@ -4888,8 +4888,8 @@ const wallsData = {
     }
   },
   "CMG": {
-    "spot": 38.1,
-    "net_gex_bn": -0.0038,
+    "spot": 37.67,
+    "net_gex_bn": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 38.0,
@@ -4901,12 +4901,12 @@ const wallsData = {
     }
   },
   "AIG": {
-    "spot": 76.54,
-    "net_gex_bn": 0.0004,
+    "spot": 76.16,
+    "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 80.0,
-      "put": 78.0
+      "call": 78.0,
+      "put": 77.0
     },
     "anchor": {
       "call": 80.0,
@@ -4914,12 +4914,12 @@ const wallsData = {
     }
   },
   "SYY": {
-    "spot": 80.7,
+    "spot": 81.85,
     "net_gex_bn": 0.0164,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 82.5,
-      "put": 80.0
+      "put": 82.5
     },
     "anchor": {
       "call": 87.5,
@@ -4927,11 +4927,11 @@ const wallsData = {
     }
   },
   "FMX": {
-    "spot": 119.25,
+    "spot": 122.45,
     "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 120.0,
+      "call": 125.0,
       "put": 120.0
     },
     "anchor": {
@@ -4940,8 +4940,8 @@ const wallsData = {
     }
   },
   "IQV": {
-    "spot": 260.14,
-    "net_gex_bn": 0.0014,
+    "spot": 258.45,
+    "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 260.0,
@@ -4953,8 +4953,8 @@ const wallsData = {
     }
   },
   "ED": {
-    "spot": 107.14,
-    "net_gex_bn": 0.0059,
+    "spot": 107.69,
+    "net_gex_bn": 0.0058,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -4966,7 +4966,7 @@ const wallsData = {
     }
   },
   "KDP": {
-    "spot": 31.84,
+    "spot": 32.01,
     "net_gex_bn": 0.0183,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -4979,8 +4979,8 @@ const wallsData = {
     }
   },
   "ROP": {
-    "spot": 427.1,
-    "net_gex_bn": 0.0006,
+    "spot": 419.52,
+    "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 420.0,
@@ -4988,16 +4988,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 410.0,
-      "put": 390.0
+      "put": 440.0
     }
   },
   "YUM": {
-    "spot": 153.91,
-    "net_gex_bn": 0.0097,
+    "spot": 152.27,
+    "net_gex_bn": 0.0101,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 160.0,
-      "put": 150.0
+      "call": 150.0,
+      "put": 145.0
     },
     "anchor": {
       "call": 160.0,
@@ -5005,12 +5005,12 @@ const wallsData = {
     }
   },
   "TWLO": {
-    "spot": 238.04,
+    "spot": 228.6,
     "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 240.0,
-      "put": 230.0
+      "put": 220.0
     },
     "anchor": {
       "call": 255.0,
@@ -5018,24 +5018,24 @@ const wallsData = {
     }
   },
   "COIN": {
-    "spot": 186.87,
-    "net_gex_bn": 0.1299,
+    "spot": 180.22,
+    "net_gex_bn": 0.1313,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 195.0,
+      "call": 185.0,
       "put": 180.0
     },
     "anchor": {
       "call": 200.0,
-      "put": 150.0
+      "put": 160.0
     }
   },
   "TEAM": {
-    "spot": 193.55,
-    "net_gex_bn": 0.0009,
-    "outlook": "STABLE / GRIND (Long Gamma)",
+    "spot": 188.15,
+    "net_gex_bn": -0.0004,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 200.0,
+      "call": 185.0,
       "put": 190.0
     },
     "anchor": {
@@ -5044,25 +5044,25 @@ const wallsData = {
     }
   },
   "NTAP": {
-    "spot": 187.21,
-    "net_gex_bn": 0.0076,
+    "spot": 179.76,
+    "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 195.0,
-      "put": 185.0
+      "call": 180.0,
+      "put": 175.0
     },
     "anchor": {
       "call": 220.0,
-      "put": 160.0
+      "put": 135.0
     }
   },
   "ADM": {
-    "spot": 80.43,
-    "net_gex_bn": 0.0169,
+    "spot": 83.81,
+    "net_gex_bn": 0.0148,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 80.0,
-      "put": 77.5
+      "call": 85.0,
+      "put": 80.0
     },
     "anchor": {
       "call": 80.0,
@@ -5070,11 +5070,11 @@ const wallsData = {
     }
   },
   "VEEV": {
-    "spot": 290.24,
-    "net_gex_bn": 0.0135,
+    "spot": 282.12,
+    "net_gex_bn": 0.0143,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 300.0,
+      "call": 280.0,
       "put": 280.0
     },
     "anchor": {
@@ -5083,20 +5083,20 @@ const wallsData = {
     }
   },
   "CCL": {
-    "spot": 24.05,
-    "net_gex_bn": -0.0768,
+    "spot": 23.65,
+    "net_gex_bn": -0.0696,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 25.0,
+      "call": 24.0,
       "put": 24.0
     },
     "anchor": {
-      "call": 30.0,
+      "call": 28.0,
       "put": 26.0
     }
   },
   "STLD": {
-    "spot": 234.5,
+    "spot": 234.62,
     "net_gex_bn": 0.0059,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5110,7 +5110,7 @@ const wallsData = {
   },
   "VOD": {
     "spot": 16.05,
-    "net_gex_bn": 0.0024,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 16.0,
@@ -5122,7 +5122,7 @@ const wallsData = {
     }
   },
   "HIG": {
-    "spot": 137.93,
+    "spot": 136.84,
     "net_gex_bn": 0.0074,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5135,7 +5135,7 @@ const wallsData = {
     }
   },
   "ALC": {
-    "spot": 72.39,
+    "spot": 71.78,
     "net_gex_bn": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5148,7 +5148,7 @@ const wallsData = {
     }
   },
   "PEG": {
-    "spot": 73.29,
+    "spot": 73.47,
     "net_gex_bn": 0.0068,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5161,11 +5161,11 @@ const wallsData = {
     }
   },
   "JBL": {
-    "spot": 304.19,
+    "spot": 296.97,
     "net_gex_bn": 0.0024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 312.5,
+      "call": 310.0,
       "put": 295.0
     },
     "anchor": {
@@ -5174,11 +5174,11 @@ const wallsData = {
     }
   },
   "VMC": {
-    "spot": 270.96,
-    "net_gex_bn": 0.0005,
+    "spot": 259.83,
+    "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 280.0,
+      "call": 270.0,
       "put": 260.0
     },
     "anchor": {
@@ -5187,12 +5187,12 @@ const wallsData = {
     }
   },
   "MSTR": {
-    "spot": 131.61,
-    "net_gex_bn": 0.1181,
+    "spot": 127.64,
+    "net_gex_bn": 0.1194,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 137.0,
-      "put": 132.0
+      "call": 130.0,
+      "put": 125.0
     },
     "anchor": {
       "call": 140.0,
@@ -5200,7 +5200,7 @@ const wallsData = {
     }
   },
   "TKO": {
-    "spot": 184.18,
+    "spot": 182.92,
     "net_gex_bn": 0.0035,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5213,12 +5213,12 @@ const wallsData = {
     }
   },
   "EXPE": {
-    "spot": 318.57,
-    "net_gex_bn": 0.0013,
+    "spot": 311.78,
+    "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 320.0,
-      "put": 310.0
+      "put": 300.0
     },
     "anchor": {
       "call": 290.0,
@@ -5226,12 +5226,12 @@ const wallsData = {
     }
   },
   "KVUE": {
-    "spot": 18.97,
-    "net_gex_bn": 0.0411,
+    "spot": 18.92,
+    "net_gex_bn": 0.0409,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 19.0,
-      "put": 19.0
+      "put": 18.0
     },
     "anchor": {
       "call": 20.0,
@@ -5239,7 +5239,7 @@ const wallsData = {
     }
   },
   "HSY": {
-    "spot": 176.93,
+    "spot": 177.64,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5252,8 +5252,8 @@ const wallsData = {
     }
   },
   "IRM": {
-    "spot": 115.24,
-    "net_gex_bn": -0.0025,
+    "spot": 115.14,
+    "net_gex_bn": -0.0028,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 120.0,
@@ -5265,8 +5265,8 @@ const wallsData = {
     }
   },
   "MTB": {
-    "spot": 234.32,
-    "net_gex_bn": 0.0028,
+    "spot": 232.9,
+    "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 240.0,
@@ -5278,12 +5278,12 @@ const wallsData = {
     }
   },
   "P": {
-    "spot": 93.36,
-    "net_gex_bn": 0.0163,
+    "spot": 92.47,
+    "net_gex_bn": 0.0164,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 95.0,
-      "put": 95.0
+      "put": 90.0
     },
     "anchor": {
       "call": 100.0,
@@ -5291,8 +5291,8 @@ const wallsData = {
     }
   },
   "KMB": {
-    "spot": 108.46,
-    "net_gex_bn": 0.0036,
+    "spot": 108.11,
+    "net_gex_bn": 0.003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -5304,11 +5304,11 @@ const wallsData = {
     }
   },
   "ESLT": {
-    "spot": 701.08,
+    "spot": 711.07,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 710.0,
+      "call": 740.0,
       "put": 710.0
     },
     "anchor": {
@@ -5317,12 +5317,12 @@ const wallsData = {
     }
   },
   "BIDU": {
-    "spot": 95.93,
-    "net_gex_bn": 0.0914,
+    "spot": 94.73,
+    "net_gex_bn": 0.0897,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 100.0,
-      "put": 95.0
+      "call": 95.0,
+      "put": 96.0
     },
     "anchor": {
       "call": 115.0,
@@ -5330,11 +5330,11 @@ const wallsData = {
     }
   },
   "GFI": {
-    "spot": 45.99,
-    "net_gex_bn": -0.0081,
+    "spot": 45.22,
+    "net_gex_bn": -0.0084,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": null,
+      "call": 45.0,
       "put": 45.0
     },
     "anchor": {
@@ -5343,21 +5343,21 @@ const wallsData = {
     }
   },
   "EME": {
-    "spot": 737.09,
+    "spot": 732.92,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 750.0,
-      "put": 750.0
+      "put": 700.0
     },
     "anchor": {
-      "call": 840.0,
-      "put": 760.0
+      "call": 660.0,
+      "put": 700.0
     }
   },
   "BSP": {
-    "spot": 41.65,
-    "net_gex_bn": -0.012,
+    "spot": 41.03,
+    "net_gex_bn": -0.0111,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -5369,7 +5369,7 @@ const wallsData = {
     }
   },
   "HBAN": {
-    "spot": 16.72,
+    "spot": 16.59,
     "net_gex_bn": 0.0097,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5382,20 +5382,20 @@ const wallsData = {
     }
   },
   "CLS": {
-    "spot": 299.66,
-    "net_gex_bn": -0.0012,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 293.23,
+    "net_gex_bn": 0.0009,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 300.0,
-      "put": 300.0
+      "put": 280.0
     },
     "anchor": {
-      "call": 350.0,
+      "call": 330.0,
       "put": 300.0
     }
   },
   "BAP": {
-    "spot": 367.33,
+    "spot": 372.05,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5408,12 +5408,12 @@ const wallsData = {
     }
   },
   "MDB": {
-    "spot": 451.08,
-    "net_gex_bn": 0.0075,
+    "spot": 440.39,
+    "net_gex_bn": 0.0086,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 450.0,
-      "put": 430.0
+      "put": 440.0
     },
     "anchor": {
       "call": 490.0,
@@ -5421,7 +5421,7 @@ const wallsData = {
     }
   },
   "PUK": {
-    "spot": 27.31,
+    "spot": 27.18,
     "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5434,12 +5434,12 @@ const wallsData = {
     }
   },
   "EC": {
-    "spot": 16.65,
-    "net_gex_bn": 0.005,
+    "spot": 17.29,
+    "net_gex_bn": 0.0057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 17.0,
-      "put": 16.0
+      "call": 18.0,
+      "put": 17.0
     },
     "anchor": {
       "call": 18.0,
@@ -5447,7 +5447,7 @@ const wallsData = {
     }
   },
   "SHG": {
-    "spot": 79.19,
+    "spot": 80.64,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5456,11 +5456,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 80.0,
-      "put": 60.0
+      "put": 70.0
     }
   },
   "WEC": {
-    "spot": 106.58,
+    "spot": 106.38,
     "net_gex_bn": 0.004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5473,12 +5473,12 @@ const wallsData = {
     }
   },
   "RJF": {
-    "spot": 178.33,
+    "spot": 173.83,
     "net_gex_bn": 0.0047,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 180.0,
-      "put": 180.0
+      "put": 170.0
     },
     "anchor": {
       "call": 180.0,
@@ -5486,12 +5486,12 @@ const wallsData = {
     }
   },
   "KR": {
-    "spot": 57.68,
-    "net_gex_bn": 0.0218,
+    "spot": 58.48,
+    "net_gex_bn": 0.0219,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 59.0,
-      "put": 55.0
+      "put": 56.0
     },
     "anchor": {
       "call": 59.0,
@@ -5499,8 +5499,8 @@ const wallsData = {
     }
   },
   "EQT": {
-    "spot": 54.17,
-    "net_gex_bn": -0.0317,
+    "spot": 54.98,
+    "net_gex_bn": -0.0325,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 55.0,
@@ -5512,7 +5512,7 @@ const wallsData = {
     }
   },
   "BBD": {
-    "spot": 3.28,
+    "spot": 3.32,
     "net_gex_bn": 0.0262,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5525,8 +5525,8 @@ const wallsData = {
     }
   },
   "ERIC": {
-    "spot": 10.07,
-    "net_gex_bn": 0.0299,
+    "spot": 10.03,
+    "net_gex_bn": 0.0298,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 10.0,
@@ -5538,11 +5538,11 @@ const wallsData = {
     }
   },
   "DXCM": {
-    "spot": 90.18,
-    "net_gex_bn": -0.001,
+    "spot": 90.73,
+    "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 90.0,
+      "call": 95.0,
       "put": 90.0
     },
     "anchor": {
@@ -5551,7 +5551,7 @@ const wallsData = {
     }
   },
   "ACGL": {
-    "spot": 98.39,
+    "spot": 98.34,
     "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5564,8 +5564,8 @@ const wallsData = {
     }
   },
   "QSR": {
-    "spot": 78.11,
-    "net_gex_bn": 0.0091,
+    "spot": 77.64,
+    "net_gex_bn": 0.009,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
@@ -5577,8 +5577,8 @@ const wallsData = {
     }
   },
   "MLM": {
-    "spot": 522.83,
-    "net_gex_bn": 0.0034,
+    "spot": 505.29,
+    "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 530.0,
@@ -5590,11 +5590,11 @@ const wallsData = {
     }
   },
   "RPRX": {
-    "spot": 61.31,
+    "spot": 62.17,
     "net_gex_bn": 0.0068,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 62.5,
+      "call": 65.0,
       "put": 60.0
     },
     "anchor": {
@@ -5603,12 +5603,12 @@ const wallsData = {
     }
   },
   "SUNB": {
-    "spot": 71.89,
-    "net_gex_bn": 0.0143,
+    "spot": 68.57,
+    "net_gex_bn": 0.0156,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 75.0,
-      "put": 70.0
+      "call": 70.0,
+      "put": null
     },
     "anchor": {
       "call": 85.0,
@@ -5616,20 +5616,20 @@ const wallsData = {
     }
   },
   "IR": {
-    "spot": 77.51,
-    "net_gex_bn": 0.0164,
+    "spot": 75.35,
+    "net_gex_bn": 0.0172,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 80.0,
+      "call": 75.0,
       "put": 75.0
     },
     "anchor": {
-      "call": 95.0,
+      "call": 90.0,
       "put": 75.0
     }
   },
   "CHT": {
-    "spot": 43.1,
+    "spot": 43.44,
     "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5642,8 +5642,8 @@ const wallsData = {
     }
   },
   "GEHC": {
-    "spot": 71.3,
-    "net_gex_bn": 0.0052,
+    "spot": 70.71,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -5655,12 +5655,12 @@ const wallsData = {
     }
   },
   "VG": {
-    "spot": 14.73,
-    "net_gex_bn": 0.0779,
+    "spot": 14.8,
+    "net_gex_bn": 0.0772,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 15.0,
-      "put": 14.0
+      "put": 14.5
     },
     "anchor": {
       "call": 15.0,
@@ -5668,11 +5668,11 @@ const wallsData = {
     }
   },
   "RMD": {
-    "spot": 240.99,
-    "net_gex_bn": -0.0064,
+    "spot": 233.66,
+    "net_gex_bn": -0.0066,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 250.0,
+      "call": 230.0,
       "put": 230.0
     },
     "anchor": {
@@ -5681,8 +5681,8 @@ const wallsData = {
     }
   },
   "KGC": {
-    "spot": 30.61,
-    "net_gex_bn": 0.0056,
+    "spot": 30.02,
+    "net_gex_bn": 0.0052,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 30.0,
@@ -5694,8 +5694,8 @@ const wallsData = {
     }
   },
   "TPR": {
-    "spot": 122.46,
-    "net_gex_bn": -0.0002,
+    "spot": 122.84,
+    "net_gex_bn": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 127.0,
@@ -5703,16 +5703,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 135.0,
-      "put": 120.0
+      "put": 110.0
     }
   },
   "NTR": {
-    "spot": 74.89,
-    "net_gex_bn": 0.0072,
+    "spot": 76.8,
+    "net_gex_bn": 0.0087,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 75.0,
-      "put": 75.0
+      "call": 80.0,
+      "put": 74.0
     },
     "anchor": {
       "call": 85.0,
@@ -5720,12 +5720,12 @@ const wallsData = {
     }
   },
   "TECK": {
-    "spot": 68.35,
-    "net_gex_bn": 0.0201,
+    "spot": 67.29,
+    "net_gex_bn": 0.0199,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
-      "put": 65.0
+      "put": 64.0
     },
     "anchor": {
       "call": 70.0,
@@ -5733,7 +5733,7 @@ const wallsData = {
     }
   },
   "CNC": {
-    "spot": 64.3,
+    "spot": 66.07,
     "net_gex_bn": 0.0133,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5746,7 +5746,7 @@ const wallsData = {
     }
   },
   "WTW": {
-    "spot": 338.13,
+    "spot": 338.6,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5759,33 +5759,33 @@ const wallsData = {
     }
   },
   "EL": {
-    "spot": 102.53,
-    "net_gex_bn": -0.0065,
+    "spot": 99.92,
+    "net_gex_bn": -0.0066,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 105.0,
+      "call": 100.0,
       "put": 100.0
     },
     "anchor": {
-      "call": 100.0,
+      "call": 105.0,
       "put": 80.0
     }
   },
   "CBOE": {
-    "spot": 305.24,
-    "net_gex_bn": 0.0007,
+    "spot": 304.83,
+    "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 307.5,
+      "call": 300.0,
       "put": 310.0
     },
     "anchor": {
-      "call": 280.0,
+      "call": 300.0,
       "put": 270.0
     }
   },
   "TDY": {
-    "spot": 615.61,
+    "spot": 609.37,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5798,12 +5798,12 @@ const wallsData = {
     }
   },
   "ON": {
-    "spot": 74.07,
-    "net_gex_bn": 0.0223,
+    "spot": 72.4,
+    "net_gex_bn": 0.0259,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
-      "put": 75.0
+      "put": 70.0
     },
     "anchor": {
       "call": 80.0,
@@ -5811,20 +5811,20 @@ const wallsData = {
     }
   },
   "CCI": {
-    "spot": 76.38,
-    "net_gex_bn": 0.0094,
+    "spot": 75.86,
+    "net_gex_bn": 0.0113,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
       "put": 75.0
     },
     "anchor": {
-      "call": 80.0,
+      "call": 75.0,
       "put": 70.0
     }
   },
   "ATI": {
-    "spot": 203.63,
+    "spot": 201.53,
     "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5837,7 +5837,7 @@ const wallsData = {
     }
   },
   "RYAAY": {
-    "spot": 55.64,
+    "spot": 54.13,
     "net_gex_bn": -0.002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -5850,8 +5850,8 @@ const wallsData = {
     }
   },
   "ZTS": {
-    "spot": 77.1,
-    "net_gex_bn": 0.0061,
+    "spot": 77.13,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
@@ -5863,8 +5863,8 @@ const wallsData = {
     }
   },
   "ZM": {
-    "spot": 97.12,
-    "net_gex_bn": 0.0204,
+    "spot": 95.33,
+    "net_gex_bn": 0.0206,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -5876,7 +5876,7 @@ const wallsData = {
     }
   },
   "EXR": {
-    "spot": 140.02,
+    "spot": 141.0,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5889,12 +5889,12 @@ const wallsData = {
     }
   },
   "CFG": {
-    "spot": 68.79,
-    "net_gex_bn": 0.0111,
+    "spot": 68.35,
+    "net_gex_bn": 0.0112,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
-      "put": 67.5
+      "put": 65.0
     },
     "anchor": {
       "call": 80.0,
@@ -5902,21 +5902,21 @@ const wallsData = {
     }
   },
   "CASY": {
-    "spot": 751.86,
+    "spot": 774.65,
     "net_gex_bn": 0.0,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 780.0,
-      "put": 730.0
+      "put": 750.0
     },
     "anchor": {
       "call": 900.0,
-      "put": 670.0
+      "put": 680.0
     }
   },
   "BIIB": {
-    "spot": 217.96,
-    "net_gex_bn": 0.0003,
+    "spot": 215.56,
+    "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 220.0,
@@ -5928,20 +5928,20 @@ const wallsData = {
     }
   },
   "RDDT": {
-    "spot": 147.86,
-    "net_gex_bn": 0.0072,
+    "spot": 146.0,
+    "net_gex_bn": 0.008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 143.0
+      "call": 150.0,
+      "put": 145.0
     },
     "anchor": {
-      "call": 180.0,
+      "call": 160.0,
       "put": 130.0
     }
   },
   "AEE": {
-    "spot": 106.04,
+    "spot": 105.86,
     "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -5954,8 +5954,8 @@ const wallsData = {
     }
   },
   "CPNG": {
-    "spot": 15.97,
-    "net_gex_bn": 0.0719,
+    "spot": 15.88,
+    "net_gex_bn": 0.0718,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 16.0,
@@ -5967,12 +5967,12 @@ const wallsData = {
     }
   },
   "LVS": {
-    "spot": 43.88,
-    "net_gex_bn": 0.001,
-    "outlook": "STABLE / GRIND (Long Gamma)",
+    "spot": 44.01,
+    "net_gex_bn": -0.0,
+    "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 45.0,
-      "put": 42.5
+      "put": 44.0
     },
     "anchor": {
       "call": 50.0,
@@ -5980,8 +5980,8 @@ const wallsData = {
     }
   },
   "ALNY": {
-    "spot": 240.27,
-    "net_gex_bn": 0.0117,
+    "spot": 239.68,
+    "net_gex_bn": 0.0115,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 250.0,
@@ -5993,7 +5993,7 @@ const wallsData = {
     }
   },
   "FTI": {
-    "spot": 77.56,
+    "spot": 78.35,
     "net_gex_bn": 0.019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6006,12 +6006,12 @@ const wallsData = {
     }
   },
   "WSM": {
-    "spot": 227.65,
-    "net_gex_bn": 0.0017,
+    "spot": 223.24,
+    "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 230.0,
-      "put": 230.0
+      "put": 220.0
     },
     "anchor": {
       "call": 250.0,
@@ -6019,25 +6019,25 @@ const wallsData = {
     }
   },
   "KHC": {
-    "spot": 25.66,
-    "net_gex_bn": 0.0401,
+    "spot": 25.85,
+    "net_gex_bn": 0.0462,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 26.0,
       "put": 25.0
     },
     "anchor": {
-      "call": 25.5,
+      "call": 26.0,
       "put": 22.5
     }
   },
   "LPLA": {
-    "spot": 371.12,
+    "spot": 360.1,
     "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 380.0,
-      "put": 360.0
+      "call": 360.0,
+      "put": 350.0
     },
     "anchor": {
       "call": 420.0,
@@ -6045,7 +6045,7 @@ const wallsData = {
     }
   },
   "SYF": {
-    "spot": 76.89,
+    "spot": 77.34,
     "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6058,12 +6058,12 @@ const wallsData = {
     }
   },
   "ILMN": {
-    "spot": 214.42,
-    "net_gex_bn": 0.006,
+    "spot": 209.44,
+    "net_gex_bn": 0.0059,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 220.0,
-      "put": 210.0
+      "call": 210.0,
+      "put": 200.0
     },
     "anchor": {
       "call": 230.0,
@@ -6071,12 +6071,12 @@ const wallsData = {
     }
   },
   "TCOM": {
-    "spot": 45.03,
-    "net_gex_bn": 0.0089,
+    "spot": 44.09,
+    "net_gex_bn": 0.0107,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
-      "put": 45.0
+      "put": null
     },
     "anchor": {
       "call": 50.0,
@@ -6084,25 +6084,25 @@ const wallsData = {
     }
   },
   "INSM": {
-    "spot": 120.47,
-    "net_gex_bn": 0.0096,
+    "spot": 120.6,
+    "net_gex_bn": 0.0086,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 125.0,
       "put": 120.0
     },
     "anchor": {
-      "call": 150.0,
+      "call": 115.0,
       "put": 120.0
     }
   },
   "Q": {
-    "spot": 120.32,
-    "net_gex_bn": -0.0021,
+    "spot": 116.0,
+    "net_gex_bn": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 125.0,
-      "put": 120.0
+      "call": 120.0,
+      "put": 115.0
     },
     "anchor": {
       "call": 135.0,
@@ -6110,25 +6110,25 @@ const wallsData = {
     }
   },
   "ZS": {
-    "spot": 189.25,
-    "net_gex_bn": 0.0075,
+    "spot": 178.36,
+    "net_gex_bn": 0.0078,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 190.0,
+      "call": 185.0,
       "put": 180.0
     },
     "anchor": {
       "call": 200.0,
-      "put": 150.0
+      "put": 140.0
     }
   },
   "MTD": {
-    "spot": 1401.77,
+    "spot": 1386.46,
     "net_gex_bn": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 1450.0,
-      "put": 1340.0
+      "call": 1360.0,
+      "put": 1330.0
     },
     "anchor": {
       "call": 1700.0,
@@ -6136,11 +6136,11 @@ const wallsData = {
     }
   },
   "XYL": {
-    "spot": 110.25,
+    "spot": 108.23,
     "net_gex_bn": 0.0084,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 110.0,
       "put": 105.0
     },
     "anchor": {
@@ -6149,7 +6149,7 @@ const wallsData = {
     }
   },
   "FTS": {
-    "spot": 54.97,
+    "spot": 54.91,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6162,11 +6162,11 @@ const wallsData = {
     }
   },
   "TS": {
-    "spot": 55.63,
-    "net_gex_bn": 0.0026,
+    "spot": 56.56,
+    "net_gex_bn": 0.0029,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 55.0,
+      "call": 57.5,
       "put": 55.0
     },
     "anchor": {
@@ -6175,8 +6175,8 @@ const wallsData = {
     }
   },
   "DTE": {
-    "spot": 135.87,
-    "net_gex_bn": 0.0033,
+    "spot": 136.05,
+    "net_gex_bn": 0.0032,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 140.0,
@@ -6188,8 +6188,8 @@ const wallsData = {
     }
   },
   "VICI": {
-    "spot": 25.73,
-    "net_gex_bn": 0.0229,
+    "spot": 25.67,
+    "net_gex_bn": 0.0221,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -6201,12 +6201,12 @@ const wallsData = {
     }
   },
   "ATO": {
-    "spot": 166.45,
+    "spot": 167.38,
     "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 170.0,
-      "put": 165.0
+      "put": 170.0
     },
     "anchor": {
       "call": 170.0,
@@ -6214,11 +6214,11 @@ const wallsData = {
     }
   },
   "NMR": {
-    "spot": 10.19,
+    "spot": 10.27,
     "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 10.0,
+      "call": null,
       "put": 10.0
     },
     "anchor": {
@@ -6227,7 +6227,7 @@ const wallsData = {
     }
   },
   "PBA": {
-    "spot": 48.31,
+    "spot": 48.6,
     "net_gex_bn": 0.0036,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6240,12 +6240,12 @@ const wallsData = {
     }
   },
   "GFS": {
-    "spot": 44.92,
-    "net_gex_bn": 0.0038,
+    "spot": 44.07,
+    "net_gex_bn": 0.0045,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
-      "put": 45.0
+      "put": null
     },
     "anchor": {
       "call": 55.0,
@@ -6253,12 +6253,12 @@ const wallsData = {
     }
   },
   "HAL": {
-    "spot": 36.8,
-    "net_gex_bn": 0.0132,
+    "spot": 36.95,
+    "net_gex_bn": 0.0163,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 37.0,
-      "put": 35.0
+      "call": 38.0,
+      "put": 36.0
     },
     "anchor": {
       "call": 35.0,
@@ -6266,8 +6266,8 @@ const wallsData = {
     }
   },
   "TSEM": {
-    "spot": 203.87,
-    "net_gex_bn": -0.005,
+    "spot": 200.8,
+    "net_gex_bn": -0.0055,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 210.0,
@@ -6279,8 +6279,8 @@ const wallsData = {
     }
   },
   "DOV": {
-    "spot": 194.84,
-    "net_gex_bn": 0.0051,
+    "spot": 191.45,
+    "net_gex_bn": 0.0049,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
@@ -6292,12 +6292,12 @@ const wallsData = {
     }
   },
   "FISV": {
-    "spot": 53.38,
-    "net_gex_bn": -0.0358,
+    "spot": 52.42,
+    "net_gex_bn": -0.0337,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 55.0,
-      "put": 51.0
+      "put": 50.0
     },
     "anchor": {
       "call": 55.0,
@@ -6305,7 +6305,7 @@ const wallsData = {
     }
   },
   "OTIS": {
-    "spot": 71.52,
+    "spot": 70.6,
     "net_gex_bn": 0.012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6318,12 +6318,12 @@ const wallsData = {
     }
   },
   "ASTS": {
-    "spot": 58.35,
-    "net_gex_bn": 0.0907,
+    "spot": 56.44,
+    "net_gex_bn": 0.1025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 60.0,
-      "put": 56.0
+      "call": 58.0,
+      "put": 55.0
     },
     "anchor": {
       "call": 70.0,
@@ -6331,7 +6331,7 @@ const wallsData = {
     }
   },
   "HUBB": {
-    "spot": 456.52,
+    "spot": 444.61,
     "net_gex_bn": -0.0119,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -6344,7 +6344,7 @@ const wallsData = {
     }
   },
   "CPRT": {
-    "spot": 33.14,
+    "spot": 32.38,
     "net_gex_bn": 0.0143,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6357,11 +6357,11 @@ const wallsData = {
     }
   },
   "FE": {
-    "spot": 45.85,
-    "net_gex_bn": 0.013,
+    "spot": 45.96,
+    "net_gex_bn": 0.0115,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 45.0,
+      "call": 47.0,
       "put": 45.0
     },
     "anchor": {
@@ -6370,8 +6370,8 @@ const wallsData = {
     }
   },
   "NVT": {
-    "spot": 150.15,
-    "net_gex_bn": 0.0106,
+    "spot": 147.75,
+    "net_gex_bn": 0.0105,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 155.0,
@@ -6383,11 +6383,11 @@ const wallsData = {
     }
   },
   "AWK": {
-    "spot": 138.65,
-    "net_gex_bn": 0.0036,
+    "spot": 137.88,
+    "net_gex_bn": 0.004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 145.0,
+      "call": 140.0,
       "put": 135.0
     },
     "anchor": {
@@ -6396,11 +6396,11 @@ const wallsData = {
     }
   },
   "RF": {
-    "spot": 29.92,
-    "net_gex_bn": 0.0014,
+    "spot": 29.52,
+    "net_gex_bn": 0.0009,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 31.0,
+      "call": 30.0,
       "put": 30.0
     },
     "anchor": {
@@ -6409,12 +6409,12 @@ const wallsData = {
     }
   },
   "EIX": {
-    "spot": 53.44,
-    "net_gex_bn": -0.0271,
+    "spot": 54.37,
+    "net_gex_bn": -0.0133,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 55.0,
-      "put": 52.5
+      "put": 55.0
     },
     "anchor": {
       "call": 65.0,
@@ -6422,8 +6422,8 @@ const wallsData = {
     }
   },
   "ES": {
-    "spot": 70.0,
-    "net_gex_bn": 0.004,
+    "spot": 70.51,
+    "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -6435,7 +6435,7 @@ const wallsData = {
     }
   },
   "AER": {
-    "spot": 145.82,
+    "spot": 144.71,
     "net_gex_bn": 0.0068,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6448,8 +6448,8 @@ const wallsData = {
     }
   },
   "CRS": {
-    "spot": 470.24,
-    "net_gex_bn": -0.0002,
+    "spot": 471.1,
+    "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 490.0,
@@ -6461,7 +6461,7 @@ const wallsData = {
     }
   },
   "PHG": {
-    "spot": 26.6,
+    "spot": 26.73,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6474,8 +6474,8 @@ const wallsData = {
     }
   },
   "HPQ": {
-    "spot": 30.5,
-    "net_gex_bn": -0.0545,
+    "spot": 30.61,
+    "net_gex_bn": -0.0551,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 32.0,
@@ -6487,7 +6487,7 @@ const wallsData = {
     }
   },
   "CINF": {
-    "spot": 170.14,
+    "spot": 171.26,
     "net_gex_bn": 0.0046,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6500,8 +6500,8 @@ const wallsData = {
     }
   },
   "PPL": {
-    "spot": 34.09,
-    "net_gex_bn": -0.0053,
+    "spot": 34.22,
+    "net_gex_bn": -0.0029,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 35.0,
@@ -6513,7 +6513,7 @@ const wallsData = {
     }
   },
   "CPAY": {
-    "spot": 404.08,
+    "spot": 403.7,
     "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6526,21 +6526,21 @@ const wallsData = {
     }
   },
   "DG": {
-    "spot": 126.65,
-    "net_gex_bn": -0.0049,
+    "spot": 130.82,
+    "net_gex_bn": -0.0041,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 130.0,
+      "call": 135.0,
       "put": 125.0
     },
     "anchor": {
-      "call": 130.0,
+      "call": 140.0,
       "put": 120.0
     }
   },
   "CNP": {
-    "spot": 39.69,
-    "net_gex_bn": 0.0072,
+    "spot": 39.46,
+    "net_gex_bn": 0.0073,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 41.0,
@@ -6552,12 +6552,12 @@ const wallsData = {
     }
   },
   "SN": {
-    "spot": 191.78,
+    "spot": 182.94,
     "net_gex_bn": -0.0075,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 195.0,
-      "put": 190.0
+      "call": 180.0,
+      "put": 180.0
     },
     "anchor": {
       "call": 195.0,
@@ -6565,8 +6565,8 @@ const wallsData = {
     }
   },
   "CTSH": {
-    "spot": 64.62,
-    "net_gex_bn": 0.0055,
+    "spot": 64.18,
+    "net_gex_bn": 0.0056,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
@@ -6578,12 +6578,12 @@ const wallsData = {
     }
   },
   "AMRZ": {
-    "spot": 43.91,
-    "net_gex_bn": -0.0058,
+    "spot": 43.32,
+    "net_gex_bn": -0.0055,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 45.0,
-      "put": 44.56
+      "put": 42.06
     },
     "anchor": {
       "call": 50.0,
@@ -6591,7 +6591,7 @@ const wallsData = {
     }
   },
   "DGX": {
-    "spot": 240.64,
+    "spot": 239.02,
     "net_gex_bn": 0.0032,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6604,7 +6604,7 @@ const wallsData = {
     }
   },
   "LH": {
-    "spot": 333.2,
+    "spot": 330.96,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6617,12 +6617,12 @@ const wallsData = {
     }
   },
   "OKTA": {
-    "spot": 172.52,
-    "net_gex_bn": -0.0174,
+    "spot": 164.64,
+    "net_gex_bn": -0.0179,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 180.0,
-      "put": 170.0
+      "call": 170.0,
+      "put": 160.0
     },
     "anchor": {
       "call": 170.0,
@@ -6630,8 +6630,8 @@ const wallsData = {
     }
   },
   "FOXA": {
-    "spot": 67.51,
-    "net_gex_bn": 0.0129,
+    "spot": 66.81,
+    "net_gex_bn": 0.0128,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -6643,8 +6643,8 @@ const wallsData = {
     }
   },
   "SW": {
-    "spot": 46.87,
-    "net_gex_bn": 0.0075,
+    "spot": 46.52,
+    "net_gex_bn": 0.0119,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -6652,16 +6652,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 50.0,
-      "put": 50.0
+      "put": 35.0
     }
   },
   "WRB": {
-    "spot": 67.75,
+    "spot": 67.82,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
-      "put": 67.5
+      "put": 65.0
     },
     "anchor": {
       "call": 72.5,
@@ -6669,8 +6669,8 @@ const wallsData = {
     }
   },
   "VRSN": {
-    "spot": 289.86,
-    "net_gex_bn": 0.0052,
+    "spot": 294.01,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 290.0,
@@ -6682,24 +6682,24 @@ const wallsData = {
     }
   },
   "FSLR": {
-    "spot": 201.82,
-    "net_gex_bn": 0.0279,
+    "spot": 201.51,
+    "net_gex_bn": 0.0407,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
       "put": 200.0
     },
     "anchor": {
-      "call": 250.0,
+      "call": 210.0,
       "put": 180.0
     }
   },
   "RBLX": {
-    "spot": 40.88,
-    "net_gex_bn": 0.0437,
+    "spot": 40.8,
+    "net_gex_bn": 0.0477,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 42.0,
+      "call": 40.0,
       "put": 40.0
     },
     "anchor": {
@@ -6708,12 +6708,12 @@ const wallsData = {
     }
   },
   "PPG": {
-    "spot": 112.1,
+    "spot": 110.44,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 115.0,
-      "put": 110.0
+      "put": 105.0
     },
     "anchor": {
       "call": 115.0,
@@ -6721,12 +6721,12 @@ const wallsData = {
     }
   },
   "AFRM": {
-    "spot": 75.53,
-    "net_gex_bn": 0.0102,
+    "spot": 70.75,
+    "net_gex_bn": 0.0111,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 75.0,
-      "put": 72.0
+      "call": 70.0,
+      "put": 70.0
     },
     "anchor": {
       "call": 80.0,
@@ -6734,8 +6734,8 @@ const wallsData = {
     }
   },
   "FWONK": {
-    "spot": 99.72,
-    "net_gex_bn": 0.0177,
+    "spot": 98.41,
+    "net_gex_bn": 0.0178,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -6747,8 +6747,8 @@ const wallsData = {
     }
   },
   "ECHO": {
-    "spot": 86.21,
-    "net_gex_bn": 0.0585,
+    "spot": 86.59,
+    "net_gex_bn": 0.0586,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 90.0,
@@ -6760,8 +6760,8 @@ const wallsData = {
     }
   },
   "ROIV": {
-    "spot": 34.28,
-    "net_gex_bn": 0.0254,
+    "spot": 34.53,
+    "net_gex_bn": 0.0252,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 35.0,
@@ -6773,7 +6773,7 @@ const wallsData = {
     }
   },
   "FCNCA": {
-    "spot": 2165.24,
+    "spot": 2157.58,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6786,12 +6786,12 @@ const wallsData = {
     }
   },
   "SYM": {
-    "spot": 39.56,
-    "net_gex_bn": -0.0,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 38.66,
+    "net_gex_bn": 0.0004,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
-      "put": 40.0
+      "put": 38.0
     },
     "anchor": {
       "call": 45.0,
@@ -6799,12 +6799,12 @@ const wallsData = {
     }
   },
   "NRG": {
-    "spot": 109.26,
-    "net_gex_bn": 0.0484,
+    "spot": 111.09,
+    "net_gex_bn": 0.0498,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 110.0,
-      "put": 105.0
+      "call": 115.0,
+      "put": 110.0
     },
     "anchor": {
       "call": 130.0,
@@ -6812,12 +6812,12 @@ const wallsData = {
     }
   },
   "TPL": {
-    "spot": 368.36,
+    "spot": 368.93,
     "net_gex_bn": 0.005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 380.0,
-      "put": 350.0
+      "put": 360.0
     },
     "anchor": {
       "call": 450.0,
@@ -6825,8 +6825,8 @@ const wallsData = {
     }
   },
   "DRI": {
-    "spot": 215.56,
-    "net_gex_bn": 0.0022,
+    "spot": 214.59,
+    "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 220.0,
@@ -6838,12 +6838,12 @@ const wallsData = {
     }
   },
   "JBHT": {
-    "spot": 263.25,
+    "spot": 260.48,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
-      "put": 260.0
+      "put": 250.0
     },
     "anchor": {
       "call": 300.0,
@@ -6851,12 +6851,12 @@ const wallsData = {
     }
   },
   "PHM": {
-    "spot": 127.18,
-    "net_gex_bn": 0.0029,
+    "spot": 124.8,
+    "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 125.0,
-      "put": 125.0
+      "put": 120.0
     },
     "anchor": {
       "call": 140.0,
@@ -6864,7 +6864,7 @@ const wallsData = {
     }
   },
   "WST": {
-    "spot": 340.92,
+    "spot": 340.36,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6877,12 +6877,12 @@ const wallsData = {
     }
   },
   "DLTR": {
-    "spot": 125.36,
-    "net_gex_bn": 0.004,
+    "spot": 131.4,
+    "net_gex_bn": 0.0045,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
-      "put": 120.0
+      "put": 128.0
     },
     "anchor": {
       "call": 145.0,
@@ -6890,7 +6890,7 @@ const wallsData = {
     }
   },
   "INCY": {
-    "spot": 123.43,
+    "spot": 123.48,
     "net_gex_bn": -0.0125,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -6903,12 +6903,12 @@ const wallsData = {
     }
   },
   "TW": {
-    "spot": 108.06,
+    "spot": 107.21,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
-      "put": 110.0
+      "put": 105.0
     },
     "anchor": {
       "call": 110.0,
@@ -6916,7 +6916,7 @@ const wallsData = {
     }
   },
   "CHD": {
-    "spot": 100.03,
+    "spot": 100.96,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -6929,12 +6929,12 @@ const wallsData = {
     }
   },
   "TROW": {
-    "spot": 110.86,
+    "spot": 109.31,
     "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 110.0,
-      "put": 110.0
+      "put": 105.0
     },
     "anchor": {
       "call": 120.0,
@@ -6942,7 +6942,7 @@ const wallsData = {
     }
   },
   "ARXS": {
-    "spot": 51.96,
+    "spot": 51.53,
     "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -6955,12 +6955,12 @@ const wallsData = {
     }
   },
   "KEY": {
-    "spot": 21.68,
-    "net_gex_bn": 0.0094,
+    "spot": 21.31,
+    "net_gex_bn": 0.0082,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 22.0,
-      "put": 22.0
+      "put": 21.0
     },
     "anchor": {
       "call": 25.0,
@@ -6968,11 +6968,11 @@ const wallsData = {
     }
   },
   "PFG": {
-    "spot": 110.54,
+    "spot": 108.96,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 110.0,
       "put": 110.0
     },
     "anchor": {
@@ -6981,25 +6981,25 @@ const wallsData = {
     }
   },
   "MRNA": {
-    "spot": 139.72,
-    "net_gex_bn": -0.0557,
+    "spot": 147.29,
+    "net_gex_bn": -0.0561,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 146.0,
-      "put": 135.0
+      "put": 145.0
     },
     "anchor": {
-      "call": 146.0,
+      "call": 180.0,
       "put": 120.0
     }
   },
   "USFD": {
-    "spot": 104.96,
-    "net_gex_bn": 0.0026,
+    "spot": 106.33,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
-      "put": 100.0
+      "put": 105.0
     },
     "anchor": {
       "call": 110.0,
@@ -7007,7 +7007,7 @@ const wallsData = {
     }
   },
   "BRO": {
-    "spot": 72.16,
+    "spot": 72.08,
     "net_gex_bn": 0.0024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7020,12 +7020,12 @@ const wallsData = {
     }
   },
   "VLTO": {
-    "spot": 98.58,
+    "spot": 97.51,
     "net_gex_bn": 0.0029,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
-      "put": 100.0
+      "put": 95.0
     },
     "anchor": {
       "call": 110.0,
@@ -7033,8 +7033,8 @@ const wallsData = {
     }
   },
   "XPO": {
-    "spot": 193.5,
-    "net_gex_bn": -0.0048,
+    "spot": 189.99,
+    "net_gex_bn": -0.0047,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 190.0,
@@ -7046,12 +7046,12 @@ const wallsData = {
     }
   },
   "RL": {
-    "spot": 343.7,
-    "net_gex_bn": -0.0005,
+    "spot": 343.4,
+    "net_gex_bn": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 350.0,
-      "put": 350.0
+      "put": 330.0
     },
     "anchor": {
       "call": 400.0,
@@ -7059,25 +7059,25 @@ const wallsData = {
     }
   },
   "RIVN": {
-    "spot": 16.04,
-    "net_gex_bn": 0.1792,
+    "spot": 15.61,
+    "net_gex_bn": 0.1798,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 16.0,
-      "put": 16.0
+      "put": 15.0
     },
     "anchor": {
-      "call": 20.0,
+      "call": 17.0,
       "put": 15.0
     }
   },
   "OMC": {
-    "spot": 87.53,
+    "spot": 86.71,
     "net_gex_bn": -0.0015,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 90.0,
-      "put": 87.5
+      "put": 82.5
     },
     "anchor": {
       "call": 90.0,
@@ -7085,7 +7085,7 @@ const wallsData = {
     }
   },
   "VRSK": {
-    "spot": 194.23,
+    "spot": 194.12,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7093,29 +7093,29 @@ const wallsData = {
       "put": 190.0
     },
     "anchor": {
-      "call": 200.0,
+      "call": 240.0,
       "put": 160.0
     }
   },
   "IOT": {
-    "spot": 41.18,
-    "net_gex_bn": 0.0103,
+    "spot": 39.08,
+    "net_gex_bn": 0.0087,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 43.0,
-      "put": 39.5
+      "call": 41.0,
+      "put": 38.0
     },
     "anchor": {
       "call": 46.0,
-      "put": 37.0
+      "put": 38.0
     }
   },
   "FFIV": {
-    "spot": 405.08,
-    "net_gex_bn": 0.0013,
+    "spot": 392.24,
+    "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 420.0,
+      "call": 400.0,
       "put": 400.0
     },
     "anchor": {
@@ -7124,7 +7124,7 @@ const wallsData = {
     }
   },
   "FWONA": {
-    "spot": 91.89,
+    "spot": 90.55,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7137,8 +7137,8 @@ const wallsData = {
     }
   },
   "BNTX": {
-    "spot": 101.24,
-    "net_gex_bn": 0.0029,
+    "spot": 100.66,
+    "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 105.0,
@@ -7150,9 +7150,9 @@ const wallsData = {
     }
   },
   "ULTA": {
-    "spot": 539.22,
-    "net_gex_bn": -0.0012,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 546.56,
+    "net_gex_bn": 0.0008,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 550.0,
       "put": 520.0
@@ -7163,7 +7163,7 @@ const wallsData = {
     }
   },
   "STE": {
-    "spot": 231.9,
+    "spot": 229.98,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7176,7 +7176,7 @@ const wallsData = {
     }
   },
   "FOX": {
-    "spot": 60.32,
+    "spot": 59.63,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7189,24 +7189,24 @@ const wallsData = {
     }
   },
   "SOFI": {
-    "spot": 17.86,
-    "net_gex_bn": 0.4054,
+    "spot": 17.28,
+    "net_gex_bn": 0.4131,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 18.5,
-      "put": 18.0
+      "call": 18.0,
+      "put": 17.0
     },
     "anchor": {
-      "call": 22.0,
+      "call": 20.0,
       "put": 17.0
     }
   },
   "FTAI": {
-    "spot": 187.21,
-    "net_gex_bn": 0.0018,
+    "spot": 189.88,
+    "net_gex_bn": 0.002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 190.0,
+      "call": 195.0,
       "put": 185.0
     },
     "anchor": {
@@ -7215,8 +7215,8 @@ const wallsData = {
     }
   },
   "L": {
-    "spot": 108.51,
-    "net_gex_bn": -0.0001,
+    "spot": 108.49,
+    "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 110.0,
@@ -7228,12 +7228,12 @@ const wallsData = {
     }
   },
   "EXPD": {
-    "spot": 189.88,
+    "spot": 188.95,
     "net_gex_bn": 0.0027,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 190.0,
-      "put": 185.0
+      "put": 180.0
     },
     "anchor": {
       "call": 190.0,
@@ -7241,20 +7241,20 @@ const wallsData = {
     }
   },
   "ENTG": {
-    "spot": 135.93,
-    "net_gex_bn": 0.0086,
+    "spot": 128.99,
+    "net_gex_bn": 0.0095,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 135.0,
       "put": 130.0
     },
     "anchor": {
-      "call": 160.0,
+      "call": 150.0,
       "put": 115.0
     }
   },
   "PKG": {
-    "spot": 237.01,
+    "spot": 232.73,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7267,8 +7267,8 @@ const wallsData = {
     }
   },
   "MTSI": {
-    "spot": 263.43,
-    "net_gex_bn": 0.0025,
+    "spot": 258.73,
+    "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 260.0,
@@ -7280,8 +7280,8 @@ const wallsData = {
     }
   },
   "STZ": {
-    "spot": 130.87,
-    "net_gex_bn": 0.001,
+    "spot": 131.03,
+    "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 135.0,
@@ -7293,7 +7293,7 @@ const wallsData = {
     }
   },
   "MKL": {
-    "spot": 1802.51,
+    "spot": 1802.49,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7306,8 +7306,8 @@ const wallsData = {
     }
   },
   "EXE": {
-    "spot": 98.59,
-    "net_gex_bn": -0.022,
+    "spot": 99.31,
+    "net_gex_bn": -0.0215,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 100.0,
@@ -7319,8 +7319,8 @@ const wallsData = {
     }
   },
   "GPN": {
-    "spot": 90.72,
-    "net_gex_bn": 0.0221,
+    "spot": 91.38,
+    "net_gex_bn": 0.0219,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 90.0,
@@ -7332,24 +7332,24 @@ const wallsData = {
     }
   },
   "BURL": {
-    "spot": 257.4,
-    "net_gex_bn": -0.0274,
+    "spot": 257.27,
+    "net_gex_bn": -0.0231,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 270.0,
-      "put": 260.0
+      "put": 250.0
     },
     "anchor": {
-      "call": 320.0,
+      "call": 285.0,
       "put": 270.0
     }
   },
   "DOW": {
-    "spot": 30.49,
-    "net_gex_bn": 0.0126,
+    "spot": 30.31,
+    "net_gex_bn": 0.0161,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 32.0,
+      "call": 31.5,
       "put": 30.0
     },
     "anchor": {
@@ -7358,12 +7358,12 @@ const wallsData = {
     }
   },
   "FICO": {
-    "spot": 1153.08,
-    "net_gex_bn": -0.0002,
+    "spot": 1093.48,
+    "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 1200.0,
-      "put": 1100.0
+      "call": 1100.0,
+      "put": 1040.0
     },
     "anchor": {
       "call": 1300.0,
@@ -7371,12 +7371,12 @@ const wallsData = {
     }
   },
   "ROKU": {
-    "spot": 156.99,
-    "net_gex_bn": 0.0087,
+    "spot": 156.62,
+    "net_gex_bn": 0.0085,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 160.0,
-      "put": 157.5
+      "put": 152.5
     },
     "anchor": {
       "call": 150.0,
@@ -7384,8 +7384,8 @@ const wallsData = {
     }
   },
   "LUV": {
-    "spot": 38.81,
-    "net_gex_bn": 0.0274,
+    "spot": 38.13,
+    "net_gex_bn": 0.0281,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
@@ -7397,11 +7397,11 @@ const wallsData = {
     }
   },
   "GH": {
-    "spot": 158.78,
-    "net_gex_bn": -0.0046,
+    "spot": 161.02,
+    "net_gex_bn": -0.0053,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 165.0,
+      "call": 160.0,
       "put": 160.0
     },
     "anchor": {
@@ -7410,12 +7410,12 @@ const wallsData = {
     }
   },
   "IP": {
-    "spot": 38.36,
-    "net_gex_bn": -0.0005,
+    "spot": 37.27,
+    "net_gex_bn": -0.0009,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 40.0,
-      "put": 38.0
+      "call": 37.5,
+      "put": 36.0
     },
     "anchor": {
       "call": 45.0,
@@ -7423,7 +7423,7 @@ const wallsData = {
     }
   },
   "FIS": {
-    "spot": 41.03,
+    "spot": 40.58,
     "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7436,7 +7436,7 @@ const wallsData = {
     }
   },
   "AMCR": {
-    "spot": 46.1,
+    "spot": 45.78,
     "net_gex_bn": 0.0074,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7449,11 +7449,11 @@ const wallsData = {
     }
   },
   "MTZ": {
-    "spot": 239.1,
-    "net_gex_bn": 0.0102,
+    "spot": 237.47,
+    "net_gex_bn": 0.0104,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 250.0,
+      "call": 240.0,
       "put": 230.0
     },
     "anchor": {
@@ -7462,7 +7462,7 @@ const wallsData = {
     }
   },
   "CMS": {
-    "spot": 68.1,
+    "spot": 68.0,
     "net_gex_bn": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7470,16 +7470,16 @@ const wallsData = {
       "put": 65.0
     },
     "anchor": {
-      "call": 80.0,
+      "call": 70.0,
       "put": 70.0
     }
   },
   "PAAS": {
-    "spot": 51.78,
-    "net_gex_bn": 0.0052,
+    "spot": 51.03,
+    "net_gex_bn": 0.0046,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 54.0,
+      "call": 52.0,
       "put": 52.0
     },
     "anchor": {
@@ -7488,8 +7488,8 @@ const wallsData = {
     }
   },
   "BCE": {
-    "spot": 23.58,
-    "net_gex_bn": -0.0046,
+    "spot": 23.68,
+    "net_gex_bn": -0.0045,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 24.0,
@@ -7501,7 +7501,7 @@ const wallsData = {
     }
   },
   "IFF": {
-    "spot": 86.56,
+    "spot": 86.31,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7514,7 +7514,7 @@ const wallsData = {
     }
   },
   "RS": {
-    "spot": 386.17,
+    "spot": 390.64,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7527,11 +7527,11 @@ const wallsData = {
     }
   },
   "BG": {
-    "spot": 113.86,
-    "net_gex_bn": 0.015,
+    "spot": 120.39,
+    "net_gex_bn": 0.014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 120.0,
       "put": 115.0
     },
     "anchor": {
@@ -7540,12 +7540,12 @@ const wallsData = {
     }
   },
   "EFX": {
-    "spot": 190.12,
+    "spot": 186.6,
     "net_gex_bn": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 195.0,
-      "put": 185.0
+      "put": 180.0
     },
     "anchor": {
       "call": 200.0,
@@ -7553,33 +7553,33 @@ const wallsData = {
     }
   },
   "SNA": {
-    "spot": 387.37,
-    "net_gex_bn": 0.0004,
+    "spot": 382.27,
+    "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 400.0,
+      "call": 390.0,
       "put": 370.0
     },
     "anchor": {
       "call": 420.0,
-      "put": 320.0
+      "put": 290.0
     }
   },
   "LEN": {
-    "spot": 85.0,
-    "net_gex_bn": 0.0083,
+    "spot": 83.88,
+    "net_gex_bn": 0.0069,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 87.0,
       "put": 85.0
     },
     "anchor": {
-      "call": 87.0,
+      "call": 92.0,
       "put": 85.0
     }
   },
   "WWD": {
-    "spot": 337.98,
+    "spot": 337.45,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7588,15 +7588,15 @@ const wallsData = {
     },
     "anchor": {
       "call": 410.0,
-      "put": 330.0
+      "put": 340.0
     }
   },
   "THC": {
-    "spot": 265.67,
-    "net_gex_bn": -0.0015,
+    "spot": 271.08,
+    "net_gex_bn": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 270.0,
+      "call": 280.0,
       "put": 260.0
     },
     "anchor": {
@@ -7605,12 +7605,12 @@ const wallsData = {
     }
   },
   "FDXF": {
-    "spot": 134.6,
+    "spot": 130.1,
     "net_gex_bn": -0.004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 140.0,
-      "put": 135.0
+      "call": 135.0,
+      "put": 125.0
     },
     "anchor": {
       "call": 140.0,
@@ -7618,8 +7618,8 @@ const wallsData = {
     }
   },
   "LYB": {
-    "spot": 64.74,
-    "net_gex_bn": -0.0372,
+    "spot": 65.15,
+    "net_gex_bn": -0.0373,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 67.5,
@@ -7631,8 +7631,8 @@ const wallsData = {
     }
   },
   "WIT": {
-    "spot": 1.85,
-    "net_gex_bn": -0.0005,
+    "spot": 1.84,
+    "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -7644,7 +7644,7 @@ const wallsData = {
     }
   },
   "BCH": {
-    "spot": 41.31,
+    "spot": 41.41,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7657,7 +7657,7 @@ const wallsData = {
     }
   },
   "SQM": {
-    "spot": 78.93,
+    "spot": 81.07,
     "net_gex_bn": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -7670,20 +7670,20 @@ const wallsData = {
     }
   },
   "INIO": {
-    "spot": 20.15,
-    "net_gex_bn": 0.0016,
+    "spot": 19.73,
+    "net_gex_bn": 0.0015,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 20.0,
       "put": 20.0
     },
     "anchor": {
-      "call": 25.0,
+      "call": 22.5,
       "put": 17.5
     }
   },
   "SNX": {
-    "spot": 251.93,
+    "spot": 251.82,
     "net_gex_bn": 0.0051,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -7696,8 +7696,8 @@ const wallsData = {
     }
   },
   "GIS": {
-    "spot": 41.62,
-    "net_gex_bn": 0.0098,
+    "spot": 41.31,
+    "net_gex_bn": 0.008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 42.5,
@@ -7709,8 +7709,8 @@ const wallsData = {
     }
   },
   "TOST": {
-    "spot": 34.04,
-    "net_gex_bn": 0.0339,
+    "spot": 33.87,
+    "net_gex_bn": 0.0373,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 35.0,
@@ -7722,8 +7722,8 @@ const wallsData = {
     }
   },
   "NI": {
-    "spot": 40.9,
-    "net_gex_bn": 0.0007,
+    "spot": 40.99,
+    "net_gex_bn": 0.0009,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -7735,11 +7735,11 @@ const wallsData = {
     }
   },
   "SITM": {
-    "spot": 558.26,
-    "net_gex_bn": 0.0,
+    "spot": 549.88,
+    "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 570.0,
+      "call": 540.0,
       "put": 550.0
     },
     "anchor": {
@@ -7748,11 +7748,11 @@ const wallsData = {
     }
   },
   "RBRK": {
-    "spot": 92.01,
-    "net_gex_bn": 0.0283,
+    "spot": 88.73,
+    "net_gex_bn": 0.028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 95.0,
+      "call": 90.0,
       "put": 90.0
     },
     "anchor": {
@@ -7761,21 +7761,21 @@ const wallsData = {
     }
   },
   "MKSI": {
-    "spot": 257.66,
-    "net_gex_bn": 0.0036,
+    "spot": 248.09,
+    "net_gex_bn": 0.0041,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 260.0,
       "put": 250.0
     },
     "anchor": {
-      "call": 320.0,
+      "call": 280.0,
       "put": 270.0
     }
   },
   "TSN": {
-    "spot": 55.08,
-    "net_gex_bn": 0.0013,
+    "spot": 54.86,
+    "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 57.5,
@@ -7787,25 +7787,25 @@ const wallsData = {
     }
   },
   "RGLD": {
-    "spot": 261.28,
-    "net_gex_bn": 0.0063,
+    "spot": 258.1,
+    "net_gex_bn": 0.0064,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
       "put": 250.0
     },
     "anchor": {
-      "call": 320.0,
+      "call": 280.0,
       "put": 230.0
     }
   },
   "ONON": {
-    "spot": 28.53,
-    "net_gex_bn": -0.0052,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 28.03,
+    "net_gex_bn": 0.002,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 29.5,
-      "put": 29.0
+      "call": 29.0,
+      "put": 28.0
     },
     "anchor": {
       "call": 32.5,
@@ -7813,11 +7813,11 @@ const wallsData = {
     }
   },
   "DD": {
-    "spot": 134.79,
+    "spot": 132.64,
     "net_gex_bn": 0.0055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 135.0,
       "put": 135.0
     },
     "anchor": {
@@ -7826,11 +7826,11 @@ const wallsData = {
     }
   },
   "BR": {
-    "spot": 182.82,
-    "net_gex_bn": 0.0044,
+    "spot": 179.57,
+    "net_gex_bn": 0.0043,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 190.0,
+      "call": 185.0,
       "put": 180.0
     },
     "anchor": {
@@ -7839,12 +7839,12 @@ const wallsData = {
     }
   },
   "ITT": {
-    "spot": 201.77,
-    "net_gex_bn": -0.0069,
+    "spot": 196.38,
+    "net_gex_bn": -0.007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 200.0,
-      "put": 195.0
+      "put": 190.0
     },
     "anchor": {
       "call": 200.0,
@@ -7852,8 +7852,8 @@ const wallsData = {
     }
   },
   "YPF": {
-    "spot": 51.57,
-    "net_gex_bn": 0.0264,
+    "spot": 52.26,
+    "net_gex_bn": 0.0265,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -7865,7 +7865,7 @@ const wallsData = {
     }
   },
   "SBAC": {
-    "spot": 190.91,
+    "spot": 188.62,
     "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -7878,11 +7878,11 @@ const wallsData = {
     }
   },
   "OWL": {
-    "spot": 12.34,
-    "net_gex_bn": -0.0764,
+    "spot": 11.84,
+    "net_gex_bn": -0.0758,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 12.5,
+      "call": 12.0,
       "put": 12.0
     },
     "anchor": {
@@ -7891,11 +7891,11 @@ const wallsData = {
     }
   },
   "BEKE": {
-    "spot": 17.27,
-    "net_gex_bn": 0.0204,
+    "spot": 17.8,
+    "net_gex_bn": 0.0201,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 17.0,
+      "call": 18.5,
       "put": 17.0
     },
     "anchor": {
@@ -7904,8 +7904,8 @@ const wallsData = {
     }
   },
   "TPG": {
-    "spot": 53.82,
-    "net_gex_bn": 0.0023,
+    "spot": 52.94,
+    "net_gex_bn": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 55.0,
@@ -7917,8 +7917,8 @@ const wallsData = {
     }
   },
   "CDE": {
-    "spot": 20.75,
-    "net_gex_bn": 0.0405,
+    "spot": 20.6,
+    "net_gex_bn": 0.042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 21.0,
@@ -7930,7 +7930,7 @@ const wallsData = {
     }
   },
   "RCI": {
-    "spot": 36.88,
+    "spot": 36.85,
     "net_gex_bn": -0.0015,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -7943,12 +7943,12 @@ const wallsData = {
     }
   },
   "SMCI": {
-    "spot": 37.37,
-    "net_gex_bn": 0.239,
+    "spot": 36.79,
+    "net_gex_bn": 0.2497,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 38.5,
-      "put": 37.0
+      "put": 35.0
     },
     "anchor": {
       "call": 41.0,
@@ -7956,11 +7956,11 @@ const wallsData = {
     }
   },
   "EVRG": {
-    "spot": 80.94,
+    "spot": 81.56,
     "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 82.5,
+      "call": 85.0,
       "put": 82.5
     },
     "anchor": {
@@ -7969,24 +7969,24 @@ const wallsData = {
     }
   },
   "AS": {
-    "spot": 30.65,
-    "net_gex_bn": 0.1027,
+    "spot": 29.97,
+    "net_gex_bn": 0.1146,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 31.0,
+      "call": 30.0,
       "put": 30.0
     },
     "anchor": {
-      "call": 35.0,
+      "call": 30.0,
       "put": 32.5
     }
   },
   "FN": {
-    "spot": 414.06,
-    "net_gex_bn": 0.0012,
+    "spot": 404.57,
+    "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 420.0,
+      "call": 400.0,
       "put": 400.0
     },
     "anchor": {
@@ -7995,12 +7995,12 @@ const wallsData = {
     }
   },
   "CHTR": {
-    "spot": 150.24,
-    "net_gex_bn": 0.0067,
+    "spot": 146.17,
+    "net_gex_bn": 0.0068,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 150.0
+      "call": 150.0,
+      "put": 140.0
     },
     "anchor": {
       "call": 170.0,
@@ -8008,12 +8008,12 @@ const wallsData = {
     }
   },
   "SSNC": {
-    "spot": 83.42,
+    "spot": 82.29,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
-      "put": 85.0
+      "put": 80.0
     },
     "anchor": {
       "call": 85.0,
@@ -8021,8 +8021,8 @@ const wallsData = {
     }
   },
   "VTRS": {
-    "spot": 16.42,
-    "net_gex_bn": 0.0717,
+    "spot": 16.65,
+    "net_gex_bn": 0.0714,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 17.0,
@@ -8034,7 +8034,7 @@ const wallsData = {
     }
   },
   "MGA": {
-    "spot": 65.47,
+    "spot": 64.28,
     "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8047,12 +8047,12 @@ const wallsData = {
     }
   },
   "FTV": {
-    "spot": 59.15,
+    "spot": 58.17,
     "net_gex_bn": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 60.0,
-      "put": 60.0
+      "put": null
     },
     "anchor": {
       "call": 65.0,
@@ -8060,7 +8060,7 @@ const wallsData = {
     }
   },
   "GPC": {
-    "spot": 136.72,
+    "spot": 134.93,
     "net_gex_bn": 0.0041,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8073,7 +8073,7 @@ const wallsData = {
     }
   },
   "VIV": {
-    "spot": 11.52,
+    "spot": 11.68,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8086,7 +8086,7 @@ const wallsData = {
     }
   },
   "ZBH": {
-    "spot": 100.04,
+    "spot": 100.39,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8099,12 +8099,12 @@ const wallsData = {
     }
   },
   "APG": {
-    "spot": 39.53,
+    "spot": 38.79,
     "net_gex_bn": 0.0159,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 41.0,
-      "put": 40.0
+      "call": 40.0,
+      "put": 37.0
     },
     "anchor": {
       "call": 47.0,
@@ -8112,7 +8112,7 @@ const wallsData = {
     }
   },
   "PKX": {
-    "spot": 61.51,
+    "spot": 61.63,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8125,12 +8125,12 @@ const wallsData = {
     }
   },
   "TSCO": {
-    "spot": 35.25,
-    "net_gex_bn": 0.0225,
+    "spot": 34.94,
+    "net_gex_bn": 0.0203,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 35.0,
-      "put": 35.0
+      "put": 34.5
     },
     "anchor": {
       "call": 35.0,
@@ -8138,11 +8138,11 @@ const wallsData = {
     }
   },
   "DKS": {
-    "spot": 136.11,
-    "net_gex_bn": 0.0238,
+    "spot": 133.22,
+    "net_gex_bn": 0.022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 135.0,
       "put": 130.0
     },
     "anchor": {
@@ -8164,8 +8164,8 @@ const wallsData = {
     }
   },
   "ZBRA": {
-    "spot": 353.11,
-    "net_gex_bn": -0.002,
+    "spot": 347.96,
+    "net_gex_bn": -0.0021,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 360.0,
@@ -8177,8 +8177,8 @@ const wallsData = {
     }
   },
   "CRCL": {
-    "spot": 93.56,
-    "net_gex_bn": 0.003,
+    "spot": 91.04,
+    "net_gex_bn": 0.0089,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 95.0,
@@ -8190,12 +8190,12 @@ const wallsData = {
     }
   },
   "KSPI": {
-    "spot": 105.18,
-    "net_gex_bn": -0.0025,
+    "spot": 105.25,
+    "net_gex_bn": -0.0026,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 105.0,
-      "put": 105.0
+      "put": 100.0
     },
     "anchor": {
       "call": 100.0,
@@ -8203,12 +8203,12 @@ const wallsData = {
     }
   },
   "JHX": {
-    "spot": 29.48,
-    "net_gex_bn": 0.0061,
+    "spot": 28.86,
+    "net_gex_bn": 0.0065,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 30.0,
-      "put": 30.0
+      "put": 27.5
     },
     "anchor": {
       "call": 27.5,
@@ -8216,8 +8216,8 @@ const wallsData = {
     }
   },
   "WY": {
-    "spot": 23.33,
-    "net_gex_bn": 0.0157,
+    "spot": 23.25,
+    "net_gex_bn": 0.0141,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 24.0,
@@ -8229,12 +8229,12 @@ const wallsData = {
     }
   },
   "PR": {
-    "spot": 23.14,
-    "net_gex_bn": 0.0668,
+    "spot": 23.53,
+    "net_gex_bn": 0.0672,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 23.0,
-      "put": 22.0
+      "call": 24.0,
+      "put": 23.0
     },
     "anchor": {
       "call": 25.0,
@@ -8242,7 +8242,7 @@ const wallsData = {
     }
   },
   "OVV": {
-    "spot": 65.28,
+    "spot": 66.04,
     "net_gex_bn": 0.0049,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8255,8 +8255,8 @@ const wallsData = {
     }
   },
   "AEG": {
-    "spot": 9.15,
-    "net_gex_bn": 0.0038,
+    "spot": 9.21,
+    "net_gex_bn": 0.0039,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -8268,12 +8268,12 @@ const wallsData = {
     }
   },
   "LSCC": {
-    "spot": 115.39,
-    "net_gex_bn": 0.0127,
+    "spot": 111.99,
+    "net_gex_bn": 0.0133,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 120.0,
-      "put": 115.0
+      "call": 110.0,
+      "put": 110.0
     },
     "anchor": {
       "call": 130.0,
@@ -8281,8 +8281,8 @@ const wallsData = {
     }
   },
   "PFGC": {
-    "spot": 98.8,
-    "net_gex_bn": -0.0004,
+    "spot": 99.4,
+    "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 100.0,
@@ -8294,12 +8294,12 @@ const wallsData = {
     }
   },
   "WCC": {
-    "spot": 339.15,
+    "spot": 335.91,
     "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 350.0,
-      "put": 340.0
+      "put": 320.0
     },
     "anchor": {
       "call": 350.0,
@@ -8307,12 +8307,12 @@ const wallsData = {
     }
   },
   "CF": {
-    "spot": 127.74,
-    "net_gex_bn": 0.0029,
+    "spot": 132.49,
+    "net_gex_bn": 0.0034,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
-      "put": 125.0
+      "put": 135.0
     },
     "anchor": {
       "call": 120.0,
@@ -8320,7 +8320,7 @@ const wallsData = {
     }
   },
   "ZTO": {
-    "spot": 21.26,
+    "spot": 21.09,
     "net_gex_bn": -0.01,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8333,8 +8333,8 @@ const wallsData = {
     }
   },
   "ROL": {
-    "spot": 36.28,
-    "net_gex_bn": 0.0059,
+    "spot": 35.92,
+    "net_gex_bn": 0.0058,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 37.5,
@@ -8346,12 +8346,12 @@ const wallsData = {
     }
   },
   "LNT": {
-    "spot": 67.95,
+    "spot": 68.14,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
-      "put": 65.0
+      "put": 67.5
     },
     "anchor": {
       "call": 75.0,
@@ -8359,12 +8359,12 @@ const wallsData = {
     }
   },
   "SBS": {
-    "spot": 4.88,
+    "spot": 4.99,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 5.0,
-      "put": null
+      "put": 5.0
     },
     "anchor": {
       "call": 5.0,
@@ -8372,8 +8372,8 @@ const wallsData = {
     }
   },
   "LDOS": {
-    "spot": 141.68,
-    "net_gex_bn": 0.0042,
+    "spot": 138.7,
+    "net_gex_bn": 0.0043,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 145.0,
@@ -8385,12 +8385,12 @@ const wallsData = {
     }
   },
   "NWS": {
-    "spot": 34.44,
+    "spot": 34.26,
     "net_gex_bn": 0.0,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 35.0,
-      "put": 35.0
+      "put": null
     },
     "anchor": {
       "call": 35.0,
@@ -8398,8 +8398,8 @@ const wallsData = {
     }
   },
   "INVH": {
-    "spot": 29.1,
-    "net_gex_bn": -0.0036,
+    "spot": 29.19,
+    "net_gex_bn": -0.0035,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 30.0,
@@ -8411,8 +8411,8 @@ const wallsData = {
     }
   },
   "BBY": {
-    "spot": 80.14,
-    "net_gex_bn": 0.0039,
+    "spot": 81.58,
+    "net_gex_bn": 0.0036,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 82.5,
@@ -8424,12 +8424,12 @@ const wallsData = {
     }
   },
   "IEX": {
-    "spot": 229.07,
+    "spot": 224.93,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 240.0,
-      "put": 230.0
+      "call": 230.0,
+      "put": 220.0
     },
     "anchor": {
       "call": 250.0,
@@ -8437,12 +8437,12 @@ const wallsData = {
     }
   },
   "RBC": {
-    "spot": 495.83,
+    "spot": 489.95,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 510.0,
-      "put": 500.0
+      "put": 490.0
     },
     "anchor": {
       "call": 480.0,
@@ -8450,11 +8450,11 @@ const wallsData = {
     }
   },
   "NLY": {
-    "spot": 22.89,
+    "spot": 22.78,
     "net_gex_bn": -0.0033,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 24.0,
+      "call": 23.0,
       "put": 22.5
     },
     "anchor": {
@@ -8463,11 +8463,11 @@ const wallsData = {
     }
   },
   "CG": {
-    "spot": 48.62,
-    "net_gex_bn": 0.0314,
+    "spot": 46.73,
+    "net_gex_bn": 0.0311,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 50.0,
+      "call": 47.5,
       "put": 47.5
     },
     "anchor": {
@@ -8476,7 +8476,7 @@ const wallsData = {
     }
   },
   "NTNX": {
-    "spot": 68.39,
+    "spot": 66.84,
     "net_gex_bn": 0.0134,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8489,12 +8489,12 @@ const wallsData = {
     }
   },
   "GEN": {
-    "spot": 30.83,
-    "net_gex_bn": 0.0284,
+    "spot": 30.5,
+    "net_gex_bn": 0.0294,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 32.0,
-      "put": 30.0
+      "call": 30.0,
+      "put": 29.0
     },
     "anchor": {
       "call": 30.0,
@@ -8502,7 +8502,7 @@ const wallsData = {
     }
   },
   "GIB": {
-    "spot": 75.6,
+    "spot": 73.75,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8515,8 +8515,8 @@ const wallsData = {
     }
   },
   "NDSN": {
-    "spot": 322.72,
-    "net_gex_bn": 0.0009,
+    "spot": 317.08,
+    "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 330.0,
@@ -8528,12 +8528,12 @@ const wallsData = {
     }
   },
   "FLUT": {
-    "spot": 100.38,
-    "net_gex_bn": -0.0249,
+    "spot": 97.47,
+    "net_gex_bn": -0.0248,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 100.0,
-      "put": 100.0
+      "put": 95.0
     },
     "anchor": {
       "call": 120.0,
@@ -8541,11 +8541,11 @@ const wallsData = {
     }
   },
   "J": {
-    "spot": 150.65,
-    "net_gex_bn": 0.0029,
+    "spot": 147.45,
+    "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 155.0,
+      "call": 145.0,
       "put": 150.0
     },
     "anchor": {
@@ -8554,25 +8554,25 @@ const wallsData = {
     }
   },
   "TLN": {
-    "spot": 294.42,
-    "net_gex_bn": 0.0003,
+    "spot": 297.75,
+    "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 302.5,
+      "call": 300.0,
       "put": 300.0
     },
     "anchor": {
-      "call": 330.0,
-      "put": 320.0
+      "call": 370.0,
+      "put": 300.0
     }
   },
   "CX": {
-    "spot": 10.86,
-    "net_gex_bn": 0.0123,
+    "spot": 10.6,
+    "net_gex_bn": 0.0124,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 11.0,
-      "put": 11.0
+      "put": null
     },
     "anchor": {
       "call": 12.0,
@@ -8580,7 +8580,7 @@ const wallsData = {
     }
   },
   "CHRW": {
-    "spot": 151.09,
+    "spot": 148.52,
     "net_gex_bn": 0.0211,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8589,16 +8589,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 170.0,
-      "put": 135.0
+      "put": 140.0
     }
   },
   "BEN": {
-    "spot": 34.24,
+    "spot": 33.44,
     "net_gex_bn": 0.0082,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 34.0,
-      "put": 34.0
+      "put": 32.0
     },
     "anchor": {
       "call": 34.0,
@@ -8606,8 +8606,8 @@ const wallsData = {
     }
   },
   "CDW": {
-    "spot": 151.91,
-    "net_gex_bn": 0.0067,
+    "spot": 149.16,
+    "net_gex_bn": 0.0061,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 150.0,
@@ -8619,7 +8619,7 @@ const wallsData = {
     }
   },
   "MEDP": {
-    "spot": 589.83,
+    "spot": 585.16,
     "net_gex_bn": -0.0018,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8632,12 +8632,12 @@ const wallsData = {
     }
   },
   "AKAM": {
-    "spot": 109.07,
-    "net_gex_bn": 0.001,
+    "spot": 106.89,
+    "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
-      "put": 110.0
+      "put": 105.0
     },
     "anchor": {
       "call": 115.0,
@@ -8645,8 +8645,8 @@ const wallsData = {
     }
   },
   "RBA": {
-    "spot": 84.68,
-    "net_gex_bn": 0.0021,
+    "spot": 83.69,
+    "net_gex_bn": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 87.5,
@@ -8658,12 +8658,12 @@ const wallsData = {
     }
   },
   "JLL": {
-    "spot": 368.45,
+    "spot": 358.76,
     "net_gex_bn": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 380.0,
-      "put": 370.0
+      "call": 360.0,
+      "put": 360.0
     },
     "anchor": {
       "call": 390.0,
@@ -8671,8 +8671,8 @@ const wallsData = {
     }
   },
   "YUMC": {
-    "spot": 44.75,
-    "net_gex_bn": 0.0077,
+    "spot": 44.91,
+    "net_gex_bn": 0.0076,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
@@ -8684,8 +8684,8 @@ const wallsData = {
     }
   },
   "BALL": {
-    "spot": 63.08,
-    "net_gex_bn": 0.0029,
+    "spot": 62.76,
+    "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
@@ -8697,12 +8697,12 @@ const wallsData = {
     }
   },
   "IONQ": {
-    "spot": 39.98,
-    "net_gex_bn": 0.0141,
+    "spot": 37.97,
+    "net_gex_bn": 0.0186,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 40.0,
-      "put": 40.0
+      "call": 39.0,
+      "put": 38.0
     },
     "anchor": {
       "call": 45.0,
@@ -8710,7 +8710,7 @@ const wallsData = {
     }
   },
   "BSAC": {
-    "spot": 34.69,
+    "spot": 34.95,
     "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8723,7 +8723,7 @@ const wallsData = {
     }
   },
   "NBIX": {
-    "spot": 154.29,
+    "spot": 155.64,
     "net_gex_bn": -0.0031,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8736,11 +8736,11 @@ const wallsData = {
     }
   },
   "CLH": {
-    "spot": 313.86,
+    "spot": 314.98,
     "net_gex_bn": -0.0038,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 320.0,
+      "call": 330.0,
       "put": 310.0
     },
     "anchor": {
@@ -8749,11 +8749,11 @@ const wallsData = {
     }
   },
   "BBIO": {
-    "spot": 76.05,
-    "net_gex_bn": -0.0036,
+    "spot": 76.63,
+    "net_gex_bn": -0.003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 75.0,
+      "call": 80.0,
       "put": 75.0
     },
     "anchor": {
@@ -8762,7 +8762,7 @@ const wallsData = {
     }
   },
   "PTC": {
-    "spot": 157.05,
+    "spot": 153.14,
     "net_gex_bn": 0.0032,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8775,7 +8775,7 @@ const wallsData = {
     }
   },
   "STRL": {
-    "spot": 468.39,
+    "spot": 461.72,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8788,7 +8788,7 @@ const wallsData = {
     }
   },
   "H": {
-    "spot": 165.98,
+    "spot": 164.46,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8801,11 +8801,11 @@ const wallsData = {
     }
   },
   "QXO": {
-    "spot": 13.44,
-    "net_gex_bn": 0.0122,
+    "spot": 13.06,
+    "net_gex_bn": 0.0117,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 14.0,
+      "call": 13.5,
       "put": 13.0
     },
     "anchor": {
@@ -8814,12 +8814,12 @@ const wallsData = {
     }
   },
   "JAZZ": {
-    "spot": 251.5,
+    "spot": 243.54,
     "net_gex_bn": 0.0009,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 250.0,
-      "put": 250.0
+      "put": 240.0
     },
     "anchor": {
       "call": 300.0,
@@ -8827,12 +8827,12 @@ const wallsData = {
     }
   },
   "KIM": {
-    "spot": 23.64,
+    "spot": 24.08,
     "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": null,
-      "put": 22.5
+      "call": 25.0,
+      "put": null
     },
     "anchor": {
       "call": 25.0,
@@ -8840,12 +8840,12 @@ const wallsData = {
     }
   },
   "MAIR": {
-    "spot": 26.53,
-    "net_gex_bn": 0.0025,
+    "spot": 26.17,
+    "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 25.0
     },
     "anchor": {
       "call": 30.0,
@@ -8853,7 +8853,7 @@ const wallsData = {
     }
   },
   "RGA": {
-    "spot": 244.68,
+    "spot": 246.7,
     "net_gex_bn": 0.0016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8866,8 +8866,8 @@ const wallsData = {
     }
   },
   "PNFP": {
-    "spot": 99.7,
-    "net_gex_bn": 0.0013,
+    "spot": 98.85,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -8879,8 +8879,8 @@ const wallsData = {
     }
   },
   "WPC": {
-    "spot": 69.96,
-    "net_gex_bn": 0.0077,
+    "spot": 70.48,
+    "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -8892,7 +8892,7 @@ const wallsData = {
     }
   },
   "TIGO": {
-    "spot": 93.33,
+    "spot": 93.5,
     "net_gex_bn": 0.0071,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8905,7 +8905,7 @@ const wallsData = {
     }
   },
   "NXT": {
-    "spot": 82.25,
+    "spot": 82.27,
     "net_gex_bn": -0.0014,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -8918,8 +8918,8 @@ const wallsData = {
     }
   },
   "ARMK": {
-    "spot": 56.28,
-    "net_gex_bn": 0.0003,
+    "spot": 56.55,
+    "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -8931,7 +8931,7 @@ const wallsData = {
     }
   },
   "KEP": {
-    "spot": 11.63,
+    "spot": 11.75,
     "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -8944,12 +8944,12 @@ const wallsData = {
     }
   },
   "STLA": {
-    "spot": 5.5,
-    "net_gex_bn": 0.0156,
+    "spot": 5.36,
+    "net_gex_bn": 0.0186,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 5.5,
-      "put": 5.5
+      "put": null
     },
     "anchor": {
       "call": 6.0,
@@ -8957,8 +8957,8 @@ const wallsData = {
     }
   },
   "ASND": {
-    "spot": 264.46,
-    "net_gex_bn": 0.0016,
+    "spot": 262.08,
+    "net_gex_bn": 0.0022,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 270.0,
@@ -8970,8 +8970,8 @@ const wallsData = {
     }
   },
   "WSE": {
-    "spot": 13.06,
-    "net_gex_bn": -0.0003,
+    "spot": 12.99,
+    "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -8983,12 +8983,12 @@ const wallsData = {
     }
   },
   "PS": {
-    "spot": 42.65,
+    "spot": 40.91,
     "net_gex_bn": -0.0024,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 40.0
     },
     "anchor": {
       "call": 40.0,
@@ -8996,12 +8996,12 @@ const wallsData = {
     }
   },
   "SWK": {
-    "spot": 96.22,
-    "net_gex_bn": 0.0523,
+    "spot": 95.3,
+    "net_gex_bn": 0.0522,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
-      "put": 97.5
+      "put": 92.5
     },
     "anchor": {
       "call": 115.0,
@@ -9009,21 +9009,21 @@ const wallsData = {
     }
   },
   "ONTO": {
-    "spot": 267.96,
+    "spot": 257.23,
     "net_gex_bn": 0.0064,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 270.0,
-      "put": 270.0
+      "call": 260.0,
+      "put": 260.0
     },
     "anchor": {
-      "call": 330.0,
+      "call": 310.0,
       "put": 280.0
     }
   },
   "EMA": {
-    "spot": 49.86,
-    "net_gex_bn": 0.0022,
+    "spot": 49.94,
+    "net_gex_bn": 0.0023,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
@@ -9035,20 +9035,20 @@ const wallsData = {
     }
   },
   "LAMR": {
-    "spot": 148.95,
-    "net_gex_bn": 0.0012,
+    "spot": 151.18,
+    "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 155.0,
       "put": 150.0
     },
     "anchor": {
-      "call": 160.0,
+      "call": 155.0,
       "put": 150.0
     }
   },
   "ULS": {
-    "spot": 74.62,
+    "spot": 73.79,
     "net_gex_bn": 0.0036,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9061,12 +9061,12 @@ const wallsData = {
     }
   },
   "BWXT": {
-    "spot": 151.82,
-    "net_gex_bn": 0.0036,
+    "spot": 158.85,
+    "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 155.0,
-      "put": 150.0
+      "call": 160.0,
+      "put": 160.0
     },
     "anchor": {
       "call": 180.0,
@@ -9074,7 +9074,7 @@ const wallsData = {
     }
   },
   "IESC": {
-    "spot": 302.01,
+    "spot": 300.01,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9087,8 +9087,8 @@ const wallsData = {
     }
   },
   "LECO": {
-    "spot": 282.17,
-    "net_gex_bn": 0.0017,
+    "spot": 273.05,
+    "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 280.0,
@@ -9100,7 +9100,7 @@ const wallsData = {
     }
   },
   "NWSA": {
-    "spot": 30.75,
+    "spot": 30.7,
     "net_gex_bn": 0.0317,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9113,7 +9113,7 @@ const wallsData = {
     }
   },
   "CSL": {
-    "spot": 352.55,
+    "spot": 343.35,
     "net_gex_bn": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -9126,12 +9126,12 @@ const wallsData = {
     }
   },
   "GFL": {
-    "spot": 42.38,
-    "net_gex_bn": 0.004,
+    "spot": 42.02,
+    "net_gex_bn": 0.0054,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 40.0
     },
     "anchor": {
       "call": 45.0,
@@ -9139,12 +9139,12 @@ const wallsData = {
     }
   },
   "VNOM": {
-    "spot": 44.63,
-    "net_gex_bn": 0.0119,
+    "spot": 45.29,
+    "net_gex_bn": 0.0121,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 46.0,
-      "put": 43.0
+      "put": 45.0
     },
     "anchor": {
       "call": 45.0,
@@ -9152,12 +9152,12 @@ const wallsData = {
     }
   },
   "TRU": {
-    "spot": 85.05,
+    "spot": 83.73,
     "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
-      "put": 82.5
+      "put": 80.0
     },
     "anchor": {
       "call": 90.0,
@@ -9165,11 +9165,11 @@ const wallsData = {
     }
   },
   "GRAB": {
-    "spot": 3.52,
-    "net_gex_bn": 0.0193,
+    "spot": 3.58,
+    "net_gex_bn": 0.0164,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 3.5,
+      "call": null,
       "put": 3.5
     },
     "anchor": {
@@ -9178,7 +9178,7 @@ const wallsData = {
     }
   },
   "TU": {
-    "spot": 9.72,
+    "spot": 9.65,
     "net_gex_bn": 0.0085,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9191,7 +9191,7 @@ const wallsData = {
     }
   },
   "BNT": {
-    "spot": 41.28,
+    "spot": 40.21,
     "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -9204,8 +9204,8 @@ const wallsData = {
     }
   },
   "HST": {
-    "spot": 21.86,
-    "net_gex_bn": -0.0019,
+    "spot": 21.83,
+    "net_gex_bn": -0.0016,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 22.0,
@@ -9217,8 +9217,8 @@ const wallsData = {
     }
   },
   "ALB": {
-    "spot": 135.02,
-    "net_gex_bn": 0.0097,
+    "spot": 136.78,
+    "net_gex_bn": 0.0093,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 140.0,
@@ -9230,7 +9230,7 @@ const wallsData = {
     }
   },
   "LTM": {
-    "spot": 49.85,
+    "spot": 49.94,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9243,24 +9243,24 @@ const wallsData = {
     }
   },
   "DINO": {
-    "spot": 99.79,
-    "net_gex_bn": 0.0321,
+    "spot": 103.11,
+    "net_gex_bn": 0.0354,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 100.0,
-      "put": 95.0
+      "call": 105.0,
+      "put": 100.0
     },
     "anchor": {
-      "call": 90.0,
+      "call": 100.0,
       "put": 92.5
     }
   },
   "TXT": {
-    "spot": 81.06,
+    "spot": 79.95,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 85.0,
+      "call": 80.0,
       "put": 80.0
     },
     "anchor": {
@@ -9269,12 +9269,12 @@ const wallsData = {
     }
   },
   "MLI": {
-    "spot": 62.63,
+    "spot": 61.74,
     "net_gex_bn": 0.0032,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 65.0,
-      "put": 62.5
+      "call": 62.5,
+      "put": 60.0
     },
     "anchor": {
       "call": 70.0,
@@ -9282,11 +9282,11 @@ const wallsData = {
     }
   },
   "MAS": {
-    "spot": 72.3,
+    "spot": 71.05,
     "net_gex_bn": 0.0016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 75.0,
+      "call": 70.0,
       "put": 70.0
     },
     "anchor": {
@@ -9295,7 +9295,7 @@ const wallsData = {
     }
   },
   "COO": {
-    "spot": 69.89,
+    "spot": 69.75,
     "net_gex_bn": 0.0094,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9308,11 +9308,11 @@ const wallsData = {
     }
   },
   "RPM": {
-    "spot": 104.97,
+    "spot": 103.2,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 110.0,
+      "call": 105.0,
       "put": 105.0
     },
     "anchor": {
@@ -9321,7 +9321,7 @@ const wallsData = {
     }
   },
   "LII": {
-    "spot": 385.33,
+    "spot": 381.1,
     "net_gex_bn": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -9334,21 +9334,21 @@ const wallsData = {
     }
   },
   "CRBG": {
-    "spot": 32.73,
-    "net_gex_bn": -0.0047,
+    "spot": 32.14,
+    "net_gex_bn": -0.0048,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 34.0,
-      "put": 32.0
+      "call": 32.0,
+      "put": 31.0
     },
     "anchor": {
-      "call": 30.0,
+      "call": 29.0,
       "put": 29.0
     }
   },
   "LOGI": {
-    "spot": 99.03,
-    "net_gex_bn": 0.0027,
+    "spot": 98.42,
+    "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -9360,7 +9360,7 @@ const wallsData = {
     }
   },
   "CACI": {
-    "spot": 627.42,
+    "spot": 620.59,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9373,24 +9373,24 @@ const wallsData = {
     }
   },
   "FUTU": {
-    "spot": 122.19,
-    "net_gex_bn": 0.0005,
+    "spot": 121.78,
+    "net_gex_bn": 0.0041,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 122.45,
+      "call": 125.0,
       "put": 120.0
     },
     "anchor": {
-      "call": 112.45,
+      "call": 125.0,
       "put": 105.0
     }
   },
   "GWRE": {
-    "spot": 204.85,
+    "spot": 201.32,
     "net_gex_bn": 0.0034,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 210.0,
+      "call": 200.0,
       "put": 200.0
     },
     "anchor": {
@@ -9399,12 +9399,12 @@ const wallsData = {
     }
   },
   "QNT": {
-    "spot": 50.25,
-    "net_gex_bn": 0.0004,
+    "spot": 48.17,
+    "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 50.0,
-      "put": 50.0
+      "put": null
     },
     "anchor": {
       "call": 60.0,
@@ -9412,12 +9412,12 @@ const wallsData = {
     }
   },
   "DT": {
-    "spot": 54.29,
-    "net_gex_bn": 0.0132,
+    "spot": 53.26,
+    "net_gex_bn": 0.0128,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 55.0,
-      "put": 55.0
+      "put": 52.5
     },
     "anchor": {
       "call": 55.0,
@@ -9425,12 +9425,12 @@ const wallsData = {
     }
   },
   "ARCC": {
-    "spot": 20.16,
-    "net_gex_bn": -0.0286,
+    "spot": 19.96,
+    "net_gex_bn": -0.0281,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 20.0,
-      "put": 20.0
+      "put": 19.0
     },
     "anchor": {
       "call": 20.0,
@@ -9438,7 +9438,7 @@ const wallsData = {
     }
   },
   "ALLE": {
-    "spot": 156.12,
+    "spot": 153.25,
     "net_gex_bn": 0.0035,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9451,11 +9451,11 @@ const wallsData = {
     }
   },
   "SOLV": {
-    "spot": 91.29,
+    "spot": 91.84,
     "net_gex_bn": 0.0173,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 90.0,
+      "call": 95.0,
       "put": 90.0
     },
     "anchor": {
@@ -9464,11 +9464,11 @@ const wallsData = {
     }
   },
   "TOL": {
-    "spot": 144.51,
+    "spot": 141.68,
     "net_gex_bn": -0.0035,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 150.0,
+      "call": 145.0,
       "put": 140.0
     },
     "anchor": {
@@ -9477,24 +9477,24 @@ const wallsData = {
     }
   },
   "BAX": {
-    "spot": 26.07,
-    "net_gex_bn": 0.0115,
+    "spot": 26.09,
+    "net_gex_bn": 0.0055,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 26.0,
-      "put": 25.0
+      "put": 25.5
     },
     "anchor": {
       "call": 30.0,
-      "put": 20.0
+      "put": 24.5
     }
   },
   "AA": {
-    "spot": 49.88,
-    "net_gex_bn": 0.0068,
+    "spot": 50.86,
+    "net_gex_bn": 0.0096,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 50.0,
+      "call": 53.0,
       "put": 50.0
     },
     "anchor": {
@@ -9503,7 +9503,7 @@ const wallsData = {
     }
   },
   "UHAL": {
-    "spot": 67.92,
+    "spot": 67.86,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9516,8 +9516,8 @@ const wallsData = {
     }
   },
   "APA": {
-    "spot": 42.87,
-    "net_gex_bn": 0.0091,
+    "spot": 43.64,
+    "net_gex_bn": 0.0098,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 45.0,
@@ -9529,7 +9529,7 @@ const wallsData = {
     }
   },
   "PAG": {
-    "spot": 217.02,
+    "spot": 216.41,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9542,12 +9542,12 @@ const wallsData = {
     }
   },
   "UNM": {
-    "spot": 93.08,
-    "net_gex_bn": 0.1004,
+    "spot": 91.63,
+    "net_gex_bn": 0.1007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 95.0,
-      "put": 92.5
+      "put": 87.5
     },
     "anchor": {
       "call": 110.0,
@@ -9555,8 +9555,8 @@ const wallsData = {
     }
   },
   "MKC": {
-    "spot": 53.97,
-    "net_gex_bn": 0.0158,
+    "spot": 54.56,
+    "net_gex_bn": 0.0155,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 55.0,
@@ -9568,8 +9568,8 @@ const wallsData = {
     }
   },
   "DOCN": {
-    "spot": 110.6,
-    "net_gex_bn": 0.0009,
+    "spot": 107.99,
+    "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -9577,25 +9577,25 @@ const wallsData = {
     },
     "anchor": {
       "call": 110.0,
-      "put": 110.0
+      "put": 90.0
     }
   },
   "IREN": {
-    "spot": 36.66,
-    "net_gex_bn": -0.0268,
+    "spot": 37.01,
+    "net_gex_bn": -0.0034,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 37.0,
-      "put": 35.0
+      "call": 38.0,
+      "put": 36.0
     },
     "anchor": {
-      "call": 45.0,
+      "call": 40.0,
       "put": 30.0
     }
   },
   "BWA": {
-    "spot": 64.43,
-    "net_gex_bn": 0.0072,
+    "spot": 63.57,
+    "net_gex_bn": 0.0069,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
@@ -9607,8 +9607,8 @@ const wallsData = {
     }
   },
   "DOC": {
-    "spot": 20.77,
-    "net_gex_bn": 0.0094,
+    "spot": 20.97,
+    "net_gex_bn": 0.0093,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -9620,8 +9620,8 @@ const wallsData = {
     }
   },
   "W": {
-    "spot": 98.07,
-    "net_gex_bn": 0.0,
+    "spot": 96.66,
+    "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
@@ -9633,8 +9633,8 @@ const wallsData = {
     }
   },
   "AGI": {
-    "spot": 36.42,
-    "net_gex_bn": 0.0396,
+    "spot": 35.51,
+    "net_gex_bn": 0.0391,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 36.0,
@@ -9646,7 +9646,7 @@ const wallsData = {
     }
   },
   "EG": {
-    "spot": 375.08,
+    "spot": 379.45,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9659,12 +9659,12 @@ const wallsData = {
     }
   },
   "EQH": {
-    "spot": 50.38,
+    "spot": 49.37,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 52.5,
-      "put": 50.0
+      "call": 50.0,
+      "put": 47.5
     },
     "anchor": {
       "call": 55.0,
@@ -9672,7 +9672,7 @@ const wallsData = {
     }
   },
   "JBS": {
-    "spot": 13.61,
+    "spot": 13.7,
     "net_gex_bn": 0.1458,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9686,7 +9686,7 @@ const wallsData = {
   },
   "AUR": {
     "spot": 5.52,
-    "net_gex_bn": 0.0023,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 5.5,
@@ -9698,7 +9698,7 @@ const wallsData = {
     }
   },
   "GL": {
-    "spot": 173.53,
+    "spot": 172.61,
     "net_gex_bn": 0.0039,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9707,11 +9707,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 200.0,
-      "put": 185.0
+      "put": 130.0
     }
   },
   "REG": {
-    "spot": 74.94,
+    "spot": 75.8,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9724,7 +9724,7 @@ const wallsData = {
     }
   },
   "AIZ": {
-    "spot": 281.97,
+    "spot": 282.19,
     "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9737,11 +9737,11 @@ const wallsData = {
     }
   },
   "OHI": {
-    "spot": 45.58,
+    "spot": 46.63,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 47.0,
+      "call": 48.0,
       "put": 45.0
     },
     "anchor": {
@@ -9750,8 +9750,8 @@ const wallsData = {
     }
   },
   "TTMI": {
-    "spot": 118.15,
-    "net_gex_bn": 0.0124,
+    "spot": 116.4,
+    "net_gex_bn": 0.0121,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 120.0,
@@ -9763,7 +9763,7 @@ const wallsData = {
     }
   },
   "TXRH": {
-    "spot": 195.45,
+    "spot": 191.54,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9776,7 +9776,7 @@ const wallsData = {
     }
   },
   "CNA": {
-    "spot": 48.62,
+    "spot": 48.53,
     "net_gex_bn": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -9789,7 +9789,7 @@ const wallsData = {
     }
   },
   "DTM": {
-    "spot": 130.5,
+    "spot": 130.24,
     "net_gex_bn": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9802,8 +9802,8 @@ const wallsData = {
     }
   },
   "TME": {
-    "spot": 8.38,
-    "net_gex_bn": -0.0001,
+    "spot": 8.16,
+    "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -9815,8 +9815,8 @@ const wallsData = {
     }
   },
   "SGI": {
-    "spot": 64.12,
-    "net_gex_bn": 0.0414,
+    "spot": 64.95,
+    "net_gex_bn": 0.0415,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
@@ -9828,7 +9828,7 @@ const wallsData = {
     }
   },
   "HAS": {
-    "spot": 93.88,
+    "spot": 94.03,
     "net_gex_bn": 0.0057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9841,7 +9841,7 @@ const wallsData = {
     }
   },
   "AVY": {
-    "spot": 176.3,
+    "spot": 174.83,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9854,11 +9854,11 @@ const wallsData = {
     }
   },
   "LULU": {
-    "spot": 121.81,
-    "net_gex_bn": 0.0147,
+    "spot": 120.29,
+    "net_gex_bn": 0.0168,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 127.0,
+      "call": 120.0,
       "put": 120.0
     },
     "anchor": {
@@ -9867,8 +9867,8 @@ const wallsData = {
     }
   },
   "LI": {
-    "spot": 12.16,
-    "net_gex_bn": 0.0157,
+    "spot": 11.94,
+    "net_gex_bn": 0.0049,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 12.0,
@@ -9876,11 +9876,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 14.0,
-      "put": 12.0
+      "put": 10.5
     }
   },
   "GGG": {
-    "spot": 78.11,
+    "spot": 77.13,
     "net_gex_bn": -0.0045,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -9893,7 +9893,7 @@ const wallsData = {
     }
   },
   "TRMB": {
-    "spot": 61.09,
+    "spot": 59.84,
     "net_gex_bn": 0.0056,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -9906,21 +9906,21 @@ const wallsData = {
     }
   },
   "AMKR": {
-    "spot": 47.66,
-    "net_gex_bn": 0.0027,
+    "spot": 45.96,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 50.0,
-      "put": 48.0
+      "call": 48.0,
+      "put": 46.0
     },
     "anchor": {
       "call": 55.0,
-      "put": 48.0
+      "put": 35.0
     }
   },
   "BMRN": {
-    "spot": 65.75,
-    "net_gex_bn": 0.0175,
+    "spot": 64.96,
+    "net_gex_bn": 0.0178,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
@@ -9932,11 +9932,11 @@ const wallsData = {
     }
   },
   "CRL": {
-    "spot": 287.8,
+    "spot": 284.7,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 300.0,
+      "call": 290.0,
       "put": 290.0
     },
     "anchor": {
@@ -9945,12 +9945,12 @@ const wallsData = {
     }
   },
   "PINS": {
-    "spot": 21.69,
-    "net_gex_bn": 0.0063,
+    "spot": 21.58,
+    "net_gex_bn": 0.0084,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 22.0,
-      "put": 21.0
+      "put": 22.0
     },
     "anchor": {
       "call": 24.0,
@@ -9958,8 +9958,8 @@ const wallsData = {
     }
   },
   "KLAR": {
-    "spot": 14.65,
-    "net_gex_bn": 0.0161,
+    "spot": 14.48,
+    "net_gex_bn": 0.0203,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 15.0,
@@ -9971,8 +9971,8 @@ const wallsData = {
     }
   },
   "HRL": {
-    "spot": 21.63,
-    "net_gex_bn": 0.0037,
+    "spot": 21.97,
+    "net_gex_bn": 0.0041,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 22.0,
@@ -9984,11 +9984,11 @@ const wallsData = {
     }
   },
   "ALLY": {
-    "spot": 42.08,
-    "net_gex_bn": 0.0132,
+    "spot": 42.01,
+    "net_gex_bn": 0.0162,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 43.0,
+      "call": 42.0,
       "put": 40.0
     },
     "anchor": {
@@ -9997,8 +9997,8 @@ const wallsData = {
     }
   },
   "FMS": {
-    "spot": 22.76,
-    "net_gex_bn": -0.0001,
+    "spot": 22.84,
+    "net_gex_bn": -0.0002,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": null,
@@ -10010,12 +10010,12 @@ const wallsData = {
     }
   },
   "FIG": {
-    "spot": 27.65,
-    "net_gex_bn": 0.0315,
+    "spot": 27.93,
+    "net_gex_bn": 0.0317,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 28.0,
-      "put": 27.5
+      "put": 27.0
     },
     "anchor": {
       "call": 30.0,
@@ -10023,12 +10023,12 @@ const wallsData = {
     }
   },
   "TYL": {
-    "spot": 381.39,
+    "spot": 374.4,
     "net_gex_bn": 0.0024,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 380.0,
-      "put": 380.0
+      "put": 360.0
     },
     "anchor": {
       "call": 350.0,
@@ -10036,12 +10036,12 @@ const wallsData = {
     }
   },
   "CHKP": {
-    "spot": 139.63,
-    "net_gex_bn": 0.0214,
+    "spot": 135.76,
+    "net_gex_bn": 0.0215,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 140.0,
-      "put": 135.0
+      "put": 130.0
     },
     "anchor": {
       "call": 140.0,
@@ -10049,8 +10049,8 @@ const wallsData = {
     }
   },
   "CNH": {
-    "spot": 12.12,
-    "net_gex_bn": 0.0338,
+    "spot": 12.23,
+    "net_gex_bn": 0.0339,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 12.5,
@@ -10062,7 +10062,7 @@ const wallsData = {
     }
   },
   "WSO": {
-    "spot": 307.68,
+    "spot": 311.97,
     "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10075,8 +10075,8 @@ const wallsData = {
     }
   },
   "RNR": {
-    "spot": 326.42,
-    "net_gex_bn": -0.0,
+    "spot": 330.99,
+    "net_gex_bn": -0.0004,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 330.0,
@@ -10084,25 +10084,25 @@ const wallsData = {
     },
     "anchor": {
       "call": 350.0,
-      "put": 290.0
-    }
-  },
-  "AEIS": {
-    "spot": 276.41,
-    "net_gex_bn": -0.0001,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
-    "tactical": {
-      "call": 290.0,
-      "put": 270.0
-    },
-    "anchor": {
-      "call": 330.0,
       "put": 300.0
     }
   },
+  "AEIS": {
+    "spot": 272.3,
+    "net_gex_bn": 0.0,
+    "outlook": "STABLE / GRIND (Long Gamma)",
+    "tactical": {
+      "call": 280.0,
+      "put": 260.0
+    },
+    "anchor": {
+      "call": 330.0,
+      "put": 250.0
+    }
+  },
   "WMG": {
-    "spot": 28.24,
-    "net_gex_bn": 0.0081,
+    "spot": 28.01,
+    "net_gex_bn": 0.0082,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 28.0,
@@ -10114,12 +10114,12 @@ const wallsData = {
     }
   },
   "BEPC": {
-    "spot": 31.75,
+    "spot": 31.57,
     "net_gex_bn": 0.0032,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 30.0
     },
     "anchor": {
       "call": 35.0,
@@ -10127,12 +10127,12 @@ const wallsData = {
     }
   },
   "CLX": {
-    "spot": 97.99,
-    "net_gex_bn": 0.0027,
+    "spot": 98.19,
+    "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 100.0,
-      "put": 95.0
+      "put": 100.0
     },
     "anchor": {
       "call": 110.0,
@@ -10140,7 +10140,7 @@ const wallsData = {
     }
   },
   "CCK": {
-    "spot": 116.64,
+    "spot": 116.38,
     "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10153,7 +10153,7 @@ const wallsData = {
     }
   },
   "AIT": {
-    "spot": 321.08,
+    "spot": 322.2,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10166,8 +10166,8 @@ const wallsData = {
     }
   },
   "FIVE": {
-    "spot": 247.39,
-    "net_gex_bn": 0.0013,
+    "spot": 246.25,
+    "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 250.0,
@@ -10179,8 +10179,8 @@ const wallsData = {
     }
   },
   "HII": {
-    "spot": 292.48,
-    "net_gex_bn": 0.0004,
+    "spot": 293.33,
+    "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 300.0,
@@ -10192,11 +10192,11 @@ const wallsData = {
     }
   },
   "SKM": {
-    "spot": 38.54,
-    "net_gex_bn": 0.0572,
+    "spot": 37.88,
+    "net_gex_bn": 0.0573,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 40.0,
+      "call": null,
       "put": null
     },
     "anchor": {
@@ -10205,12 +10205,12 @@ const wallsData = {
     }
   },
   "RVTY": {
-    "spot": 128.25,
+    "spot": 126.23,
     "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
-      "put": 125.0
+      "put": 120.0
     },
     "anchor": {
       "call": 150.0,
@@ -10218,8 +10218,8 @@ const wallsData = {
     }
   },
   "AGNC": {
-    "spot": 10.69,
-    "net_gex_bn": -0.1296,
+    "spot": 10.68,
+    "net_gex_bn": -0.1253,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 11.0,
@@ -10231,8 +10231,8 @@ const wallsData = {
     }
   },
   "EMBJ": {
-    "spot": 71.88,
-    "net_gex_bn": 0.0102,
+    "spot": 72.85,
+    "net_gex_bn": 0.0104,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
@@ -10244,7 +10244,7 @@ const wallsData = {
     }
   },
   "PEN": {
-    "spot": 322.96,
+    "spot": 322.57,
     "net_gex_bn": -0.0037,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -10257,7 +10257,7 @@ const wallsData = {
     }
   },
   "WTS": {
-    "spot": 365.43,
+    "spot": 357.44,
     "net_gex_bn": 0.0031,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10270,33 +10270,33 @@ const wallsData = {
     }
   },
   "DECK": {
-    "spot": 87.68,
-    "net_gex_bn": -0.0001,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 85.38,
+    "net_gex_bn": 0.0,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 87.0,
-      "put": 88.0
+      "put": 85.0
     },
     "anchor": {
       "call": 100.0,
-      "put": 90.0
+      "put": 85.0
     }
   },
   "HTHT": {
-    "spot": 47.39,
+    "spot": 47.27,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 45.0
     },
     "anchor": {
-      "call": 55.0,
+      "call": 50.0,
       "put": 45.0
     }
   },
   "FNF": {
-    "spot": 46.83,
+    "spot": 46.49,
     "net_gex_bn": -0.009,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -10309,7 +10309,7 @@ const wallsData = {
     }
   },
   "SNN": {
-    "spot": 28.87,
+    "spot": 29.15,
     "net_gex_bn": 0.0,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10317,12 +10317,12 @@ const wallsData = {
       "put": null
     },
     "anchor": {
-      "call": 30.0,
+      "call": 35.0,
       "put": 30.0
     }
   },
   "CR": {
-    "spot": 204.72,
+    "spot": 202.4,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10335,8 +10335,8 @@ const wallsData = {
     }
   },
   "SF": {
-    "spot": 80.91,
-    "net_gex_bn": 0.0024,
+    "spot": 79.81,
+    "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
@@ -10348,12 +10348,12 @@ const wallsData = {
     }
   },
   "GNRC": {
-    "spot": 185.77,
-    "net_gex_bn": 0.0004,
+    "spot": 181.1,
+    "net_gex_bn": 0.0012,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 195.0,
-      "put": 185.0
+      "call": 180.0,
+      "put": 175.0
     },
     "anchor": {
       "call": 200.0,
@@ -10361,8 +10361,8 @@ const wallsData = {
     }
   },
   "EXEL": {
-    "spot": 54.41,
-    "net_gex_bn": -0.0136,
+    "spot": 55.57,
+    "net_gex_bn": -0.0131,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 55.0,
@@ -10374,12 +10374,12 @@ const wallsData = {
     }
   },
   "ICLR": {
-    "spot": 165.19,
-    "net_gex_bn": 0.0022,
+    "spot": 160.31,
+    "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 170.0,
-      "put": 165.0
+      "call": 160.0,
+      "put": 160.0
     },
     "anchor": {
       "call": 160.0,
@@ -10387,8 +10387,8 @@ const wallsData = {
     }
   },
   "CSGP": {
-    "spot": 32.29,
-    "net_gex_bn": 0.0042,
+    "spot": 32.03,
+    "net_gex_bn": 0.0033,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -10400,11 +10400,11 @@ const wallsData = {
     }
   },
   "ARWR": {
-    "spot": 81.39,
-    "net_gex_bn": 0.0121,
+    "spot": 82.71,
+    "net_gex_bn": 0.0129,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 80.0,
+      "call": 85.0,
       "put": 80.0
     },
     "anchor": {
@@ -10413,12 +10413,12 @@ const wallsData = {
     }
   },
   "NVMI": {
-    "spot": 349.96,
-    "net_gex_bn": 0.0009,
+    "spot": 339.55,
+    "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 350.0,
-      "put": 350.0
+      "put": 330.0
     },
     "anchor": {
       "call": 400.0,
@@ -10426,8 +10426,8 @@ const wallsData = {
     }
   },
   "DKNG": {
-    "spot": 23.92,
-    "net_gex_bn": 0.0767,
+    "spot": 23.82,
+    "net_gex_bn": 0.0797,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 25.0,
@@ -10435,24 +10435,24 @@ const wallsData = {
     },
     "anchor": {
       "call": 25.0,
-      "put": 25.0
+      "put": 24.0
     }
   },
   "OC": {
-    "spot": 139.6,
+    "spot": 135.39,
     "net_gex_bn": 0.0016,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 145.0,
-      "put": 140.0
+      "call": 140.0,
+      "put": 130.0
     },
     "anchor": {
-      "call": 170.0,
+      "call": 150.0,
       "put": 105.0
     }
   },
   "SEIC": {
-    "spot": 111.14,
+    "spot": 110.49,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10465,8 +10465,8 @@ const wallsData = {
     }
   },
   "SJM": {
-    "spot": 132.42,
-    "net_gex_bn": -0.0016,
+    "spot": 132.34,
+    "net_gex_bn": -0.0017,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 130.0,
@@ -10478,7 +10478,7 @@ const wallsData = {
     }
   },
   "ELS": {
-    "spot": 63.53,
+    "spot": 63.44,
     "net_gex_bn": 0.0,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10491,8 +10491,8 @@ const wallsData = {
     }
   },
   "GLPI": {
-    "spot": 42.21,
-    "net_gex_bn": 0.0039,
+    "spot": 42.1,
+    "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 42.5,
@@ -10504,21 +10504,21 @@ const wallsData = {
     }
   },
   "RTO": {
-    "spot": 23.77,
+    "spot": 24.31,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": null,
+      "call": 25.0,
       "put": null
     },
     "anchor": {
-      "call": 25.0,
+      "call": 30.0,
       "put": 22.5
     }
   },
   "HMY": {
-    "spot": 19.58,
-    "net_gex_bn": 0.0212,
+    "spot": 19.44,
+    "net_gex_bn": 0.0224,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 20.0,
@@ -10530,20 +10530,20 @@ const wallsData = {
     }
   },
   "MDGL": {
-    "spot": 530.32,
-    "net_gex_bn": 0.005,
+    "spot": 539.29,
+    "net_gex_bn": 0.0049,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 520.0,
+      "call": 540.0,
       "put": 540.0
     },
     "anchor": {
       "call": 500.0,
-      "put": 400.0
+      "put": 500.0
     }
   },
   "EHC": {
-    "spot": 121.01,
+    "spot": 122.34,
     "net_gex_bn": 0.0001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10556,11 +10556,11 @@ const wallsData = {
     }
   },
   "HBM": {
-    "spot": 28.69,
+    "spot": 27.48,
     "net_gex_bn": 0.0179,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 30.0,
+      "call": null,
       "put": null
     },
     "anchor": {
@@ -10569,12 +10569,12 @@ const wallsData = {
     }
   },
   "ALGN": {
-    "spot": 159.22,
-    "net_gex_bn": -0.0002,
-    "outlook": "VOLATILE / DANGER (Short Gamma)",
+    "spot": 157.58,
+    "net_gex_bn": 0.0001,
+    "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 160.0,
-      "put": 155.0
+      "call": 165.0,
+      "put": 150.0
     },
     "anchor": {
       "call": 185.0,
@@ -10582,12 +10582,12 @@ const wallsData = {
     }
   },
   "SMTC": {
-    "spot": 131.97,
-    "net_gex_bn": 0.0325,
+    "spot": 130.31,
+    "net_gex_bn": 0.0323,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 130.0,
-      "put": 130.0
+      "put": 125.0
     },
     "anchor": {
       "call": 145.0,
@@ -10595,11 +10595,11 @@ const wallsData = {
     }
   },
   "AMH": {
-    "spot": 33.31,
+    "spot": 33.37,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": null,
+      "call": 35.0,
       "put": null
     },
     "anchor": {
@@ -10608,7 +10608,7 @@ const wallsData = {
     }
   },
   "PNW": {
-    "spot": 97.42,
+    "spot": 97.8,
     "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10621,21 +10621,21 @@ const wallsData = {
     }
   },
   "DY": {
-    "spot": 290.1,
+    "spot": 285.5,
     "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 300.0,
+      "call": 290.0,
       "put": 290.0
     },
     "anchor": {
       "call": 340.0,
-      "put": 290.0
+      "put": 300.0
     }
   },
   "COKE": {
-    "spot": 194.34,
-    "net_gex_bn": 0.0014,
+    "spot": 194.0,
+    "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
@@ -10643,15 +10643,15 @@ const wallsData = {
     },
     "anchor": {
       "call": 190.0,
-      "put": 200.0
+      "put": 175.0
     }
   },
   "CORT": {
-    "spot": 113.22,
+    "spot": 114.49,
     "net_gex_bn": 0.0049,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 115.0,
+      "call": 120.0,
       "put": 110.0
     },
     "anchor": {
@@ -10660,12 +10660,12 @@ const wallsData = {
     }
   },
   "SMMT": {
-    "spot": 13.62,
-    "net_gex_bn": 0.0024,
+    "spot": 13.91,
+    "net_gex_bn": 0.0025,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 14.0,
-      "put": 13.0
+      "put": 14.0
     },
     "anchor": {
       "call": 15.0,
@@ -10673,11 +10673,11 @@ const wallsData = {
     }
   },
   "FHN": {
-    "spot": 24.42,
-    "net_gex_bn": 0.257,
+    "spot": 24.16,
+    "net_gex_bn": 0.2574,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 25.0,
+      "call": 24.0,
       "put": 24.0
     },
     "anchor": {
@@ -10686,8 +10686,8 @@ const wallsData = {
     }
   },
   "CHYM": {
-    "spot": 32.68,
-    "net_gex_bn": 0.025,
+    "spot": 32.22,
+    "net_gex_bn": 0.0258,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 32.5,
@@ -10699,8 +10699,8 @@ const wallsData = {
     }
   },
   "BJ": {
-    "spot": 90.65,
-    "net_gex_bn": -0.0009,
+    "spot": 93.26,
+    "net_gex_bn": -0.0006,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 95.0,
@@ -10708,11 +10708,11 @@ const wallsData = {
     },
     "anchor": {
       "call": 100.0,
-      "put": 90.0
+      "put": 100.0
     }
   },
   "UDR": {
-    "spot": 36.97,
+    "spot": 36.99,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10725,7 +10725,7 @@ const wallsData = {
     }
   },
   "AFG": {
-    "spot": 142.85,
+    "spot": 142.07,
     "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10738,12 +10738,12 @@ const wallsData = {
     }
   },
   "KTOS": {
-    "spot": 50.74,
-    "net_gex_bn": 0.0032,
+    "spot": 49.28,
+    "net_gex_bn": 0.0039,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 52.0,
-      "put": 51.0
+      "call": 50.0,
+      "put": 50.0
     },
     "anchor": {
       "call": 60.0,
@@ -10751,12 +10751,12 @@ const wallsData = {
     }
   },
   "HL": {
-    "spot": 19.8,
-    "net_gex_bn": 0.104,
+    "spot": 19.53,
+    "net_gex_bn": 0.1074,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 20.0,
-      "put": 20.0
+      "put": 19.5
     },
     "anchor": {
       "call": 22.0,
@@ -10764,7 +10764,7 @@ const wallsData = {
     }
   },
   "DRS": {
-    "spot": 37.83,
+    "spot": 38.04,
     "net_gex_bn": 0.0023,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10777,11 +10777,11 @@ const wallsData = {
     }
   },
   "MICC": {
-    "spot": 20.48,
+    "spot": 19.88,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": null,
+      "call": 20.0,
       "put": 20.0
     },
     "anchor": {
@@ -10790,7 +10790,7 @@ const wallsData = {
     }
   },
   "ERIE": {
-    "spot": 256.17,
+    "spot": 256.34,
     "net_gex_bn": 0.0017,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10799,12 +10799,12 @@ const wallsData = {
     },
     "anchor": {
       "call": 260.0,
-      "put": 200.0
+      "put": 230.0
     }
   },
   "IT": {
-    "spot": 198.76,
-    "net_gex_bn": 0.0005,
+    "spot": 191.29,
+    "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
@@ -10816,8 +10816,8 @@ const wallsData = {
     }
   },
   "DPZ": {
-    "spot": 346.08,
-    "net_gex_bn": 0.0011,
+    "spot": 343.38,
+    "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 350.0,
@@ -10829,11 +10829,11 @@ const wallsData = {
     }
   },
   "TFII": {
-    "spot": 133.91,
+    "spot": 129.89,
     "net_gex_bn": 0.0003,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 130.0,
       "put": 130.0
     },
     "anchor": {
@@ -10842,7 +10842,7 @@ const wallsData = {
     }
   },
   "EVR": {
-    "spot": 286.95,
+    "spot": 291.41,
     "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -10855,8 +10855,8 @@ const wallsData = {
     }
   },
   "HALO": {
-    "spot": 106.37,
-    "net_gex_bn": 0.0075,
+    "spot": 107.51,
+    "net_gex_bn": 0.0079,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 110.0,
@@ -10868,11 +10868,11 @@ const wallsData = {
     }
   },
   "VSAT": {
-    "spot": 67.07,
-    "net_gex_bn": 0.0593,
+    "spot": 66.45,
+    "net_gex_bn": 0.0579,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 70.0,
+      "call": null,
       "put": 65.0
     },
     "anchor": {
@@ -10881,12 +10881,12 @@ const wallsData = {
     }
   },
   "AR": {
-    "spot": 38.62,
-    "net_gex_bn": 0.0041,
+    "spot": 39.59,
+    "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 40.0,
-      "put": 37.0
+      "put": 38.0
     },
     "anchor": {
       "call": 40.0,
@@ -10894,24 +10894,24 @@ const wallsData = {
     }
   },
   "NIO": {
-    "spot": 4.32,
-    "net_gex_bn": 0.1142,
+    "spot": 4.11,
+    "net_gex_bn": 0.1772,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 4.5,
-      "put": null
+      "call": null,
+      "put": 4.0
     },
     "anchor": {
       "call": 5.0,
-      "put": 4.5
+      "put": 4.0
     }
   },
   "LFUS": {
-    "spot": 410.77,
-    "net_gex_bn": -0.0012,
+    "spot": 409.19,
+    "net_gex_bn": -0.0011,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 430.0,
+      "call": 410.0,
       "put": 410.0
     },
     "anchor": {
@@ -10920,11 +10920,11 @@ const wallsData = {
     }
   },
   "ENLT": {
-    "spot": 77.49,
-    "net_gex_bn": 0.0052,
+    "spot": 75.12,
+    "net_gex_bn": 0.0053,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 80.0,
+      "call": 75.0,
       "put": 75.0
     },
     "anchor": {
@@ -10933,11 +10933,11 @@ const wallsData = {
     }
   },
   "GDDY": {
-    "spot": 97.57,
-    "net_gex_bn": -0.0008,
+    "spot": 100.85,
+    "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 100.0,
+      "call": 105.0,
       "put": 98.0
     },
     "anchor": {
@@ -10946,12 +10946,12 @@ const wallsData = {
     }
   },
   "RRX": {
-    "spot": 158.02,
-    "net_gex_bn": -0.0001,
+    "spot": 156.16,
+    "net_gex_bn": -0.0,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 165.0,
-      "put": 160.0
+      "call": 160.0,
+      "put": 150.0
     },
     "anchor": {
       "call": 190.0,
@@ -10959,11 +10959,11 @@ const wallsData = {
     }
   },
   "AHR": {
-    "spot": 55.29,
+    "spot": 56.25,
     "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 55.0,
+      "call": null,
       "put": 55.0
     },
     "anchor": {
@@ -10972,8 +10972,8 @@ const wallsData = {
     }
   },
   "FPS": {
-    "spot": 30.32,
-    "net_gex_bn": 0.0242,
+    "spot": 29.59,
+    "net_gex_bn": 0.0244,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 30.0,
@@ -10985,8 +10985,8 @@ const wallsData = {
     }
   },
   "CART": {
-    "spot": 50.59,
-    "net_gex_bn": 0.0122,
+    "spot": 50.12,
+    "net_gex_bn": 0.0126,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 52.0,
@@ -10994,16 +10994,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 55.0,
-      "put": 49.0
+      "put": 48.0
     }
   },
   "GMED": {
-    "spot": 81.32,
+    "spot": 80.25,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 85.0,
-      "put": 82.5
+      "call": 82.5,
+      "put": 80.0
     },
     "anchor": {
       "call": 90.0,
@@ -11011,8 +11011,8 @@ const wallsData = {
     }
   },
   "MGM": {
-    "spot": 41.5,
-    "net_gex_bn": 0.0151,
+    "spot": 41.33,
+    "net_gex_bn": 0.0159,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 42.0,
@@ -11024,8 +11024,8 @@ const wallsData = {
     }
   },
   "SCI": {
-    "spot": 81.88,
-    "net_gex_bn": 0.0054,
+    "spot": 82.2,
+    "net_gex_bn": 0.0069,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 85.0,
@@ -11037,11 +11037,11 @@ const wallsData = {
     }
   },
   "MANH": {
-    "spot": 224.56,
+    "spot": 219.1,
     "net_gex_bn": 0.0,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 230.0,
+      "call": 220.0,
       "put": 220.0
     },
     "anchor": {
@@ -11050,12 +11050,12 @@ const wallsData = {
     }
   },
   "DVA": {
-    "spot": 176.35,
-    "net_gex_bn": 0.0175,
+    "spot": 177.58,
+    "net_gex_bn": 0.0176,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 185.0,
-      "put": 170.0
+      "put": 180.0
     },
     "anchor": {
       "call": 200.0,
@@ -11063,8 +11063,8 @@ const wallsData = {
     }
   },
   "WTRG": {
-    "spot": 41.24,
-    "net_gex_bn": 0.0019,
+    "spot": 41.2,
+    "net_gex_bn": 0.002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
@@ -11076,21 +11076,21 @@ const wallsData = {
     }
   },
   "AAOI": {
-    "spot": 107.42,
-    "net_gex_bn": 0.0076,
+    "spot": 103.29,
+    "net_gex_bn": 0.0091,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 110.0,
-      "put": 105.0
+      "call": 105.0,
+      "put": 100.0
     },
     "anchor": {
       "call": 110.0,
-      "put": 110.0
+      "put": 100.0
     }
   },
   "ELAN": {
-    "spot": 23.86,
-    "net_gex_bn": 0.0042,
+    "spot": 24.31,
+    "net_gex_bn": 0.0044,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 25.0,
@@ -11102,8 +11102,8 @@ const wallsData = {
     }
   },
   "XPEV": {
-    "spot": 11.4,
-    "net_gex_bn": 0.1017,
+    "spot": 11.37,
+    "net_gex_bn": 0.0951,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 11.5,
@@ -11111,16 +11111,16 @@ const wallsData = {
     },
     "anchor": {
       "call": 13.0,
-      "put": 11.0
+      "put": 10.0
     }
   },
   "DOCU": {
-    "spot": 65.72,
-    "net_gex_bn": -0.0012,
+    "spot": 64.87,
+    "net_gex_bn": -0.003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 65.0,
-      "put": 65.0
+      "put": 64.0
     },
     "anchor": {
       "call": 70.0,
@@ -11128,8 +11128,8 @@ const wallsData = {
     }
   },
   "TECH": {
-    "spot": 72.31,
-    "net_gex_bn": 0.0532,
+    "spot": 72.29,
+    "net_gex_bn": 0.0537,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 75.0,
@@ -11141,11 +11141,11 @@ const wallsData = {
     }
   },
   "DCI": {
-    "spot": 90.74,
+    "spot": 89.83,
     "net_gex_bn": 0.0019,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 95.0,
+      "call": 90.0,
       "put": 90.0
     },
     "anchor": {
@@ -11154,7 +11154,7 @@ const wallsData = {
     }
   },
   "UMBF": {
-    "spot": 141.91,
+    "spot": 139.78,
     "net_gex_bn": 0.0007,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11167,12 +11167,12 @@ const wallsData = {
     }
   },
   "KNX": {
-    "spot": 67.97,
-    "net_gex_bn": 0.0069,
+    "spot": 67.27,
+    "net_gex_bn": 0.0072,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
-      "put": 67.5
+      "put": 65.0
     },
     "anchor": {
       "call": 80.0,
@@ -11180,12 +11180,12 @@ const wallsData = {
     }
   },
   "BPOP": {
-    "spot": 168.49,
+    "spot": 168.27,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 170.0,
-      "put": 165.0
+      "put": 160.0
     },
     "anchor": {
       "call": 170.0,
@@ -11193,11 +11193,11 @@ const wallsData = {
     }
   },
   "AXSM": {
-    "spot": 198.83,
-    "net_gex_bn": 0.0034,
+    "spot": 201.68,
+    "net_gex_bn": 0.0035,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 200.0,
+      "call": 210.0,
       "put": 200.0
     },
     "anchor": {
@@ -11206,25 +11206,25 @@ const wallsData = {
     }
   },
   "HUBS": {
-    "spot": 261.47,
-    "net_gex_bn": -0.0031,
+    "spot": 253.04,
+    "net_gex_bn": -0.0032,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 270.0,
-      "put": 260.0
+      "call": 250.0,
+      "put": 250.0
     },
     "anchor": {
       "call": 300.0,
-      "put": 200.0
+      "put": 190.0
     }
   },
   "BSY": {
-    "spot": 36.96,
-    "net_gex_bn": 0.0039,
+    "spot": 36.15,
+    "net_gex_bn": 0.004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": null,
-      "put": null
+      "put": 35.0
     },
     "anchor": {
       "call": 40.0,
@@ -11232,12 +11232,12 @@ const wallsData = {
     }
   },
   "HUT": {
-    "spot": 77.46,
-    "net_gex_bn": 0.0407,
+    "spot": 78.97,
+    "net_gex_bn": 0.0428,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
-      "put": 75.0
+      "put": 80.0
     },
     "anchor": {
       "call": 90.0,
@@ -11245,12 +11245,12 @@ const wallsData = {
     }
   },
   "ABVX": {
-    "spot": 112.05,
-    "net_gex_bn": 0.0044,
+    "spot": 114.4,
+    "net_gex_bn": 0.0035,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 114.0,
-      "put": 110.0
+      "call": 120.0,
+      "put": 115.0
     },
     "anchor": {
       "call": 140.0,
@@ -11258,7 +11258,7 @@ const wallsData = {
     }
   },
   "JKHY": {
-    "spot": 168.12,
+    "spot": 167.85,
     "net_gex_bn": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -11271,12 +11271,12 @@ const wallsData = {
     }
   },
   "BMNR": {
-    "spot": 24.83,
-    "net_gex_bn": 0.0625,
+    "spot": 24.16,
+    "net_gex_bn": 0.0701,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 25.0,
-      "put": 25.0
+      "put": 23.0
     },
     "anchor": {
       "call": 30.0,
@@ -11284,20 +11284,20 @@ const wallsData = {
     }
   },
   "SANM": {
-    "spot": 195.65,
+    "spot": 190.88,
     "net_gex_bn": 0.0038,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 200.0,
-      "put": 195.0
+      "put": 185.0
     },
     "anchor": {
-      "call": 240.0,
+      "call": 210.0,
       "put": 180.0
     }
   },
   "SPXC": {
-    "spot": 196.42,
+    "spot": 194.11,
     "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -11310,7 +11310,7 @@ const wallsData = {
     }
   },
   "GIL": {
-    "spot": 52.55,
+    "spot": 51.91,
     "net_gex_bn": 0.0021,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11323,11 +11323,11 @@ const wallsData = {
     }
   },
   "WMS": {
-    "spot": 135.87,
-    "net_gex_bn": -0.0002,
+    "spot": 132.57,
+    "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 140.0,
+      "call": 135.0,
       "put": 130.0
     },
     "anchor": {
@@ -11336,8 +11336,8 @@ const wallsData = {
     }
   },
   "GSAT": {
-    "spot": 81.63,
-    "net_gex_bn": 0.0066,
+    "spot": 81.45,
+    "net_gex_bn": 0.0067,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
@@ -11349,11 +11349,11 @@ const wallsData = {
     }
   },
   "SAIL": {
-    "spot": 20.45,
-    "net_gex_bn": 0.0055,
+    "spot": 19.65,
+    "net_gex_bn": 0.0057,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": null,
+      "call": 20.0,
       "put": 20.0
     },
     "anchor": {
@@ -11362,12 +11362,12 @@ const wallsData = {
     }
   },
   "WYNN": {
-    "spot": 91.11,
-    "net_gex_bn": 0.0377,
+    "spot": 91.39,
+    "net_gex_bn": 0.0386,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 95.0,
-      "put": 90.0
+      "put": 92.0
     },
     "anchor": {
       "call": 110.0,
@@ -11375,12 +11375,12 @@ const wallsData = {
     }
   },
   "RYAN": {
-    "spot": 41.99,
+    "spot": 42.58,
     "net_gex_bn": 0.0028,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 42.0,
-      "put": 40.0
+      "put": 41.0
     },
     "anchor": {
       "call": 40.0,
@@ -11388,8 +11388,8 @@ const wallsData = {
     }
   },
   "BXP": {
-    "spot": 68.15,
-    "net_gex_bn": 0.0044,
+    "spot": 67.91,
+    "net_gex_bn": 0.0047,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -11401,7 +11401,7 @@ const wallsData = {
     }
   },
   "TX": {
-    "spot": 54.83,
+    "spot": 55.36,
     "net_gex_bn": 0.0013,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11414,12 +11414,12 @@ const wallsData = {
     }
   },
   "GKOS": {
-    "spot": 178.49,
+    "spot": 176.31,
     "net_gex_bn": -0.0007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 180.0,
-      "put": 180.0
+      "put": 170.0
     },
     "anchor": {
       "call": 195.0,
@@ -11427,8 +11427,8 @@ const wallsData = {
     }
   },
   "PNR": {
-    "spot": 61.06,
-    "net_gex_bn": 0.004,
+    "spot": 61.45,
+    "net_gex_bn": 0.0042,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 62.5,
@@ -11440,11 +11440,11 @@ const wallsData = {
     }
   },
   "SSB": {
-    "spot": 104.97,
+    "spot": 104.7,
     "net_gex_bn": 0.0011,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 110.0,
+      "call": 105.0,
       "put": 100.0
     },
     "anchor": {
@@ -11453,7 +11453,7 @@ const wallsData = {
     }
   },
   "AYI": {
-    "spot": 331.63,
+    "spot": 327.75,
     "net_gex_bn": 0.0002,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11466,11 +11466,11 @@ const wallsData = {
     }
   },
   "JEF": {
-    "spot": 52.25,
-    "net_gex_bn": -0.0207,
+    "spot": 52.61,
+    "net_gex_bn": -0.0205,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 52.5,
+      "call": 55.0,
       "put": 50.0
     },
     "anchor": {
@@ -11479,8 +11479,8 @@ const wallsData = {
     }
   },
   "CYTK": {
-    "spot": 70.14,
-    "net_gex_bn": 0.0393,
+    "spot": 71.19,
+    "net_gex_bn": 0.0389,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 70.0,
@@ -11492,12 +11492,12 @@ const wallsData = {
     }
   },
   "FROG": {
-    "spot": 99.49,
-    "net_gex_bn": 0.0126,
+    "spot": 93.5,
+    "net_gex_bn": 0.0133,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 100.0,
-      "put": 100.0
+      "call": 95.0,
+      "put": 90.0
     },
     "anchor": {
       "call": 105.0,
@@ -11505,21 +11505,21 @@ const wallsData = {
     }
   },
   "CGNX": {
-    "spot": 60.43,
-    "net_gex_bn": 0.0069,
+    "spot": 59.72,
+    "net_gex_bn": 0.0067,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 60.0,
       "put": 60.0
     },
     "anchor": {
-      "call": 75.0,
+      "call": 70.0,
       "put": 55.0
     }
   },
   "MOD": {
-    "spot": 177.16,
-    "net_gex_bn": 0.0061,
+    "spot": 178.51,
+    "net_gex_bn": 0.006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 185.0,
@@ -11531,8 +11531,8 @@ const wallsData = {
     }
   },
   "PSKY": {
-    "spot": 10.88,
-    "net_gex_bn": 0.0787,
+    "spot": 10.6,
+    "net_gex_bn": 0.0765,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 11.0,
@@ -11544,8 +11544,8 @@ const wallsData = {
     }
   },
   "ARW": {
-    "spot": 204.37,
-    "net_gex_bn": 0.0009,
+    "spot": 204.15,
+    "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 210.0,
@@ -11557,12 +11557,12 @@ const wallsData = {
     }
   },
   "ENSG": {
-    "spot": 171.14,
+    "spot": 174.37,
     "net_gex_bn": 0.0026,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 175.0,
-      "put": 170.0
+      "put": 175.0
     },
     "anchor": {
       "call": 195.0,
@@ -11570,11 +11570,11 @@ const wallsData = {
     }
   },
   "AM": {
-    "spot": 22.37,
+    "spot": 22.54,
     "net_gex_bn": 0.0174,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 22.0,
+      "call": 23.0,
       "put": 22.0
     },
     "anchor": {
@@ -11583,8 +11583,8 @@ const wallsData = {
     }
   },
   "AES": {
-    "spot": 14.73,
-    "net_gex_bn": -0.0263,
+    "spot": 14.77,
+    "net_gex_bn": -0.0261,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 15.0,
@@ -11596,12 +11596,12 @@ const wallsData = {
     }
   },
   "RMBS": {
-    "spot": 86.55,
+    "spot": 84.07,
     "net_gex_bn": 0.0014,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 90.0,
-      "put": 85.0
+      "call": 85.0,
+      "put": 80.0
     },
     "anchor": {
       "call": 100.0,
@@ -11609,7 +11609,7 @@ const wallsData = {
     }
   },
   "RDY": {
-    "spot": 12.17,
+    "spot": 12.19,
     "net_gex_bn": 0.0004,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11622,21 +11622,21 @@ const wallsData = {
     }
   },
   "IAG": {
-    "spot": 20.34,
-    "net_gex_bn": 0.0359,
+    "spot": 19.79,
+    "net_gex_bn": 0.0358,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 20.0,
       "put": 20.0
     },
     "anchor": {
-      "call": 25.0,
+      "call": 21.0,
       "put": 16.0
     }
   },
   "ZION": {
-    "spot": 66.9,
-    "net_gex_bn": -0.0056,
+    "spot": 66.69,
+    "net_gex_bn": -0.0054,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 70.0,
@@ -11648,7 +11648,7 @@ const wallsData = {
     }
   },
   "PRAX": {
-    "spot": 344.1,
+    "spot": 350.12,
     "net_gex_bn": -0.0008,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -11661,7 +11661,7 @@ const wallsData = {
     }
   },
   "WLK": {
-    "spot": 74.57,
+    "spot": 73.9,
     "net_gex_bn": 0.0018,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11674,7 +11674,7 @@ const wallsData = {
     }
   },
   "ALSN": {
-    "spot": 126.28,
+    "spot": 124.14,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11687,7 +11687,7 @@ const wallsData = {
     }
   },
   "CFR": {
-    "spot": 160.64,
+    "spot": 159.48,
     "net_gex_bn": 0.0006,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11700,11 +11700,11 @@ const wallsData = {
     }
   },
   "APTV": {
-    "spot": 45.42,
-    "net_gex_bn": 0.0238,
+    "spot": 45.23,
+    "net_gex_bn": 0.0235,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": 47.5,
+      "call": 45.0,
       "put": 45.0
     },
     "anchor": {
@@ -11713,11 +11713,11 @@ const wallsData = {
     }
   },
   "SWKS": {
-    "spot": 66.73,
-    "net_gex_bn": -0.0028,
+    "spot": 65.86,
+    "net_gex_bn": -0.0027,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 70.0,
+      "call": 65.0,
       "put": 65.0
     },
     "anchor": {
@@ -11726,12 +11726,12 @@ const wallsData = {
     }
   },
   "FLS": {
-    "spot": 79.33,
-    "net_gex_bn": 0.0049,
+    "spot": 76.64,
+    "net_gex_bn": 0.0048,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 80.0,
-      "put": 80.0
+      "put": 75.0
     },
     "anchor": {
       "call": 90.0,
@@ -11739,7 +11739,7 @@ const wallsData = {
     }
   },
   "PSO": {
-    "spot": 16.61,
+    "spot": 16.56,
     "net_gex_bn": -0.0005,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
@@ -11752,11 +11752,11 @@ const wallsData = {
     }
   },
   "ONB": {
-    "spot": 25.6,
+    "spot": 25.42,
     "net_gex_bn": 0.001,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
-      "call": null,
+      "call": 25.0,
       "put": 25.0
     },
     "anchor": {
@@ -11765,7 +11765,7 @@ const wallsData = {
     }
   },
   "ORI": {
-    "spot": 41.85,
+    "spot": 41.73,
     "net_gex_bn": 0.0008,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11778,8 +11778,8 @@ const wallsData = {
     }
   },
   "NYT": {
-    "spot": 67.58,
-    "net_gex_bn": -0.0002,
+    "spot": 67.93,
+    "net_gex_bn": -0.0003,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 67.5,
@@ -11791,12 +11791,12 @@ const wallsData = {
     }
   },
   "MOH": {
-    "spot": 199.05,
-    "net_gex_bn": -0.0063,
+    "spot": 204.7,
+    "net_gex_bn": -0.0068,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 200.0,
-      "put": 200.0
+      "call": 210.0,
+      "put": 195.0
     },
     "anchor": {
       "call": 200.0,
@@ -11804,7 +11804,7 @@ const wallsData = {
     }
   },
   "APGE": {
-    "spot": 135.03,
+    "spot": 135.07,
     "net_gex_bn": 0.0044,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
@@ -11817,11 +11817,11 @@ const wallsData = {
     }
   },
   "AAL": {
-    "spot": 13.44,
-    "net_gex_bn": -0.1031,
+    "spot": 13.19,
+    "net_gex_bn": -0.1007,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 14.0,
+      "call": 13.0,
       "put": 13.0
     },
     "anchor": {
@@ -11830,8 +11830,8 @@ const wallsData = {
     }
   },
   "FDS": {
-    "spot": 311.89,
-    "net_gex_bn": -0.0057,
+    "spot": 307.73,
+    "net_gex_bn": -0.0058,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
       "call": 320.0,
@@ -11843,12 +11843,12 @@ const wallsData = {
     }
   },
   "TEM": {
-    "spot": 63.54,
-    "net_gex_bn": 0.0416,
+    "spot": 62.65,
+    "net_gex_bn": 0.043,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 65.0,
-      "put": 62.0
+      "put": 60.0
     },
     "anchor": {
       "call": 75.0,
@@ -11856,8 +11856,8 @@ const wallsData = {
     }
   },
   "PODD": {
-    "spot": 148.71,
-    "net_gex_bn": 0.0003,
+    "spot": 148.48,
+    "net_gex_bn": 0.0005,
     "outlook": "STABLE / GRIND (Long Gamma)",
     "tactical": {
       "call": 155.0,
@@ -11869,12 +11869,12 @@ const wallsData = {
     }
   },
   "MUSA": {
-    "spot": 512.62,
+    "spot": 528.49,
     "net_gex_bn": -0.0001,
     "outlook": "VOLATILE / DANGER (Short Gamma)",
     "tactical": {
-      "call": 510.0,
-      "put": 500.0
+      "call": 540.0,
+      "put": 520.0
     },
     "anchor": {
       "call": 540.0,
