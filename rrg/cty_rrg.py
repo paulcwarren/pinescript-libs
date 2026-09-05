@@ -12,7 +12,7 @@ CORE_TICKERS = [
 
 # Emerging Markets & Extended (Unchecked by default)
 EXTENDED_UNIVERSE = [
-    "EEM", "MCHI", "INDA", "EWT", "EWZ", "EWY", "EWW", "EPOL", "EZA", "TUR", "THD", "EWS"
+    "EEM", "MCHI", "INDA", "EWT", "EWZ", "EWY", "EWW", "EPOL", "EZA", "TUR", "THD", "EWS", "EIS"
 ]
 
 BENCHMARK = "ACWI" # Global Equity Benchmark
