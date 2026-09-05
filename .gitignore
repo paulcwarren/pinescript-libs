@@ -1,3 +1,6 @@
 pegy_results.csv
 .DS_Store
 
+.envrc
+mum/
+data/
