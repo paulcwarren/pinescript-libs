@@ -5,7 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'rrg/rrg.py' # Runs on push if you modify the python script itself
+      - 'rrg/rrg.py'      # Runs on push if you modify the python script itself
+      - 'rrg/cty_rrg.py'  
   schedule:
     # Runs at 20:00 UTC (1:00 PM PDT) Monday through Friday
     - cron: '0 20 * * 1-5'
