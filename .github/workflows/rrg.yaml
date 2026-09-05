@@ -36,6 +36,7 @@ jobs:
     - name: Run rrg.py
       run: |
         python rrg/rrg.py
+        python rrg/cty_rrg.py
 
     - name: Commit and push updated rrg_dashboard.html
       env:
@@ -44,5 +45,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add rrg/rrg_dashboard.html
-        git diff --cached --quiet || git commit -m "Update rrg_dashboard.html [skip ci]"
+        git add rrg/cty_rrg_dashboard.html
+        git diff --cached --quiet || git commit -m "Update rrg dashboards [skip ci]"
         git push https://x-access-token:${PAT}@github.com/paulcwarren/pinescript-libs.git HEAD:main
