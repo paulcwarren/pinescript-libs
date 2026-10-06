@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'fundamentals/get_pegys.py'
   schedule:
     - cron: '0 0 * * 0' # Every Sunday
   workflow_dispatch:
