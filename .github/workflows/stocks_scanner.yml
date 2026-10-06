@@ -1,6 +1,11 @@
 name: Stock Scanner
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scanners/run_scanner.py'      # Runs on push if you modify the python script itself
   workflow_dispatch:
   schedule:
     # Start at 20:15 UTC. The job waits until 1:15 PM

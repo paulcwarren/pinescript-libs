@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+    - 'options/get_walls.py'
   schedule:
     # Runs at 09:00 UTC (2:00 AM Pacific) on Mon, Tue, Wed, Thu, Fri
     - cron: '0 11 * * 1-5'
