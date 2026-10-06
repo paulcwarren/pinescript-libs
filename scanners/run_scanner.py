@@ -1630,6 +1630,21 @@ def build_trigger_chart(
         margin={"l": 60, "r": 60, "t": 80, "b": 50}
     )
 
+    # Crosshair: dotted vertical and horizontal lines follow the cursor.
+    fig.update_xaxes(
+        showspikes=True,
+        spikemode="across",
+        spikesnap="cursor",
+        spikedash="dot"
+    )
+
+    fig.update_yaxes(
+        showspikes=True,
+        spikemode="across",
+        spikesnap="cursor",
+        spikedash="dot"
+    )
+
     fig.update_yaxes(
         title_text="Price",
         row=1,
